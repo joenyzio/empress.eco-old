@@ -37,6 +37,12 @@ module.exports = {
       colors: {
         brand: '#6922a2',
       },
+      brand: {
+        pink: '#a50b89',
+        blue: '#13169B',
+        purple: '#6922a2',
+        green: '#23ae22',
+      },
       keyframes: {
         marquee: {
           from: {
