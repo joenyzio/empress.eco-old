@@ -13,6 +13,30 @@ module.exports = {
       animation: {
         marquee: "marquee 50s linear infinite",
       },
+      textColor: {
+        'brand': '#6922a2',
+      },
+      backgroundColor: {
+        'brand': '#6922a2',
+      },
+      borderColor: {
+        'brand': '#6922a2',
+      },
+      gradientColorStops: {
+        'brand': '#6922a2',
+      },
+      placeholderColor: {
+        'brand': '#6922a2',
+      },
+      ringColor: {
+        'brand': '#6922a2',
+      },
+      fill: {
+        'brand': '#6922a2',
+      },
+      colors: {
+        brand: '#6922a2',
+      },
       keyframes: {
         marquee: {
           from: {

@@ -67,5 +67,14 @@ const makeTitle = title
     <Navbar />
     <slot />
     <Footer margin={footerMargin} />
+        <!-- Chat Embed Script -->
+        <script type="module">
+          import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+          Chatbot.init({
+              chatflowid: "1dd03657-db13-4108-861f-f386c49c46a5",
+              apiHost: "http://localhost:4000",
+          })
+      </script>
   </body>
 </html>
+
