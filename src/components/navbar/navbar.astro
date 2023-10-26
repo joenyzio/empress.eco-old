@@ -4,84 +4,6 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { StickyHeader, Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
-const menuitems = [
-  {
-    title: "Products",
-    path: "#",
-    children: [
-      { title: "Features", path: "/features" },
-      { title: "Integrations", path: "/integrations" },
-      {
-        title: "Blog Details",
-        path: "/blog//typography-example",
-      },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
-  {
-    title: "Solutions",
-    path: "#",
-    children: [
-      { title: "Features", path: "/features" },
-      { title: "Integrations", path: "/integrations" },
-      {
-        title: "Blog Details",
-        path: "/blog//typography-example",
-      },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
-  {
-    title: "Developers",
-    path: "#",
-    children: [
-      { title: "Features", path: "/features" },
-      { title: "Integrations", path: "/integrations" },
-      {
-        title: "Blog Details",
-        path: "/blog//typography-example",
-      },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
-  {
-    title: "Resources",
-    path: "#",
-    children: [
-      { title: "Features", path: "/features" },
-      { title: "Integrations", path: "/integrations" },
-      {
-        title: "Blog Details",
-        path: "/blog//typography-example",
-      },
-      { title: "404 Page", path: "/404" },
-      {
-        title: "About",
-        path: "/about",
-      },
-      {
-        title: "Contact",
-        path: "/contact",
-      },
-      {
-        title: "Blog",
-        path: "/blog",
-      },
-    ],
-  },
-  {
-    title: "Community",
-    path: "#",
-    children: [
-      { title: "Features", path: "/features" },
-      { title: "Integrations", path: "/integrations" },
-    ],
-  },
-  {
-    title: "Pricing",
-    path: "/pricing",
-  },
-];
 ---
 
 <StickyHeader
@@ -90,63 +12,374 @@ const menuitems = [
   defaultClass="py-5 border-transparent"
   activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg">
   <Container>
-    <div
-      class="flex flex-col lg:flex-row justify-between items-center relative z-10"
-      transition:animate="none">
-      <Astronav>
-        <div class="flex w-full lg:w-auto items-center justify-between">
-          <a
-            href="/"
-            class="text-lg flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full px-2 -ml-2"
-            ><span class="font-bold text-indigo-600">empress</span><span
-              class="text-slate-600">.eco</span
-            >
-            <span
-              class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md"
-              >BETA</span
-            >
-          </a>
-          <div class="block lg:hidden">
-            <MenuIcon class="w-4 h-4 text-gray-800" />
-          </div>
-        </div>
-        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-          <ul class="flex flex-col lg:flex-row lg:gap-3">
-            {
-              menuitems.map((item, index) => (
-                <>
-                  {item.children && (
-                    <Dropdown
-                      title={item.title}
-                      children={item.children}
-                      lastItem={index === menuitems.length - 1}
-                    />
-                  )}
+      <div
+        transition:animate="none">
+          <div class="flex w-full lg:w-auto items-left justify-between">
+            <a
+              href="/"
+              class="text-lg flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full -ml-2"
+              ><span class="font-bold text-indigo-600">empress</span><span
+                class="text-slate-600">.eco</span
+              >
+              <span
+                class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md"
+                >BETA</span
+              >
+            </a>
+  
+            <header class="container mx-auto px-4 py-6 flex items-center justify-between">
 
-                  {!item.children && (
-                    <li>
-                      <a
-                        href={item.path}
-                        class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                        {item.title}
-                      </a>
-                    </li>
-                  )}
-                </>
-              ))
-            }
-          </ul>
+              <nav>
+                <ul class="flex items-center justify-center text-gray-500">
+                  <li class="relative group px-3 py-2">
+                    <button class="hover:opacity-50 cursor-default">Products</button>
+                    <div
+                      class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+                      <div class="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+                        <div
+                          class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
+                        </div>
+          
+                        <div class="relative z-10">
+                          <div class="grid grid-cols-2 gap-6">
+                            <div>
+                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">The Suite</p>
+                              <ul class="mt-3 text-[15px]">
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8]
+                                    transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Experience OS
+                                    <p class="text-gray-500 font-normal">Create next-gen experiences</p>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Experience Bots
+                                    <p class="text-gray-500 font-normal">Be everywhere, every time</p>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Experience-as-a-Service
+                                    <p class="text-gray-500 font-normal">Find experts on-demand</p>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div>
+                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">Features</p>
+                              <ul class="mt-3 text-[15px]">
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Dashboards
+                                    <p class="text-gray-500 font-normal">Analyze your ecosystem</p>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Automations
+                                    <p class="text-gray-500 font-normal">Optimize your performance</p>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Predictions
+                                    <p class="text-gray-500 font-normal">Look into the future</p>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="relative group px-3 py-2">
+                    <button class="hover:opacity-50 cursor-default">Solutions</button>
+                    <div
+                      class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+                      <div class="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+                        <div
+                          class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
+                        </div>
+          
+                        <div class="relative z-10">
+                          <div class="grid grid-cols-3 gap-10">
+                            <div>
+                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">TEAMS</p>
+                              <ul class="mt-3 text-[15px]">
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Customer Support
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Human Resources
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Operations
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Marketing
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Leadership
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div>
+                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">INDUSTRIES</p>
+                              <ul class="mt-3 text-[15px]">
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    E-Commerce
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Financial Services
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Healthcare
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Hospitality
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Education
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div>
+                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">USE CASES</p>
+                              <ul class="mt-3 text-[15px]">
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Enterprise
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Startups
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Agencies
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Influencers
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Non-Profits
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="relative group px-3 py-2">
+                    <button class="hover:opacity-50 cursor-default">Developers</button>
+                    <div
+                      class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+                      <div class="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+                        <div
+                          class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12.65rem] duration-500 ease-in-out rounded-sm">
+                        </div>
+          
+                        <div class="relative z-10">
+                          <a href="#"
+                            class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                            Documentation
+                            <p class="text-gray-500 font-normal">Start integrating in no time</p>
+                          </a>
+                          <div class="mt-6 grid grid-cols-2 gap-6">
+                            <div>
+                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">Get started</p>
+                              <ul class="mt-3 text-[15px]">
+                                <li>
+                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Libraries and SDKs
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Plugins
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Code samples
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
+                                    Tutorials
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div>
+                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">Guides</p>
+                              <ul class="mt-3 text-[15px]">
+                                <li>
+                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-gray-600 font-semibold hover:text-indigo-600">
+                                    First Steps with Empress
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-gray-600 font-semibold hover:text-indigo-600">
+                                    Experience Protocol Overview
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-gray-600 font-semibold hover:text-indigo-600">
+                                    Building Experience Apps
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-gray-600 font-semibold hover:text-indigo-600">
+                                    Integrating with Empress
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="relative group px-3 py-2">
+                    <button class="hover:opacity-50 cursor-default">Resources</button>
+                    <div
+                      class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+                      <div class="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+                        <div
+                          class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
+                        </div>
+          
+                        <div class="relative z-10">
+                          <div class="grid grid-cols-2 gap-6">
+                            <div>
+                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">LEARN</p>
+                              <ul class="mt-3 text-[15px]">
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8]
+                                    transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Empress Blog
+                                    <p class="text-gray-500 font-normal">Empress news and stories</p>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Empress Guide
+                                    <p class="text-gray-500 font-normal">Tips & tricks from Empress</p>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Empress Academy
+                                    <p class="text-gray-500 font-normal">Learn all about Empress</p>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div>
+                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">CONNECT</p>
+                              <ul class="mt-3 text-[15px]">
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Find Support
+                                    <p class="text-gray-500 font-normal">Contact our support team</p>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Join the Community
+                                    <p class="text-gray-500 font-normal">Join the #PurpleWorld</p>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
+                                    Become a Partner
+                                    <p class="text-gray-500 font-normal">Explore our partner programs</p>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="relative group px-3 py-2">
+                    <a href="#" class="hover:opacity-50 cursor-default">Pricing
+                    </a>
+                  </li>
+                </ul>
+
+
+
+            
           <div class="lg:hidden flex items-center mt-3 gap-4">
             <Link href="#" style="muted" block size="md">Log in</Link>
             <Link href="#" size="md" block>Try for Free</Link>
           </div>
         </MenuItems>
-      </Astronav>
       <div>
         <div class="hidden lg:flex items-center gap-4">
           <a
             href="#"
-            class="text-sm px-2 py-1 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full"
+            class="text-sm px-2 py-1 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full text-indigo-700"
             >Contact Sales</a
           >
           <Link
