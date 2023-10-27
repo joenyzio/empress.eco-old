@@ -1,0 +1,85 @@
+---
+import Container from "./container.astro";
+import Sectionhead from "./sectionhead.astro";
+import { ArrowIcon } from "./ui/icons";
+
+const featureFaq = [
+  {
+    question: "What exactly does the Experience OS offer?",
+    answer:
+      "Empress's Experience OS allows businesses to design, manage, and continually evolve captivating digital experiences. With tools ranging from a Dynamic Content Creator to Adaptive Experience Templates, we ensure that users have a memorable experience that resonates with your brand."
+  },
+  {
+    question: "How does AI and Automation help in optimizing experiences?",
+    answer:
+      "Our AI and Automation suite leverages advanced machine learning algorithms to provide performance analytics, forecast user patterns, and ensure real-time personalization. This means each user interaction is not only seamless but also continually refined based on user behavior."
+  },
+  {
+    question: "Which tools and platforms can I integrate with Empress?",
+    answer:
+      "Empress boasts integrations with over 200+ tools including popular ones like Slack, Zapier, Intercom, Shopify, Messenger, and Discord. With our easy integration process, you can effortlessly connect and sync various tools to streamline operations."
+  },
+  {
+    question: "How can Empress Academy assist my team and me?",
+    answer:
+      "Empress Academy provides a plethora of learning resources tailored to enhance your understanding of digital experiences. It's a perfect avenue to learn at your own pace, gather insights, and implement them for improved user engagement."
+  },
+  {
+    question: "Is there a trial or free version available for Empress?",
+    answer:
+      "Yes! Empress offers a 'Basic' plan that's free forever, ideal for those just beginning their experience journey. This plan comes packed with a host of features, which you can review in our pricing section."
+  },
+  {
+    question: "Can I upgrade my Empress subscription at any time?",
+    answer:
+      "Absolutely. Empress provides flexibility in scaling your subscription. Whether you're upgrading to accommodate growing business needs or want to explore more features, you can adjust your plan from the subscription management section in your account."
+  },
+  {
+    question: "How does Empress ensure consistent user experience across devices?",
+    answer:
+      "At the heart of all experiences is our Experience Bot. Using this, Empress ensures that the digital experiences you design are consistently delivered across all devices, be it mobiles, tablets, or desktops, thus boosting user satisfaction."
+  },
+  {
+    question: "What kind of support can I expect with Experience-as-a-Service?",
+    answer:
+      "Our Experience-as-a-Service connects you with experts who deeply understand the Empress platform. Whether you have technical questions, need guidance on best practices, or require support for optimizing experiences, our specialists are here to assist you."
+  },
+  {
+    question: "How secure is my data with Empress?",
+    answer:
+      "Empress prioritizes user data security. We employ state-of-the-art encryption and adhere to global security standards to ensure your data remains confidential and protected at all times."
+  },
+  {
+    question: "Are there any resources to help understand user behavior analytics?",
+    answer:
+      "Yes, our Real-Time Behavior Analytics tool provides actionable insights that help in understanding user behaviors, preferences, and interaction patterns. This aids businesses in optimizing experiences in real-time and delivering content that resonates with their audience."
+  },
+];
+---
+
+<Container>
+  <Sectionhead>
+    <Fragment slot="title">FAQ</Fragment>
+    <Fragment slot="desc">Frequenty asked questions</Fragment>
+  </Sectionhead>
+
+  <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+    {
+      featureFaq.map((item) => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span> {item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))
+    }
+  </div>
+</Container>

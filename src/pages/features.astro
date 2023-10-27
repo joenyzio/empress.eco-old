@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import FeatureFaq from "@components/feature-faq.astro";
 import Badge from "@components/ui/badge.astro";
 import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
@@ -19,11 +20,69 @@ import FeatureImgThree from "../assets/features/3.png";
 import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
+import {
+  Slack,
+  Zapier,
+  Intercom,
+  Shopify,
+  Messenger,
+  Discord,
+} from "@components/ui/icons";
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
+
+const { nomargin } = Astro.props;
+
+const integrations = [
+  {
+    name: "Slack",
+    description:
+      "Get notified in your Slack channels when a new order is placed.",
+    Icon: Slack,
+    link: "#",
+  },
+
+  {
+    name: "Zapier",
+    description:
+      "Connect over 200+ tools with our easy to use Zapier integrations.",
+    Icon: Zapier,
+    link: "#",
+  },
+
+  {
+    name: "Intercom",
+    description:
+      "Send order updates and emails to your customers via Intercom.",
+    Icon: Intercom,
+    link: "#",
+  },
+
+  {
+    name: "Shopify",
+    description:
+      "Create orders and customers in Shopify when a new order is placed.",
+    Icon: Shopify,
+    link: "#",
+  },
+
+  {
+    name: "Messenger",
+    description: "Notify your Facebook Messenger when a new order is placed.",
+    Icon: Messenger,
+    link: "#",
+  },
+
+  {
+    name: "Discord",
+    description: "Notify your Discord server when a new order is placed.",
+    Icon: Discord,
+    link: "#",
+  },
+];
 
 const features = [
   {
@@ -57,77 +116,196 @@ const features = [
     "icon": "fluent:box-24-regular"
   }
 ];
+
+const create = [
+  {
+    "title": "Dynamic Content Creator",
+    "description": "Bring your creative concepts to life with our intuitive digital content tools.",
+    "icon": "fluent:document-javascript-24-regular"
+  },
+  {
+    "title": "Integrated Campaign Planner",
+    "description": "Design and initiate campaigns that consistently reflect your brand across every medium.",
+    "icon": "fluent:trophy-24-regular"
+  },
+  {
+    "title": "Interaction Optimizer",
+    "description": "Make every user touchpoint memorable, heightening brand impact.",
+    "icon": "fluent:box-24-regular"
+  },
+  {
+    "title": "Universal Device Delivery",
+    "description": "Deliver consistent experiences across devices, boosting user satisfaction.",
+    "icon": "fluent:document-javascript-24-regular"
+  },
+  {
+    "title": "Adaptive Experience Templates",
+    "description": "Quickly realize your visions without starting from square one.",
+    "icon": "fluent:trophy-24-regular"
+  },
+  {
+    "title": "Collaborative Planning Suite",
+    "description": "Combine team strengths from ideation to execution, enriching content quality.",
+    "icon": "fluent:box-24-regular"
+  }
+];
+
+const automate = [
+  {
+    "title": "Self-Evolving Experience Bots",
+    "description": "AI bots that evolve with you, ensuring tailored user interactions aligned with your vision.",
+    "icon": "fluent:document-javascript-24-regular"
+  },
+  {
+    "title": "AI-Driven Personalization",
+    "description": "Each user chat mirrors your brand essence, thanks to seamless content integration.",
+    "icon": "fluent:trophy-24-regular"
+  },
+  {
+    "title": "Efficient Digital Workflows",
+    "description": "Integrate seamlessly with platforms and tools, ensuring optimal operations.",
+    "icon": "fluent:box-24-regular"
+  },
+  {
+    "title": "Real-Time Behavior Analytics",
+    "description": " Easy integration of Experience Bots boosts digital operational efficiency.",
+    "icon": "fluent:document-javascript-24-regular"
+  },
+  {
+    "title": "Cross-Platform Consistency",
+    "description": "Bypass starting hurdles; deliver consistently engaging content.",
+    "icon": "fluent:trophy-24-regular"
+  },
+  {
+    "title": "Global Engagement Assistant",
+    "description": "Break through language barriers thanks to automated multilingual support.",
+    "icon": "fluent:box-24-regular"
+  }
+];
 ---
 
-<Layout title="About" footerMargin={false}>
-  <div class="overflow-x-clip">
-    <Container>
-      <main class="grid lg:grid-cols-5 place-items-center relative">
-        <div
-          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
-        </div>
-        <div
-          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
-        </div>
-        <div class="max-w-sm md:max-w-max lg:col-span-2">
-          <h1
-            class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-            Features
-          </h1>
-          <p
-            class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-            From pioneering startups to iconic brands, we provide the essential tools to craft next-gen experiences, optimize results, and drive performance.
-          </p>
+<Layout title="Features" footerMargin={false}>
+      <div class="overflow-x-clip">
+        <Container>
           <div
-            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-            <Link
-              href="https://web3templates.com/templates/astroship-pro-astro-saas-website-template"
-              target="_blank"
-              class="flex gap-1 items-center justify-center bg-brand"
-              rel="noopener">
-              Get Started
-            </Link>
-            <Link
-              size="lg"
-              style="outline"
-              rel="noopener"
-              href="https://github.com/surjithctly/astroship"
-              class="flex gap-1 items-center justify-center border-brand text-brand"
-              target="_blank">
-              Free Version
-            </Link>
-          </div>
-        </div>
-        <div class="py-3 lg:col-span-3 lg:-mr-44">
-          <Picture
-            src={heroImage}
-            alt="Astronaut in the air"
-            formats={["avif", "webp"]}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            widths={[240, 540, 720, heroImage.width]}
-            loading="eager"
-            fetchpriority="high"
-          />
-        </div>
-      </main>
-    </Container>
-  </div>
-  
-
-  <Container>
-  
-    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      class:list={[
+        "max-w-4xl mx-auto flex flex-col items-center justify-center",
+        !nomargin && "mt-24",
+      ]}>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        We've got you covered
+        Understand Empress's Core Features
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Empress covers all things experience. If you don't find what you're looking
-        for, contact us and we'll either help you or steer you in the right
-        direction.
+        Empress helps you and your teams work together intelligently and scale effortlessly.
       </p>
     </div>
+    
+    <div
+    class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-center gap-3">
+    <Link
+      href="https://web3templates.com/templates/astroship-pro-astro-saas-website-template"
+      target="_blank"
+      class="flex gap-1 items-center justify-center bg-brand"
+      rel="noopener">
+      Get Started
+    </Link>
+    <Link
+      size="lg"
+      style="outline"
+      rel="noopener"
+      href="https://github.com/surjithctly/astroship"
+      class="flex gap-1 items-center justify-center border-brand text-brand"
+      target="_blank">
+      Free Version
+    </Link>
+  </div>
+    </Container>
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+    <!-- <Logos /> -->
+  </div>  
 
+  <Container>
+
+    <div
+    class:list={[
+      "max-w-4xl mx-auto flex flex-col items-center justify-center",
+      !nomargin && "mt-24",
+    ]}>
+    <Badge color="purple">Experience OS</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      Design Modern Experiences
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      Design, manage, and evolve captivating digital experiences with Empress, reducing inefficiencies and enhancing engagement.
+    </p>
+  </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        create.map((item) => (
+          <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div
+    class:list={[
+      "max-w-4xl mx-auto flex flex-col items-center justify-center",
+      !nomargin && "mt-24",
+    ]}>
+    <Badge color="purple">Experience Transformed</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      Optimize Performance
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      Leverage the full breadth of our experience platform, driving innovation and improvement.
+    </p>
+  </div>
+
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 mt-16 gap-10">
+      <Card class="lg:col-span-3" color="purple">
+        <Fragment slot="image">
+          <Picture
+            src={FeatureImgOne}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="h-full w-full object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">Simplify Insights</span>
+        <span slot="title">Performance Analytics</span>
+        <span slot="desc">
+          Dive deep into results to understand and improve every interaction, ensuring peak effectiveness and engagement.
+        </span>
+      </Card>
+      <Card class="lg:col-span-2" color="indigo">
+        <Fragment slot="image">
+          <Picture
+            src={FeatureImgTwo}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="h-full w-full object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">Capture More Data</span>
+        <span slot="title">Experience Driven Data</span>
+        <span slot="desc">
+          Access vital metrics centrally, simplifying strategic decisions.</span
+        >
+      </Card>
+    </div>
+    
     <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
       <Card color="indigo" size="sm">
         <Fragment slot="image">
@@ -139,10 +317,10 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Optimize with AI</span>
-        <span slot="title">Harness AI Precision</span>
+        <span slot="badge">Visualize Everything</span>
+        <span slot="title">Unified Dashboard</span>
         <span slot="desc">
-          Empress's AI ensures dynamic and personalized interactions.</span
+          At-a-glance insights into your campaigns and user data.</span
         >
       </Card>
     
@@ -156,10 +334,10 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Universal Tracking</span>
-        <span slot="title">Optimize Performance </span>
+        <span slot="badge">See the Future</span>
+        <span slot="title">Predictive Analytics</span>
         <span slot="desc">
-          Track interactions across platforms with Empress for to maximize operations.</span
+          Use AI to forecast and adjust to evolving user patterns.</span
         >
       </Card>
     
@@ -175,198 +353,28 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Webhooks</span>
-        <span slot="title">Connect 100+ Integrations</span>
+        <span slot="badge">Refine your Strategy</span>
+        <span slot="title">Engagement Analysis</span>
         <span slot="desc">
-          Seamlessly integrate with hundreds of tools using webhooks and Zapier.</span
+          Deep-dive into user experience interactions to refine strategies.</span
         >
       </Card>
     </div>
 
-      <div class="grid md:grid-cols-2 py-10">
-        <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-          <Picture
-            src={FeatureImg1}
-            alt="Feature Image"
-            formats={["avif", "webp"]}
-            loading="lazy"
-          />
-        </div>
-    
-      <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Embrace a New Age of User Engagement with AI and Automation
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Get Started</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-
-    <div class="grid md:grid-cols-2 py-10">
-      <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-        <Picture
-          src={FeatureImg1}
-          alt="Feature Image"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-      </div>
-  
-    <div class="grid place-items-center">
-      <div class="max-w-lg">
-        <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-        <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-          Embrace a New Age of User Engagement with AI and Automation
-        </h3>
-        <p class="mt-4 text-slate-600 [text-wrap:balance]">
-          Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-        </p>
-        <ul class="grid mt-6 text-left gap-y-4">
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-          </li>
-        </ul>
-        <div class="flex items-center gap-4 mt-6">
-          <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-            <span>Get Started</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 py-10">
-    <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-      <Picture
-        src={FeatureImg1}
-        alt="Feature Image"
-        formats={["avif", "webp"]}
-        loading="lazy"
-      />
-    </div>
-
-  <div class="grid place-items-center">
-    <div class="max-w-lg">
-      <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        Embrace a New Age of User Engagement with AI and Automation
-      </h3>
-      <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-      </p>
-      <ul class="grid mt-6 text-left gap-y-4">
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-        </li>
-      </ul>
-      <div class="flex items-center gap-4 mt-6">
-        <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-          <span>Get Started</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-            <path
-              fill-rule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </Link>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      <Badge color="purple">AI & Automation</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        We've got you covered
+        Automate Your Workflow
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Empress covers all things experience. If you don't find what you're looking
-        for, contact us and we'll either help you or steer you in the right
-        direction.
+        Elevate efficiency, streamline processes, and achieve more in less time by embracing the automation capabilities of Empress.
       </p>
     </div>
 
     <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
       {
-        features.map((item) => (
+        automate.map((item) => (
           <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
             <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
               <Icon class="text-indigo-500" name={item.icon} size="24" />
@@ -382,6 +390,106 @@ const features = [
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">Integrations</Fragment>
+        <Fragment slot="desc">
+          Connect over 200+ tools with our easy to use integrations.
+        </Fragment>
+      </Sectionhead>
+  
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+        {
+          integrations.map((item) => (
+            <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+              <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
+                <item.Icon class="w-8 h-8" />
+              </div>
+  
+              <h3 class="text-xl lg:text-2xl font-medium mt-4">{item.name}</h3>
+              <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                {item.description}
+              </p>
+  
+              <div class="mt-3">
+                <a
+                  href="#"
+                  class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  View Integration
+                  <span class="absolute inset-0" />
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <Badge color="purple">Amplify Your Impact</Badge>
+        <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+          Success and Support
+        </h2>
+        <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+          Harness the power of Experience-as-a-Service to elevate your brand in the digital domain. Connect with specialists who understand your platform inside and out.
+        </p>
+      </div>
+  
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+        <Card color="indigo" size="sm">
+          <Fragment slot="image">
+            <Picture
+              src={FeatureImgThree}
+              alt="Feature image"
+              formats={["avif", "webp"]}
+              class="h-full w-full object-contain"
+              loading="lazy"
+            />
+          </Fragment>
+          <span slot="badge">Experience-as-a-Service</span>
+          <span slot="title">Customer Success</span>
+          <span slot="desc">
+            Connect with experts to support all your experience needs. </span
+          >
+        </Card>
+      
+        <Card color="purple" size="sm">
+          <Fragment slot="image">
+            <Picture
+              src={FeatureImgTwo}
+              alt="Feature image"
+              formats={["avif", "webp"]}
+              class="h-full w-full object-contain"
+              loading="lazy"
+            />
+          </Fragment>
+          <span slot="badge">Learn</span>
+          <span slot="title">Empress Academy</span>
+          <span slot="desc">
+            Learn digital experience nuances at your pace through diverse learning resources.</span
+          >
+        </Card>
+      
+        <Card size="sm">
+          <Fragment slot="image">
+            <!-- // svg image. cannot use <picture/> as of now -->
+            <Image
+              src={IntegrationImg}
+              alt="Feature image"
+              width="909"
+              height="823"
+              class="h-full w-full object-contain"
+              loading="lazy"
+            />
+          </Fragment>
+          <span slot="badge">From Insights to Action</span>
+          <span slot="title">Support Center</span>
+          <span slot="desc">
+            A collection of resources available to support your goals.</span
+          >
+        </Card>
+      </div>
+    </Container>
+    <FeatureFaq />
   </Container>
   <Cta />
 </Layout>
