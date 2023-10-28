@@ -27,36 +27,37 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const features = [
   {
-    "title": "Precision-Driven Creativity",
-    "description": "Harness our toolkit to design immersive content and experiences from scratch, streamlining your creative process.",
+    "title": "Education Solutions",
+    "description": "Optimize operational workflows in education, enhancing e-learning and student engagement.",
     "icon": "fluent:document-javascript-24-regular"
   },
   {
-    "title": "Seamless Content Integration",
-    "description": "Already on another platform? Easily integrate it with ours, enabling tracking and optimization without any hassles.",
+    "title": "Financial Services Solutions",
+    "description": "Drive operational excellence with secure, data-driven financial management and insights.",
     "icon": "fluent:trophy-24-regular"
   },
   {
-    "title": "Unified User Dashboard",
-    "description": "Get a consolidated view of your engagements, analytics, and content. Say goodbye to the chaos of scattered information.",
+    "title": "Government Solutions",
+    "description": "Elevate governmental processes, ensuring seamless, efficient citizen engagements.",
     "icon": "fluent:box-24-regular"
   },
   {
-    "title": "Precision-Driven Creativity",
-    "description": "Harness our toolkit to design immersive content and experiences from scratch, streamlining your creative process.",
+    "title": "Healthcare Solutions",
+    "description": "Boost operational efficiency in healthcare, from patient care to back-end management.",
     "icon": "fluent:document-javascript-24-regular"
   },
   {
-    "title": "Seamless Content Integration",
-    "description": "Already on another platform? Easily integrate it with ours, enabling tracking and optimization without any hassles.",
+    "title": "Manufacturing Solutions",
+    "description": "Augment manufacturing operations with tech-driven solutions for peak efficiency.",
     "icon": "fluent:trophy-24-regular"
   },
   {
-    "title": "Unified User Dashboard",
-    "description": "Get a consolidated view of your engagements, analytics, and content. Say goodbye to the chaos of scattered information.",
+    "title": "Dedicated Support",
+    "description": "Empower operations with round-the-clock expert support, ensuring smooth workflows.",
     "icon": "fluent:box-24-regular"
   }
 ];
+
 ---
 
 <Layout title="About" footerMargin={false}>
@@ -72,11 +73,11 @@ const features = [
         <div class="max-w-sm md:max-w-max lg:col-span-2">
           <h1
             class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-            Operations
+            Streamline Your Operations
           </h1>
           <p
             class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-            From pioneering startups to iconic brands, we provide the essential tools to craft next-gen experiences, optimize results, and drive performance.
+            Drive excellence in your industry by enhancing engagement, minimizing inefficiencies, and streamlining operational efficiencies.
           </p>
           <div
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
@@ -117,14 +118,12 @@ const features = [
   <Container>
   
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      <Badge color="purple">Operational Excellence</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        We've got you covered
+        The Ultimate Operational Solution
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Empress covers all things experience. If you don't find what you're looking
-        for, contact us and we'll either help you or steer you in the right
-        direction.
+        Seamlessly unify and enhance your operations with Empress's modern business experience engine.
       </p>
     </div>
 
@@ -139,10 +138,10 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Optimize with AI</span>
-        <span slot="title">Harness AI Precision</span>
+        <span slot="badge">Unified Approach</span>
+        <span slot="title">All-in-One Platform Experience</span>
         <span slot="desc">
-          Empress's AI ensures dynamic and personalized interactions.</span
+          Empress provides a comprehensive platform tailored for every operational touchpoint, from ideation to execution.</span
         >
       </Card>
     
@@ -156,10 +155,10 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Universal Tracking</span>
-        <span slot="title">Optimize Performance </span>
+        <span slot="badge">Data-Driven</span>
+        <span slot="title">Real-time Monitoring & Analytics</span>
         <span slot="desc">
-          Track interactions across platforms with Empress for to maximize operations.</span
+          Use centralized metrics and analytics for informed, data-driven decision-making.</span
         >
       </Card>
     
@@ -175,10 +174,10 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Webhooks</span>
-        <span slot="title">Connect 100+ Integrations</span>
+        <span slot="badge">Seamless Integration</span>
+        <span slot="title">Over 200+ Tools at Your Fingertips</span>
         <span slot="desc">
-          Seamlessly integrate with hundreds of tools using webhooks and Zapier.</span
+          Effortlessly integrate with tools like Slack, Zapier, Intercom, and more, ensuring cohesive operations.</span
         >
       </Card>
     </div>
@@ -193,49 +192,43 @@ const features = [
           />
         </div>
     
-      <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Embrace a New Age of User Engagement with AI and Automation
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Get Started</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
+        <div class="grid place-items-center">
+          <div class="max-w-lg">
+              <Badge color="purple" class="-ml-px">Operational AI</Badge>
+              <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+                  AI-Optimized Operational Insights
+              </h3>
+              <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                  Elevate operations with AI-driven chat intelligence, proactive decision-making, and heightened user experiences.
+              </p>
+              <ul class="grid mt-6 text-left gap-y-4">
+                  <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+      
+                      <span class="text-sm">Enhanced response times and precision</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+      
+                      <span class="text-sm">Strategies attuned to forecast operational challenges</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+      
+                      <span class="text-sm">Operational automations tailored for efficiency</span>
+                  </li>
+              </ul>
+              <div class="flex items-center gap-4 mt-6">
+                  <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+                      <span>Optimize Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
+                      </svg>
+                  </Link>
+              </div>
           </div>
-        </div>
       </div>
+      
     </div>
 
     
@@ -250,49 +243,43 @@ const features = [
         />
       </div>
   
-    <div class="grid place-items-center">
-      <div class="max-w-lg">
-        <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-        <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-          Embrace a New Age of User Engagement with AI and Automation
-        </h3>
-        <p class="mt-4 text-slate-600 [text-wrap:balance]">
-          Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-        </p>
-        <ul class="grid mt-6 text-left gap-y-4">
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-          </li>
-        </ul>
-        <div class="flex items-center gap-4 mt-6">
-          <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-            <span>Get Started</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+            <Badge color="purple" class="-ml-px">Unified Operations</Badge>
+            <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+                Seamless Cross-Device Integration
+            </h3>
+            <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                Optimize operations by ensuring consistent and high-quality experiences across every device and platform.
+            </p>
+            <ul class="grid mt-6 text-left gap-y-4">
+                <li class="flex items-center gap-3 text-neutral-800">
+                    <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+    
+                    <span class="text-sm">Effortless transitions between devices for users</span>
+                </li>
+                <li class="flex items-center gap-3 text-neutral-800">
+                    <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+    
+                    <span class="text-sm">Maintain operational excellence, regardless of the device</span>
+                </li>
+                <li class="flex items-center gap-3 text-neutral-800">
+                    <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+    
+                    <span class="text-sm">Assured uniformity and quality in every interaction</span>
+                </li>
+            </ul>
+            <div class="flex items-center gap-4 mt-6">
+                <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+                    <span>Optimize Now</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                        <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
+                    </svg>
+                </Link>
+            </div>
         </div>
-      </div>
     </div>
+    
   </div>
 
   <div class="grid md:grid-cols-2 py-10">
@@ -305,62 +292,54 @@ const features = [
       />
     </div>
 
-  <div class="grid place-items-center">
-    <div class="max-w-lg">
-      <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        Embrace a New Age of User Engagement with AI and Automation
-      </h3>
-      <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-      </p>
-      <ul class="grid mt-6 text-left gap-y-4">
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-        </li>
-      </ul>
-      <div class="flex items-center gap-4 mt-6">
-        <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-          <span>Get Started</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-            <path
-              fill-rule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </Link>
+    <div class="grid place-items-center">
+      <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">Streamlined Migration</Badge>
+          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+              Optimized Platform Transition
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+              Elevate your operational agility with smooth, secure, and efficient platform transitions.
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+              <li class="flex items-center gap-3 text-neutral-800">
+                  <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+  
+                  <span class="text-sm">Guaranteed data protection throughout migration</span>
+              </li>
+              <li class="flex items-center gap-3 text-neutral-800">
+                  <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+  
+                  <span class="text-sm">Easy integration of data from legacy systems</span>
+              </li>
+              <li class="flex items-center gap-3 text-neutral-800">
+                  <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+  
+                  <span class="text-sm">Maintain business continuity with least downtime</span>
+              </li>
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+              <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+                  <span>Begin Migration</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
+                  </svg>
+              </Link>
+          </div>
       </div>
-    </div>
   </div>
+  
 </div>
 
 
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      <Badge color="purple">More Features</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        We've got you covered
+        Industry Solutions
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Empress covers all things experience. If you don't find what you're looking
-        for, contact us and we'll either help you or steer you in the right
-        direction.
+        Tailored operational solutions for various sectors, harnessing the power of Empress.
       </p>
     </div>
 

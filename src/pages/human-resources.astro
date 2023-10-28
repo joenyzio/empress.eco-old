@@ -28,35 +28,37 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 const features = [
   {
     "title": "Learning and Development",
-    "description": "Empress Academy offers continuous learning resources.",
+    "description": "Champion talent development, offering tailored resources and courses, ensuring employees stay ahead in their skillsets.",
     "icon": "fluent:document-javascript-24-regular"
   },
   {
     "title": "Integration Capabilities",
-    "description": "Integrate with tools like Slack, Zapier, Intercom, etc., for streamlined operations.",
+    "description": "Boost HR operations by integrating effortlessly with essential tools like Slack and Intercom, streamlining communication and workflows.",
     "icon": "fluent:trophy-24-regular"
   },
   {
     "title": "AI-Powered Insights",
-    "description": "Refine HR processes in real-time with anticipatory insights.",
+    "description": "Harness the power of AI to predict HR trends, refine processes, and make informed decisions, transforming the HR landscape in real-time.",
     "icon": "fluent:box-24-regular"
   },
   {
     "title": "Experience Bots",
-    "description": "Engage employees across platforms, answering queries and offering support.",
+    "description": "Enhance employee interactions with bots designed to answer queries, provide support, and optimize the HR experience.",
     "icon": "fluent:document-javascript-24-regular"
   },
   {
     "title": "Global Engagement Assistant",
-    "description": "Offer multilingual support for diverse employee bases, breaking language barriers.",
+    "description": "Cultivate a global workforce by offering multilingual support, ensuring smooth communication regardless of language.",
     "icon": "fluent:trophy-24-regular"
   },
   {
     "title": "Cross-Platform Consistency",
-    "description": "Personalized HR experience across devices, from smartphones to desktops.",
+    "description": "Deliver a uniform HR experience across all devices, ensuring personalized, consistent interactions via mobile or desktop.",
     "icon": "fluent:box-24-regular"
   }
 ];
+
+
 ---
 
 <Layout title="About" footerMargin={false}>
@@ -191,48 +193,36 @@ const features = [
           />
         </div>
     
-      <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">Behavior Analysis</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Real-Time Behavior Analytics
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Understand and cater to employee interactions, needs, and patterns.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Deep dive into employee behaviors</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Forecast future HR trends</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Unified insights dashboard</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Get Started</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
+        <div class="grid place-items-center">
+          <div class="max-w-lg">
+              <Badge color="purple" class="-ml-px">Behavior Analysis</Badge>
+              <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">Advanced Real-Time Behavior Analytics</h3>
+              <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                  Dive deep into nuanced employee interactions and derive actionable insights to enhance the overall working environment.
+              </p>
+              <ul class="grid mt-6 text-left gap-y-4">
+                  <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                      <span class="text-sm">Detailed behavioral trends and patterns</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                      <span class="text-sm">Anticipate future shifts in employee dynamics</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                      <span class="text-sm">Integrated insights for holistic understanding</span>
+                  </li>
+              </ul>
+              <div class="flex items-center gap-4 mt-6">
+                  <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+                      <span>Explore More</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
+                      </svg>
+                  </Link>
+              </div>
           </div>
-        </div>
       </div>
     </div>
 
@@ -246,30 +236,75 @@ const features = [
         />
       </div>
   
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+            <Badge color="purple" class="-ml-px">Team Collaboration</Badge>
+            <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">Comprehensive Collaborative Planning</h3>
+            <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                Empower HR teams with an end-to-end suite for enhanced strategy planning, seamless collaboration, and streamlined execution.
+            </p>
+            <ul class="grid mt-6 text-left gap-y-4">
+                <li class="flex items-center gap-3 text-neutral-800">
+                    <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                    <span class="text-sm">Enhance team synergy for improved results</span>
+                </li>
+                <li class="flex items-center gap-3 text-neutral-800">
+                    <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                    <span class="text-sm">Raise content quality and HR effectiveness</span>
+                </li>
+                <li class="flex items-center gap-3 text-neutral-800">
+                    <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                    <span class="text-sm">Maintain a coherent and aligned HR strategy</span>
+                </li>
+            </ul>
+            <div class="flex items-center gap-4 mt-6">
+                <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+                    <span>Explore More</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                        <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
+                    </svg>
+                </Link>
+            </div>
+        </div>
+    </div>
+  </div> 
+
+    
+
+  <div class="grid md:grid-cols-2 py-10">
+    <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
+      <Picture
+        src={FeatureImg1}
+        alt="Feature Image"
+        formats={["avif", "webp"]}
+        loading="lazy"
+      />
+    </div>
+
     <div class="grid place-items-center">
       <div class="max-w-lg">
-        <Badge color="purple" class="-ml-px">Team Collaboration</Badge>
+        <Badge color="purple" class="-ml-px">HR Efficiency</Badge>
         <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-          Collaborative Planning Suite
+          Revolutionize HR Operations
         </h3>
         <p class="mt-4 text-slate-600 [text-wrap:balance]">
-          Enhance HR strategy from ideation to execution with the empresss experience suite.
+          Elevate your HR performance by leveraging data-driven insights to create a holistic employee experience.
         </p>
         <ul class="grid mt-6 text-left gap-y-4">
           <li class="flex items-center gap-3 text-neutral-800">
             <Icon name="ph:check-circle-fill" class="w-5 h-5" />
   
-            <span class="text-sm">Foster team collaboration</span>
+            <span class="text-sm">Streamline HR processes & workflows</span>
           </li>
           <li class="flex items-center gap-3 text-neutral-800">
             <Icon name="ph:check-circle-fill" class="w-5 h-5" />
   
-            <span class="text-sm">Improve content quality</span>
+            <span class="text-sm">Optimize talent acquisition & management</span>
           </li>
           <li class="flex items-center gap-3 text-neutral-800">
             <Icon name="ph:check-circle-fill" class="w-5 h-5" />
   
-            <span class="text-sm">Ensure alignment in HR strategy</span>
+            <span class="text-sm">Empower HR with actionable data analytics</span>
           </li>
         </ul>
         <div class="flex items-center gap-4 mt-6">
@@ -289,63 +324,6 @@ const features = [
         </div>
       </div>
     </div>
-  </div> 
-
-    
-
-  <div class="grid md:grid-cols-2 py-10">
-    <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-      <Picture
-        src={FeatureImg1}
-        alt="Feature Image"
-        formats={["avif", "webp"]}
-        loading="lazy"
-      />
-    </div>
-
-  <div class="grid place-items-center">
-    <div class="max-w-lg">
-      <Badge color="purple" class="-ml-px">Expert Support</Badge>
-      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        Provide 24/7 Expert Assistance
-      </h3>
-      <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Connect your team with expert knowledge anytime with on-demand virtual assistants.
-      </p>
-      <ul class="grid mt-6 text-left gap-y-4">
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-        </li>
-      </ul>
-      <div class="flex items-center gap-4 mt-6">
-        <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-          <span>Get Started</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-            <path
-              fill-rule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </Link>
-      </div>
-    </div>
-  </div>
 </div>
 
 

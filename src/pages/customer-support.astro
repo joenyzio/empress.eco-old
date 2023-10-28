@@ -27,90 +27,102 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const features = [
   {
-    "title": "Slack Integration",
-    "description": "Get instant notifications for new queries or escalated challenges.",
+    "title": "Slack Synergy",
+    "description": "Achieve instantaneous response rates by integrating support queries directly into Slack, drastically improving your issue resolution times.",
     "icon": "fluent:document-javascript-24-regular"
   },
   {
-    "title": "Email Updates",
-    "description": "Send real-time updates and emails, streamlining the user communication process.",
+    "title": "Real-time Email Notifications",
+    "description": "Bridge the communication gap by updating users instantly. Enhance trust by providing transparent progress updates on support.",
     "icon": "fluent:trophy-24-regular"
   },
   {
-    "title": "Messenger Support",
-    "description": "Connect on platforms like Facebook Messenger for prompt responses.",
+    "title": "Instant Messenger Support",
+    "description": "Harness the power of platforms like Messenger to assist customers in real-time, ensuring they always have a superior support experience.",
     "icon": "fluent:box-24-regular"
   },
   {
-    "title": "Discord Connectivity",
-    "description": "Real-time support and community management on community servers.",
+    "title": "Dynamic Discord Support",
+    "description": "Elevate your community interactions on Discord with immediate support interventions, fostering a sense of belonging and trust.",
     "icon": "fluent:document-javascript-24-regular"
   },
   {
-    "title": "Global Engagement",
-    "description": "Break language barriers with AI-powered multilingual support.",
+    "title": "Universal Engagement",
+    "description": "Eliminate language barriers using AI-driven translations, ensuring every user feels valued, regardless of linguistic differences.",
     "icon": "fluent:trophy-24-regular"
   },
   {
-    "title": "Efficient Workflows",
-    "description": "Seamless integrations across platforms ensure an efficient customer support process.",
+    "title": "Seamless Support Workflows",
+    "description": "Empower your customer support team with streamlined integrations that enable efficient, quick, and hassle-free operations.",
     "icon": "fluent:box-24-regular"
   }
 ];
+
+
 ---
 
 <Layout title="About" footerMargin={false}>
   <div class="overflow-x-clip">
     <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
-        <div
-          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
-        </div>
-        <div
-          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
-        </div>
-        <div class="max-w-sm md:max-w-max lg:col-span-2">
-          <h1
-            class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-            Elevate Customer Support
-          </h1>
-          <p
-            class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-            Revolutionize your support strategies with Empress, the AI-driven experience platform.
-          </p>
+          <!-- Radial background effect 1 -->
           <div
-            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-            <Link
-              href="https://web3templates.com/templates/astroship-pro-astro-saas-website-template"
-              target="_blank"
-              class="flex gap-1 items-center justify-center bg-brand"
-              rel="noopener">
-              Get Started
-            </Link>
-            <Link
-              size="lg"
-              style="outline"
-              rel="noopener"
-              href="https://github.com/surjithctly/astroship"
-              class="flex gap-1 items-center justify-center border-brand text-brand"
-              target="_blank">
-              Free Version
-            </Link>
+              class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
           </div>
-        </div>
-        <div class="py-3 lg:col-span-3 lg:-mr-44">
-          <Picture
-            src={heroImage}
-            alt="Astronaut in the air"
-            formats={["avif", "webp"]}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            widths={[240, 540, 720, heroImage.width]}
-            loading="eager"
-            fetchpriority="high"
-          />
-        </div>
+          
+          <!-- Radial background effect 2 -->
+          <div
+              class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
+          </div>
+          
+          <!-- Content: Elevate Customer Support -->
+          <div class="max-w-sm md:max-w-max lg:col-span-2">
+              <h1
+                  class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
+                  Transforming Customer Support
+              </h1>
+              <p
+                  class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
+                  Discover Empress - a next-gen AI-powered platform designed to redefine and uplift your customer support experience.
+              </p>
+              
+              <!-- Action buttons: Get Started & Free Version -->
+              <div
+                  class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+                  <Link
+                      href="https://web3templates.com/templates/astroship-pro-astro-saas-website-template"
+                      target="_blank"
+                      class="flex gap-1 items-center justify-center bg-brand"
+                      rel="noopener">
+                      Join Now
+                  </Link>
+                  <Link
+                      size="lg"
+                      style="outline"
+                      rel="noopener"
+                      href="https://github.com/surjithctly/astroship"
+                      class="flex gap-1 items-center justify-center border-brand text-brand"
+                      target="_blank">
+                      Explore Free Version
+                  </Link>
+              </div>
+          </div>
+          
+          <!-- Product Image: Astronaut Illustration -->
+          <div class="py-3 lg:col-span-3 lg:-mr-44">
+              <Picture
+                  src={heroImage}
+                  alt="Innovative Astronaut Imagery"
+                  formats={["avif", "webp"]}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  widths={[240, 540, 720, heroImage.width]}
+                  loading="eager"
+                  fetchpriority="high"
+              />
+          </div>
       </main>
-    </Container>
+  </Container>
+  
   </div>
   
 
@@ -122,7 +134,7 @@ const features = [
         Optimal Business Interactions
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Harness AI technologies and user-centric designs to provide dynamic insights and proactive solutions.
+        Harness AI technologies and user-centric designs to provide dynamic insights and proactive solutions
       </p>
     </div>
 
@@ -140,7 +152,7 @@ const features = [
         <span slot="badge">Optimize with AI</span>
         <span slot="title">Smart AI Chat Solutions</span>
         <span slot="desc">
-          Engage users in real-time, streamline queries, and seamlessly transition complex issues to human experts.</span
+          Engage users in real-time, streamline queries, and seamlessly transition complex issues to human experts</span
         >
       </Card>
     
@@ -157,7 +169,7 @@ const features = [
         <span slot="badge">Real-Time Insights</span>
         <span slot="title">Monitoring & Analytics</span>
         <span slot="desc">
-          Ensure rapid adjustments to strategies and content, based on real-time user pathways.</span
+          Ensure rapid adjustments to strategies and content, based on real-time user pathways</span
         >
       </Card>
     
@@ -191,49 +203,50 @@ const features = [
           />
         </div>
     
-      <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">Evolving Bots</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Self-Evolving Experience Bots
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            AI bots that adapt to your brand voices, ensuring more personalized user interactions.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Aligns with brand voices.</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Anticipates user needs.</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Delivers tailored experiences.</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Get Started</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
+        <div class="grid place-items-center">
+          <div class="max-w-lg">
+              <Badge color="purple" class="-ml-px">Adaptive AI Bots</Badge>
+              <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+                  AI Bots That Continuously Learn & Adapt
+              </h3>
+              <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                  Experience the next level of AI-powered interactions. Our bots not only understand your brand voice but also evolve with every interaction to serve your users better.
+              </p>
+              <ul class="grid mt-6 text-left gap-y-4">
+                  <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+          
+                      <span class="text-sm">Seamlessly integrates with your brand's unique voice.</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+          
+                      <span class="text-sm">Predicts and caters to emerging user requirements.</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+          
+                      <span class="text-sm">Enhances user interactions with custom-tailored experiences.</span>
+                  </li>
+              </ul>
+              <div class="flex items-center gap-4 mt-6">
+                  <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+                      <span>Unlock Adaptive Interactions</span>
+                      <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                          <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                      </svg>
+                  </Link>
+              </div>
           </div>
-        </div>
       </div>
+      
     </div>
 
     
@@ -248,49 +261,50 @@ const features = [
         />
       </div>
   
-    <div class="grid place-items-center">
-      <div class="max-w-lg">
-        <Badge color="purple" class="-ml-px">Seamless Design</Badge>
-        <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-          Unified Experience Design
-        </h3>
-        <p class="mt-4 text-slate-600 [text-wrap:balance]">
-          Craft user journeys that reflect brand values and address specific needs.
-        </p>
-        <ul class="grid mt-6 text-left gap-y-4">
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Enhance user support pathways</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Ensure brand alignment</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Optimize each interaction point</span>
-          </li>
-        </ul>
-        <div class="flex items-center gap-4 mt-6">
-          <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-            <span>Get Started</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">Customer-Centric Design</Badge>
+          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+            Personalized Service Experience
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+            Design customer service experiences that not only reflect the essence of your brand but also prioritize individual customer needs and preferences.
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+            <li class="flex items-center gap-3 text-neutral-800">
+              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+    
+              <span class="text-sm">Tailored support pathways for enhanced user satisfaction</span>
+            </li>
+            <li class="flex items-center gap-3 text-neutral-800">
+              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+    
+              <span class="text-sm">Consistent brand voice across all customer touchpoints</span>
+            </li>
+            <li class="flex items-center gap-3 text-neutral-800">
+              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+    
+              <span class="text-sm">Data-driven strategies to optimize every interaction</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+              <span>Experience the Difference</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+  
   </div>
 
   <div class="grid md:grid-cols-2 py-10">
@@ -303,49 +317,50 @@ const features = [
       />
     </div>
 
-  <div class="grid place-items-center">
-    <div class="max-w-lg">
-      <Badge color="purple" class="-ml-px">Expertise Round-the-Clock</Badge>
-      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        Provide 24/7 Expert Assistance
-      </h3>
-      <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Extend your team to tackle customer queries, from technical to strategic.
-      </p>
-      <ul class="grid mt-6 text-left gap-y-4">
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Immediate tech support</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Strategy consultations</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Reliable, constant assistance</span>
-        </li>
-      </ul>
-      <div class="flex items-center gap-4 mt-6">
-        <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-          <span>Get Started</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-            <path
-              fill-rule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </Link>
+    <div class="grid place-items-center">
+      <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">Uninterrupted Expertise</Badge>
+          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+              Always-On Expert Assistance
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+              Provide support anytime, anywhere. From complex tech hiccups to advanced strategic insights, our team is committed to ensuring your success.
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+              <li class="flex items-center gap-3 text-neutral-800">
+                  <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+  
+                  <span class="text-sm">Prompt tech support to keep operations smooth</span>
+              </li>
+              <li class="flex items-center gap-3 text-neutral-800">
+                  <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+  
+                  <span class="text-sm">On-demand chat to improve customer support</span>
+              </li>
+              <li class="flex items-center gap-3 text-neutral-800">
+                  <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+  
+                  <span class="text-sm">Dependable assistance, ensuring peace of mind 24/7</span>
+              </li>
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+              <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+                  <span>Experience Uninterrupted Support</span>
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path
+                          fill-rule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+              </Link>
+          </div>
       </div>
-    </div>
   </div>
+  
 </div>
 
 
