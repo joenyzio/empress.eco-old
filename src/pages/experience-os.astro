@@ -1,17 +1,19 @@
 ---
+
 import { getCollection } from "astro:content";
 import Badge from "@components/ui/badge.astro";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
-import heroImage from "../assets/hero-screenshot.png";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Link from "@components/ui/link.astro";
-import EmployeeImg from "../assets/employee.jpg";
-import Logos from "@components/logos.astro";
-import { Icon } from "astro-icon";
 import Cta from "@components/cta.astro";
 import Card from "@components/card.astro";
+
+import { Icon } from "astro-icon";
+import ArrowIcon from "../components/ui/icons/arrow.astro"
+
+import Logos from "@components/logos.astro";
+import heroImage from "../assets/hero-screenshot.png";
 import IntegrationImg from "../assets/integrations.svg?url";
 import FeatureImgOne from "../assets/features/2.png";
 import FeatureImgTwo from "../assets/features/2.png";
@@ -19,44 +21,187 @@ import FeatureImgThree from "../assets/features/3.png";
 import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
+import EmployeeImg from "../assets/employee.jpg";
+
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const features = [
-  {
-    "title": "Craft Incredible Experiences",
-    "description": "Elevate your creativity with tools that inspire. Craft content and experiences that resonate, simplifying your entire creative journey.",
-    "icon": "fluent:document-javascript-24-regular"
-  },
-  {
-    "title": "Integrate with Your Tools",
-    "description": "Connect with our platform regardless of your existing setup, ensuring continuous enhancement and tracking capabilities.",
-    "icon": "fluent:trophy-24-regular"
-  },
-  {
-    "title": "Consolidate Your Data View",
-    "description": "Explore a unified dashboard that presents engagements, insights, and content, bringing clarity to your strategies.",
-    "icon": "fluent:box-24-regular"
-  },
-  {
-    "title": "Personalize User Interactions",
-    "description": "Anticipate, adapt, and amplify using the brilliance of AI, crafting personalized touchpoints every time.",
-    "icon": "fluent:document-javascript-24-regular"
-  },
-  {
-    "title": "Unlock Actionable Insights",
-    "description": "Data at your fingertips. Dive deep into user behaviors, foresee trends, and pivot your strategies for maximum impact.",
-    "icon": "fluent:trophy-24-regular"
-  },
-  {
-    "title": "Engage Users Everywhere",
-    "description": "Design device-agnostic experiences ensuring consistent and memorable interactions every step of the way.",
-    "icon": "fluent:box-24-regular"
+
+const data = [
+{
+    "mainHeading": "Experience OS",
+    "subtext": "Craft, optimize, and analyze touchpoints. Transform every interaction into an opportunity with Empress.",
+    "headingButtons": [
+          {
+            "text": "Get Started",
+            "link": "#"
+          },
+          {
+            "text": "Free Version",
+            "link": "#"
+          }
+    ],
+    "sectionHeading": "User Experiences",
+    "offering": {
+      "title": "Experience-Driven Growth",
+      "subtext": "Supercharge your trajectory by turning experiences into your business’s competitive edge. Clear outcomes, less complexity, more ROI."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Goals",
+        "title": "All-in-One Platform",
+        "description": "Plan campaigns, create experiences, and seamlessly integrate across teams."
+      },
+      {
+        "heading": "Reach",
+        "title": "Connect On Any Device",
+        "description": "Deliver to users on any device with experiences tailored for impact."
+      },
+      {
+        "heading": "Performance",
+        "title": "Drive Measurable Results",
+        "description": "Measure performance, optimize results, and perfect every user interaction."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Solutions",
+        "title": "End-to-End Solutions",
+        "description": "The All-In-One Experience Platform for Business Growth",
+        "bulletPoints": [
+          "Collaborative Content Planning",
+          "Versatile Experience Templates",
+          "Instant Experience Bot Integration"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "#"
+          }
+        ],
+      },
+      {
+        "heading": "Analytics",
+        "title": "Unified Experience Analytics",
+        "description": "Empower Your Experience Journey from Start to Finish",
+        "bulletPoints": [
+          "Seamless Data Consolidation",
+          "Platform-Specific Plugins",
+          "Integration-Powered Flexibility"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "#"
+          }
+        ],
+      },
+      {
+        "heading": "AI Insights",
+        "title": "AI-Powered Insights",
+        "description": "Embrace a New Age of User Engagement with AI and Automation",
+        "bulletPoints": [
+          "Smart Chatbot Conversations",
+          "Future-Ready Predictive Analytics",
+          "AI-Tailored User Journeys"
+        ]
+      }
+    ],
+    "buttons": [
+          {
+            "text": "MORE FEATURES",
+            "link": "#"
+          }
+    ],
+    "featureHeading": "Empowerment",
+    "featureTitle": "Empower Every Touchpoint",
+    "featureAssurance": "With Empress, it's more than just creating experiences; it's about pioneering moments that matter. Unlock the potential in every interaction and see where innovation takes you.",
   }
 ];
+
+const features = [
+  {
+    "title": "Craft Experiences",
+    "description": "Elevate your creativity with tools that inspire. Craft content and experiences that resonate, simplifying your entire creative journey.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Integration Tools",
+    "description": "Connect with our platform regardless of your existing setup, ensuring continuous enhancement and tracking capabilities.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Data Consolidation",
+    "description": "Explore a unified dashboard that presents engagements, insights, and content, bringing clarity to your strategies.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Personalize Interactions",
+    "description": "Anticipate, adapt, and amplify using the brilliance of AI, crafting personalized touchpoints every time.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Unlock Insights",
+    "description": "Data at your fingertips. Dive deep into user behaviors, foresee trends, and pivot your strategies for maximum impact.",
+    "icon": "fluent:trophy-24-regular",
+  },
+  {
+    "title": "Engage Users",
+    "description": "Design device-agnostic experiences ensuring consistent and memorable interactions every step of the way.",
+    "icon": "fluent:box-24-regular",
+  }
+];
+
+const faq = [
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  }
+];
+
+
+
+const featureBlocks = data[0].featureBlocks;
+
 ---
 
 <Layout title="About" footerMargin={false}>
@@ -72,30 +217,31 @@ const features = [
         <div class="max-w-sm md:max-w-max lg:col-span-2">
           <h1
             class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-            Experience OS
+            {data[0].mainHeading}
           </h1>
           <p
             class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-            Craft, optimize, and analyze touchpoints. Transform every interaction into an opportunity with Empress.
+            {data[0].subtext}
           </p>
           <div
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-            <Link
-              href="https://web3templates.com/templates/astroship-pro-astro-saas-website-template"
+          <Link
+              href={data[0].headingButtons[0].link}
               target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
-              Get Started
-            </Link>
-            <Link
-              size="lg"
-              style="outline"
-              rel="noopener"
-              href="https://github.com/surjithctly/astroship"
-              class="flex gap-1 items-center justify-center border-brand text-brand"
-              target="_blank">
-              Free Version
-            </Link>
+              {data[0].headingButtons[0].text}
+          </Link>
+          
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href={data[0].headingButtons[1].link}
+            class="flex gap-1 items-center justify-center border-brand text-brand"
+            target="_blank">
+            {data[0].headingButtons[1].text}
+          </Link>
           </div>
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
@@ -117,12 +263,12 @@ const features = [
   <Container>
   
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">Redefining User Experiences</Badge>
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        The Premier Platform for Experience-Driven Growth
+        {data[0].offering.title}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Supercharge your trajectory by turning experiences into your business’s competitive edge. Clear outcomes, less complexity, more ROI.
+        {data[0].offering.subtext}
       </p>
     </div>
 
@@ -137,13 +283,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Meet Your Goals</span>
-        <span slot="title">All-in-One Platform</span>
-        <span slot="desc">
-          Plan campaigns, create experiences, and seamlessly integrate across teams.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
       </Card>
-    
+      
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
@@ -154,13 +298,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Expand Your Reach</span>
-        <span slot="title">Connect On Any Device</span>
-        <span slot="desc">
-          Deliver to users on any device with experiences tailored for impact.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
       </Card>
-    
+      
       <Card size="sm">
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
@@ -173,190 +315,87 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Elevate Your Performance</span>
-        <span slot="title">Drive Measurable Results</span>
-        <span slot="desc">
-          Measure performance, optimize results, and perfect every user interaction.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
       </Card>
     </div>
 
-      <div class="grid md:grid-cols-2 py-10">
-        <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-          <Picture
-            src={FeatureImg1}
-            alt="Feature Image"
-            formats={["avif", "webp"]}
-            loading="lazy"
-          />
-        </div>
+
+
+      <!-- FeatureBlock.astro -->
     
       <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">End-to-End Solutions</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            The All-In-One Experience Platform for Business Growth
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Revolutionize your content cycle from idea inception to audience engagement.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Collaborative Content Planning</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Versatile Experience Templates</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Instant Experience Bot Integration</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Get Started</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
+        {data[0].featureBlocks.map((block) => (
+          <div class="grid md:grid-cols-2 py-10">
+            <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
+              <Picture
+                src={FeatureImg1}
+                alt="Feature Image"
+                formats={["avif", "webp"]}
+                loading="lazy"
+              />
+            </div>
+            <div class="grid place-items-center">
+              <div class="max-w-lg">
+                <Badge color="purple" class="-ml-px">{block.heading}</Badge>
+                <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+                  {block.title}
+                </h3>
+                <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                  {block.description}
+                </p>
+                <ul class="grid mt-6 text-left gap-y-4">
+                  {block.bulletPoints.map((point) => (
+                    <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                      <span class="text-sm">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="flex items-center gap-4 mt-6">
+                  {block.buttons?.map((button, index) => {
+                    if (index === 0) {
+                      return (
+                        <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                          <span>{button.text}</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                            <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </Link>
+                      );
+                    } else {
+                      return (
+                        <a 
+                          href={button.link} 
+                          class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                          {button.text}
+                        </a>
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    </div>
-
-    
-
-    <div class="grid md:grid-cols-2 py-10">
-      <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-        <Picture
-          src={FeatureImg1}
-          alt="Feature Image"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-      </div>
-  
-      <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">Unified Experience Analytics</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Empower Your Experience Journey from Start to Finish
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Centralize your data insights and maximize outreach with integration prowess.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Seamless Data Consolidation</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Platform-Specific Plugins</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Integration-Powered Flexibility</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Get Started</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 py-10">
-    <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-      <Picture
-        src={FeatureImg1}
-        alt="Feature Image"
-        formats={["avif", "webp"]}
-        loading="lazy"
-      />
-    </div>
-
-  <div class="grid place-items-center">
-    <div class="max-w-lg">
-      <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        Embrace a New Age of User Engagement with AI and Automation
-      </h3>
-      <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Dive into an AI-orchestrated world of precision interactions. Anticipate, personalize, and innovate in tandem with user dynamics.
-      </p>
-      <ul class="grid mt-6 text-left gap-y-4">
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Smart Chatbot Conversations</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Future-Ready Predictive Analytics</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">AI-Tailored User Journeys</span>
-        </li>
-      </ul>
-      <div class="flex items-center gap-4 mt-6">
-        <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-          <span>Get Started</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-            <path
-              fill-rule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </Link>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+      
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      <Badge color="purple">{data[0].featureHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        Empower Every Touchpoint
+        {data[0].featureTitle}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        With Empress, it's more than just creating experiences; it's about pioneering moments that matter. Unlock the potential in every interaction and see where innovation takes you.
+        {data[0].featureAssurance}
       </p>
     </div>
 
@@ -368,7 +407,7 @@ const features = [
               <Icon class="text-indigo-500" name={item.icon} size="24" />
             </div>
             <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+              <h3 class="font-semibold text-lg">{item.title}</h3>
               <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
             </div>
           </div>
@@ -376,8 +415,37 @@ const features = [
       }
     </div>
 
+  
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
   </Container>
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+  
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  
+
   <Cta />
 </Layout>
+

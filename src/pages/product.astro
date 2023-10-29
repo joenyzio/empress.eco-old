@@ -1,17 +1,19 @@
 ---
+
 import { getCollection } from "astro:content";
 import Badge from "@components/ui/badge.astro";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
-import heroImage from "../assets/hero-screenshot.png";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Link from "@components/ui/link.astro";
-import EmployeeImg from "../assets/employee.jpg";
-import Logos from "@components/logos.astro";
-import { Icon } from "astro-icon";
 import Cta from "@components/cta.astro";
 import Card from "@components/card.astro";
+
+import { Icon } from "astro-icon";
+import ArrowIcon from "../components/ui/icons/arrow.astro"
+
+import Logos from "@components/logos.astro";
+import heroImage from "../assets/hero-screenshot.png";
 import IntegrationImg from "../assets/integrations.svg?url";
 import FeatureImgOne from "../assets/features/2.png";
 import FeatureImgTwo from "../assets/features/2.png";
@@ -19,44 +21,199 @@ import FeatureImgThree from "../assets/features/3.png";
 import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
+import EmployeeImg from "../assets/employee.jpg";
+
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
+
+const data = [
+{
+    "mainHeading": "Elevate Your Experience",
+    "subtext": "Empress equips businesses of all sizes with a cutting-edge experience suite. Drive transformative experiences, streamline results, and fuel your journey to excellence.",
+    "headingButtons": [
+          {
+            "text": "Get Started",
+            "link": "#"
+          },
+          {
+            "text": "Free Version",
+            "link": "#"
+          }
+        ],
+    "sectionHeading": "Business Growth",
+    "offering": {
+      "title": "Elevate Every Touchpoint",
+      "subtext": "Empress refines each interaction, transforming ordinary moments into memorable business milestones."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Experience OS",
+        "title": "Design Cutting-Edge Experiences",
+        "description": "Deliver dynamic, personalized user experiences designed for impact."
+      },
+      {
+        "heading": "Experience Bots",
+        "title": "Constant & Consistent Presence",
+        "description": "Engage users consistently across platforms with Empress's intelligent bots."
+      },
+      {
+        "heading": "Experience-as-a-Service",
+        "title": "Instant Expertise, On-Demand",
+        "description": "Transform experiences with expert guidance to reach global audiences."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Experience OS",
+        "title": "Elevate Every User Journey",
+        "description": "Our platform combines campaign tools, unified analytics, and AI-driven user engagements on a single platform.",
+        "bulletPoints": [
+          "All-in-One Platform",
+          "Unified Experience Analytics",
+          "AI-Enhanced Engagements"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "#"
+          }
+        ],
+      },
+      {
+        "heading": "Experience Bots",
+        "title": "Personalized, Insightful, and Global Experiences",
+        "description": "Enable tailored AI interactions, offering real-time user insights and ensuring global accessibility.",
+        "bulletPoints": [
+          "Tailored AI Conversations",
+          "Real-time User Analysis",
+          "Global Engagement"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "#"
+          }
+        ],
+      },
+      {
+        "heading": "Experience-as-a-Service",
+        "title": "Expertise at Your Fingertips",
+        "description": "Align your brand, confidently navigate experience transformations, and resonate with global audiences with expert support.",
+        "bulletPoints": [
+          "Intelligent AI-Powered Chatbots",
+          "Predictive Analytics for Strategic Actions",
+          "AI-Enhanced Personalization & Automations"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "#"
+          }
+        ],
+      }
+    ],
+    "buttons": [
+          {
+            "text": "Start 14-day trial",
+            "link": "#"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "#"
+          }
+        ],
+    "featureHeading": "Empress Advantage",
+    "featureTitle": "Unlock the Empress Advantage",
+    "featureAssurance": "Dive into a universe of unmatched experiences with Empress. If there's a horizon you've yet to explore, reach out – we're your partners in designing impactful experiences.",
+  }
+];
+
 const features = [
   {
     "title": "Maximize Efficiency",
     "description": "Tailor user experiences with AI-driven insights and a unified dashboard.",
-    "icon": "fluent:document-javascript-24-regular"
+    "icon": "fluent:document-javascript-24-regular",
   },
   {
     "title": "Automate for Excellence",
     "description": "Craft dynamic content and streamline processes with expansive integrations.",
-    "icon": "fluent:trophy-24-regular"
+    "icon": "fluent:document-javascript-24-regular",
   },
   {
-    "title": "Dive into Real-time Insights",
+    "title": "Real-time Insights",
     "description": "Gain immediate understanding of user behaviors with customizable visual analytics.",
-    "icon": "fluent:box-24-regular"
+    "icon": "fluent:document-javascript-24-regular",
   },
   {
-    "title": "Prioritize Data Protection",
+    "title": "Prioritize Protection",
     "description": "Ensure top-tier security and compliance with enterprise-level features.",
-    "icon": "fluent:document-javascript-24-regular"
+    "icon": "fluent:document-javascript-24-regular",
   },
   {
-    "title": "Seamless Management Controls",
+    "title": "Manage Seamlessly",
     "description": "Centralize oversight of permissions, protocols, and user access.",
-    "icon": "fluent:trophy-24-regular"
+    "icon": "fluent:trophy-24-regular",
   },
   {
-    "title": "Drive Brand & User Alignment",
+    "title": "Drive Alignment",
     "description": "Align organizational objectives while easily monitoring key experiences.",
-    "icon": "fluent:box-24-regular"
+    "icon": "fluent:box-24-regular",
   }
 ];
+
+
+
+const faq = [
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  },
+  {
+    question: "[Your question here]",
+    answer: "[Your answer here]"
+  }
+];
+
+
+
+const featureBlocks = data[0].featureBlocks;
+
 ---
 
 <Layout title="About" footerMargin={false}>
@@ -72,30 +229,31 @@ const features = [
         <div class="max-w-sm md:max-w-max lg:col-span-2">
           <h1
             class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-            Elevate Your Experience
+            {data[0].mainHeading}
           </h1>
           <p
             class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-            Empress equips businesses of all sizes with a cutting-edge experience suite. Drive transformative experiences, streamline results, and fuel your journey to excellence.
+            {data[0].subtext}
           </p>
           <div
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-            <Link
-              href="https://web3templates.com/templates/astroship-pro-astro-saas-website-template"
+          <Link
+              href={data[0].headingButtons[0].link}
               target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
-              Get Started
-            </Link>
-            <Link
-              size="lg"
-              style="outline"
-              rel="noopener"
-              href="https://github.com/surjithctly/astroship"
-              class="flex gap-1 items-center justify-center border-brand text-brand"
-              target="_blank">
-              Free Version
-            </Link>
+              {data[0].headingButtons[0].text}
+          </Link>
+          
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href={data[0].headingButtons[1].link}
+            class="flex gap-1 items-center justify-center border-brand text-brand"
+            target="_blank">
+            {data[0].headingButtons[1].text}
+          </Link>
           </div>
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
@@ -117,12 +275,12 @@ const features = [
   <Container>
   
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">Elevate Every Touchpoint</Badge>
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        Experiences Reimagined for Business Growth
+        {data[0].offering.title}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Empress refines each interaction, transforming ordinary moments into memorable business milestones.
+        {data[0].offering.subtext}
       </p>
     </div>
 
@@ -137,13 +295,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Experience OS</span>
-        <span slot="title">Design Cutting-Edge Experiences</span>
-        <span slot="desc">
-          Deliver dynamic, personalized user experiences designed for impact.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
       </Card>
-    
+      
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
@@ -154,13 +310,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Experience Bots</span>
-        <span slot="title">Constant & Consistent Presence.</span>
-        <span slot="desc">
-          Engage users consistently across platforms with Empress's intelligent bots.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
       </Card>
-    
+      
       <Card size="sm">
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
@@ -173,264 +327,87 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Experience-as-a-Service</span>
-        <span slot="title">Instant Expertise, On-Demand</span>
-        <span slot="desc">
-          Transform experiences with expert guidance to reach global audiences.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
       </Card>
     </div>
 
-    <div class="grid md:grid-cols-2 py-10">
-      <div class="grid place-items-center">
-        <Picture
-          src={FeatureImg1}
-          alt="Feature Image"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-      </div>
+
+
+      <!-- FeatureBlock.astro -->
     
       <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">Next Generation Experiences</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Empower Every Team to Optimize Every Experience
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Empress tailors technology to enhance experiences for all your organizational needs.
-          </p>
-    
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm"><b>Customer Support:</b> Quicker, smarter, AI-powered resolutions.
-                </span>
-            </li>
-    
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm"><b>Human Resources:</b> Streamlined recruitment and engagement.
-            </li>
-    
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm"><b>Operations:</b> Boost efficiency, reduce redundancies.
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm"><b>Marketing:</b> Personalized campaigns, real-time insights.
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm"><b>Leadership:</b> Overview, actionable insights, dynamic adaptation.
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Start 14-day trial</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
-            <a
-              href="#"
-              class="text-sm px-2 transition py-1 text-slate-600 hover:text-brand focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-              Contact Sales</a
-            >
+        {data[0].featureBlocks.map((block) => (
+          <div class="grid md:grid-cols-2 py-10">
+            <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
+              <Picture
+                src={FeatureImg1}
+                alt="Feature Image"
+                formats={["avif", "webp"]}
+                loading="lazy"
+              />
+            </div>
+            <div class="grid place-items-center">
+              <div class="max-w-lg">
+                <Badge color="purple" class="-ml-px">{block.heading}</Badge>
+                <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+                  {block.title}
+                </h3>
+                <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                  {block.description}
+                </p>
+                <ul class="grid mt-6 text-left gap-y-4">
+                  {block.bulletPoints.map((point) => (
+                    <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                      <span class="text-sm">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="flex items-center gap-4 mt-6">
+                  {block.buttons?.map((button, index) => {
+                    if (index === 0) {
+                      return (
+                        <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                          <span>{button.text}</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                            <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </Link>
+                      );
+                    } else {
+                      return (
+                        <a 
+                          href={button.link} 
+                          class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                          {button.text}
+                        </a>
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    </div>
-
-      <div class="grid md:grid-cols-2 py-10">
-        <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-          <Picture
-            src={FeatureImg1}
-            alt="Feature Image"
-            formats={["avif", "webp"]}
-            loading="lazy"
-          />
-        </div>
-    
-      <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">Experience OS</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Elevate Every User Journey
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Our platform combines campaign tools, unified analytics, and AI-driven user engagements on a single platform.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">All-in-One Platform</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Unified Experience Analytics</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">AI-Enhanced Engagements</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Get Started</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-
-    <div class="grid md:grid-cols-2 py-10">
-      <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-        <Picture
-          src={FeatureImg1}
-          alt="Feature Image"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-      </div>
-  
-    <div class="grid place-items-center">
-      <div class="max-w-lg">
-        <Badge color="purple" class="-ml-px">Experience Bots</Badge>
-        <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-          Personalized, Insightful, and Global Experiences
-        </h3>
-        <p class="mt-4 text-slate-600 [text-wrap:balance]">
-          Enable tailored AI interactions, offering real-time user insights and ensuring global accessibility.
-        </p>
-        <ul class="grid mt-6 text-left gap-y-4">
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Tailored AI Conversations</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Real-time User Analysis</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Global Engagement</span>
-          </li>
-        </ul>
-        <div class="flex items-center gap-4 mt-6">
-          <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-            <span>Get Started</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 py-10">
-    <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-      <Picture
-        src={FeatureImg1}
-        alt="Feature Image"
-        formats={["avif", "webp"]}
-        loading="lazy"
-      />
-    </div>
-
-  <div class="grid place-items-center">
-    <div class="max-w-lg">
-      <Badge color="purple" class="-ml-px">Experience-as-a-Service</Badge>
-      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        Expertise at Your Fingertips
-      </h3>
-      <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Align your brand, confidently navigate experience transformations, and resonate with global audiences with expert support.
-      </p>
-      <ul class="grid mt-6 text-left gap-y-4">
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-        </li>
-      </ul>
-      <div class="flex items-center gap-4 mt-6">
-        <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-          <span>Get Started</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-            <path
-              fill-rule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </Link>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+      
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      <Badge color="purple">{data[0].featureHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        Unlock the Empress Advantage
+        {data[0].featureTitle}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Dive into a universe of unmatched experiences with Empress. If there's a horizon you've yet to explore, reach out – we're your partners in designing impactful experiences.
+        {data[0].featureAssurance}
       </p>
     </div>
 
@@ -442,7 +419,7 @@ const features = [
               <Icon class="text-indigo-500" name={item.icon} size="24" />
             </div>
             <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+              <h3 class="font-semibold text-lg">{item.title}</h3>
               <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
             </div>
           </div>
@@ -450,8 +427,37 @@ const features = [
       }
     </div>
 
+  
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
   </Container>
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+  
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  
+
   <Cta />
 </Layout>
+

@@ -1,0 +1,86 @@
+{
+    "mainHeading": "[Main Heading Text: 5-10 words]",
+    "subtext": "[Short Description or Mission Statement: ~200 characters]",
+    "sectionHeading": "[2-3 words summarizing following offering]",
+    "offering": {
+      "title": "[Offering Text: 5-10 words]",
+      "subtext": "[1 sentence describing the value of the offering: ~200 characters]"
+    },
+    "valueBlocks": [
+      {
+        "heading": "[2-3 words summarizing following value]",
+        "title": "[Value Title: 5-10 words]",
+        "description": "[Value Subtitle: ~200 characters]"
+      },
+      {
+        "heading": "[2-3 words summarizing following feature]",
+        "title": "[Value Title: 5-10 words]",
+        "description": "[Value Subtitle: ~200 characters]"
+      },
+      {
+        "heading": "[2-3 words summarizing following feature]",
+        "title": "[Feature Title: 5-10 words]",
+        "description": "[Feature Subtitle: ~200 characters]"
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "[2-3 words summarizing following feature]",
+        "title": "[Feature Title: 5-10 words]",
+        "description": "[Feature Subtitle: ~200 characters]",
+        "bulletPoints": [
+          "[Bullet Point 1: ~200 characters]",
+          "[Bullet Point 2: ~200 characters]",
+          "[Bullet Point 3: ~200 characters]"
+        ]
+      },
+      {
+        "heading": "[2-3 words summarizing following benefit]",
+        "title": "[Benefit Title: 5-10 words]",
+        "description": "[Benefit Subtitle: ~200 characters]",
+        "bulletPoints": [
+          "[Bullet Point 1: ~200 characters]",
+          "[Bullet Point 2: ~200 characters]",
+          "[Bullet Point 3: ~200 characters]"
+        ]
+      },
+      {
+        "heading": "[2-3 words summarizing another benefit]",
+        "title": "[Another Benefit Title: 5-10 words]",
+        "description": "[Another Benefit Subtitle: ~200 characters]",
+        "bulletPoints": [
+          "[Bullet Point 1: ~200 characters]",
+          "[Bullet Point 2: ~200 characters]",
+          "[Bullet Point 3: ~200 characters]"
+        ]
+      }
+    ],
+    "featureAssurance": "[Support Statement: ~200 characters]",
+    "featureLists": [
+      {
+        "feature": "[Feature Name: 5-10 words]",
+        "description": "[Brief Description about Feature: ~200 characters]"
+      },
+      {
+        "feature": "[Feature Name: 5-10 words]",
+        "description": "[Brief Description about Advanced Feature: ~200 characters]"
+      },
+      {
+        "feature": "[Feature Name: 5-10 words]",
+        "description": "[Brief Description about Advanced Feature: ~200 characters]"
+      },
+      {
+        "feature": "[Feature Name: 5-10 words]",
+        "description": "[Brief Description about Advanced Feature: ~200 characters]"
+      },
+      {
+        "feature": "[Feature Name: 5-10 words]",
+        "description": "[Brief Description about Advanced Feature: ~200 characters]"
+      },
+      {
+        "feature": "[Feature Name: 5-10 words]",
+        "description": "[Brief Description about Advanced Feature: ~200 characters]"
+      }
+    ]
+  }
+  

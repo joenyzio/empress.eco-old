@@ -1,17 +1,19 @@
 ---
+
 import { getCollection } from "astro:content";
 import Badge from "@components/ui/badge.astro";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
-import heroImage from "../assets/hero-screenshot.png";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Link from "@components/ui/link.astro";
-import EmployeeImg from "../assets/employee.jpg";
-import Logos from "@components/logos.astro";
-import { Icon } from "astro-icon";
 import Cta from "@components/cta.astro";
 import Card from "@components/card.astro";
+
+import { Icon } from "astro-icon";
+import ArrowIcon from "../components/ui/icons/arrow.astro"
+
+import Logos from "@components/logos.astro";
+import heroImage from "../assets/hero-screenshot.png";
 import IntegrationImg from "../assets/integrations.svg?url";
 import FeatureImgOne from "../assets/features/2.png";
 import FeatureImgTwo from "../assets/features/2.png";
@@ -19,13 +21,110 @@ import FeatureImgThree from "../assets/features/3.png";
 import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
+import EmployeeImg from "../assets/employee.jpg";
+
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
+
+const data = [
+  {
+    "mainHeading": "Transforming Customer Support",
+    "subtext": "Discover Empress - a next-gen AI-powered platform designed to redefine and uplift your customer support experience.",
+    "headingButtons": [
+      {
+        "text": "Join Now",
+        "link": "#"
+      },
+      {
+        "text": "Explore Free Version",
+        "link": "#"
+      }
+    ],
+    "sectionHeading": "Empress Overview",
+    "offering": {
+      "title": "Optimal Business Interactions",
+      "subtext": "Harness AI technologies and user-centric designs to provide dynamic insights and proactive solutions"
+    },
+    "valueBlocks": [
+      {
+        "heading": "Real-Time Chat",
+        "title": "Smart AI Chat Solutions",
+        "description": "Engage users in real-time, streamline queries, and seamlessly transition complex issues to human experts"
+      },
+      {
+        "heading": "Monitoring",
+        "title": "Real-Time Insights",
+        "description": "Ensure rapid adjustments to strategies and content, based on real-time user pathways"
+      },
+      {
+        "heading": "Device Compatibility",
+        "title": "Universal Access",
+        "description": "Consistent, high-quality support regardless of the device—be it smartphone, tablet, or desktop."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Adaptive AI",
+        "title": "Adaptive AI Bots",
+        "description": "Experience the next level of AI-powered interactions. Our bots not only understand your brand voice but also evolve with every interaction to serve your users better.",
+        "bulletPoints": [
+          "Seamlessly integrates with your brand's unique voice.",
+          "Predicts and caters to emerging user requirements.",
+          "Enhances user interactions with custom-tailored experiences."
+        ],
+        "buttons": [
+          {
+            "text": "Unlock Adaptive Interactions",
+            "link": "#"
+          }
+        ],
+      },
+      {
+        "heading": "Customer Focus",
+        "title": "Customer-Centric Design",
+        "description": "Design customer service experiences that not only reflect the essence of your brand but also prioritize individual customer needs and preferences.",
+        "bulletPoints": [
+          "Tailored support pathways for enhanced user satisfaction",
+          "Consistent brand voice across all customer touchpoints",
+          "Data-driven strategies to optimize every interaction"
+        ],
+        "buttons": [
+          {
+            "text": "Experience the Difference",
+            "link": "#"
+          }
+        ],
+      },
+      {
+        "heading": "Expert Assistance",
+        "title": "Uninterrupted Expertise",
+        "description": "Provide support anytime, anywhere. From complex tech hiccups to advanced strategic insights, our team is committed to ensuring your success.",
+        "bulletPoints": [
+          "Prompt tech support to keep operations smooth",
+          "On-demand chat to improve customer support",
+          "Dependable assistance, ensuring peace of mind 24/7"
+        ],
+        "buttons": [
+          {
+            "text": "Experience Uninterrupted Support",
+            "link": "#"
+          }
+        ]
+      }
+    ]
+  }
+];
+
 const features = [
+  {
+    "title": "Integrated Tools",
+    "description": "Enhance communication flows and user engagement with our integrated tool set.",
+    "icon": "fluent:document-javascript-24-regular"
+  },
   {
     "title": "Slack Synergy",
     "description": "Achieve instantaneous response rates by integrating support queries directly into Slack, drastically improving your issue resolution times.",
@@ -34,30 +133,73 @@ const features = [
   {
     "title": "Real-time Email Notifications",
     "description": "Bridge the communication gap by updating users instantly. Enhance trust by providing transparent progress updates on support.",
-    "icon": "fluent:trophy-24-regular"
+    "icon": "fluent:document-javascript-24-regular"
   },
   {
     "title": "Instant Messenger Support",
     "description": "Harness the power of platforms like Messenger to assist customers in real-time, ensuring they always have a superior support experience.",
-    "icon": "fluent:box-24-regular"
+    "icon": "fluent:document-javascript-24-regular"
   },
   {
     "title": "Dynamic Discord Support",
     "description": "Elevate your community interactions on Discord with immediate support interventions, fostering a sense of belonging and trust.",
-    "icon": "fluent:document-javascript-24-regular"
+    "icon": "fluent:trophy-24-regular"
   },
   {
     "title": "Universal Engagement",
     "description": "Eliminate language barriers using AI-driven translations, ensuring every user feels valued, regardless of linguistic differences.",
-    "icon": "fluent:trophy-24-regular"
-  },
-  {
-    "title": "Seamless Support Workflows",
-    "description": "Empower your customer support team with streamlined integrations that enable efficient, quick, and hassle-free operations.",
     "icon": "fluent:box-24-regular"
   }
 ];
 
+
+const faq = [
+  {
+    question: "What does the Experience OS offer?",
+    answer: "Empress's Experience OS allows businesses to design, manage, and continually evolve captivating experiences. With tools ranging from a Dynamic Content Creator to Adaptive Experience Templates, we ensure that users have a memorable experience that resonates with your brand."
+  },
+  {
+    question: "How does AI and Automation optimize experiences?",
+    answer: "Our AI and Automation suite leverages advanced machine learning algorithms to provide performance analytics, forecast user patterns, and ensure real-time personalization. This means each user interaction is not only seamless but also continually refined based on user behavior."
+  },
+  {
+    question: "Which tools and platforms can I integrate with Empress?",
+    answer: "Empress boasts integrations with over 200+ tools including popular ones like Slack, Zapier, Intercom, Shopify, Messenger, and Discord. With our easy integration process, you can effortlessly connect and sync various tools to streamline operations."
+  },
+  {
+    question: "How can Empress Academy assist my team and me?",
+    answer: "Empress Academy provides a plethora of learning resources tailored to enhance your understanding of experiences. It's a perfect avenue to learn at your own pace, gather insights, and implement them for improved user engagement."
+  },
+  {
+    question: "Is there a trial or free version available for Empress?",
+    answer: "Yes! Empress offers a 'Basic' plan that's free forever, ideal for those just beginning their experience journey. This plan comes packed with a host of features, which you can review in our pricing section."
+  },
+  {
+    question: "Can I upgrade my Empress subscription at any time?",
+    answer: "Absolutely. Empress provides flexibility in scaling your subscription. Whether you're upgrading to accommodate growing business needs or want to explore more features, you can adjust your plan from the subscription management section in your account."
+  },
+  {
+    question: "How does Empress ensure consistent user experience across devices?",
+    answer: "At the heart of all experiences is our Experience Bot. Using this, Empress ensures that the experiences you design are consistently delivered across all devices, be it mobiles, tablets, or desktops, thus boosting user satisfaction."
+  },
+  {
+    question: "What support can I expect with Experience-as-a-Service?",
+    answer: "Our Experience-as-a-Service connects you with experts who deeply understand the Empress platform. Whether you have technical questions, need guidance on best practices, or require support for optimizing experiences, our specialists are here to assist you."
+  },
+  {
+    question: "How secure is my data with Empress?",
+    answer: "Empress prioritizes user data security. We employ state-of-the-art encryption and adhere to global security standards to ensure your data remains confidential and protected at all times."
+  },
+  {
+    question: "Are there resources to understand user behavior analytics?",
+    answer: "Yes, our Real-Time Behavior Analytics tool provides actionable insights that help in understanding user behaviors, preferences, and interaction patterns. This aids businesses in optimizing experiences in real-time and delivering content that resonates with their audience."
+  }
+];
+
+
+
+
+const featureBlocks = data[0].featureBlocks;
 
 ---
 
@@ -65,76 +207,67 @@ const features = [
   <div class="overflow-x-clip">
     <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
-          <!-- Radial background effect 1 -->
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
+        </div>
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
+        </div>
+        <div class="max-w-sm md:max-w-max lg:col-span-2">
+          <h1
+            class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
+            {data[0].mainHeading}
+          </h1>
+          <p
+            class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
+            {data[0].subtext}
+          </p>
           <div
-              class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
-          </div>
+            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+          <Link
+              href={data[0].headingButtons[0].link}
+              target="_blank"
+              class="flex gap-1 items-center justify-center bg-brand"
+              rel="noopener">
+              {data[0].headingButtons[0].text}
+          </Link>
           
-          <!-- Radial background effect 2 -->
-          <div
-              class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href={data[0].headingButtons[1].link}
+            class="flex gap-1 items-center justify-center border-brand text-brand"
+            target="_blank">
+            {data[0].headingButtons[1].text}
+          </Link>
           </div>
-          
-          <!-- Content: Elevate Customer Support -->
-          <div class="max-w-sm md:max-w-max lg:col-span-2">
-              <h1
-                  class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-                  Transforming Customer Support
-              </h1>
-              <p
-                  class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-                  Discover Empress - a next-gen AI-powered platform designed to redefine and uplift your customer support experience.
-              </p>
-              
-              <!-- Action buttons: Get Started & Free Version -->
-              <div
-                  class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-                  <Link
-                      href="https://web3templates.com/templates/astroship-pro-astro-saas-website-template"
-                      target="_blank"
-                      class="flex gap-1 items-center justify-center bg-brand"
-                      rel="noopener">
-                      Join Now
-                  </Link>
-                  <Link
-                      size="lg"
-                      style="outline"
-                      rel="noopener"
-                      href="https://github.com/surjithctly/astroship"
-                      class="flex gap-1 items-center justify-center border-brand text-brand"
-                      target="_blank">
-                      Explore Free Version
-                  </Link>
-              </div>
-          </div>
-          
-          <!-- Product Image: Astronaut Illustration -->
-          <div class="py-3 lg:col-span-3 lg:-mr-44">
-              <Picture
-                  src={heroImage}
-                  alt="Innovative Astronaut Imagery"
-                  formats={["avif", "webp"]}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  widths={[240, 540, 720, heroImage.width]}
-                  loading="eager"
-                  fetchpriority="high"
-              />
-          </div>
+        </div>
+        <div class="py-3 lg:col-span-3 lg:-mr-44">
+          <Picture
+            src={heroImage}
+            alt="Astronaut in the air"
+            formats={["avif", "webp"]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            widths={[240, 540, 720, heroImage.width]}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
       </main>
-  </Container>
-  
+    </Container>
   </div>
   
 
   <Container>
   
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">Empress Overview</Badge>
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        Optimal Business Interactions
+        {data[0].offering.title}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Harness AI technologies and user-centric designs to provide dynamic insights and proactive solutions
+        {data[0].offering.subtext}
       </p>
     </div>
 
@@ -149,13 +282,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Optimize with AI</span>
-        <span slot="title">Smart AI Chat Solutions</span>
-        <span slot="desc">
-          Engage users in real-time, streamline queries, and seamlessly transition complex issues to human experts</span
-        >
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
       </Card>
-    
+      
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
@@ -166,13 +297,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Real-Time Insights</span>
-        <span slot="title">Monitoring & Analytics</span>
-        <span slot="desc">
-          Ensure rapid adjustments to strategies and content, based on real-time user pathways</span
-        >
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
       </Card>
-    
+      
       <Card size="sm">
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
@@ -185,193 +314,87 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Universal Access</span>
-        <span slot="title">Cross-Device Compatibility</span>
-        <span slot="desc">
-          Consistent, high-quality support regardless of the device—be it smartphone, tablet, or desktop.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
       </Card>
     </div>
 
-      <div class="grid md:grid-cols-2 py-10">
-        <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-          <Picture
-            src={FeatureImg1}
-            alt="Feature Image"
-            formats={["avif", "webp"]}
-            loading="lazy"
-          />
-        </div>
+
+
+      <!-- FeatureBlock.astro -->
     
-        <div class="grid place-items-center">
-          <div class="max-w-lg">
-              <Badge color="purple" class="-ml-px">Adaptive AI Bots</Badge>
-              <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-                  AI Bots That Continuously Learn & Adapt
-              </h3>
-              <p class="mt-4 text-slate-600 [text-wrap:balance]">
-                  Experience the next level of AI-powered interactions. Our bots not only understand your brand voice but also evolve with every interaction to serve your users better.
-              </p>
-              <ul class="grid mt-6 text-left gap-y-4">
-                  <li class="flex items-center gap-3 text-neutral-800">
+      <div class="grid place-items-center">
+        {data[0].featureBlocks.map((block) => (
+          <div class="grid md:grid-cols-2 py-10">
+            <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
+              <Picture
+                src={FeatureImg1}
+                alt="Feature Image"
+                formats={["avif", "webp"]}
+                loading="lazy"
+              />
+            </div>
+            <div class="grid place-items-center">
+              <div class="max-w-lg">
+                <Badge color="purple" class="-ml-px">{block.heading}</Badge>
+                <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+                  {block.title}
+                </h3>
+                <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                  {block.description}
+                </p>
+                <ul class="grid mt-6 text-left gap-y-4">
+                  {block.bulletPoints.map((point) => (
+                    <li class="flex items-center gap-3 text-neutral-800">
                       <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-          
-                      <span class="text-sm">Seamlessly integrates with your brand's unique voice.</span>
-                  </li>
-                  <li class="flex items-center gap-3 text-neutral-800">
-                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-          
-                      <span class="text-sm">Predicts and caters to emerging user requirements.</span>
-                  </li>
-                  <li class="flex items-center gap-3 text-neutral-800">
-                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-          
-                      <span class="text-sm">Enhances user interactions with custom-tailored experiences.</span>
-                  </li>
-              </ul>
-              <div class="flex items-center gap-4 mt-6">
-                  <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-                      <span>Unlock Adaptive Interactions</span>
-                      <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                          <path
+                      <span class="text-sm">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="flex items-center gap-4 mt-6">
+                  {block.buttons?.map((button, index) => {
+                    if (index === 0) {
+                      return (
+                        <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                          <span>{button.text}</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                            <path
                               fill-rule="evenodd"
                               d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
                               clip-rule="evenodd"></path>
-                      </svg>
-                  </Link>
+                          </svg>
+                        </Link>
+                      );
+                    } else {
+                      return (
+                        <a 
+                          href={button.link} 
+                          class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                          {button.text}
+                        </a>
+                      );
+                    }
+                  })}
+                </div>
               </div>
+            </div>
           </div>
+        ))}
       </div>
       
-    </div>
-
-    
-
-    <div class="grid md:grid-cols-2 py-10">
-      <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-        <Picture
-          src={FeatureImg1}
-          alt="Feature Image"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-      </div>
-  
-      <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">Customer-Centric Design</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Personalized Service Experience
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Design customer service experiences that not only reflect the essence of your brand but also prioritize individual customer needs and preferences.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Tailored support pathways for enhanced user satisfaction</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Consistent brand voice across all customer touchpoints</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Data-driven strategies to optimize every interaction</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Experience the Difference</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </div>
-  
-  </div>
-
-  <div class="grid md:grid-cols-2 py-10">
-    <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-      <Picture
-        src={FeatureImg1}
-        alt="Feature Image"
-        formats={["avif", "webp"]}
-        loading="lazy"
-      />
-    </div>
-
-    <div class="grid place-items-center">
-      <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">Uninterrupted Expertise</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-              Always-On Expert Assistance
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-              Provide support anytime, anywhere. From complex tech hiccups to advanced strategic insights, our team is committed to ensuring your success.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-              <li class="flex items-center gap-3 text-neutral-800">
-                  <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-                  <span class="text-sm">Prompt tech support to keep operations smooth</span>
-              </li>
-              <li class="flex items-center gap-3 text-neutral-800">
-                  <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-                  <span class="text-sm">On-demand chat to improve customer support</span>
-              </li>
-              <li class="flex items-center gap-3 text-neutral-800">
-                  <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-                  <span class="text-sm">Dependable assistance, ensuring peace of mind 24/7</span>
-              </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-              <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-                  <span>Experience Uninterrupted Support</span>
-                  <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                      <path
-                          fill-rule="evenodd"
-                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                          clip-rule="evenodd"></path>
-                  </svg>
-              </Link>
-          </div>
-      </div>
-  </div>
-  
-</div>
-
-
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">More Features</Badge>
+      <Badge color="purple">{data[0].featureHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        Integrated Tools
+        {data[0].featureTitle}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Enhance communication flows and user engagement with our integrated tool set.
+        {data[0].featureAssurance}
       </p>
     </div>
 
@@ -383,7 +406,7 @@ const features = [
               <Icon class="text-indigo-500" name={item.icon} size="24" />
             </div>
             <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+              <h3 class="font-semibold text-lg">{item.title}</h3>
               <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
             </div>
           </div>
@@ -391,8 +414,37 @@ const features = [
       }
     </div>
 
+  
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
   </Container>
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+  
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  
+
   <Cta />
 </Layout>
+
