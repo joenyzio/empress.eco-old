@@ -1,17 +1,19 @@
 ---
+
 import { getCollection } from "astro:content";
 import Badge from "@components/ui/badge.astro";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
-import heroImage from "../assets/hero-screenshot.png";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Link from "@components/ui/link.astro";
-import EmployeeImg from "../assets/employee.jpg";
-import Logos from "@components/logos.astro";
-import { Icon } from "astro-icon";
 import Cta from "@components/cta.astro";
 import Card from "@components/card.astro";
+
+import { Icon } from "astro-icon";
+import ArrowIcon from "../components/ui/icons/arrow.astro"
+
+import Logos from "@components/logos.astro";
+import heroImage from "../assets/hero-screenshot.png";
 import IntegrationImg from "../assets/integrations.svg?url";
 import FeatureImgOne from "../assets/features/2.png";
 import FeatureImgTwo from "../assets/features/2.png";
@@ -19,44 +21,187 @@ import FeatureImgThree from "../assets/features/3.png";
 import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
+import EmployeeImg from "../assets/employee.jpg";
+
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const features = [
-  {
-    "title": "Precision-Driven Creativity",
-    "description": "Harness our toolkit to design immersive content and experiences from scratch, streamlining your creative process.",
-    "icon": "fluent:document-javascript-24-regular"
-  },
-  {
-    "title": "Seamless Content Integration",
-    "description": "Already on another platform? Easily integrate it with ours, enabling tracking and optimization without any hassles.",
-    "icon": "fluent:trophy-24-regular"
-  },
-  {
-    "title": "Unified User Dashboard",
-    "description": "Get a consolidated view of your engagements, analytics, and content. Say goodbye to the chaos of scattered information.",
-    "icon": "fluent:box-24-regular"
-  },
-  {
-    "title": "Precision-Driven Creativity",
-    "description": "Harness our toolkit to design immersive content and experiences from scratch, streamlining your creative process.",
-    "icon": "fluent:document-javascript-24-regular"
-  },
-  {
-    "title": "Seamless Content Integration",
-    "description": "Already on another platform? Easily integrate it with ours, enabling tracking and optimization without any hassles.",
-    "icon": "fluent:trophy-24-regular"
-  },
-  {
-    "title": "Unified User Dashboard",
-    "description": "Get a consolidated view of your engagements, analytics, and content. Say goodbye to the chaos of scattered information.",
-    "icon": "fluent:box-24-regular"
+
+const data = [
+{
+    "mainHeading": "Elevate Your Enterprise with Empress",
+    "subtext": "Unlock the full potential of your content for enterprise scalability and efficiency.",
+    "headingButtons": [
+          {
+            "text": "Start 14-day trial",
+            "link": "#"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "#"
+          }
+        ],
+    "sectionHeading": "The Empress Advantage",
+    "offering": {
+      "title": "Unified Solutions for Enterprise Excellence",
+      "subtext": "Seamless content management tailored to the specific needs of large-scale enterprises."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Content Suite",
+        "title": "End-to-End Tool Suite",
+        "description": "Access comprehensive solutions that guide content from creation to optimization."
+      },
+      {
+        "heading": "Smart Bot Intelligence",
+        "title": "Platform Agnostic Access",
+        "description": "Guarantees effortless information sharing and access across all platforms with our Smart Bot."
+      },
+      {
+        "heading": "Experience Insights",
+        "title": "Precision Data Insights",
+        "description": "Capture in-depth analytics from each Smart Bot interaction, tapping into the power of the Experience API."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Simplify Experiences",
+        "title": "Enterprise-Grade Workflows",
+        "description": "Harness a suite of powerful tools meticulously crafted for organizations with expansive content needs, enabling seamless management, optimization, and distribution.",
+        "bulletPoints": [
+          "Automated content management toolkit.",
+          "High-quality assurance with each content piece.",
+          "Built for scalability and changing enterprise needs."
+        ],
+        "buttons": [
+          {
+            "text": "Start 14-day trial",
+            "link": "#"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "#"
+          }
+        ],
+      },
+      {
+    "heading": "Smart Bot Data Integration",
+    "title": "Track & Optimize Every Experience",
+    "description": "Every experience you craft is meticulously tracked within Smart Bot interactions. Gain unparalleled access to detailed analytics while integrating insights from external platforms, enhancing your bot's capabilities.",
+    "bulletPoints": [
+      "Seamless monitoring of all Smart Bot experiences.",
+      "Integrate external data for a holistic bot perspective.",
+      "Leverage comprehensive analytics to inform your strategic decisions."
+    ],
+    "buttons": [
+      {
+        "text": "Start 14-day trial",
+        "link": "#"
+      },
+      {
+        "text": "Contact Sales",
+        "link": "#"
+      }
+    ],
+},
+
+      {
+      "heading": "AI-Powered Projections from Smart Bot",
+      "title": "Data-Driven Predictions for Enhanced Performance",
+      "description": "Harness the power of our next-gen AI algorithms analyzing data from Smart Bot interactions. Gain precise insights and predictions tailored to optimize team performance and elevate customer outcomes.",
+        "bulletPoints": [
+            "Utilize AI-driven insights for actionable strategies.",
+            "Forecast adjustments based on audience interactions with Smart Bot.",
+            "Strategically adapt to enhance both team and customer experiences."
+    ],
+    "buttons": [
+      {
+        "text": "Start 14-day trial",
+        "link": "#"
+      },
+      {
+        "text": "Contact Sales",
+        "link": "#"
+      }
+    ],
+}
+
+
+    ],
+    "featureHeading": "Enterprise Design",
+    "featureTitle": "Built for Scalability",
+    "featureAssurance": "Assuring premium performance and adaptability as your enterprise evolves.",
   }
 ];
+
+const features = [
+  {
+    "title": "Holistic Content Management",
+    "description": "Empower your enterprise with an all-in-one toolkit, designed for seamless content optimization, distribution, and management.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Intelligent Bot Evolution",
+    "description": "Adapt and evolve, optimizing content delivery and ensuring unparalleled accessibility across diverse platforms and languages.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Granular User Insights",
+    "description": "Accurately assess performance metrics and identify areas for improvement to consistently exceed enterprise standards.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Unified Data Ecosystem",
+    "description": "Maintain data integrity while pulling actionable insights from a cohesive, integrated data landscape.",
+    "icon": "fluent:data-sunburst-24-regular",
+  },
+  {
+    "title": "Future-Proof Strategies",
+    "description": "Stay steps ahead with AI-driven insights, offering timely predictions on market trends and audience shifts.",
+    "icon": "fluent:trophy-24-regular",
+  },
+  {
+    "title": "Adaptive Enterprise Interface",
+    "description": "Experience a user-centric design that grows with your organization to meet your dynamic needs and complexities.",
+    "icon": "fluent:document-javascript-24-regular",
+  }
+];
+
+const faq = [
+  {
+    question: "How does Empress integrate with my existing enterprise systems?",
+    answer: "Empress seamlessly integrates with a wide range of popular enterprise content management systems. Our platform is designed to complement and enhance your existing infrastructure, ensuring a smooth transition and immediate optimization."
+  },
+  {
+    question: "Can the Smart Bot be customized to fit our specific industry needs?",
+    answer: "Absolutely! Our Smart Bot is built with adaptability in mind. It can be trained and customized to align with your industry's unique requirements, ensuring relevant and effective interactions across all platforms."
+  },
+  {
+    question: "How do the AI-powered projections differ from traditional methods?",
+    answer: "Our AI-powered projections utilize next-gen algorithms that analyze vast amounts of data in real-time, offering more accurate and timely market trend predictions."
+  },
+  {
+    question: "What measures does Empress take to ensure data integrity?",
+    answer: "Data integrity is paramount at Empress. We employ advanced security protocols, regular backups, and data validation processes to ensure your data remains accurate, consistent, and accessible at all times."
+  },
+  {
+    question: "How does Empress help in anticipating trends?",
+    answer: "Empress leverages AI-driven insights to provide timely predictions on market trends and audience shifts. By analyzing user interactions, market data, and content performance, we help maintain superior experiences or your business."
+  },
+  {
+    question: "Is the interface user-friendly for teams with varied tech proficiency?",
+    answer: "Yes, our interface is designed to be intuitive and user-centric. It caters to users of all tech proficiencies, ensuring that your entire team can leverage the platform's capabilities with ease."
+  }
+];
+
+
+
+
+const featureBlocks = data[0].featureBlocks;
+
 ---
 
 <Layout title="About" footerMargin={false}>
@@ -72,30 +217,31 @@ const features = [
         <div class="max-w-sm md:max-w-max lg:col-span-2">
           <h1
             class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-            Enterprise
+            {data[0].mainHeading}
           </h1>
           <p
             class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-            From pioneering startups to iconic brands, we provide the essential tools to craft next-gen experiences, optimize results, and drive performance.
+            {data[0].subtext}
           </p>
           <div
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-            <Link
-              href="https://web3templates.com/templates/astroship-pro-astro-saas-website-template"
+          <Link
+              href={data[0].headingButtons[0].link}
               target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
-              Get Started
-            </Link>
-            <Link
-              size="lg"
-              style="outline"
-              rel="noopener"
-              href="https://github.com/surjithctly/astroship"
-              class="flex gap-1 items-center justify-center border-brand text-brand"
-              target="_blank">
-              Free Version
-            </Link>
+              {data[0].headingButtons[0].text}
+          </Link>
+          
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href={data[0].headingButtons[1].link}
+            class="flex gap-1 items-center justify-center border-brand text-brand"
+            target="_blank">
+            {data[0].headingButtons[1].text}
+          </Link>
           </div>
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
@@ -117,14 +263,12 @@ const features = [
   <Container>
   
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        We've got you covered
+        {data[0].offering.title}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Empress covers all things experience. If you don't find what you're looking
-        for, contact us and we'll either help you or steer you in the right
-        direction.
+        {data[0].offering.subtext}
       </p>
     </div>
 
@@ -139,13 +283,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Optimize with AI</span>
-        <span slot="title">Harness AI Precision</span>
-        <span slot="desc">
-          Empress's AI ensures dynamic and personalized interactions.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
       </Card>
-    
+      
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
@@ -156,13 +298,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Universal Tracking</span>
-        <span slot="title">Optimize Performance </span>
-        <span slot="desc">
-          Track interactions across platforms with Empress for to maximize operations.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
       </Card>
-    
+      
       <Card size="sm">
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
@@ -175,192 +315,87 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Webhooks</span>
-        <span slot="title">Connect 100+ Integrations</span>
-        <span slot="desc">
-          Seamlessly integrate with hundreds of tools using webhooks and Zapier.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
       </Card>
     </div>
 
-      <div class="grid md:grid-cols-2 py-10">
-        <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-          <Picture
-            src={FeatureImg1}
-            alt="Feature Image"
-            formats={["avif", "webp"]}
-            loading="lazy"
-          />
-        </div>
+
+
+      <!-- FeatureBlock.astro -->
     
       <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Embrace a New Age of User Engagement with AI and Automation
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Get Started</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
+        {data[0].featureBlocks.map((block) => (
+          <div class="grid md:grid-cols-2 py-10">
+            <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
+              <Picture
+                src={FeatureImg1}
+                alt="Feature Image"
+                formats={["avif", "webp"]}
+                loading="lazy"
+              />
+            </div>
+            <div class="grid place-items-center">
+              <div class="max-w-lg">
+                <Badge color="purple" class="-ml-px">{block.heading}</Badge>
+                <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+                  {block.title}
+                </h3>
+                <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                  {block.description}
+                </p>
+                <ul class="grid mt-6 text-left gap-y-4">
+                  {block.bulletPoints.map((point) => (
+                    <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                      <span class="text-sm">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="flex items-center gap-4 mt-6">
+                  {block.buttons?.map((button, index) => {
+                    if (index === 0) {
+                      return (
+                        <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                          <span>{button.text}</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                            <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </Link>
+                      );
+                    } else {
+                      return (
+                        <a 
+                          href={button.link} 
+                          class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                          {button.text}
+                        </a>
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    </div>
-
-    
-
-    <div class="grid md:grid-cols-2 py-10">
-      <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-        <Picture
-          src={FeatureImg1}
-          alt="Feature Image"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-      </div>
-  
-    <div class="grid place-items-center">
-      <div class="max-w-lg">
-        <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-        <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-          Embrace a New Age of User Engagement with AI and Automation
-        </h3>
-        <p class="mt-4 text-slate-600 [text-wrap:balance]">
-          Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-        </p>
-        <ul class="grid mt-6 text-left gap-y-4">
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-          </li>
-        </ul>
-        <div class="flex items-center gap-4 mt-6">
-          <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-            <span>Get Started</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 py-10">
-    <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-      <Picture
-        src={FeatureImg1}
-        alt="Feature Image"
-        formats={["avif", "webp"]}
-        loading="lazy"
-      />
-    </div>
-
-  <div class="grid place-items-center">
-    <div class="max-w-lg">
-      <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        Embrace a New Age of User Engagement with AI and Automation
-      </h3>
-      <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-      </p>
-      <ul class="grid mt-6 text-left gap-y-4">
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-        </li>
-      </ul>
-      <div class="flex items-center gap-4 mt-6">
-        <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-          <span>Get Started</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-            <path
-              fill-rule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </Link>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+      
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      <Badge color="purple">{data[0].featureHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        We've got you covered
+        {data[0].featureTitle}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Empress covers all things experience. If you don't find what you're looking
-        for, contact us and we'll either help you or steer you in the right
-        direction.
+        {data[0].featureAssurance}
       </p>
     </div>
 
@@ -372,7 +407,7 @@ const features = [
               <Icon class="text-indigo-500" name={item.icon} size="24" />
             </div>
             <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+              <h3 class="font-semibold text-lg">{item.title}</h3>
               <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
             </div>
           </div>
@@ -380,8 +415,37 @@ const features = [
       }
     </div>
 
+  
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
   </Container>
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+  
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  
+
   <Cta />
 </Layout>
+
