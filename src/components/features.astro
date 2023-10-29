@@ -2,6 +2,14 @@
 // @ts-ignore
 import Badge from "@components/ui/badge.astro";
 import { Icon } from "astro-icon";
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+import Cta from "@components/cta.astro";
+import Card from "@components/card.astro";
+import ArrowIcon from "../components/ui/icons/arrow.astro"
 
 const features = [
   {
@@ -36,6 +44,40 @@ const features = [
     "icon": "fluent:people-community-24-regular"
   }
 ];
+
+const faq = [
+  {
+    question: "What is Empress OS and what does it offer?",
+    answer: "The Empress OS Experience Suite covers the full content journey: from creation to optimization, enhancing user engagement and innovation."
+  },
+  {
+    question: "How is the Smart Bot in Empress unique?",
+    answer: "Empress's Smart Bot constantly updates with your latest content, offering tailored interactions across various platforms and languages."
+  },
+  {
+    question: "What's the role of the Experience API (xAPI)?",
+    answer: "xAPI captures experience focused data and captures every Smart Bot interaction, providing detailed insights into user behavior and preferences."
+  },
+  {
+    question: "How does Empress handle data from my existing platforms?",
+    answer: "Empress ensures easy data migration from existing platforms, prioritizing data integrity and smooth integration."
+  },
+  {
+    question: "How do real-time and predictive analytics enhance engagement?",
+    answer: "Real-time analytics offer immediate user insights. Predictive analytics forecast trends, allowing proactive audience engagement."
+  },
+  {
+    question: "Is Empress compatible across devices?",
+    answer: "Yes, Empress ensures a consistent user experience across devices, from smartphones to desktops."
+  },
+  {
+    question: "Can I integrate other tools with Empress?",
+    answer: "Absolutely! Empress supports seamless integration with over 100 tools via webhooks and Zapier."
+  }
+];
+
+
+
 ---
 
 <!-- <div class="mt-16">
@@ -47,7 +89,7 @@ const features = [
   </p>
 </div> -->
 <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-  <Badge color="purple">MORE FEATURES</Badge>
+  <Badge color="purple">More Features</Badge>
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
     We've got you covered
   </h2>
@@ -75,3 +117,29 @@ const features = [
 </div>
 
 <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+<Container>
+  <Sectionhead>
+    <Fragment slot="title">FAQ</Fragment>
+    <Fragment slot="desc">Frequently asked questions</Fragment>
+  </Sectionhead>
+
+  <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+    {faq.map(item => (
+      <div class="py-5">
+        <details class="group">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+            <span>{item.question}</span>
+            <span class="transition group-open:rotate-180">
+              <ArrowIcon />
+            </span>
+          </summary>
+          <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+            {item.answer}
+          </p>
+        </details>
+      </div>
+    ))}
+  </div>
+</Container>
+
