@@ -2,63 +2,207 @@
 import Container from "@components/container.astro";
 import { Icon } from "astro-icon";
 
-const footerLinks = {
+const { margin } = Astro.props;
+
+const footermenu = {
   industries: [
-    { title: "E-Commerce", path: "/e-commerce" },
-    { title: "Financial Services", path: "/financial-services" },
-    { title: "Technology", path: "/technology" },
-    { title: "Healthcare", path: "/healthcare" },
-    { title: "Education", path: "/education" }
+    {
+      title: "E-Commerce",
+      path: "/e-commerce"
+    },
+    {
+      title: "Financial Services",
+      path: "/financial-services"
+    },
+    {
+      title: "Technology",
+      path: "/technology"
+    },
+    {
+      title: "Healthcare",
+      path: "/healthcare"
+    },
+    {
+      title: "Education",
+      path: "/education"
+    }
   ],
   useCases: [
-    { title: "Enterprise", path: "/enterprise" },
-    { title: "Startups", path: "/startups" },
-    { title: "Agencies", path: "/agencies" },
-    { title: "Influencers", path: "/influencers" },
-    { title: "Non-Profits", path: "/non-profits" }
+    {
+      title: "Enterprise",
+      path: "/enterprise"
+    },
+    {
+      title: "Startups",
+      path: "/startups"
+    },
+    {
+      title: "Agencies",
+      path: "/agencies"
+    },
+    {
+      title: "Influencers",
+      path: "/influencers"
+    },
+    {
+      title: "Non-Profits",
+      path: "/non-profits"
+    }
   ],
   developers: [
-    { title: "Documentation", path: "https://docs.empress.eco", desc: "Start integrating in no time" },
-    { title: "Libraries and SDKs", path: "#" },
-    { title: "Plugins", path: "#" },
-    { title: "Code samples", path: "#" },
-    { title: "Tutorials", path: "#" }
+    {
+      title: "Documentation",
+      path: "https://docs.empress.eco",
+      desc: "Start integrating in no time"
+    },
+    {
+      title: "Libraries and SDKs",
+      path: "#"
+    },
+    {
+      title: "Plugins",
+      path: "#"
+    },
+    {
+      title: "Code samples",
+      path: "#"
+    },
+    {
+      title: "Tutorials",
+      path: "#"
+    }
   ],
   resources: [
-    { title: "Empress Blog", path: "/blog", desc: "Empress news and stories" },
-    { title: "Empress Guides", path: "/guides", desc: "Tips & tricks from Empress" },
-    { title: "Empress Academy", path: "/academy", desc: "Learn all about Empress" }
-  ],
-  connect: [
-    { title: "Find Support", path: "https://support.empress.eco/en", desc: "Contact our support team" },
-    { title: "Join the Community", path: "#", desc: "Join the #PurpleWorld" },
-    { title: "Become a Partner", path: "#", desc: "Explore our partner programs" }
+    {
+      title: "Find Support",
+      path: "https://support.empress.eco/en",
+      desc: "Contact our support team"
+    },
+    {
+      title: "Join the Community",
+      path: "#",
+      desc: "Join the #PurpleWorld"
+    },
+    {
+      title: "Empress Blog",
+      path: "/blog",
+      desc: "Empress news and stories"
+    },
+    {
+      title: "Empress Guides",
+      path: "/guides",
+      desc: "Tips & tricks from Empress"
+    },
+    {
+      title: "Empress Academy",
+      path: "/academy",
+      desc: "Learn all about Empress"
+    },
+    {
+      title: "Become a Partner",
+      path: "#",
+      desc: "Explore our partner programs"
+    }
   ]
 };
+
 ---
 
-<footer class="py-14 bg-slate-100 border-t border-slate-100 mt-10">
+<footer
+  class:list={[
+    "py-14 bg-slate-100 border-t border-slate-100",
+    margin && "mt-10",
+  ]}>
   <Container>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-      <!-- Logo and Social Links -->
-      <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
-        <a href="/" class="text-lg flex items-center">
-          <span class="font-bold text-indigo-600">empress</span><span class="text-slate-600">.eco</span>
-          <span class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md">BETA</span>
+      <div class="sm:col-span-1 md:col-span-1 lg:col-span-1">
+        <a href="/" class="text-lg flex items-center"
+          ><span class="font-bold text-indigo-600">empress</span><span
+            class="text-slate-600">.eco</span
+          >
+          <span
+            class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md"
+            >BETA</span
+          >
         </a>
-        <p class="mt-4 text-sm text-slate-700 max-w-xs">Engage with Empress and elevate your experience.</p>
+        <p class="mt-4 text-sm text-slate-700 max-w-xs">
+          Make every experience count.
+        </p>
         <div class="flex gap-3 mt-4 items-center">
-          <!-- Add your social links here -->
+          <a
+            href="https://twitter.com/empress_eco"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+            <Icon name="bx:bxl-twitter" class="w-4 h-4" />
+            <span class="sr-only">Twitter or X</span></a
+          >
+          <a
+            href="https://discord.com/invite/3xcm97vBYX"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+            <Icon name="bx:bxl-discord" class="w-4 h-4" /><span
+              class="sr-only">Discord</span
+            ></a
+          >
+          <a
+            href="https://www.youtube.com/channel/UCCFb7RTb_4mgm7qNoB3mVzw"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+            <Icon name="bx:bxl-youtube" class="w-4 h-4" /><span
+              class="sr-only">YouTube</span
+            ></a
+          >
+          <a
+            href="https://www.linkedin.com/company/19204219/admin/feed/posts/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+            <Icon name="bx:bxl-linkedin-square" class="w-4 h-4" /><span
+              class="sr-only">LinkedIn</span
+            ></a
+          >
+        <a
+        href="https://www.instagram.com/empress_eco/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+        <Icon name="ri:instagram-fill" class="w-4 h-4" /><span
+          class="sr-only">Instagram</span
+        ></a
+      >
+      <a
+      href="https://www.reddit.com/r/empress_eco/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+      <Icon name="ic:baseline-reddit" class="w-4 h-4" /><span
+        class="sr-only">Reddit</span
+      ></a
+    >
+    <a
+    href="https://www.tiktok.com/@empress_eco"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+    <Icon name="ic:sharp-tiktok" class="w-4 h-4" /><span
+      class="sr-only">TikTok</span
+    ></a
+  >
         </div>
       </div>
-
-      <!-- Links -->
       <div>
         <h3 class="font-medium text-sm text-slate-800">Industries</h3>
         <div class="flex flex-col mt-3">
           {
-            footerLinks.industries.map((link) => (
-              <a href={link.path} class="py-2 text-sm text-slate-600 hover:text-indigo-600">{link.title}</a>
+            footermenu.industries.map((item) => (
+              <a
+                href={item.path || "#"}
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600">
+                {item.title}
+              </a>
             ))
           }
         </div>
@@ -67,8 +211,12 @@ const footerLinks = {
         <h3 class="font-medium text-sm text-slate-800">Use Cases</h3>
         <div class="flex flex-col mt-3">
           {
-            footerLinks.useCases.map((link) => (
-              <a href={link.path} class="py-2 text-sm text-slate-600 hover:text-indigo-600">{link.title}</a>
+            footermenu.useCases.map((item) => (
+              <a
+                href={item.path || "#"}
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600">
+                {item.title}
+              </a>
             ))
           }
         </div>
@@ -77,8 +225,12 @@ const footerLinks = {
         <h3 class="font-medium text-sm text-slate-800">Developers</h3>
         <div class="flex flex-col mt-3">
           {
-            footerLinks.developers.map((link) => (
-              <a href={link.path} class="py-2 text-sm text-slate-600 hover:text-indigo-600">{link.title}</a>
+            footermenu.developers.map((item) => (
+              <a
+                href={item.path || "#"}
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600">
+                {item.title}
+              </a>
             ))
           }
         </div>
@@ -87,18 +239,12 @@ const footerLinks = {
         <h3 class="font-medium text-sm text-slate-800">Resources</h3>
         <div class="flex flex-col mt-3">
           {
-            footerLinks.resources.map((link) => (
-              <a href={link.path} class="py-2 text-sm text-slate-600 hover:text-indigo-600">{link.title}</a>
-            ))
-          }
-        </div>
-      </div>
-      <div>
-        <h3 class="font-medium text-sm text-slate-800">Connect</h3>
-        <div class="flex flex-col mt-3">
-          {
-            footerLinks.connect.map((link) => (
-              <a href={link.path} class="py-2 text-sm text-slate-600 hover:text-indigo-600">{link.title}</a>
+            footermenu.resources.map((item) => (
+              <a
+                href={item.path || "#"}
+                class="py-2 text-sm text-slate-600 hover:text-indigo-600">
+                {item.title}
+              </a>
             ))
           }
         </div>
@@ -108,11 +254,15 @@ const footerLinks = {
 
   <div class="mt-14 pt-8 px-5 border-t border-slate-200">
     <Container>
-      <p class="text-center text-sm text-slate-600">
+      <p class="text-center text-sm text-slate-600 [text-wrap:balance]">
         Copyright © {new Date().getFullYear()} Empress. All rights reserved.
       </p>
       <p class="text-center text-xs text-slate-600 mt-2">
-        <a href="/terms" class="hover:text-indigo-500"> Terms</a> ・ <a href="/privacy" class="hover:text-indigo-500">Privacy</a>
+        <a href="/terms" class="hover:text-indigo-500"> Terms</a> ・ <a
+          href="/privacy"
+          class="hover:text-indigo-500">
+          Privacy</a
+        >
       </p>
     </Container>
   </div>
