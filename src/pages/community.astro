@@ -1,0 +1,534 @@
+---
+import { getCollection } from "astro:content";
+import FeatureFaq from "@components/feature-faq.astro";
+import Badge from "@components/ui/badge.astro";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import heroImage from "../assets/hero-screenshot.png";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+import EmployeeImg from "../assets/employee.jpg";
+import Logos from "@components/logos.astro";
+import { Icon } from "astro-icon";
+import ArrowIcon from "../components/ui/icons/arrow.astro"
+import Cta from "@components/cta.astro";
+import Card from "@components/card.astro";
+import IntegrationImg from "../assets/integrations.svg?url";
+import FeatureImgOne from "../assets/features/2.png";
+import FeatureImgTwo from "../assets/features/2.png";
+import FeatureImgThree from "../assets/features/3.png";
+import FeatureImg1 from "../assets/features/6.png";
+import FeatureImg2 from "../assets/features/2.png";
+import { Picture, Image } from "astro:assets";
+import {
+  Slack,
+  Zapier,
+  Intercom,
+  Shopify,
+  Messenger,
+  Discord,
+} from "@components/ui/icons";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+const { nomargin } = Astro.props;
+
+const data = [
+  {
+    "mainHeading": "Driving Global Change with #PurpleWorld",
+    "subtext": "Join our mission-driven community, dedicated to achieving the Sustainable Development Goals (SDGs) by fostering transformative experiences.",
+    "headingButtons": [
+      {
+        "text": "Join the SDG Movement",
+        "link": "#"
+      },
+      {
+        "text": "Empress SDG Insights",
+        "link": "#"
+      }
+    ],
+  }
+]
+
+const faq = [
+  {
+    question: "What is the main objective of #PurpleWorld?",
+    answer: "#PurpleWorld is a mission-driven initiative focused on advancing the Sustainable Development Goals (SDGs) by fostering transformative experiences and community-driven actions. It serves as a platform for global change towards achieving these critical goals."
+  },
+  {
+    question: "What are the Sustainable Development Goals (SDGs)?",
+    answer: "The Sustainable Development Goals (SDGs) are a set of 17 global goals established by the United Nations in 2015. They address various global challenges, including poverty, inequality, climate change, environmental degradation, peace, and justice, with a target to achieve them by 2030."
+  },
+  {
+    question: "How does #PurpleWorld support the achievement of the SDGs?",
+    answer: "#PurpleWorld actively drives awareness, education, and actionable projects aligned with the SDGs. Through various platforms and initiatives, it empowers individuals and communities to contribute towards these global objectives actively."
+  },
+  {
+    question: "What projects can I expect from the Experience Network?",
+    answer: "The #ExperienceNetwork offers a variety of SDG-aligned projects, events, and collaborations. It provides a space for individuals to share experiences, insights, and best practices to drive impactful global sustainability projects."
+  },
+  {
+    question: "Are there any specific SDGs that #PurpleWorld focuses on?",
+    answer: "#PurpleWorld is dedicated to advancing all 17 SDGs. While certain initiatives or projects might emphasize specific goals, the overall movement is committed to holistic sustainable development."
+  },
+  {
+    question: "How can I stay updated on #PurpleWorld's activities?",
+    answer: "Engage with #PurpleWorld across various social media platforms, including Discord, Twitter, YouTube, and more. These platforms provide real-time updates, educational webinars, community stories, and insights related to the SDGs."
+  },
+  {
+    question: "How can I make an impact towards the SDGs through #PurpleWorld?",
+    answer: "You can participate in weekly challenges, share your growth journey through #GrowAndTell, advocate for experiential learning with #TeachTheWorld, or even lead your own community projects. Each initiative within #PurpleWorld offers opportunities for individuals to drive action towards sustainable development."
+  },
+  {
+    question: "What resources does #PurpleWorld offer for working with Empress?",
+    answer: "#PurpleWorld provides the Empress Academy for structured courses, Empress Guides for self-paced education, and the Empress Blog to stay updated with trends, insights, and actionable steps related to our mission."
+  }
+];
+
+
+const social = [
+  {
+    name: "Twitter (X)",
+    description: "Get real-time updates and insights.",
+    Icon: Discord,
+    link: "https://twitter.com/empress_eco",
+  },
+  {
+    name: "Discord",
+    description: "Engage in real-time community chats.",
+    Icon: Discord,
+    link: "https://discord.com/invite/3xcm97vBYX",  // Replace with your actual Discord link
+  },
+  {
+    name: "YouTube",
+    description: "Watch educational webinars and videos.",
+    Icon: Discord,
+    link: "https://www.youtube.com/channel/UCCFb7RTb_4mgm7qNoB3mVzw",  // Replace with your actual YouTube link
+  },
+  {
+    name: "LinkedIn",
+    description: "Connect for professional growth and trends.",
+    Icon: Discord,
+    link: "https://www.linkedin.com/company/19204219/admin/feed/posts/",  // Replace with your actual LinkedIn link
+  },
+  {
+    name: "TikTok",
+    description: "Enjoy quick educational tips and fun.",
+    Icon: Discord,
+    link: "https://www.tiktok.com/@empress_eco",  // Replace with your actual TikTok link
+  },
+  {
+    name: "Instagram",
+    description: "See our community’s behind-the-scenes stories.",
+    Icon: Discord,
+    link: "https://www.instagram.com/empress_eco/",  // Replace with your actual Instagram link
+  },
+  {
+    name: "Pinterest",
+    description: "Find curated educational resources.",
+    Icon: Discord,
+    link: "https://www.pinterest.com/empress_eco/",  // Replace with your actual Pinterest link
+  },
+  {
+    name: "Reddit",
+    description: "Join discussions and participate in Q&A.",
+    Icon: Discord,
+    link: "https://www.reddit.com/r/empress_eco/",  // Replace with your actual Reddit link
+  },
+  {
+    name: "Your Own Community",
+    description: "Lead and tailor your own experience.",
+    Icon: Discord,  // You'll need to replace this with the actual icon component or path
+    link: "/contact",  // Replace with your actual contact link
+  }
+];
+
+const features = [
+  {
+    "title": "Precision-Driven Creativity",
+    "description": "Harness our toolkit to design immersive content and experiences from scratch, streamlining your creative process.",
+    "icon": "fluent:document-javascript-24-regular"
+  },
+  {
+    "title": "Seamless Content Integration",
+    "description": "Already on another platform? Easily integrate it with ours, enabling tracking and optimization without any hassles.",
+    "icon": "fluent:trophy-24-regular"
+  },
+  {
+    "title": "Unified User Dashboard",
+    "description": "Get a consolidated view of your engagements, analytics, and content. Say goodbye to the chaos of scattered information.",
+    "icon": "fluent:box-24-regular"
+  },
+  {
+    "title": "Precision-Driven Creativity",
+    "description": "Harness our toolkit to design immersive content and experiences from scratch, streamlining your creative process.",
+    "icon": "fluent:document-javascript-24-regular"
+  },
+  {
+    "title": "Seamless Content Integration",
+    "description": "Already on another platform? Easily integrate it with ours, enabling tracking and optimization without any hassles.",
+    "icon": "fluent:trophy-24-regular"
+  },
+  {
+    "title": "Unified User Dashboard",
+    "description": "Get a consolidated view of your engagements, analytics, and content. Say goodbye to the chaos of scattered information.",
+    "icon": "fluent:box-24-regular"
+  }
+];
+
+const automate = [
+  {
+    "title": "Innovation",
+    "description": "It is through innovative approaches and creative solutions that we aim to address the world's most pressing challenges.",
+    "icon": "fluent:document-javascript-24-regular" // Placeholder icon
+  },
+  {
+    "title": "Wisdom",
+    "description": "We believe in fostering informed decision-making that prioritizes the long-term welfare of our global community.",
+    "icon": "fluent:trophy-24-regular" // Placeholder icon
+  },
+  {
+    "title": "Quality",
+    "description": "In every endeavor, we strive for excellence, ensuring that our contributions are impactful and enduring.",
+    "icon": "fluent:box-24-regular" // Placeholder icon
+  },
+  {
+    "title": "Inclusivity",
+    "description": "We emphasize building bridges across cultures, backgrounds, and beliefs, ensuring that the benefits of our initiatives reach everyone.",
+    "icon": "fluent:document-javascript-24-regular" // Placeholder icon
+  },
+  {
+    "title": "Uniqueness",
+    "description": "#PurpleWorld stands out in its commitment to tailor experiences that resonate with diverse communities while finding common purpose.",
+    "icon": "fluent:trophy-24-regular" // Placeholder icon
+  },
+  {
+    "title": "Futurism",
+    "description": "We prioritize forward-thinking educational strategies that equip individuals with the tools to shape a sustainable future.",
+    "icon": "fluent:box-24-regular" // Placeholder icon
+  }
+];
+---
+
+<Layout title="Features" footerMargin={false}>
+      <div class="overflow-x-clip">
+        <div class="overflow-x-clip">
+          <Container>
+            <main class="grid lg:grid-cols-5 place-items-center relative">
+              <div
+                class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
+              </div>
+              <div
+                class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
+              </div>
+              <div class="max-w-sm md:max-w-max lg:col-span-2">
+                <h1
+                  class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
+                  {data[0].mainHeading}
+                </h1>
+                <p
+                  class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
+                  {data[0].subtext}
+                </p>
+                <div
+                  class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+                <Link
+                    href={data[0].headingButtons[0].link}
+                    target="_blank"
+                    class="flex gap-1 items-center justify-center bg-brand"
+                    rel="noopener">
+                    {data[0].headingButtons[0].text}
+                </Link>
+                
+                <Link
+                  size="lg"
+                  style="outline"
+                  rel="noopener"
+                  href={data[0].headingButtons[1].link}
+                  class="flex gap-1 items-center justify-center border-purple text-purple"
+                  target="_blank">
+                  {data[0].headingButtons[1].text}
+                </Link>
+                </div>
+              </div>
+              <div class="py-3 lg:col-span-3 lg:-mr-44">
+                <Picture
+                  src={heroImage}
+                  alt="Astronaut in the air"
+                  formats={["avif", "webp"]}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  widths={[240, 540, 720, heroImage.width]}
+                  loading="eager"
+                  fetchpriority="high"
+                />
+              </div>
+            </main>
+          </Container>
+        </div>
+        <Container>
+    
+
+
+    <div
+    class:list={[
+      "max-w-4xl mx-auto flex flex-col items-center justify-center",
+      !nomargin && "mt-24",
+    ]}>
+    <Badge color="purple">Join the #PurpleWorld Revolution</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      Unite With #PurpleWorld To Build a More Sustainable Future
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      We're on a mission to meet the Sustainable Development Goals (SDGs), paving the way for sustainable solutions and innovative thinking.
+    </p>
+  </div>
+
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 mt-16 gap-10">
+      <Card class="lg:col-span-3" color="purple">
+        <Fragment slot="image">
+          <Picture
+            src={FeatureImgOne}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="h-full w-full object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">Experience Network</span>
+        <span slot="title">#ExperienceNetwork</span>
+        <span slot="desc">
+          Be part of a community that believes in the transformative power of shared experiences to achieve global sustainability.
+        </span>
+      </Card>
+      <Card class="lg:col-span-2" color="indigo">
+        <Fragment slot="image">
+          <Picture
+            src={FeatureImgTwo}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="h-full w-full object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">Empower Challenge</span>
+        <span slot="title">#EmpowerChallenge</span>
+        <span slot="desc">
+          Engage in our weekly challenges, directing efforts towards impactful, SDG-aligned projects.</span
+        >
+      </Card>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+      <Card color="indigo" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={FeatureImgThree}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="h-full w-full object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">Voices of Change</span>
+        <span slot="title">#VoicesofChange</span>
+        <span slot="desc">
+          Discover inspiring narratives that catalyze action towards sustainable development.</span
+        >
+      </Card>
+    
+      <Card color="purple" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={FeatureImgTwo}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="h-full w-full object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">Teach The World</span>
+        <span slot="title">#TeachTheWorld</span>
+        <span slot="desc">
+          Advocate for experiential learning that promotes global sustainability.</span
+        >
+      </Card>
+    
+      <Card size="sm">
+        <Fragment slot="image">
+          <!-- // svg image. cannot use <picture/> as of now -->
+          <Image
+            src={IntegrationImg}
+            alt="Feature image"
+            width="909"
+            height="823"
+            class="h-full w-full object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">Grow and Tell</span>
+        <span slot="title">#GrowAndTell</span>
+        <span slot="desc">
+          Share your growth story and inspire others to effect sustainable change.</span
+        >
+      </Card>
+    </div>
+
+
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">#PurpleWorld Pillars</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        A Vision for Global Impact
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        #PurpleWorld represents more than just a color; it's our commitment to a sustainable and enlightened future. These values underpin our mission:
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        automate.map((item) => (
+          <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+    <Container>
+      <Sectionhead>
+        <Fragment slot="title">Social Media</Fragment>
+        <Fragment slot="desc">
+          Share #PurpleWorld on Any Social Media Channel.
+        </Fragment>
+      </Sectionhead>
+  
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+        {
+          social.map((item) => (
+            <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+              <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
+                <item.Icon class="w-8 h-8" />
+              </div>
+  
+              <h3 class="text-xl lg:text-2xl font-medium mt-4">{item.name}</h3>
+              <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                {item.description}
+              </p>
+  
+              <div class="mt-3">
+                <a
+                  href="#"
+                  class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  Get Connected
+                  <span class="absolute inset-0" />
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <Badge color="purple">Amplify Your Impact</Badge>
+        <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+          More than a Movement
+        </h2>
+        <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+          #PurpleWorld is committed to making the SDGs a reality. Discover the values that drive our mission and vision:
+        </p>
+      </div>
+  
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+        <Card color="indigo" size="sm">
+          <Fragment slot="image">
+            <Picture
+              src={FeatureImgThree}
+              alt="Feature image"
+              formats={["avif", "webp"]}
+              class="h-full w-full object-contain"
+              loading="lazy"
+            />
+          </Fragment>
+          <span slot="badge">Interactive Learning</span>
+          <span slot="title">Empress Academy</span>
+          <span slot="desc">
+            Structured courses guided by industry experts.</span
+          >
+        </Card>
+      
+        <Card color="purple" size="sm">
+          <Fragment slot="image">
+            <Picture
+              src={FeatureImgTwo}
+              alt="Feature image"
+              formats={["avif", "webp"]}
+              class="h-full w-full object-contain"
+              loading="lazy"
+            />
+          </Fragment>
+          <span slot="badge">Self-paced Education</span>
+          <span slot="title">Empress Guides</span>
+          <span slot="desc">
+            Curated materials tailored to your learning pace.</span
+          >
+        </Card>
+      
+        <Card size="sm">
+          <Fragment slot="image">
+            <!-- // svg image. cannot use <picture/> as of now -->
+            <Image
+              src={IntegrationImg}
+              alt="Feature image"
+              width="909"
+              height="823"
+              class="h-full w-full object-contain"
+              loading="lazy"
+            />
+          </Fragment>
+          <span slot="badge">Latest Insights</span>
+          <span slot="title">Empress Blog</span>
+          <span slot="desc">
+            Stay updated with trends and actionable insights.</span
+          >
+        </Card>
+      </div>
+    </Container>
+
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  <Cta />
+</Layout>
