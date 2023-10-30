@@ -1,17 +1,19 @@
 ---
+
 import { getCollection } from "astro:content";
 import Badge from "@components/ui/badge.astro";
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
-import heroImage from "../assets/hero-screenshot.png";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Link from "@components/ui/link.astro";
-import EmployeeImg from "../assets/employee.jpg";
-import Logos from "@components/logos.astro";
-import { Icon } from "astro-icon";
 import Cta from "@components/cta.astro";
 import Card from "@components/card.astro";
+
+import { Icon } from "astro-icon";
+import ArrowIcon from "../components/ui/icons/arrow.astro"
+
+import Logos from "@components/logos.astro";
+import heroImage from "../assets/hero-screenshot.png";
 import IntegrationImg from "../assets/integrations.svg?url";
 import FeatureImgOne from "../assets/features/2.png";
 import FeatureImgTwo from "../assets/features/2.png";
@@ -19,44 +21,191 @@ import FeatureImgThree from "../assets/features/3.png";
 import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
+import EmployeeImg from "../assets/employee.jpg";
+
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const features = [
+
+const data = [
   {
-    "title": "Precision-Driven Creativity",
-    "description": "Harness our toolkit to design immersive content and experiences from scratch, streamlining your creative process.",
-    "icon": "fluent:document-javascript-24-regular"
-  },
-  {
-    "title": "Seamless Content Integration",
-    "description": "Already on another platform? Easily integrate it with ours, enabling tracking and optimization without any hassles.",
-    "icon": "fluent:trophy-24-regular"
-  },
-  {
-    "title": "Unified User Dashboard",
-    "description": "Get a consolidated view of your engagements, analytics, and content. Say goodbye to the chaos of scattered information.",
-    "icon": "fluent:box-24-regular"
-  },
-  {
-    "title": "Precision-Driven Creativity",
-    "description": "Harness our toolkit to design immersive content and experiences from scratch, streamlining your creative process.",
-    "icon": "fluent:document-javascript-24-regular"
-  },
-  {
-    "title": "Seamless Content Integration",
-    "description": "Already on another platform? Easily integrate it with ours, enabling tracking and optimization without any hassles.",
-    "icon": "fluent:trophy-24-regular"
-  },
-  {
-    "title": "Unified User Dashboard",
-    "description": "Get a consolidated view of your engagements, analytics, and content. Say goodbye to the chaos of scattered information.",
-    "icon": "fluent:box-24-regular"
+    "mainHeading": "Empower Your Agency with Empress",
+    "subtext": "Supercharge your agency's offerings with our comprehensive suite of content and experience tools.",
+    "headingButtons": [
+      {
+        "text": "Start 14-day trial",
+        "link": "#"
+      },
+      {
+        "text": "Contact Sales",
+        "link": "#"
+      }
+    ],
+    "sectionHeading": "Redefine Agency Performance with Empress",
+    "offering": {
+      "title": "Optimized Solutions for Agency Needs",
+      "subtext": "Equip your agency with the right tools and insights tailored to elevate client experiences and drive growth."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Content Excellence",
+        "title": "From Client Brief to Execution",
+        "description": "Streamline content creation, optimization, and distribution for all your agency projects, ensuring client satisfaction."
+      },
+      {
+        "heading": "Bot-Enhanced Interactions",
+        "title": "Maximize Client Engagement",
+        "description": "Leverage our adaptive Smart Bot for your clients, providing them with dynamic and personalized user interactions."
+      },
+      {
+        "heading": "Insightful Analytics",
+        "title": "Data-Backed Strategies",
+        "description": "Glean actionable insights for your agency's campaigns, ensuring optimal results and high ROI for your clients."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Agency-Centric Tools",
+        "title": "Flexibility at Every Step",
+        "description": "Whether for a small business client or a major brand, Empress offers scalable solutions tailored for your agency's diverse needs.",
+        "bulletPoints": [
+          "Automated workflows for all agency projects.",
+          "Customizable designs for unique client needs.",
+          "Infrastructure built for high-performance campaigns."
+        ],
+        "buttons": [
+          {
+            "text": "Start 14-day trial",
+            "link": "#"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "#"
+          }
+        ],
+      },
+      {
+        "heading": "Engagement Metrics",
+        "title": "Enhanced Client Reports",
+        "description": "Provide your clients with comprehensive user engagement metrics, helping them understand campaign performance better.",
+        "bulletPoints": [
+          "Detailed insights on user behaviors.",
+          "Optimal strategies built on real-time data.",
+          "Forecast user trends for proactive engagements."
+        ],
+        "buttons": [
+          {
+            "text": "Start 14-day trial",
+            "link": "#"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "#"
+          }
+        ],
+      },
+      {
+    "heading": "AI-Powered Personalization",
+    "title": "Unique Experiences for Every Client",
+    "description": "Tailor content and user experiences based on real-time AI insights, ensuring that each of your clients stands out.",
+    "bulletPoints": [
+      "Advanced algorithms for dynamic user interactions.",
+      "Personalized content suggestions for better engagement.",
+      "Adaptive AI models for evolving audience trends."
+    ],
+    "buttons": [
+      {
+        "text": "Start 14-day trial",
+        "link": "#"
+      },
+      {
+        "text": "Contact Sales",
+        "link": "#"
+      }
+    ],
+}
+    ],
+    
+    "featureHeading": "Agency-Optimized Capabilities",
+    "featureTitle": "Deliver More for Your Clients",
+    "featureAssurance": "Empress is committed to enhancing your agency's deliverables, ensuring client satisfaction and repeat business."
   }
 ];
+
+const features = [
+  {
+    "title": "Dynamic Content Tools",
+    "description": "Empower your agency with tools that make content creation, management, and optimization a breeze.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Interactive Bot Features",
+    "description": "Boost client engagement with a Smart Bot that adapts to user needs, delivering unique experiences across platforms.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Comprehensive Analytics",
+    "description": "Empower your agency's strategies with insights that can transform client campaigns and elevate results.",
+    "icon": "fluent:document-javascript-24-regular",
+  },
+  {
+    "title": "Seamless Data Integration",
+    "description": "Integrate client data effortlessly, providing a holistic view for better decision-making.",
+    "icon": "fluent:data-sunburst-24-regular",
+  },
+  {
+    "title": "Predictive AI Insights",
+    "description": "Stay ahead of the curve with AI-driven predictions, enabling your agency to navigate emerging trends efficiently.",
+    "icon": "fluent:trophy-24-regular",
+  },
+  {
+    "title": "Adaptable User Interfaces",
+    "description": "Ensure that your clients' users always receive a premium experience, regardless of the scale or platform.",
+    "icon": "fluent:document-javascript-24-regular",
+  }
+];
+
+
+const faq = [
+  {
+    question: "Is Empress tailored to meet the diverse needs of different agencies?",
+    answer: "Absolutely! Empress is crafted with agencies of all sizes and niches in mind. Our suite of tools is versatile, ensuring you can serve both your small business clients and major brands effectively."
+  },
+  {
+    question: "How easy is it for our agency to integrate Empress into our workflow?",
+    answer: "Empress comes with an intuitive interface and integrates seamlessly with most agency tools. Most agencies can seamlessly incorporate Empress in a matter of days. Plus, our dedicated team is always on hand to assist with your onboarding needs."
+  },
+  {
+    question: "How does Empress enhance the user experience for our clients?",
+    answer: "It's designed to adapt to users' behaviors and preferences swiftly, ensuring that your clients receive dynamic and tailored experiences that elevate engagement levels."
+  },
+  {
+    question: "How does Empress ensure a high ROI for our agency and our clients?",
+    answer: "Empress offers a suite of tools that enhance user engagement, optimize content distribution, and provide actionable insights. These features not only streamline your agency operations but also ensure your clients achieve measurable results, thus ensuring value for every dollar spent."
+  },
+  {
+    question: "How can Empress empower our agency's strategies for clients?",
+    answer: "Empress provides comprehensive analytics, AI-driven insights, and a holistic data view. With these tools at your disposal, your agency can deeply understand user behaviors and make strategic decisions that amplify client campaign results."
+  },
+  {
+    question: "What support does Empress offer to agencies?",
+    answer: "We recognize the distinctive challenges agencies face. Therefore, Empress extends specialized support and resources tailored for agencies. This includes best practices, insights, and rapid response assistance to ensure your agency always delivers its best."
+  },
+  {
+    question: "As our agency grows can Empress adapt to our changing demands?",
+    answer: "Definitely. Empress is founded on a flexible architecture, designed for scalability and adaptability. As your agency's portfolio expands and client requirements shift, Empress can be customized and scaled accordingly, ensuring you're consistently equipped with the right tools."
+  }
+];
+
+
+
+
+
+const featureBlocks = data[0].featureBlocks;
+
 ---
 
 <Layout title="About" footerMargin={false}>
@@ -72,30 +221,31 @@ const features = [
         <div class="max-w-sm md:max-w-max lg:col-span-2">
           <h1
             class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-            Agencies
+            {data[0].mainHeading}
           </h1>
           <p
             class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-            From pioneering startups to iconic brands, we provide the essential tools to craft next-gen experiences, optimize results, and drive performance.
+            {data[0].subtext}
           </p>
           <div
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-            <Link
-              href="https://web3templates.com/templates/astroship-pro-astro-saas-website-template"
+          <Link
+              href={data[0].headingButtons[0].link}
               target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
-              Get Started
-            </Link>
-            <Link
-              size="lg"
-              style="outline"
-              rel="noopener"
-              href="https://github.com/surjithctly/astroship"
-              class="flex gap-1 items-center justify-center border-brand text-brand"
-              target="_blank">
-              Free Version
-            </Link>
+              {data[0].headingButtons[0].text}
+          </Link>
+          
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href={data[0].headingButtons[1].link}
+            class="flex gap-1 items-center justify-center border-brand text-brand"
+            target="_blank">
+            {data[0].headingButtons[1].text}
+          </Link>
           </div>
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
@@ -117,14 +267,12 @@ const features = [
   <Container>
   
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        We've got you covered
+        {data[0].offering.title}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Empress covers all things experience. If you don't find what you're looking
-        for, contact us and we'll either help you or steer you in the right
-        direction.
+        {data[0].offering.subtext}
       </p>
     </div>
 
@@ -139,13 +287,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Optimize with AI</span>
-        <span slot="title">Harness AI Precision</span>
-        <span slot="desc">
-          Empress's AI ensures dynamic and personalized interactions.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
       </Card>
-    
+      
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
@@ -156,13 +302,11 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Universal Tracking</span>
-        <span slot="title">Optimize Performance </span>
-        <span slot="desc">
-          Track interactions across platforms with Empress for to maximize operations.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
       </Card>
-    
+      
       <Card size="sm">
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
@@ -175,192 +319,87 @@ const features = [
             loading="lazy"
           />
         </Fragment>
-        <span slot="badge">Webhooks</span>
-        <span slot="title">Connect 100+ Integrations</span>
-        <span slot="desc">
-          Seamlessly integrate with hundreds of tools using webhooks and Zapier.</span
-        >
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
       </Card>
     </div>
 
-      <div class="grid md:grid-cols-2 py-10">
-        <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-          <Picture
-            src={FeatureImg1}
-            alt="Feature Image"
-            formats={["avif", "webp"]}
-            loading="lazy"
-          />
-        </div>
+
+
+      <!-- FeatureBlock.astro -->
     
       <div class="grid place-items-center">
-        <div class="max-w-lg">
-          <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-          <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-            Embrace a New Age of User Engagement with AI and Automation
-          </h3>
-          <p class="mt-4 text-slate-600 [text-wrap:balance]">
-            Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-          </p>
-          <ul class="grid mt-6 text-left gap-y-4">
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-            </li>
-            <li class="flex items-center gap-3 text-neutral-800">
-              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-    
-              <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-4 mt-6">
-            <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-              <span>Get Started</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
+        {data[0].featureBlocks.map((block) => (
+          <div class="grid md:grid-cols-2 py-10">
+            <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
+              <Picture
+                src={FeatureImg1}
+                alt="Feature Image"
+                formats={["avif", "webp"]}
+                loading="lazy"
+              />
+            </div>
+            <div class="grid place-items-center">
+              <div class="max-w-lg">
+                <Badge color="purple" class="-ml-px">{block.heading}</Badge>
+                <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+                  {block.title}
+                </h3>
+                <p class="mt-4 text-slate-600 [text-wrap:balance]">
+                  {block.description}
+                </p>
+                <ul class="grid mt-6 text-left gap-y-4">
+                  {block.bulletPoints.map((point) => (
+                    <li class="flex items-center gap-3 text-neutral-800">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                      <span class="text-sm">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div class="flex items-center gap-4 mt-6">
+                  {block.buttons?.map((button, index) => {
+                    if (index === 0) {
+                      return (
+                        <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                          <span>{button.text}</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                            <path
+                              fill-rule="evenodd"
+                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </Link>
+                      );
+                    } else {
+                      return (
+                        <a 
+                          href={button.link} 
+                          class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                          {button.text}
+                        </a>
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    </div>
-
-    
-
-    <div class="grid md:grid-cols-2 py-10">
-      <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-        <Picture
-          src={FeatureImg1}
-          alt="Feature Image"
-          formats={["avif", "webp"]}
-          loading="lazy"
-        />
-      </div>
-  
-    <div class="grid place-items-center">
-      <div class="max-w-lg">
-        <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-        <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-          Embrace a New Age of User Engagement with AI and Automation
-        </h3>
-        <p class="mt-4 text-slate-600 [text-wrap:balance]">
-          Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-        </p>
-        <ul class="grid mt-6 text-left gap-y-4">
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-          </li>
-          <li class="flex items-center gap-3 text-neutral-800">
-            <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-  
-            <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-          </li>
-        </ul>
-        <div class="flex items-center gap-4 mt-6">
-          <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-            <span>Get Started</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 py-10">
-    <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-      <Picture
-        src={FeatureImg1}
-        alt="Feature Image"
-        formats={["avif", "webp"]}
-        loading="lazy"
-      />
-    </div>
-
-  <div class="grid place-items-center">
-    <div class="max-w-lg">
-      <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
-      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        Embrace a New Age of User Engagement with AI and Automation
-      </h3>
-      <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Delve deep into a world of AI guided user interactions. With Empress, anticipate needs, tailor responses, and refine experiences, all in real-time.
-      </p>
-      <ul class="grid mt-6 text-left gap-y-4">
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Intelligent AI-Powered Chatbots</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">Predictive Analytics for Strategic Actions</span>
-        </li>
-        <li class="flex items-center gap-3 text-neutral-800">
-          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
-          <span class="text-sm">AI-Enhanced Personalization & Automations</span>
-        </li>
-      </ul>
-      <div class="flex items-center gap-4 mt-6">
-        <Link href="#" size="sm" class="inline-flex items-center group gap-px">
-          <span>Get Started</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-            <path
-              fill-rule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clip-rule="evenodd"></path>
-          </svg>
-        </Link>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+      
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">MORE FEATURES</Badge>
+      <Badge color="purple">{data[0].featureHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        We've got you covered
+        {data[0].featureTitle}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Empress covers all things experience. If you don't find what you're looking
-        for, contact us and we'll either help you or steer you in the right
-        direction.
+        {data[0].featureAssurance}
       </p>
     </div>
 
@@ -372,7 +411,7 @@ const features = [
               <Icon class="text-indigo-500" name={item.icon} size="24" />
             </div>
             <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+              <h3 class="font-semibold text-lg">{item.title}</h3>
               <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
             </div>
           </div>
@@ -380,8 +419,37 @@ const features = [
       }
     </div>
 
+  
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
   </Container>
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+  
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  
+
   <Cta />
 </Layout>
+
