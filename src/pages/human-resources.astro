@@ -37,11 +37,11 @@ const data = [
     "headingButtons": [
       {
         "text": "Get Started",
-        "link": "#"
+        "link": "/contact"
       },
       {
-        "text": "Experience Free Version",
-        "link": "#"
+        "text": "Contact Sales",
+        "link": "/contact"
       }
     ],
     "sectionHeading": "Empress for HR",
@@ -77,9 +77,13 @@ const data = [
           "Tailored strategies powered by Experience API (xapi)"
         ],
         "buttons": [
+        {
+            "text": "Get Started",
+            "link": "/contact"
+          },
           {
-            "text": "Learn More",
-            "link": "#"
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ]
       },
@@ -93,9 +97,13 @@ const data = [
           "Unified vision and streamlined execution"
         ],
         "buttons": [
+        {
+            "text": "Get Started",
+            "link": "/contact"
+          },
           {
-            "text": "Discover More",
-            "link": "#"
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ]
       },
@@ -109,17 +117,21 @@ const data = [
           "Proactive approach powered by actionable analytics"
         ],
         "buttons": [
+        {
+            "text": "Get Started",
+            "link": "/contact"
+          },
           {
-            "text": "Experience Efficiency",
-            "link": "#"
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ]
       }
     ],
     "buttons": [
       {
-        "text": "Start Your Journey",
-        "link": "#"
+        "text": "Get Started",
+        "link": "/contact"
       }
     ],
     "featureHeading": "Empress Innovations for HR",
@@ -219,7 +231,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -230,8 +241,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>

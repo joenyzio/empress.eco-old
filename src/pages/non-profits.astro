@@ -32,16 +32,16 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
 {
-    "mainHeading": "Empower Your Non-Profit with Empress",
+    "mainHeading": "Evolve Your Non-Profit with Empress",
     "subtext": "Design, measure, and advance mission-driven experiences that amplify your impact, scale your reach, and foster transformative change.",
     "headingButtons": [
           {
             "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
+            "link": "/contact"
           },
           {
             "text": "Contact Support",
-            "link": "#"
+            "link": "/contact"
           }
         ],
     "sectionHeading": "The Empress Edge for Non-Profits",
@@ -77,14 +77,14 @@ const data = [
           "Built to adapt to ever-evolving community needs."
         ],
         "buttons": [
-          {
-            "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
-          },
-          {
-            "text": "Contact Support",
-            "link": "#"
-          }
+        {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
         ],
       },
       {
@@ -97,14 +97,14 @@ const data = [
       "Turn insights into actionable, mission-driven strategies."
     ],
     "buttons": [
-      {
-        "text": "Get Started",
-        "link": "https://app.empress.eco/admin/login"
-      },
-      {
-        "text": "Contact Support",
-        "link": "#"
-      }
+    {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
     ],
 },
 
@@ -118,14 +118,14 @@ const data = [
             "Stay aligned with your mission's evolving trajectory."
     ],
     "buttons": [
-      {
-        "text": "Get Started",
-        "link": "https://app.empress.eco/admin/login"
-      },
-      {
-        "text": "Contact Support",
-        "link": "#"
-      }
+    {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
     ],
 }
     ],
@@ -227,7 +227,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -238,8 +237,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>

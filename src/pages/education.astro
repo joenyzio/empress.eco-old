@@ -37,7 +37,7 @@ const data = [
     "headingButtons": [
           {
             "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
+            "link": "/contact"
           },
           {
             "text": "Contact Sales",
@@ -78,14 +78,14 @@ const data = [
           "Cross-platform distribution capabilities."
         ],
         "buttons": [
-          {
-            "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
-          },
-          {
-            "text": "Contact Sales",
-            "link": "/contact"
-          }
+        {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
         ],
       },
       {
@@ -98,14 +98,14 @@ const data = [
           "Real-time updates and customization."
         ],
         "buttons": [
-          {
-            "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
-          },
-          {
-            "text": "Contact Sales",
-            "link": "/contact"
-          }
+        {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
         ],
       },
       {
@@ -116,18 +116,28 @@ const data = [
           "Integrate data without loss.",
           "Harness predictive analytics.",
           "Proactive audience engagement tools."
-        ]
+        ],
+        "buttons": [
+        {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
+        ],
       }
     ],
     "buttons": [
-          {
-            "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
-          },
-          {
-            "text": "Contact Sales",
-            "link": "/contact"
-          }
+    {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
         ],
     "featureHeading": "Empress Features",
     "featureTitle": "Tailored for Modern Education",
@@ -227,7 +237,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -238,8 +247,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>

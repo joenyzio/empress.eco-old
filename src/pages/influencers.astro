@@ -32,12 +32,12 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
 {
-    "mainHeading": "Empower Your Influence with Empress",
+    "mainHeading": "Expand Your Influence with Empress",
     "subtext": "Curate, enhance, and measure transformative experiences that captivate and grow your audience.",
     "headingButtons": [
           {
             "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
+            "link": "/contact"
           },
           {
             "text": "Contact Sales",
@@ -77,14 +77,14 @@ const data = [
           "Tools designed for influencers' dynamic needs."
         ],
         "buttons": [
-          {
-            "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
-          },
-          {
-            "text": "Contact Sales",
-            "link": "/contact"
-          }
+        {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
         ],
       },
       {
@@ -97,14 +97,14 @@ const data = [
           "Leverage analytics to consistently engage and grow your audience."
         ],
         "buttons": [
-          {
-            "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
-          },
-          {
-            "text": "Contact Sales",
-            "link": "/contact"
-          }
+        {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
         ],
       },
       {
@@ -117,14 +117,14 @@ const data = [
             "Ensure relevance and authenticity in every interaction."
         ],
         "buttons": [
-          {
-            "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
-          },
-          {
-            "text": "Contact Sales",
-            "link": "/contact"
-          }
+        {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
         ],
       }
     ],
@@ -222,7 +222,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -233,8 +232,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>

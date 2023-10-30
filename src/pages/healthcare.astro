@@ -37,7 +37,7 @@ const data = [
         "headingButtons": [
             {
                 "text": "Get Started",
-                "link": "https://app.empress.eco/admin/login"
+                "link": "/contact"
             },
             {
                 "text": "Contact Sales",
@@ -77,14 +77,14 @@ const data = [
                     "Innovative solutions for operational challenges."
                 ],
                 "buttons": [
-                    {
-                      "text": "Get Started",
-                      "link": "https://app.empress.eco/admin/login"
-                    },
-                    {
-                        "text": "Contact Sales",
-                        "link": "/contact"
-                    }
+                {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
                 ]
             },
             {
@@ -97,14 +97,14 @@ const data = [
                     "Adaptive solutions for evolving healthcare needs."
                 ],
                 "buttons": [
-                    {
-                      "text": "Get Started",
-                      "link": "https://app.empress.eco/admin/login"
-                    },
-                    {
-                        "text": "Contact Sales",
-                        "link": "/contact"
-                    }
+                {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
                 ]
             },
             {
@@ -117,14 +117,14 @@ const data = [
                     "Harness innovative tools for enhanced operational efficiency."
                 ],
                 "buttons": [
-                    {
-                      "text": "Get Started",
-                      "link": "https://app.empress.eco/admin/login"
-                    },
-                    {
-                        "text": "Contact Sales",
-                        "link": "/contact"
-                    }
+                {
+                "text": "Get Started",
+                "link": "/contact"
+                },
+                {
+                  "text": "Contact Sales",
+                  "link": "/contact"
+                }
                 ]
             }
         ],
@@ -229,7 +229,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -240,8 +239,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>

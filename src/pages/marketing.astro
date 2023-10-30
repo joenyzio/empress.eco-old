@@ -36,12 +36,12 @@ const data = [
     "subtext": "Unlock an all-encompassing content suite, empowered by AI-driven insights, to revolutionize your marketing campaigns.",
     "headingButtons": [
       {
-        "text": "Launch Your Campaign",
-        "link": "#"
+        "text": "Get Started",
+        "link": "/contact"
       },
       {
-        "text": "Try for Free",
-        "link": "#"
+        "text": "Contact Sales",
+        "link": "/contact"
       }
     ],
     "sectionHeading": "Redefining Modern Marketing",
@@ -78,8 +78,12 @@ const data = [
         ],
         "buttons": [
           {
-            "text": "Unlock Insights",
-            "link": "#"
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ]
       },
@@ -94,8 +98,12 @@ const data = [
         ],
         "buttons": [
           {
-            "text": "Experience AI Marketing",
-            "link": "#"
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ]
       },
@@ -110,8 +118,12 @@ const data = [
         ],
         "buttons": [
           {
-            "text": "Dive into Data",
-            "link": "#"
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ]
       }
@@ -214,7 +226,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -225,8 +236,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>

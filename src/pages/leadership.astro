@@ -36,12 +36,12 @@ const data = [
     "subtext": "Harness Empress to elevate your leadership strategy. Access comprehensive content, predictive analytics, and seamless integrations.",
     "headingButtons": [
       {
-        "text": "Empower Leadership",
-        "link": "#"
+        "text": "Get Started",
+        "link": "/contact"
       },
       {
-        "text": "Try for Free",
-        "link": "#"
+        "text": "Contact Sales",
+        "link": "/contact"
       }
     ],
     "sectionHeading": "Elevate with Empress",
@@ -78,8 +78,12 @@ const data = [
         ],
         "buttons": [
           {
-            "text": "Lead with Intelligence",
-            "link": "#"
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ]
       },
@@ -94,8 +98,12 @@ const data = [
         ],
         "buttons": [
           {
-            "text": "Lead Globally",
-            "link": "#"
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ]
       },
@@ -110,8 +118,12 @@ const data = [
         ],
         "buttons": [
           {
-            "text": "Lead Together",
-            "link": "#"
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ]
       }
@@ -216,7 +228,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -227,8 +238,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>

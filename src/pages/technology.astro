@@ -32,12 +32,12 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
     {
-        "mainHeading": "Empress Tech Solutions",
-        "subtext": "Delivering Strategic Digital Solutions Tailored for the Tech Sector.",
+        "mainHeading": "Increase Product Adoption with Empress",
+        "subtext": "Create, Publish, and Optimize Your User Journeys for Enhanced Community Engagement and Product Usage",
         "headingButtons": [
             {
               "text": "Get Started",
-              "link": "https://app.empress.eco/admin/login"
+              "link": "/contact"
             },
             {
                 "text": "Contact Sales",
@@ -47,7 +47,7 @@ const data = [
         "sectionHeading": "Strategic Digital Tools for Your Tech Business",
         "offering": {
             "title": "Integrated Content Lifecycle",
-            "subtext": "From content creation to insightful optimization, elevate your content strategy with our comprehensive suite."
+            "subtext": "From content creation to insightful optimization, elevate your impact with our comprehensive suite."
         },
         "valueBlocks": [
             {
@@ -78,12 +78,12 @@ const data = [
                 ],
                 "buttons": [
                     {
-                      "text": "Get Started",
-                      "link": "https://app.empress.eco/admin/login"
+                    "text": "Get Started",
+                    "link": "/contact"
                     },
                     {
-                        "text": "Contact Sales",
-                        "link": "/contact"
+                      "text": "Contact Sales",
+                      "link": "/contact"
                     }
                 ]
             },
@@ -98,12 +98,12 @@ const data = [
                 ],
                 "buttons": [
                     {
-                      "text": "Get Started",
-                      "link": "https://app.empress.eco/admin/login"
+                    "text": "Get Started",
+                    "link": "/contact"
                     },
                     {
-                        "text": "Contact Sales",
-                        "link": "/contact"
+                      "text": "Contact Sales",
+                      "link": "/contact"
                     }
                 ]
             },
@@ -118,12 +118,12 @@ const data = [
                 ],
                 "buttons": [
                     {
-                        "text": "Get Started",
-                        "link": "https://app.empress.eco/admin/login"
+                    "text": "Get Started",
+                    "link": "/contact"
                     },
                     {
-                        "text": "Contact Sales",
-                        "link": "/contact"
+                      "text": "Contact Sales",
+                      "link": "/contact"
                     }
                 ]
             }
@@ -228,7 +228,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -239,8 +238,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>
