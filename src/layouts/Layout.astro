@@ -24,7 +24,7 @@ const { title, footerMargin = true } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "Astroship Pro"
-  : "Astroship Pro - SAAS Startup Website Template for Astro";
+  : "empress.eco - Make Every Experience Count";
 ---
 
 <!doctype html>
@@ -37,7 +37,7 @@ const makeTitle = title
 
     <SEO
       title={makeTitle}
-      description="Astroship Pro - SAAS & Startup Website Template for Astro built with TailwindCSS."
+      description="empress.eco - Make Every Experience Count."
       canonical={canonicalURL}
       twitter={{
         creator: "@surjithctly",
@@ -48,11 +48,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship Pro - SAAS &Startup Website Template for Astro`,
+          title: `empress.eco - Mak Every Experience Count`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Empress Homepage Screenshot",
         },
       }}
     />
@@ -76,12 +76,23 @@ const makeTitle = title
     <slot />
     <Footer margin={footerMargin} />
         <!-- Chat Embed Script -->
-        <script type="module">
+        <!-- <script type="module">
           import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
           Chatbot.init({
               chatflowid: "1dd03657-db13-4108-861f-f386c49c46a5",
               apiHost: "http://localhost:4000",
           })
+      </script> -->
+      <script>
+        window.intercomSettings = {
+          api_base: "https://api-iam.intercom.io",
+          app_id: "r85kig20"
+        };
+      </script>
+      
+      <script>
+      // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/r85kig20'
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/r85kig20';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
       </script>
   </body>
 </html>
