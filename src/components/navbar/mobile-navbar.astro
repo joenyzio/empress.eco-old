@@ -4,9 +4,77 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { StickyHeader, Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
+const menuitems = [
+  {
+    title: "Products",
+    path: "#",
+    children: [
+      { title: "Product Overview", path: "/features" },
+      { title: "All Features", path: "/integrations" },
+      { title: "App Integrations", path: "/integrations" },
+      { title: "Empress OS", path: "/integrations" },
+      { title: "Smart Bots", path: "/integrations" },
+      { title: "Experience-as-a-Service", path: "/integrations" },
+    ],
+  },
+  {
+    title: "Solutions",
+    path: "#",
+    children: [
+      { title: "Customer Support", path: "/features" },
+      { title: "Human Resources", path: "/integrations" },
+      { title: "Operations", path: "/integrations" },
+      { title: "Marketing", path: "/integrations" },
+      { title: "Leadership", path: "/integrations" },
+      { title: "E-Commerce", path: "/integrations" },
+      { title: "Financial Services", path: "/integrations" },
+      { title: "Technology", path: "/integrations" },
+      { title: "Healthcare", path: "/integrations" },
+      { title: "Education", path: "/integrations" },
+      { title: "Enterprise", path: "/integrations" },
+      { title: "Startups", path: "/integrations" },
+      { title: "Agencies", path: "/integrations" },
+      { title: "Influencers", path: "/integrations" },
+      { title: "Non-Profits", path: "/integrations" },
+    ],
+  },
+  {
+    title: "Developers",
+    path: "#",
+    children: [
+      { title: "Documentation", path: "/features" },
+      { title: "Libraries and SDKs", path: "/integrations" },
+      { title: "Plugins", path: "/integrations" },
+      { title: "Code Samples", path: "/integrations" },
+      { title: "Tutorials", path: "/integrations" },
+      { title: "First Steps with Empress", path: "/integrations" },
+      { title: "Experience Protocol Overview", path: "/integrations" },
+      { title: "Building Experience Apps", path: "/integrations" },
+      { title: "Integrating with Empress", path: "/integrations" },    
+    ],
+  },
+  {
+    title: "Resources",
+    path: "#",
+    children: [
+      { title: "Empress Blog", path: "/features" },
+      { title: "Empress Guides", path: "/integrations" },
+      { title: "Empress Academy", path: "/integrations" },
+      { title: "Find Support", path: "/integrations" },
+      { title: "Join the Community", path: "/integrations" },
+      { title: "Become an Advocate", path: "/integrations" },
+    ],
+  },
+  {
+    title: "Contact Sales",
+    path: "/pricing",
+  },
+  {
+    title: "Pricing",
+    path: "/about",
+  }
+];
 ---
-
-<!-- DESKTOP MENU -->
 
 <StickyHeader
   class="sticky top-0 border-b z-20 transition-all"
@@ -14,390 +82,106 @@ import { StickyHeader, Astronav, MenuItems, MenuIcon } from "astro-navbar";
   defaultClass="py-5 border-transparent"
   activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg">
   <Container>
-      <div
-        transition:animate="none">
-          <div class="flex w-full lg:w-auto items-left justify-between">
-            <a
-              href="/"
-              class="text-lg flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full -ml-2"
-              ><span class="font-bold text-indigo-600">empress</span><span
-                class="text-slate-600">.eco</span
-              >
-              <span
-                class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md"
-                >BETA</span
-              >
-            </a>
-  
-            <header class="container mx-auto px-4 py-6 flex items-center justify-between">
-
-              <nav>
-                <ul class="flex items-center justify-center text-gray-500">
-                  <li class="relative group px-3 py-2">
-                    <button class="hover:opacity-50 cursor-default">Products</button>
-                    <div
-                      class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
-                      <div class="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-                        <div
-                          class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
-                        </div>
-          
-                        <div class="relative z-10">
-                          <div class="grid grid-cols-2 gap-6">
-                            <div>
-                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">Platform</p>
-                              <ul class="mt-3 text-[15px]">
-                                <li>
-                                  <a href="/product"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Product Overview
-                                    <p class="text-gray-500 font-normal">Your 360° Experience Suite</p>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/features"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    All Features
-                                    <p class="text-gray-500 font-normal">All-Inclusive Feature Set</p>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/integrations"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    App Integrations
-                                    <p class="text-gray-500 font-normal">Connect to 200+ Tools</p>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div>
-                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">The Suite</p>
-                              <ul class="mt-3 text-[15px]">
-                                <li>
-                                  <a href="/empress-os"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8]
-                                    transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Empress OS
-                                    <p class="text-gray-500 font-normal">Your Experience Control Center</p>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/smart-bots"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Smart Bots
-                                    <p class="text-gray-500 font-normal">Personalized Digital Ambassador</p>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/experience-as-a-service"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Experience-as-a-Service
-                                    <p class="text-gray-500 font-normal">Interaction Meets Intelligence</p>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="relative group px-3 py-2">
-                    <button class="hover:opacity-50 cursor-default">Solutions</button>
-                    <div
-                      class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
-                      <div class="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-                        <div
-                          class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
-                        </div>
-          
-                        <div class="relative z-10">
-                          <div class="grid grid-cols-3 gap-10">
-                            <div>
-                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">TEAMS</p>
-                              <ul class="mt-3 text-[15px]">
-                                <li>
-                                  <a href="/customer-support"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Customer Support
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/human-resources"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Human Resources
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/operations"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Operations
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/marketing"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Marketing
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/leadership"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Leadership
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div>
-                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">INDUSTRIES</p>
-                              <ul class="mt-3 text-[15px]">
-                                <li>
-                                  <a href="/e-commerce"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    E-Commerce
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/financial-services"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Financial Services
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/technology"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Technology
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/healthcare"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Healthcare
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/education"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Education
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div>
-                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">USE CASES</p>
-                              <ul class="mt-3 text-[15px]">
-                                <li>
-                                  <a href="/enterprise"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Enterprise
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/startups"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Startups
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/agencies"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Agencies
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/influencers"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Influencers
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/non-profits"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Non-Profits
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="relative group px-3 py-2">
-                    <button class="hover:opacity-50 cursor-default">Developers</button>
-                    <div
-                      class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
-                      <div class="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-                        <div
-                          class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12.65rem] duration-500 ease-in-out rounded-sm">
-                        </div>
-          
-                        <div class="relative z-10">
-                          <a href="https://docs.empress.eco"
-                            class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                            Documentation
-                            <p class="text-gray-500 font-normal">Start integrating in no time</p>
-                          </a>
-                          <div class="mt-6 grid grid-cols-2 gap-6">
-                            <div>
-                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">Get Started</p>
-                              <ul class="mt-3 text-[15px]">
-                                <li>
-                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Libraries and SDKs
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Plugins
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Code samples
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-500 font-semibold hover:text-indigo-600">
-                                    Tutorials
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div>
-                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">Guides</p>
-                              <ul class="mt-3 text-[15px]">
-                                <li>
-                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-gray-600 font-semibold hover:text-indigo-600">
-                                    First Steps with Empress
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-gray-600 font-semibold hover:text-indigo-600">
-                                    Experience Protocol Overview
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-gray-600 font-semibold hover:text-indigo-600">
-                                    Building Experience Apps
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-gray-600 font-semibold hover:text-indigo-600">
-                                    Integrating with Empress
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="relative group px-3 py-2">
-                    <button class="hover:opacity-50 cursor-default">Resources</button>
-                    <div
-                      class="absolute top-0 -left-48 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
-                      <div class="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-                        <div
-                          class="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
-                        </div>
-          
-                        <div class="relative z-10">
-                          <div class="grid grid-cols-2 gap-6">
-                            <div>
-                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">LEARN</p>
-                              <ul class="mt-3 text-[15px]">
-                                <li>
-                                  <a href="/blog"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8]
-                                    transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Empress Blog
-                                    <p class="text-gray-500 font-normal">Empress news and stories</p>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/guides"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Empress Guides
-                                    <p class="text-gray-500 font-normal">Tips & tricks from Empress</p>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/academy"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Empress Academy
-                                    <p class="text-gray-500 font-normal">Learn all about Empress</p>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div>
-                              <p class="uppercase tracking-wider text-gray-500 font-medium text-[13px]">CONNECT</p>
-                              <ul class="mt-3 text-[15px]">
-                                <li>
-                                  <a href="https://support.empress.eco/en/"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Find Support
-                                    <p class="text-gray-500 font-normal">Contact our support team</p>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/community"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Join the Community
-                                    <p class="text-gray-500 font-normal">Join the #PurpleWorld</p>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="/advocate"
-                                    class="block p-2 -mx-2 rounded-lg hover:bg-[#f4f6f8] transition ease-in-out duration-300 text-indigo-600 font-semibold hover:text-indigo-600">
-                                    Become an Advocate
-                                    <p class="text-gray-500 font-normal">Explore our advocate program</p>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="relative group px-3 py-2">
-                    <a href="/pricing" class="hover:opacity-50 cursor-default">Pricing
-                    </a>
-                  </li>
-                </ul>
-          <div class="lg:hidden flex items-center mt-3 gap-4">
-            <Link href="#" style="muted" block size="md">Log in</Link>
-            <Link href="#" size="md" block>Try for Free</Link>
+    <div class="flex flex-col lg:flex-row justify-between items-center relative z-10" transition:animate="none">
+      <Astronav>
+        <div class="flex w-full lg:w-auto items-center justify-between">
+          <a href="/" class="text-lg flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full px-2 -ml-2">
+            <span class="font-bold text-indigo-600">empress</span>
+            <span class="text-slate-600">.eco</span>
+            <span class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md">BETA</span>
+          </a>
+          <div class="block lg:hidden">
+            <MenuIcon class="w-4 h-4 text-gray-800" />
           </div>
+        </div>
+        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+          <slot name="menu-items">
+            <ul class="flex flex-col lg:flex-row lg:gap-3">
+              {menuitems.map((item, index) => (
+                <>
+                  {item.children ? (
+                    <Dropdown title={item.title} children={item.children} lastItem={index === menuitems.length - 1} />
+                  ) : (
+                    <li>
+                      <a href={item.path} class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                        {item.title}
+                      </a>
+                    </li>
+                  )}
+                </>
+              ))}
+            </ul>
+          </slot>
         </MenuItems>
+      </Astronav>
       <div>
         <div class="hidden lg:flex items-center gap-4">
-          <a
-            href="/contact"
-            class="text-sm px-2 py-1 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full text-indigo-700"
-            >Contact Sales</a
-          >
-          <Link
-            href="/contact"
-            size="sm"
-            class="inline-flex items-center group gap-px">
-            <span>Join Beta</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
+          <a href="#" class="text-sm px-2 py-1 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">Log in</a>
+          <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+            <span>Try for Free</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+              <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
+            </svg>
+          </Link>
+        </div>
+        <div class="lg:hidden flex items-center gap-4">
+          {/* ... (mobile menu contents) ... */}
+          {/* Continue on next step */}
+        </div>
+      </div>
+    </div>
+  </Container>
+</StickyHeader>
+
+
+<!-- <StickyHeader
+  class="sticky top-0 border-b z-20 transition-all"
+  scrollY={50}
+  defaultClass="py-5 border-transparent"
+  activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg">
+  <Container>
+    <div class="flex flex-col lg:flex-row justify-between items-center relative z-10" transition:animate="none">
+      <Astronav>
+        <div class="flex w-full lg:w-auto items-center justify-between">
+          <a href="/" class="text-lg flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full px-2 -ml-2">
+            <span class="font-bold text-indigo-600">empress</span>
+            <span class="text-slate-600">.eco</span>
+            <span class="uppercase mt-0.5 leading-none text-[10px] ml-1 font-bold bg-gray-200 text-slate-700 px-2 py-1 rounded-md">BETA</span>
+          </a>
+          <div class="block lg:hidden">
+            <MenuIcon class="w-4 h-4 text-gray-800" />
+          </div>
+        </div>
+        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+          <slot name="menu-items">
+            <ul class="flex flex-col lg:flex-row lg:gap-3">
+              {menuitems.map((item, index) => (
+                <>
+                  {item.children && <Dropdown title={item.title} children={item.children} lastItem={index === menuitems.length - 1} />}
+                  {!item.children && (
+                    <li>
+                      <a href={item.path} class="flex lg:px-3 py-2 text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                        {item.title}
+                      </a>
+                    </li>
+                  )}
+                </>
+              ))}
+            </ul>
+          </slot>
+        </MenuItems>
+      </Astronav>
+      <div>
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="#" class="text-sm px-2 py-1 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">Log in</a>
+          <Link href="#" size="sm" class="inline-flex items-center group gap-px">
+            <span>Try for Free</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+              <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
             </svg>
           </Link>
         </div>
       </div>
     </div>
   </Container>
-</StickyHeader>
+</StickyHeader> -->
