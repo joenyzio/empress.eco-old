@@ -37,7 +37,7 @@ const data = [
     "headingButtons": [
       {
         "text": "Get Started",
-        "link": "https://app.empress.eco/admin/login"
+        "link": "/contact"
       },
       {
         "text": "Contact Sales",
@@ -79,7 +79,7 @@ const data = [
         "buttons": [
           {
             "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
+            "link": "/contact"
           },
           {
             "text": "Contact Sales",
@@ -99,7 +99,7 @@ const data = [
         "buttons": [
           {
             "text": "Get Started",
-            "link": "https://app.empress.eco/admin/login"
+            "link": "/contact"
           },
           {
             "text": "Contact Sales",
@@ -117,14 +117,14 @@ const data = [
       "Real-time adaptation ensuring consistent user delight."
     ],
     "buttons": [
-      {
-        "text": "Get Started",
-        "link": "https://app.empress.eco/admin/login"
-      },
-      {
-        "text": "Contact Sales",
-        "link": "/contact"
-      }
+        {
+          "text": "Get Started",
+          "link": "/contact"
+        },
+        {
+          "text": "Contact Sales",
+          "link": "/contact"
+        }
     ],
 }
     ],
@@ -186,7 +186,7 @@ const faq = [
     answer: "Empress has a free plan for testing and scales with you. Our features are designed to increase user engagement, streamline processes, and offer actionable insights, ensuring a high ROI for your investment."
   },
   {
-    question: "How does Empress assist in making data-driven decisions for our startup?",
+    question: "How does Empress assist with data-driven decisions for our startup?",
     answer: "Empress offers real-time experience analytics, AI-powered market predictions, and a unified data landscape. These tools allow startups to gain deep insights into user behavior, anticipate market shifts, and make informed strategic decisions."
   },
   {
@@ -229,7 +229,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -240,8 +239,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>

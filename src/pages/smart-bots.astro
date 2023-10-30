@@ -32,16 +32,16 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
   {
-    "mainHeading": "Empress Smart Bots",
+    "mainHeading": "Streamline Engagement with Smart Bots",
     "subtext": "Supercharge your platform with AI that learns and adapts. Craft unique, authentic connections every time.",
     "headingButtons": [
       {
-        "text": "Explore Smart Bots",
-        "link": "#"
+        "text": "Get Started",
+        "link": "/contact"
       },
       {
-        "text": "Get the Free Version",
-        "link": "#"
+        "text": "Contact Sales",
+        "link": "/contact"
       }
     ],
     "sectionHeading": "Transform User Engagement",
@@ -78,8 +78,12 @@ const data = [
         ],
         "buttons": [
           {
-            "text": "Dive Deeper",
-            "link": "#"
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ],
       },
@@ -94,8 +98,12 @@ const data = [
         ],
         "buttons": [
           {
-            "text": "Discover More",
-            "link": "#"
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
           }
         ],
       },
@@ -104,17 +112,21 @@ const data = [
         "title": "Bridge Language Gaps",
         "description": "Engage audiences worldwide. Smart Bots natively handle multiple languages, ensuring you resonate on a global scale.",
         "bulletPoints": [
-          "Enter New Geographies with Ease",
-          "On-the-Fly Translations",
-          "User-Configurable Language Preferences"
-        ]
-      }
-    ],
-    "buttons": [
-      {
-        "text": "Be Part of the Future",
-        "link": "#"
-      }
+          "Maintain an Active Feedback Loop",
+          "Data-Driven Improvement Suggestions",
+          "Fluid Integration with Content Repositories"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
+          }
+        ],
+      },
     ],
     "featureHeading": "Around-the-Clock Support",
     "featureTitle": "Always Be There for Your Users",
@@ -246,7 +258,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -257,8 +268,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>

@@ -37,11 +37,11 @@ const data = [
   "headingButtons": [
     {
       "text": "Get Started",
-      "link": "https://app.empress.eco/admin/login"
+      "link": "/contact"
     },
     {
-      "text": "Explore Free Version",
-      "link": "#"
+      "text": "Contact Sales",
+      "link": "/contact"
     }
   ],
   "sectionHeading": "Transforming Business Through Experience",
@@ -77,10 +77,14 @@ const data = [
         "Quick Smart Bot Integration"
       ],
       "buttons": [
-        {
-          "text": "Get Started",
-          "link": "#"
-        }
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
+          }
       ]
     },
     {
@@ -93,10 +97,14 @@ const data = [
         "Easy Integration Options"
       ],
       "buttons": [
-        {
-          "text": "Get Started",
-          "link": "#"
-        }
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
+          }
       ]
     },
     {
@@ -104,17 +112,31 @@ const data = [
       "title": "AI-Driven Engagement",
       "description": " By seamlessly blending AI-driven insights and automation tools, we empower businesses to anticipate user needs, deliver personalized experiences, and evolve at the pace of tomorrow's demands.",
       "bulletPoints": [
-        "Adaptive Chatbot Interactions",
-        "Predictive Analytics for Forward-Thinking",
-        "AI-Optimized User Paths"
+        "Collaborative Content Planning",
+        "Adaptable Experience Templates",
+        "Quick Smart Bot Integration"
+      ],
+      "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
+          }
       ]
-    }
+    },
   ],
   "buttons": [
-    {
-      "text": "MORE FEATURES",
-      "link": "#"
-    }
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "Contact Sales",
+            "link": "/contact"
+          }
   ],
   "featureHeading": "Empowering Touchpoints",
   "featureTitle": "Elevate Every Interaction",
@@ -214,7 +236,6 @@ const featureBlocks = data[0].featureBlocks;
             class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
           <Link
               href={data[0].headingButtons[0].link}
-              target="_blank"
               class="flex gap-1 items-center justify-center bg-brand"
               rel="noopener">
               {data[0].headingButtons[0].text}
@@ -225,8 +246,7 @@ const featureBlocks = data[0].featureBlocks;
             style="outline"
             rel="noopener"
             href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand"
-            target="_blank">
+            class="flex gap-1 items-center justify-center border-brand text-brand">
             {data[0].headingButtons[1].text}
           </Link>
           </div>
