@@ -8,6 +8,7 @@ import Sectionhead from "@components/sectionhead.astro";
 import Link from "@components/ui/link.astro";
 import Cta from "@components/cta.astro";
 import Card from "@components/card.astro";
+import react from '@astrojs/react';
 
 import { Icon } from "astro-icon";
 import ArrowIcon from "../components/ui/icons/arrow.astro"
@@ -387,7 +388,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </div>
   
-      <div class="">
+      <div class="container">
         <LottieAnimation id="lottie" src="../../public/business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
