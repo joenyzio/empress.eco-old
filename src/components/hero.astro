@@ -1,8 +1,14 @@
 ---
 import { Image, Picture } from "astro:assets";
 import heroImage from "../assets/hero-screenshot.png";
+import hero from "../assets/hero-screenshot.png";
 import Link from "@components/ui/link.astro";
 import Container from "@components/container.astro";
+import Dashboard from "../assets/features/dashboard-development.png";
+import ServerAnalysis from "../assets/features/server-analysis.png";
+import Outsourcing from "../assets/features/outsourcing-software-development-service-web-page.png";
+import ContentCreation from "../assets/features/content-blog.png";
+
 ---
 
 <div class="overflow-x-clip">
@@ -44,7 +50,7 @@ import Container from "@components/container.astro";
       </div>
       <div class="py-3 lg:col-span-3 lg:-mr-44">
         <Picture
-          src={heroImage}
+          src={Dashboard}
           alt="Astronaut in the air"
           formats={["avif", "webp"]}
           sizes="(max-width: 1024px) 100vw, 50vw"

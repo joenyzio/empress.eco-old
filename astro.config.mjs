@@ -2,6 +2,8 @@ import { defineConfig, sharpImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import lottie from "astro-integration-lottie";
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,5 +12,5 @@ export default defineConfig({
     service: sharpImageService(),
     domains: ["source.unsplash.com", "images.unsplash.com"],
   },
-  integrations: [tailwind(), mdx(), sitemap()],
+  integrations: [tailwind(), mdx(), sitemap(), lottie()],
 });
