@@ -8,14 +8,13 @@ import ServerAnalysis from "../assets/features/server-analysis.png";
 import Outsourcing from "../assets/features/outsourcing-software-development-service-web-page.png";
 import ContentCreation from "../assets/features/content-blog.png";
 import AnalyticalAI from "../assets/features/analytical-ai.png";
-// import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-// import { stopAnimationMidway } from './lottieControl.js';
-
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 
 const { nomargin } = Astro.props;
 ---
+
 
 <div
   class:list={[
@@ -31,15 +30,15 @@ const { nomargin } = Astro.props;
   </p>
 </div>
 
-<div class="grid md:grid-cols-2 py-10">
-  <div class="grid place-items-center">
-    <Picture
-      src={ContentCreation}
-      alt="Feature Image"
-      formats={["avif", "webp"]}
-      loading="lazy"
-    />
-  </div>
+  <div class="grid md:grid-cols-2 py-10">
+    <div class="">
+      <LottieAnimation 
+        id="lottie" 
+        src="../../public/candlestick-analysis.json" 
+        autoplay="visible" 
+        style={{ width: '100%', height: 'auto' }}
+      />
+    </div>
 
   <div class="grid place-items-center">
     <div class="max-w-lg">
@@ -93,58 +92,11 @@ const { nomargin } = Astro.props;
     </div>
   </div>
 </div>
-
-
-<!-- <div class="flex items-center py-5">
-  <div class="w-1/2 flex-shrink-0">
-    <LottieAnimation id="lottie" src="../../public/data-hosting.json" autoplay="true" style="width: 100%; height: auto;"/>
-  </div>
-  
-  <div class="w-1/2 max-w-lg place-items-start justify-center">
-    <Badge color="purple" class="-ml-px">Empress OS</Badge>
-    <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
-      A Fully Integrated Suite of Experience Focused Tools
-    </h3>
-    <p class="mt-4 text-slate-600 [text-wrap:balance]">
-      From ideation to execution, Empress is your all-encompassing platform. Create, measure, and elevate world-class experiences at every touchpoint.
-    </p>
-    <ul class="grid mt-6 text-left gap-y-4">
-      <li class="flex items-center gap-3 text-neutral-800">
-        <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-        <span class="text-sm">All-in-One Experience Design Suite</span>
-      </li>
-      <li class="flex items-center gap-3 text-neutral-800">
-        <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-        <span class="text-sm">Real-time Interaction Monitoring & Analytics</span>
-      </li>
-      <li class="flex items-center gap-3 text-neutral-800">
-        <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-        <span class="text-sm">Seamless Integration & Scalability</span>
-      </li>
-    </ul>
-    <div class="flex items-center gap-4 mt-6">
-      <Link href="/contact" size="sm" class="inline-flex items-center group gap-px">
-        <span>Get Started</span>
-        <svg xmlns="https://app.empress.eco/admin/login" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
-        </svg>
-      </Link>
-      <a href="/contact" class="text-sm px-2 transition py-1 text-slate-600 hover:text-brand focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">Contact Sales</a>
-    </div>
-  </div>
-</div> -->
+</div>
 
 
 <div class="grid md:grid-cols-2 py-10">
-  <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
-    <Picture
-      src={AnalyticalAI}
-      alt="Feature Image"
-      formats={["avif", "webp"]}
-      loading="lazy"
-    />
-  </div>
-
+  <!-- Text Section (Moved to the left) -->
   <div class="grid place-items-center">
     <div class="max-w-lg">
       <Badge color="purple" class="-ml-px">AI-Powered Insights</Badge>
@@ -157,17 +109,14 @@ const { nomargin } = Astro.props;
       <ul class="grid mt-6 text-left gap-y-4">
         <li class="flex items-center gap-3 text-neutral-800">
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
           <span class="text-sm">Intuitive AI Chat Experiences</span>
         </li>
         <li class="flex items-center gap-3 text-neutral-800">
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
           <span class="text-sm">Predictive Engagement Strategies</span>
         </li>
         <li class="flex items-center gap-3 text-neutral-800">
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-
           <span class="text-sm">Tailored AI-Assisted Interactions</span>
         </li>
       </ul>
@@ -188,9 +137,14 @@ const { nomargin } = Astro.props;
         <a
           href="/contact"
           class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full"
-          >Contact Sales</a
-        >
+          >Contact Sales</a>
       </div>
     </div>
   </div>
+
+  <!-- Lottie Animation Section (Moved to the right) -->
+  <div class="">
+    <LottieAnimation id="lottie-2" src="../../public/candlestick-analysis.json" autoplay="visible" style="width: 100%; height: auto;"/>
+  </div>
+</div>
 </div>
