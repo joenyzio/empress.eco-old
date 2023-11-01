@@ -23,6 +23,7 @@ import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import Champion from "../assets/features/champion.svg";
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -254,7 +255,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={heroImage}
+            src={Champion}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"

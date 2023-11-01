@@ -22,6 +22,7 @@ import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../assets/employee.jpg";
+import SuccessPath from "../assets/features/success-path-2.svg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 
 
@@ -246,7 +247,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={heroImage}
+            src={SuccessPath}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
