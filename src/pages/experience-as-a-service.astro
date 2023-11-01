@@ -23,6 +23,7 @@ import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import DataAnalysisVRTechnology from "../assets/features/data-analysis-using-vr-technology.svg";
 
 
 // Filter team entries with 'draft: false' & date before current date
@@ -33,7 +34,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
 {
-  "mainHeading": "Where Interaction Meets Intelligence",
+  "mainHeading": "Connect Information to Inspiration",
   "subtext": "Track, optimize, and predict user behaviors. Transform every interaction with real-time, data-driven insights.",
   "headingButtons": [
     {
@@ -45,9 +46,9 @@ const data = [
       "link": "/contact"
     }
   ],
-  "sectionHeading": "Data-Driven Excellence",
+  "sectionHeading": "Empress Insights",
   "offering": {
-    "title": "The Heatbeat of Data-Centric Decisions",
+    "title": "The Heartbeat of Data-Driven Decisions",
     "subtext": "Turn every user interaction into a goldmine of data. Extract, analyze, and leverage insights for strategic growth and enhanced ROI."
   },
   "valueBlocks": [
@@ -256,7 +257,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={heroImage}
+            src={DataAnalysisVRTechnology}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"

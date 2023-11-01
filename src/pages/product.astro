@@ -23,6 +23,7 @@ import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../assets/employee.jpg";
+import CreativeDesignWorkshop from "../assets/features/creative-design-workshop.svg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 
 
@@ -35,7 +36,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
 {
-    "mainHeading": "Engage Your Audience",
+    "mainHeading": "Scale your Business with Empress",
     "subtext": "Empress equips businesses of all sizes with a cutting-edge experience suite. Drive transformative experiences, streamline results, and fuel your journey to excellence.",
     "headingButtons": [
           {
@@ -261,7 +262,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={heroImage}
+            src={CreativeDesignWorkshop}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"

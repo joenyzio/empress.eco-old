@@ -23,6 +23,7 @@ import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import ArtificialIntelligence from "../assets/features/artificial-intelligence.svg";
 
 
 // Filter team entries with 'draft: false' & date before current date
@@ -33,7 +34,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
   {
-    "mainHeading": "Meet Your Digital Ambassador",
+    "mainHeading": "Speak the Language of Automation",
     "subtext": "Experience the fusion of AI precision with genuine human-like engagements. Forge memorable connections, every interaction.",
     "headingButtons": [
       {
@@ -47,7 +48,7 @@ const data = [
     ],
     "sectionHeading": "Transform Digital Experiences",
     "offering": {
-      "title": "Turn Content into Conversations",
+      "title": "Meet Your Personalized Digital Advocate",
       "subtext": "Craft distinct experiences tailored for each user."
     },
     "valueBlocks": [
@@ -246,7 +247,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={heroImage}
+            src={ArtificialIntelligence}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
