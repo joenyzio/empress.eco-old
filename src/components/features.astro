@@ -10,6 +10,10 @@ import Link from "@components/ui/link.astro";
 import Cta from "@components/cta.astro";
 import Card from "@components/card.astro";
 import ArrowIcon from "../components/ui/icons/arrow.astro"
+import { Picture, Image } from "astro:assets";
+import FeatureImg1 from "../assets/features/6.png";
+import FeatureImg2 from "../assets/features/2.png";
+import FeatureImg8 from "../assets/features/8.png";
 
 const features = [
   {
@@ -47,35 +51,34 @@ const features = [
 
 const faq = [
   {
-    question: "What is Empress OS and what does it offer?",
-    answer: "The Empress OS Experience Suite covers the full content journey: from creation to optimization, enhancing user engagement and innovation."
+    question: "How can Empress help my startup grow?",
+    answer: "Empress equips startups with comprehensive tools for content creation, user engagement analytics, and AI-driven personalization to enhance growth and streamline your operational processes."
   },
   {
-    question: "How is the Smart Bot in Empress unique?",
-    answer: "Empress's Smart Bot constantly updates with your latest content, offering tailored interactions across various platforms and languages."
+    question: "Is Empress suitable for large, established brands?",
+    answer: "Absolutely. Empress offers scalability and integration capabilities that are perfect for established brands looking to innovate and optimize their user experience at scale."
   },
   {
-    question: "What's the role of the Experience API (xAPI)?",
-    answer: "xAPI captures experience focused data and captures every Smart Bot interaction, providing detailed insights into user behavior and preferences."
+    question: "Can I monitor user interactions in real-time with Empress?",
+    answer: "Yes, Empress provides real-time monitoring and analytics to help you understand and enhance user interactions as they happen."
   },
   {
-    question: "How does Empress handle data from my existing platforms?",
-    answer: "Empress ensures easy data migration from existing platforms, prioritizing data integrity and smooth integration."
+    question: "What makes Empress different from other AI interaction tools?",
+    answer: "Empress stands out with its predictive engagement strategies, tailored AI-assisted interactions, and intuitive dashboards for actionable business insights."
   },
   {
-    question: "How do real-time and predictive analytics enhance engagement?",
-    answer: "Real-time analytics offer immediate user insights. Predictive analytics forecast trends, allowing proactive audience engagement."
+    question: "How does Empress cater to specific industries?",
+    answer: "Empress offers specialized solutions tailored to meet the unique demands of industries such as education, finance, healthcare, and more, ensuring relevance and precision in user interactions."
   },
   {
-    question: "Is Empress compatible across devices?",
-    answer: "Yes, Empress ensures a consistent user experience across devices, from smartphones to desktops."
+    question: "Is there support available for platform migration to Empress?",
+    answer: "Yes, Empress provides effortless platform migration support, ensuring a smooth transition with a focus on data integrity and minimal operational disruption."
   },
   {
-    question: "Can I integrate other tools with Empress?",
-    answer: "Absolutely! Empress supports seamless integration with over 100 tools via webhooks and Zapier."
+    question: "What support does Empress offer post-integration?",
+    answer: "Empress offers 24/7 expert assistance for all your technical queries and strategic needs, ensuring continuous support for your business growth."
   }
 ];
-
 
 
 ---
@@ -91,10 +94,10 @@ const faq = [
 <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
   <Badge color="purple">More Features</Badge>
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-    We've got you covered
+    We've Got You Covered
   </h2>
   <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-    Empress covers all things experience. If you don't find what you're looking
+    We're you're partner in business growth. If you don't find what you're looking
     for, contact us and we'll either help you or steer you in the right
     direction.
   </p>
@@ -116,7 +119,8 @@ const faq = [
   }
 </div>
 
-<div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+<div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
 <Container>
   <Sectionhead>
@@ -142,4 +146,6 @@ const faq = [
     ))}
   </div>
 </Container>
+
+
 
