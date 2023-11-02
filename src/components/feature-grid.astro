@@ -6,14 +6,23 @@ import IntegrationImg from "../assets/integrations.svg?url";
 import FeatureImgOne from "../assets/features/2.png";
 import FeatureImgTwo from "../assets/features/2.png";
 import FeatureImgThree from "../assets/features/3.png";
+import ModernCity from "../assets/features/modern-city.svg";
+import BusinessAnalyst from "../assets/features/business-analyst.svg";
+import BusinessCompetition from "../assets/features/business-competition.svg";
+import ArtificialIntelligence from "../assets/features/artificial-intelligence.svg";
+import BusinessWebsite from "../assets/features/business-website.svg";
+import AutomatedMarketing from "../assets/features/automated-marketing.svg";
+import Education from "../assets/features/education.svg";
+
+
 ---
 
 <div class="mt-24">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Next Generation <span class="text-indigo-600">Data Insights</span>
+    The Next Generation of <span class="text-indigo-600">Business Performance</span>
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Blend cutting-edge technology with user insights. With Empress, lead your industry by crafting superior experiences.
+    Elevating business performance through unified content, seamless collaboration, and actionable insights.
   </p>
 </div>
 
@@ -21,10 +30,10 @@ import FeatureImgThree from "../assets/features/3.png";
   <Card class="lg:col-span-3" color="purple">
     <Fragment slot="image">
       <Picture
-        src={FeatureImgOne}
+        src={ArtificialIntelligence}
         alt="Feature image"
         formats={["avif", "webp"]}
-        class="h-full w-full object-contain"
+        class="object-cover"
         loading="lazy"
       />
     </Fragment>
@@ -37,10 +46,10 @@ import FeatureImgThree from "../assets/features/3.png";
   <Card class="lg:col-span-2" color="indigo">
     <Fragment slot="image">
       <Picture
-        src={FeatureImgTwo}
+        src={Education}
         alt="Feature image"
         formats={["avif", "webp"]}
-        class="h-full w-full object-contain"
+        class="object-cover"
         loading="lazy"
       />
     </Fragment>
@@ -56,10 +65,10 @@ import FeatureImgThree from "../assets/features/3.png";
   <Card color="indigo" size="sm">
     <Fragment slot="image">
       <Picture
-        src={FeatureImgThree}
+        src={AutomatedMarketing}
         alt="Feature image"
         formats={["avif", "webp"]}
-        class="h-full w-full object-contain"
+        class="object-contain"
         loading="lazy"
       />
     </Fragment>
@@ -73,10 +82,10 @@ import FeatureImgThree from "../assets/features/3.png";
   <Card color="purple" size="sm">
     <Fragment slot="image">
       <Picture
-        src={FeatureImgTwo}
+        src={BusinessAnalyst}
         alt="Feature image"
         formats={["avif", "webp"]}
-        class="h-full w-full object-contain"
+        class="object-contain"
         loading="lazy"
       />
     </Fragment>
@@ -91,11 +100,11 @@ import FeatureImgThree from "../assets/features/3.png";
     <Fragment slot="image">
       <!-- // svg image. cannot use <picture/> as of now -->
       <Image
-        src={IntegrationImg}
+        src={BusinessCompetition}
         alt="Feature image"
         width="909"
         height="823"
-        class="h-full w-full object-contain"
+        class="object-contain"
         loading="lazy"
       />
     </Fragment>
