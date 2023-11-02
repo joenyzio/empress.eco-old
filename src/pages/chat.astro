@@ -23,7 +23,10 @@ import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import DataAnalysisVRTechnology from "../assets/features/data-analysis-using-vr-technology.svg";
+import ArtificialIntelligence from "../assets/features/artificial-intelligence.svg";
+import AutomatedMarketing from "../assets/features/automated-marketing.svg";
+import BusinessCompetition from "../assets/features/business-competition.svg";
+import WorldTour from "../assets/features/world-tour.svg";
 
 
 // Filter team entries with 'draft: false' & date before current date
@@ -33,53 +36,53 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-  "mainHeading": "Connect Information to Inspiration",
-  "subtext": "Track, optimize, and predict user behaviors. Transform every interaction with real-time, data-driven insights.",
-  "headingButtons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
+  {
+    "mainHeading": "Speak the Language of Automation",
+    "subtext": "Experience the fusion of AI precision with genuine human-like engagements. Forge memorable connections, every interaction.",
+    "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "Contact Sales",
+        "link": "/contact"
+      }
+    ],
+    "sectionHeading": "Welcome to Empress Chat",
+    "offering": {
+      "title": "Meet Your Personal Business Advocate",
+      "subtext": "Deliver personalized experiences that resonate with every individual user."
     },
-    {
-      "text": "Contact Us",
-      "link": "/contact"
-    }
-  ],
-  "sectionHeading": "Empress Insights",
-  "offering": {
-    "title": "The Heartbeat of Data-Driven Decisions",
-    "subtext": "Turn every interaction into a goldmine of data. Extract, analyze, and leverage insights for strategic growth and enhanced ROI."
-  },
-  "valueBlocks": [
+    "valueBlocks": [
   {
-    "heading": "Predictive Analytics",
-    "title": "Navigate Tomorrow, Today",
-    "description": "Proactively shape business outcomes with insights that predict and prepare you for future user needs and market shifts."
+    "heading": "24/7 Support",
+    "title": "Always Be Available",
+    "description": "Empress Chat offers 24/7 assistance, ensuring your team and customers receive help whenever they need it, boosting satisfaction and efficiency."
   },
   {
-    "heading": "Strategic Guidance",
-    "title": "Informed Decision Making",
-    "description": "Translate complex user data into actionable insights, crafting experiences that deeply connect and convert."
+    "heading": "Integations",
+    "title": "Streamline Your Work",
+    "description": "Connect your chat services to your existing platforms for a frictionless workflow that enhances productivity and security."
   },
   {
-    "heading": "Real-Time Dashboards",
-    "title": "Visualize Your Insights",
-    "description": "Respond to the market with agility, using real-time analytics to make decisions that deliver continuous user experience enhancements."
+    "heading": "Multi-Language Support",
+    "title": "Communicate Globally",
+    "description": "Empress Chat's multilingual capabilities and feedback mechanisms allow you to engage with a worldwide audience and continuously improve the user experience."
   }
-  ],
-  "featureBlocks": [
-  {
-  "heading": "Proactive Insights",
-  "title": "Anticipate the Future with Predictive Analytics",
-  "description": "Stay ahead of the curve by utilizing predictive analytics to gain early insights into user behavior and market trends, crafting proactive business strategies.",
+    ],
+    "featureBlocks": [
+    {
+  "heading": "Global Support",
+  "title": "Empower Your Support with 24/7 Availability",
+  "description": "Empress Chat ensures your team or customers have constant access to support, bolstering satisfaction and productivity, no matter the time zone or hour.",
   "bulletPoints": [
-    "Harness forward-looking analytics to preemptively address user needs",
-    "Capitalize on emerging trends by adapting to market signals in real-time",
-    "Drive strategic decisions with predictive intelligence"
+    "Offer uninterrupted assistance with our 24/7 support capabilities",
+    "Enhance user experience with instant knowledge retrieval, anytime",
+    "Reduce downtime with interactive troubleshooting that’s always on"
   ],
   "buttons": [
-  {
+    {
       "text": "Get Started",
       "link": "/contact"
     },
@@ -90,33 +93,13 @@ const data = [
   ]
 },
 {
-  "heading": "Behavioral Analytics",
-  "title": "Unlock User Behavior Stories with Advanced Insights",
-  "description": "Leverage deep behavioral insights and comprehensive data aggregation to understand and enhance every step of the user journey.",
+  "heading": "Integration and Interaction",
+  "title": "Streamline Workflows with Seamless Integration Access",
+  "description": "Empress Chat's integration capabilities merge your chat services with existing platforms, providing a cohesive and efficient workflow for users.",
   "bulletPoints": [
-    "Analyze complex user behavior to tailor personalized experiences",
-    "Aggregate cross-platform interactions for a holistic view of engagement",
-    "Utilize enhanced UX mapping to identify and smooth out friction points"
-  ],
-  "buttons": [
-  {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "Contact Sales",
-      "link": "/contact"
-    }
-  ]
-},
-{
-  "heading": "Data-Driven Strategies",
-  "title": "Empower Strategic Decisions with Real-Time Dashboards",
-  "description": "Empower your team with real-time insights and custom analytics dashboards, enabling swift, data-driven responses to user feedback and market dynamics.",
-  "bulletPoints": [
-    "Adapt to changes with real-time analytics and immediate insights",
-    "Customize dashboards to focus on metrics that directly impact your business goals",
-    "Support decision-making with intelligent, data-based reasoning"
+    "Directly connect with integrated platforms for a seamless experience",
+    "Smart routing directs queries to the right tools or personnel efficiently",
+    "Maintain secure communication with robust user access control"
   ],
   "buttons": [
     {
@@ -129,9 +112,17 @@ const data = [
     }
   ]
 },
+{
+  "heading": "Intelligent User Engagement",
+  "title": "Enhance Engagement with Multilingual Support and Feedback Collection",
+  "description": "Reach a global audience with multilingual support and grow through insights gained from user feedback to continuously enhance the chat experience.",
+  "bulletPoints": [
+    "Break barriers with multi-language support, inviting global interaction",
+    "Gather and leverage user feedback to improve service quality",
+    "Dynamic content updates ensure accurate and relevant assistance"
   ],
   "buttons": [
-  {
+    {
       "text": "Get Started",
       "link": "/contact"
     },
@@ -139,58 +130,61 @@ const data = [
       "text": "Contact Sales",
       "link": "/contact"
     }
-  ],
-  "featureHeading": "Optimizing Every Data Point",
-  "featureTitle": "We're Here to Support You",
-  "featureAssurance": "With Experience-as-a-Service, it's not about merely tracking; it's about understanding, anticipating, and evolving. Turn insights into unmatched experiences."
+  ]
+},
+],
+"featureHeading": "The Empress Difference",
+"featureTitle": "Make Every Moment Matter",
+"featureAssurance": "Empress Chat goes beyond mere automation, ensuring meaningful brand-user interactions anytime, anywhere."
 }
 ];
+           
 
 const features = [
   {
-    "title": "Predictive Analytics",
-    "description": "Unlock forward-looking insights to anticipate user needs and trends, driving proactive business strategies.",
-    "icon": "fluent:data-trending-24-regular",
+    "title": "Instant Knowledge Retrieval",
+    "description": "Gain immediate access to your entire knowledge base with simple conversational queries, enhancing decision-making and productivity.",
+    "icon": "fluent:chat-help-24-regular",
   },
   {
-    "title": "Behavioral Intelligence",
-    "description": "Understand intricate user behavior patterns through advanced analytics for more personalized interactions.",
-    "icon": "fluent:brain-circuit-24-regular",
+    "title": "Dynamic Content Updates",
+    "description": "The chatbot stays current with your latest published content, ensuring accurate information is provided in each interaction.",
+    "icon": "fluent:document-48-regular",
   },
   {
-    "title": "Comprehensive Data Aggregation",
-    "description": "Aggregate interaction data across all touchpoints, providing a 360-degree view of user engagement.",
-    "icon": "fluent:database-24-regular",
+    "title": "24/7 Availability",
+    "description": "Provide round-the-clock assistance to internal teams or customers, ensuring help is always at hand when needed.",
+    "icon": "fluent:clock-24-regular",
   },
   {
-    "title": "Real-Time Insights",
-    "description": "Access immediate analytics to swiftly adapt to user feedback and market changes to optimize your business.",
-    "icon": "fluent:timer-24-regular",
+    "title": "Seamless Integration Access",
+    "description": "Directly interact with integrated platforms and tools within Empress OS for a unified user experience.",
+    "icon": "fluent:link-square-24-regular",
   },
   {
-    "title": "Automated Learning",
-    "description": "Leverage automated learning systems to continuously refine and improve user experiences.",
+    "title": "Smart Routing",
+    "description": "Intelligent conversation flow that directs users to the right information or personnel, optimizing resource allocation.",
     "icon": "fluent:bot-24-regular",
   },
   {
-    "title": "Custom Insights Dashboards",
-    "description": "Utilize customizable dashboards to monitor the metrics that matter most to your business.",
-    "icon": "fluent:cellular-data-cellular-unavailable-24-regular",
+    "title": "User Access Control",
+    "description": "Manage who can interact with the chatbot and what information they can access, maintaining security and privacy.",
+    "icon": "fluent:shield-24-regular",
   },
   {
-    "title": "Intelligent Search Capabilities",
-    "description": "Experience advanced search functionality that understands context, making data retrieval intuitive and efficient.",
-    "icon": "fluent:search-24-regular",
+    "title": "Interactive Troubleshooting",
+    "description": "Guide users through step-by-step problem solving, reducing downtime and enhancing solution delivery.",
+    "icon": "fluent:toolbox-24-regular",
   },
   {
-    "title": "Data-Driven Decision Making",
-    "description": "Empower your team to make informed decisions with insights derived from comprehensive data analysis.",
-    "icon": "fluent:slide-settings-24-regular",
+    "title": "Multi-Language Support",
+    "description": "Break language barriers by offering multilingual support, making the chatbot accessible to a wider audience.",
+    "icon": "fluent:translate-24-regular",
   },
   {
-    "title": "Enhanced User Experience Mapping",
-    "description": "Map out user experiences in detail, identifying friction points and opportunities for optimization.",
-    "icon": "fluent:map-24-regular",
+    "title": "Feedback Collection",
+    "description": "Collect valuable feedback through interactive surveys and dialogs, facilitating continuous improvement.",
+    "icon": "fluent:comment-multiple-24-regular",
   }
 ];
 
@@ -198,32 +192,32 @@ const features = [
 
 const faq = [
   {
-    question: "How does Empress Insights use predictive analytics?",
-    answer: "Empress Insights uses predictive analytics to forecast future user behaviors and market trends, allowing businesses to make proactive decisions and prepare for future needs and shifts in the market."
+    question: "How does Empress Chat ensure 24/7 availability?",
+    answer: "Empress Chat leverages AI to offer round-the-clock support, ensuring that whether it's for your team or your customers, help is always available, boosting satisfaction and operational efficiency."
   },
   {
-    question: "What is behavioral analytics and how can it help my business?",
-    answer: "Behavioral analytics is the study of user behavior data. It helps your business by providing insights into how users interact with your service, enabling you to tailor personalized experiences and improve the user journey."
+    question: "Can Empress Chat be integrated with other platforms?",
+    answer: "Yes, Empress Chat is designed to seamlessly integrate with your existing platforms to create a cohesive and efficient workflow, enhancing productivity without compromising security."
   },
   {
-    question: "Can I customize the real-time dashboards?",
-    answer: "Yes, Empress Insights offers customizable dashboards that you can tailor to focus on specific metrics that align with your business objectives, providing you with the most relevant insights for decision-making."
+    question: "Does Empress Chat support multiple languages?",
+    answer: "Empress Chat provides multilingual support to accommodate a global audience, ensuring your business can communicate and engage with users in their native language."
   },
   {
-    question: "What kind of data does Empress Insights aggregate?",
-    answer: "Empress Insights aggregates comprehensive interaction data from various touchpoints, providing a 360-degree view of user engagement for a holistic understanding of user behavior."
+    question: "What type of user feedback can Empress Chat collect?",
+    answer: "Empress Chat can gather real-time feedback through user interactions, allowing you to continuously refine the chat experience based on user responses and improve service quality."
   },
   {
-    question: "How does Empress Insights ensure real-time insights?",
-    answer: "Empress Insights provides real-time analytics by continuously tracking and analyzing user interactions, enabling your business to quickly adapt to feedback and changes in the market."
+    question: "How does Empress Chat contribute to efficient problem resolution?",
+    answer: "Empress Chat offers interactive troubleshooting, guiding users through a step-by-step process to solve their issues promptly, minimizing downtime and enhancing overall resolution efficiency."
   },
   {
-    question: "What is automated learning in the context of Empress Insights?",
-    answer: "Automated learning refers to the system's ability to use data and user interactions to continuously learn and improve, enhancing the accuracy of insights and user experiences over time."
+    question: "What is Smart Routing in Empress Chat?",
+    answer: "Smart Routing is a feature in Empress Chat that intelligently directs user inquiries to the appropriate tools, resources, or personnel, optimizing resource allocation and response times."
   },
   {
-    question: "How does Empress Insights facilitate data-driven decision-making?",
-    answer: "Empress Insights empowers teams with in-depth analysis and actionable insights derived from user data, allowing for informed decisions that are based on solid data evidence and comprehensive analytics."
+    question: "How does Empress Chat handle information security and user privacy?",
+    answer: "Empress Chat includes robust user access control to manage interactions and protect sensitive information, ensuring that data security and user privacy are always maintained."
   }
 ];
 
@@ -273,7 +267,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={DataAnalysisVRTechnology}
+            src={ArtificialIntelligence}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -303,10 +297,10 @@ const featureBlocks = data[0].featureBlocks;
       <Card color="indigo" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgThree}
+            src={AutomatedMarketing}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -318,7 +312,7 @@ const featureBlocks = data[0].featureBlocks;
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgTwo}
+            src={BusinessCompetition}
             alt="Feature image"
             formats={["avif", "webp"]}
             class="h-full w-full object-contain"
@@ -334,7 +328,7 @@ const featureBlocks = data[0].featureBlocks;
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
           <Image
-            src={IntegrationImg}
+            src={WorldTour}
             alt="Feature image"
             width="909"
             height="823"
@@ -401,14 +395,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../public/analytical-report-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../public/auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../public/space-hologram.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../public/litecoin-funnel.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -514,7 +508,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../public/pie-graph.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../public/job-announcement.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
   </div>
 

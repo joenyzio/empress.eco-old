@@ -23,7 +23,11 @@ import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import NetworkServerEndpointManagement from "../assets/features/network-server-endpoint-management.svg";
+import DataAnalysisVRTechnology from "../assets/features/data-analysis-using-vr-technology.svg";
+import ToolsForDataAnalytics from "../assets/features/tools-for-data-analysis-statistical-or-financial-analytics.svg";
+import BusinessDataAnalysis from "../assets/features/business-data-analysis-team-financial-forecast-statistical-market-research.svg";
+import BigData from "../assets/features/big-data-or-stock-market-analysis.svg";
+import AnalystConveyor from "../assets/features/people-or-analysts-working-on-conveyor.svg";
 
 
 // Filter team entries with 'draft: false' & date before current date
@@ -34,52 +38,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
 {
-  "mainHeading": "The Operating System for Business Growth",
-  "subtext": "Empress OS empowers you to craft, streamline, and elevate your growth journey—all from one integrated platform.",
+  "mainHeading": "Connect Information to Inspiration",
+  "subtext": "Track, optimize, and predict user behaviors. Transform every interaction with real-time, data-driven insights.",
   "headingButtons": [
     {
       "text": "Get Started",
       "link": "/contact"
     },
     {
-      "text": "Contact Sales",
+      "text": "Contact Us",
       "link": "/contact"
     }
   ],
-  "sectionHeading": "The Empress Difference",
+  "sectionHeading": "Empress Insights",
   "offering": {
-    "title": "Where Innovation Meets Execution",
-    "subtext": "Revolutionizing collaboration and management with seamless, intuitive, and comprehensive tools for modern teams."
+    "title": "The Heartbeat of Data-Driven Decisions",
+    "subtext": "Turn every interaction into a goldmine of data. Extract, analyze, and leverage insights for strategic growth and enhanced ROI."
   },
   "valueBlocks": [
   {
-    "heading": "Content",
-    "title": "Streamline Your Content",
-    "description": "Empower your team with intuitive tools to create, manage, and publish content, all from a centralized platform that simplifies your digital landscape."
+    "heading": "Predictive Analytics",
+    "title": "Navigate Tomorrow, Today",
+    "description": "Proactively shape business outcomes with insights that predict and prepare you for future user needs and market shifts."
   },
   {
-    "heading": "Collaboration",
-    "title": "Collaborate with Ease",
-    "description": "Foster a connected and dynamic team environment with real-time tools that turn individual efforts into collective achievements."
+    "heading": "Strategic Guidance",
+    "title": "Informed Decision Making",
+    "description": "Translate complex user data into actionable insights, crafting experiences that deeply connect and convert."
   },
   {
-    "heading": "Coordination",
-    "title": "Coordinate Seamlessly",
-    "description": "Gain actionable insights with advanced dashboards and automate mundane tasks to ensure your team’s focus remains on achieving strategic goals efficiently."
+    "heading": "Real-Time Dashboards",
+    "title": "Visualize Your Insights",
+    "description": "Respond to the market with agility, using real-time analytics to make decisions that deliver continuous user experience enhancements."
   }
-],
+  ],
   "featureBlocks": [
   {
-  "heading": "Content",
-  "title": "Simplify Your Content Management",
-  "description": "Transform the chaos of content management into a streamlined, creative process. Enhance your content strategies to publish and manage with ease.",
+  "heading": "Proactive Insights",
+  "title": "Anticipate the Future with Predictive Analytics",
+  "description": "Stay ahead of the curve by utilizing predictive analytics to gain early insights into user behavior and market trends, crafting proactive business strategies.",
   "bulletPoints": [
-    "Create, edit, and publish content effortlessly with intuitive tools",
-    "Maintain a centralized media library for all your digital assets",
-    "Leverage seamless integrations to enhance your content ecosystem"
+    "Harness forward-looking analytics to preemptively address user needs",
+    "Capitalize on emerging trends by adapting to market signals in real-time",
+    "Drive strategic decisions with predictive intelligence"
   ],
   "buttons": [
-    {
+  {
       "text": "Get Started",
       "link": "/contact"
     },
@@ -90,16 +94,16 @@ const data = [
   ]
 },
 {
-  "heading": "Collaboration",
-  "title": "Enhance Your Team's Collaboration",
-  "description": "Empress OS is engineered to unlock your team's collaborative potential, enabling real-time communication and project management to drive unparalleled synergy and productivity.",
+  "heading": "Behavioral Analytics",
+  "title": "Unlock a Universe of Advanced Insights",
+  "description": "Leverage deep behavioral insights and comprehensive data aggregation to understand and enhance every step of the user journey.",
   "bulletPoints": [
-    "Foster real-time communication to keep your team connected",
-    "Empower collaborative editing for a dynamic workflow",
-    "Configure custom access permissions to safeguard information"
+    "Analyze complex user behavior to tailor personalized experiences",
+    "Aggregate cross-platform interactions for a holistic view of engagement",
+    "Utilize enhanced UX mapping to identify and smooth out friction points"
   ],
   "buttons": [
-    {
+  {
       "text": "Get Started",
       "link": "/contact"
     },
@@ -110,13 +114,13 @@ const data = [
   ]
 },
 {
-  "heading": "Coordination",
-  "title": "Accelerate Your Project Performance",
-  "description": "Navigate the complexities of project management with Empress OS, offering clarity through comprehensive dashboards and automated task management, ensuring every project is a success.",
+  "heading": "Data-Driven Strategies",
+  "title": "Empower Strategic Decisions with Real-Time Dashboards",
+  "description": "Empower your team with real-time insights and custom analytics dashboards, enabling swift, data-driven responses to user feedback and market dynamics.",
   "bulletPoints": [
-    "Gain clarity with dashboards on project timelines and deliverables",
-    "Automate routine tasks to focus on strategic objectives",
-    "Access a centralized knowledge base to underpin project decisions"
+    "Adapt to changes with real-time analytics and immediate insights",
+    "Customize dashboards to focus on metrics that directly impact your business goals",
+    "Support decision-making with intelligent, data-based reasoning"
   ],
   "buttons": [
     {
@@ -131,66 +135,66 @@ const data = [
 },
   ],
   "buttons": [
-          {
-            "text": "Dive In",
-            "link": "/contact"
-          },
-          {
-            "text": "Reach Out",
-            "link": "/contact"
-          }
+  {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "Contact Sales",
+      "link": "/contact"
+    }
   ],
-  "featureHeading": "Empress OS Benefits",
+  "featureHeading": "Optimizing Every Data Point",
   "featureTitle": "We're Here to Support You",
-  "featureAssurance": "A transformative platform where creative visions are seamlessly turned into reality. Step into the new era of digital experience."
+  "featureAssurance": "With Experience-as-a-Service, it's not about merely tracking; it's about understanding, anticipating, and evolving. Turn insights into unmatched experiences."
 }
 ];
 
 const features = [
   {
-    "title": "Content Management Simplified",
-    "description": "Intuitive tools for creating and managing digital content, streamlining the publication process for blogs and wikis.",
-    "icon": "fluent:document-48-regular",
+    "title": "Predictive Analytics",
+    "description": "Unlock forward-looking insights to anticipate user needs and trends, driving proactive business strategies.",
+    "icon": "fluent:data-trending-24-regular",
   },
   {
-    "title": "Enhanced Team Collaboration",
-    "description": "Real-time communication and collaborative editing that catalyze team synergy and project management efficiency.",
-    "icon": "fluent:people-team-24-regular",
+    "title": "Behavioral Intelligence",
+    "description": "Understand intricate user behavior patterns through advanced analytics for more personalized interactions.",
+    "icon": "fluent:brain-circuit-24-regular",
   },
   {
-    "title": "Project Management Clarity",
-    "description": "Comprehensive dashboards providing insight into project timelines, deliverables, and team accountability.",
-    "icon": "fluent:clipboard-task-list-ltr-20-regular",
+    "title": "Comprehensive Data Aggregation",
+    "description": "Aggregate interaction data across all touchpoints, providing a 360-degree view of user engagement.",
+    "icon": "fluent:database-24-regular",
   },
   {
-    "title": "Automated Routine Tasks",
-    "description": "Advanced automation for repetitive tasks, freeing up valuable time for strategic and creative work.",
-    "icon": "fluent:arrow-step-in-right-24-filled",
+    "title": "Real-Time Insights",
+    "description": "Access immediate analytics to swiftly adapt to user feedback and market changes to optimize your business.",
+    "icon": "fluent:timer-24-regular",
   },
   {
-    "title": "Custom Access Permissions",
-    "description": "Configurable access controls ensuring secure and appropriate use of information across the team.",
-    "icon": "fluent:lock-shield-24-regular",
+    "title": "Automated Learning",
+    "description": "Leverage automated learning systems to continuously refine and improve user experiences.",
+    "icon": "fluent:bot-24-regular",
   },
   {
-    "title": "Centralized Media Storage",
-    "description": "A unified media library for efficient storage and retrieval of multimedia content, supporting dynamic content creation.",
-    "icon": "fluent:image-search-24-regular",
-  },
-  {
-    "title": "Seamless Integrations",
-    "description": "Connect with a wide array of tools and platforms for a seamless operational ecosystem within the organization.",
-    "icon": "fluent:plug-connected-24-regular",
-  },
-  {
-    "title": "Cross-Device Accessibility",
-    "description": "A platform that adapts to all devices, ensuring access to tools and data for your entire team anytime, anywhere.",
+    "title": "Custom Insights Dashboards",
+    "description": "Utilize customizable dashboards to monitor the metrics that matter most to your business.",
     "icon": "fluent:cellular-data-cellular-unavailable-24-regular",
   },
   {
-    "title": "Knowledge Base Centralization",
-    "description": "A comprehensive knowledge repository that acts as a centralized reference point for the entire team.",
-    "icon": "fluent:book-information-24-regular",
+    "title": "Intelligent Search Capabilities",
+    "description": "Experience advanced search functionality that understands context, making data retrieval intuitive and efficient.",
+    "icon": "fluent:search-24-regular",
+  },
+  {
+    "title": "Data-Driven Decision Making",
+    "description": "Empower your team to make informed decisions with insights derived from comprehensive data analysis.",
+    "icon": "fluent:slide-settings-24-regular",
+  },
+  {
+    "title": "Enhanced User Experience Mapping",
+    "description": "Map out user experiences in detail, identifying friction points and opportunities for optimization.",
+    "icon": "fluent:map-24-regular",
   }
 ];
 
@@ -198,35 +202,34 @@ const features = [
 
 const faq = [
   {
-    question: "What does Empress OS offer for content management?",
-    answer: "Empress OS simplifies content management by providing intuitive tools to create, manage, and publish content. It includes a centralized media library for digital assets and supports seamless integrations to enhance content workflows."
+    question: "How does Empress Insights use predictive analytics?",
+    answer: "Empress Insights uses predictive analytics to forecast future user behaviors and market trends, allowing businesses to make proactive decisions and prepare for future needs and shifts in the market."
   },
   {
-    question: "How does Empress OS facilitate team collaboration?",
-    answer: "Empress OS enhances team collaboration by enabling project management features that help in aligning the team's efforts. It also allows for collaborative editing and configurable access permissions to ensure secure collaboration."
+    question: "What is behavioral analytics and how can it help my business?",
+    answer: "Behavioral analytics is the study of user behavior data. It helps your business by providing insights into how users interact with your service, enabling you to tailor personalized experiences and improve the user journey."
   },
   {
-    question: "What project management features does Empress OS include?",
-    answer: "Empress OS provides comprehensive dashboards for tracking project progress, automates routine tasks to increase focus on strategic goals, and includes a centralized knowledge base for supporting project-related decisions."
+    question: "Can I customize the real-time dashboards?",
+    answer: "Yes, Empress Insights offers customizable dashboards that you can tailor to focus on specific metrics that align with your business objectives, providing you with the most relevant insights for decision-making."
   },
   {
-    question: "Can Empress OS be integrated with my existing tools?",
-    answer: "Yes, Empress OS boasts integration capabilities with a broad range of applications, services, and platforms to synchronize your operational ecosystem efficiently."
+    question: "What kind of data does Empress Insights aggregate?",
+    answer: "Empress Insights aggregates comprehensive interaction data from various touchpoints, providing a 360-degree view of user engagement for a holistic understanding of user behavior."
   },
   {
-    question: "Is Empress OS suitable for use on all devices?",
-    answer: "Empress OS is accessible across various devices, ensuring team members can utilize its full suite of tools and access data whenever necessary, from any location."
+    question: "How does Empress Insights ensure real-time insights?",
+    answer: "Empress Insights provides real-time analytics by continuously tracking and analyzing user interactions, enabling your business to quickly adapt to feedback and changes in the market."
   },
   {
-    question: "What kind of tasks can Empress OS help automate?",
-    answer: "Empress OS can automate an array of tasks, such as scheduling, content distribution, and report generation, which allows teams to focus more on high-impact activities and creative processes."
+    question: "What is automated learning in the context of Empress Insights?",
+    answer: "Automated learning refers to the system's ability to use data and user interactions to continuously learn and improve, enhancing the accuracy of insights and user experiences over time."
   },
   {
-    question: "How does Empress OS maintain security in team collaboration?",
-    answer: "Empress OS maintains a high level of security in team collaboration by offering granular access controls. This feature ensures that team members have appropriate levels of data access, tailored to their roles and responsibilities."
+    question: "How does Empress Insights facilitate data-driven decision-making?",
+    answer: "Empress Insights empowers teams with in-depth analysis and actionable insights derived from user data, allowing for informed decisions that are based on solid data evidence and comprehensive analytics."
   }
 ];
-
 
 
 
@@ -274,7 +277,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={NetworkServerEndpointManagement}
+            src={AnalystConveyor}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -304,7 +307,7 @@ const featureBlocks = data[0].featureBlocks;
       <Card color="indigo" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgThree}
+            src={BusinessDataAnalysis}
             alt="Feature image"
             formats={["avif", "webp"]}
             class="h-full w-full object-contain"
@@ -319,7 +322,7 @@ const featureBlocks = data[0].featureBlocks;
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgTwo}
+            src={ToolsForDataAnalytics}
             alt="Feature image"
             formats={["avif", "webp"]}
             class="h-full w-full object-contain"
@@ -335,7 +338,7 @@ const featureBlocks = data[0].featureBlocks;
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
           <Image
-            src={IntegrationImg}
+            src={BigData}
             alt="Feature image"
             width="909"
             height="823"
@@ -402,14 +405,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../public/financial-infographics.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../public/analytical-report-2.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../public/annual-report.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../public/space-hologram.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -515,7 +518,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../public/ai-analytics.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../public/pie-graph.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
   </div>
 

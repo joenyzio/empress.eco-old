@@ -28,6 +28,16 @@ import {
   Messenger,
   Discord,
 } from "@components/ui/icons";
+import ArtificialIntelligence from "../assets/features/artificial-intelligence.svg";
+import TimeIsMoney from "../assets/features/time-is-money-concept.jpg";
+import WorldTour from "../assets/features/world-tour.svg";
+import SuccessPath from "../assets/features/success-path.svg";
+import TargetMarketing from "../assets/features/target-marketing.svg";
+import Education from "../assets/features/education.svg";
+import NewIdeas from "../assets/features/search-for-new-ideas-technologies-technological-innovations.svg";
+import Champion from "../assets/features/champion.svg";
+
+
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -274,10 +284,10 @@ const automate = [
       <Card class="lg:col-span-3" color="purple">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgOne}
+            src={ArtificialIntelligence}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -290,10 +300,10 @@ const automate = [
       <Card class="lg:col-span-2" color="indigo">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgTwo}
+            src={TimeIsMoney}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -309,10 +319,10 @@ const automate = [
       <Card color="indigo" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgThree}
+            src={WorldTour}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -326,10 +336,10 @@ const automate = [
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgTwo}
+            src={SuccessPath}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -344,11 +354,11 @@ const automate = [
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
           <Image
-            src={IntegrationImg}
+            src={TargetMarketing}
             alt="Feature image"
             width="909"
             height="823"
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -437,10 +447,10 @@ const automate = [
         <Card color="indigo" size="sm">
           <Fragment slot="image">
             <Picture
-              src={FeatureImgThree}
+              src={Champion}
               alt="Feature image"
               formats={["avif", "webp"]}
-              class="h-full w-full object-contain"
+              class="object-contain"
               loading="lazy"
             />
           </Fragment>
@@ -454,10 +464,10 @@ const automate = [
         <Card color="purple" size="sm">
           <Fragment slot="image">
             <Picture
-              src={FeatureImgTwo}
+              src={Education}
               alt="Feature image"
               formats={["avif", "webp"]}
-              class="h-full w-full object-contain"
+              class="object-contain"
               loading="lazy"
             />
           </Fragment>
@@ -472,11 +482,11 @@ const automate = [
           <Fragment slot="image">
             <!-- // svg image. cannot use <picture/> as of now -->
             <Image
-              src={IntegrationImg}
+              src={NewIdeas}
               alt="Feature image"
               width="909"
               height="823"
-              class="h-full w-full object-contain"
+              class="object-contain"
               loading="lazy"
             />
           </Fragment>

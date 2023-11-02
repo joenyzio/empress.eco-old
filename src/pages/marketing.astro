@@ -24,6 +24,9 @@ import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../assets/employee.jpg";
 import TargetMarketing from "../assets/features/targeting-audience-for-marketing.svg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import AutomatedMarketing from "../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../assets/features/dashboard-development.png";
 
 
 // Filter team entries with 'draft: false' & date before current date
@@ -278,10 +281,10 @@ const featureBlocks = data[0].featureBlocks;
       <Card color="indigo" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgThree}
+            src={NetworkServerManagement}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -293,10 +296,10 @@ const featureBlocks = data[0].featureBlocks;
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgTwo}
+            src={AutomatedMarketing}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -309,11 +312,11 @@ const featureBlocks = data[0].featureBlocks;
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
           <Image
-            src={IntegrationImg}
+            src={DashboardDevelopment}
             alt="Feature image"
             width="909"
             height="823"
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>

@@ -23,7 +23,11 @@ import FeatureImg2 from "../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import ArtificialIntelligence from "../assets/features/artificial-intelligence.svg";
+import NetworkServerEndpointManagement from "../assets/features/network-server-endpoint-management.svg";
+import ScheduleManagement from "../assets/features/schedule-management.svg";
+import BusinessWebsite from "../assets/features/business-website.svg";
+import Devops from "../assets/features/devops.svg";
+
 
 
 // Filter team entries with 'draft: false' & date before current date
@@ -33,155 +37,164 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-  {
-    "mainHeading": "Speak the Language of Automation",
-    "subtext": "Experience the fusion of AI precision with genuine human-like engagements. Forge memorable connections, every interaction.",
-    "headingButtons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
-        "text": "Contact Sales",
-        "link": "/contact"
-      }
-    ],
-    "sectionHeading": "Welcome to Empress Chat",
-    "offering": {
-      "title": "Meet Your Personal Business Advocate",
-      "subtext": "Deliver personalized experiences that resonate with every individual user."
+{
+  "mainHeading": "The Operating System for Business Growth",
+  "subtext": "Empress OS empowers you to craft, streamline, and elevate your growth journey—all from one integrated platform.",
+  "headingButtons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
     },
-    "valueBlocks": [
+    {
+      "text": "Contact Sales",
+      "link": "/contact"
+    }
+  ],
+  "sectionHeading": "The Empress Difference",
+  "offering": {
+    "title": "Where Innovation Meets Execution",
+    "subtext": "Revolutionizing collaboration and management with seamless, intuitive, and comprehensive tools for modern teams."
+  },
+  "valueBlocks": [
   {
-    "heading": "24/7 Support",
-    "title": "Always Be Available",
-    "description": "Empress Chat offers 24/7 assistance, ensuring your team and customers receive help whenever they need it, boosting satisfaction and efficiency."
+    "heading": "Content",
+    "title": "Streamline Your Content",
+    "description": "Empower your team with intuitive tools to create, manage, and publish content, all from a centralized platform that simplifies your digital landscape."
   },
   {
-    "heading": "Integations",
-    "title": "Streamline Your Work",
-    "description": "Connect your chat services to your existing platforms for a frictionless workflow that enhances productivity and security."
+    "heading": "Collaboration",
+    "title": "Collaborate with Ease",
+    "description": "Foster a connected and dynamic team environment with real-time tools that turn individual efforts into collective achievements."
   },
   {
-    "heading": "Multi-Language Support",
-    "title": "Communicate Globally",
-    "description": "Empress Chat's multilingual capabilities and feedback mechanisms allow you to engage with a worldwide audience and continuously improve the user experience."
+    "heading": "Coordination",
+    "title": "Coordinate Insights",
+    "description": "Gain actionable insights with advanced dashboards and automate mundane tasks to ensure your team’s focus remains on achieving strategic goals efficiently."
   }
-    ],
-    "featureBlocks": [
-    {
-  "heading": "Global Support",
-  "title": "Empower Your Support with 24/7 Availability",
-  "description": "Empress Chat ensures your team or customers have constant access to support, bolstering satisfaction and productivity, no matter the time zone or hour.",
-  "bulletPoints": [
-    "Offer uninterrupted assistance with our 24/7 support capabilities",
-    "Enhance user experience with instant knowledge retrieval, anytime",
-    "Reduce downtime with interactive troubleshooting that’s always on"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "Contact Sales",
-      "link": "/contact"
-    }
-  ]
-},
-{
-  "heading": "Integration and Interaction",
-  "title": "Streamline Workflows with Seamless Integration Access",
-  "description": "Empress Chat's integration capabilities merge your chat services with existing platforms, providing a cohesive and efficient workflow for users.",
-  "bulletPoints": [
-    "Directly connect with integrated platforms for a seamless experience",
-    "Smart routing directs queries to the right tools or personnel efficiently",
-    "Maintain secure communication with robust user access control"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "Contact Sales",
-      "link": "/contact"
-    }
-  ]
-},
-{
-  "heading": "Intelligent User Engagement",
-  "title": "Enhance Engagement with Multilingual Support and Feedback Collection",
-  "description": "Reach a global audience with multilingual support and grow through insights gained from user feedback to continuously enhance the chat experience.",
-  "bulletPoints": [
-    "Break barriers with multi-language support, inviting global interaction",
-    "Gather and leverage user feedback to improve service quality",
-    "Dynamic content updates ensure accurate and relevant assistance"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "Contact Sales",
-      "link": "/contact"
-    }
-  ]
-},
 ],
-"featureHeading": "The Empress Difference",
-"featureTitle": "Make Every Moment Matter",
-"featureAssurance": "Empress Chat goes beyond mere automation, ensuring meaningful brand-user interactions anytime, anywhere."
+  "featureBlocks": [
+  {
+  "heading": "Content",
+  "title": "Simplify Your Content Management",
+  "description": "Transform the chaos of content management into a streamlined, creative process. Enhance your content strategies to publish and manage with ease.",
+  "bulletPoints": [
+    "Create, edit, and publish content effortlessly with intuitive tools",
+    "Maintain a centralized media library for all your digital assets",
+    "Leverage seamless integrations to enhance your content ecosystem"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "Contact Sales",
+      "link": "/contact"
+    }
+  ]
+},
+{
+  "heading": "Collaboration",
+  "title": "Enhance Your Team's Collaboration",
+  "description": "Empress OS is engineered to unlock your team's collaborative potential, enabling real-time communication and project management to drive unparalleled synergy and productivity.",
+  "bulletPoints": [
+    "Foster real-time communication to keep your team connected",
+    "Empower collaborative editing for a dynamic workflow",
+    "Configure custom access permissions to safeguard information"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "Contact Sales",
+      "link": "/contact"
+    }
+  ]
+},
+{
+  "heading": "Coordination",
+  "title": "Accelerate Your Project Performance",
+  "description": "Navigate the complexities of project management with Empress OS, offering clarity through comprehensive dashboards and automated task management, ensuring every project is a success.",
+  "bulletPoints": [
+    "Gain clarity with dashboards on project timelines and deliverables",
+    "Automate routine tasks to focus on strategic objectives",
+    "Access a centralized knowledge base to underpin project decisions"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "Contact Sales",
+      "link": "/contact"
+    }
+  ]
+},
+  ],
+  "buttons": [
+          {
+            "text": "Dive In",
+            "link": "/contact"
+          },
+          {
+            "text": "Reach Out",
+            "link": "/contact"
+          }
+  ],
+  "featureHeading": "Empress OS Benefits",
+  "featureTitle": "We're Here to Support You",
+  "featureAssurance": "A transformative platform where creative visions are seamlessly turned into reality. Step into the new era of digital experience."
 }
 ];
-           
 
 const features = [
   {
-    "title": "Instant Knowledge Retrieval",
-    "description": "Gain immediate access to your entire knowledge base with simple conversational queries, enhancing decision-making and productivity.",
-    "icon": "fluent:chat-help-24-regular",
-  },
-  {
-    "title": "Dynamic Content Updates",
-    "description": "The chatbot stays current with your latest published content, ensuring accurate information is provided in each interaction.",
+    "title": "Content Management Simplified",
+    "description": "Intuitive tools for creating and managing digital content, streamlining the publication process for blogs and wikis.",
     "icon": "fluent:document-48-regular",
   },
   {
-    "title": "24/7 Availability",
-    "description": "Provide round-the-clock assistance to internal teams or customers, ensuring help is always at hand when needed.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Enhanced Team Collaboration",
+    "description": "Real-time communication and collaborative editing that catalyze team synergy and project management efficiency.",
+    "icon": "fluent:people-team-24-regular",
   },
   {
-    "title": "Seamless Integration Access",
-    "description": "Directly interact with integrated platforms and tools within Empress OS for a unified user experience.",
-    "icon": "fluent:link-square-24-regular",
+    "title": "Project Management Clarity",
+    "description": "Comprehensive dashboards providing insight into project timelines, deliverables, and team accountability.",
+    "icon": "fluent:clipboard-task-list-ltr-20-regular",
   },
   {
-    "title": "Smart Routing",
-    "description": "Intelligent conversation flow that directs users to the right information or personnel, optimizing resource allocation.",
-    "icon": "fluent:bot-24-regular",
+    "title": "Automated Routine Tasks",
+    "description": "Advanced automation for repetitive tasks, freeing up valuable time for strategic and creative work.",
+    "icon": "fluent:arrow-step-in-right-24-filled",
   },
   {
-    "title": "User Access Control",
-    "description": "Manage who can interact with the chatbot and what information they can access, maintaining security and privacy.",
-    "icon": "fluent:shield-24-regular",
+    "title": "Custom Access Permissions",
+    "description": "Configurable access controls ensuring secure and appropriate use of information across the team.",
+    "icon": "fluent:lock-shield-24-regular",
   },
   {
-    "title": "Interactive Troubleshooting",
-    "description": "Guide users through step-by-step problem solving, reducing downtime and enhancing solution delivery.",
-    "icon": "fluent:toolbox-24-regular",
+    "title": "Centralized Media Storage",
+    "description": "A unified media library for efficient storage and retrieval of multimedia content, supporting dynamic content creation.",
+    "icon": "fluent:image-search-24-regular",
   },
   {
-    "title": "Multi-Language Support",
-    "description": "Break language barriers by offering multilingual support, making the chatbot accessible to a wider audience.",
-    "icon": "fluent:translate-24-regular",
+    "title": "Seamless Integrations",
+    "description": "Connect with a wide array of tools and platforms for a seamless operational ecosystem within the organization.",
+    "icon": "fluent:plug-connected-24-regular",
   },
   {
-    "title": "Feedback Collection",
-    "description": "Collect valuable feedback through interactive surveys and dialogs, facilitating continuous improvement.",
-    "icon": "fluent:comment-multiple-24-regular",
+    "title": "Cross-Device Accessibility",
+    "description": "A platform that adapts to all devices, ensuring access to tools and data for your entire team anytime, anywhere.",
+    "icon": "fluent:cellular-data-cellular-unavailable-24-regular",
+  },
+  {
+    "title": "Knowledge Base Centralization",
+    "description": "A comprehensive knowledge repository that acts as a centralized reference point for the entire team.",
+    "icon": "fluent:book-information-24-regular",
   }
 ];
 
@@ -189,34 +202,35 @@ const features = [
 
 const faq = [
   {
-    question: "How does Empress Chat ensure 24/7 availability?",
-    answer: "Empress Chat leverages AI to offer round-the-clock support, ensuring that whether it's for your team or your customers, help is always available, boosting satisfaction and operational efficiency."
+    question: "What does Empress OS offer for content management?",
+    answer: "Empress OS simplifies content management by providing intuitive tools to create, manage, and publish content. It includes a centralized media library for digital assets and supports seamless integrations to enhance content workflows."
   },
   {
-    question: "Can Empress Chat be integrated with other platforms?",
-    answer: "Yes, Empress Chat is designed to seamlessly integrate with your existing platforms to create a cohesive and efficient workflow, enhancing productivity without compromising security."
+    question: "How does Empress OS facilitate team collaboration?",
+    answer: "Empress OS enhances team collaboration by enabling project management features that help in aligning the team's efforts. It also allows for collaborative editing and configurable access permissions to ensure secure collaboration."
   },
   {
-    question: "Does Empress Chat support multiple languages?",
-    answer: "Empress Chat provides multilingual support to accommodate a global audience, ensuring your business can communicate and engage with users in their native language."
+    question: "What project management features does Empress OS include?",
+    answer: "Empress OS provides comprehensive dashboards for tracking project progress, automates routine tasks to increase focus on strategic goals, and includes a centralized knowledge base for supporting project-related decisions."
   },
   {
-    question: "What type of user feedback can Empress Chat collect?",
-    answer: "Empress Chat can gather real-time feedback through user interactions, allowing you to continuously refine the chat experience based on user responses and improve service quality."
+    question: "Can Empress OS be integrated with my existing tools?",
+    answer: "Yes, Empress OS boasts integration capabilities with a broad range of applications, services, and platforms to synchronize your operational ecosystem efficiently."
   },
   {
-    question: "How does Empress Chat contribute to efficient problem resolution?",
-    answer: "Empress Chat offers interactive troubleshooting, guiding users through a step-by-step process to solve their issues promptly, minimizing downtime and enhancing overall resolution efficiency."
+    question: "Is Empress OS suitable for use on all devices?",
+    answer: "Empress OS is accessible across various devices, ensuring team members can utilize its full suite of tools and access data whenever necessary, from any location."
   },
   {
-    question: "What is Smart Routing in Empress Chat?",
-    answer: "Smart Routing is a feature in Empress Chat that intelligently directs user inquiries to the appropriate tools, resources, or personnel, optimizing resource allocation and response times."
+    question: "What kind of tasks can Empress OS help automate?",
+    answer: "Empress OS can automate an array of tasks, such as scheduling, content distribution, and report generation, which allows teams to focus more on high-impact activities and creative processes."
   },
   {
-    question: "How does Empress Chat handle information security and user privacy?",
-    answer: "Empress Chat includes robust user access control to manage interactions and protect sensitive information, ensuring that data security and user privacy are always maintained."
+    question: "How does Empress OS maintain security in team collaboration?",
+    answer: "Empress OS maintains a high level of security in team collaboration by offering granular access controls. This feature ensures that team members have appropriate levels of data access, tailored to their roles and responsibilities."
   }
 ];
+
 
 
 
@@ -264,7 +278,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={ArtificialIntelligence}
+            src={NetworkServerEndpointManagement}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -294,10 +308,10 @@ const featureBlocks = data[0].featureBlocks;
       <Card color="indigo" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgThree}
+            src={BusinessWebsite}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -309,10 +323,10 @@ const featureBlocks = data[0].featureBlocks;
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgTwo}
+            src={ScheduleManagement}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -325,7 +339,7 @@ const featureBlocks = data[0].featureBlocks;
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
           <Image
-            src={IntegrationImg}
+            src={Devops}
             alt="Feature image"
             width="909"
             height="823"
@@ -392,14 +406,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../public/auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../public/financial-infographics.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../public/litecoin-funnel.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../public/annual-report.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -505,7 +519,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../public/job-announcement.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../public/ai-analytics.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
   </div>
 

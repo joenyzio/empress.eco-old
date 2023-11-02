@@ -30,6 +30,17 @@ import {
   Discord,
 } from "@components/ui/icons";
 
+import RenewableEnergy from "../assets/features/renewable-energy.svg";
+import HashTag from "../assets/features/users-using-social-media-website.svg";
+import SocialMediaApp from "../assets/features/social-media-app.svg";
+import SocialMediaAnalysis from "../assets/features/social-media-marketing-analysis.svg";
+import CharitableDonation from "../assets/features/ngo-charitable-donation-and-volunteer-work.svg";
+import OutsourcingSoftware from "../assets/features/outsourcing-software-development-service-web-page.png";
+import Education from "../assets/features/education.svg";
+import NewIdeas from "../assets/features/search-for-new-ideas-technologies-technological-innovations.svg";
+import Champion from "../assets/features/champion.svg";
+
+
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
@@ -224,7 +235,7 @@ const automate = [
               </div>
               <div class="py-3 lg:col-span-3 lg:-mr-44">
                 <Picture
-                  src={heroImage}
+                  src={RenewableEnergy}
                   alt="Astronaut in the air"
                   formats={["avif", "webp"]}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -259,10 +270,10 @@ const automate = [
       <Card class="lg:col-span-3" color="purple">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgOne}
+            src={SocialMediaApp}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -275,10 +286,10 @@ const automate = [
       <Card class="lg:col-span-2" color="indigo">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgTwo}
+            src={HashTag}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -294,10 +305,10 @@ const automate = [
       <Card color="indigo" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgThree}
+            src={SocialMediaAnalysis}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="bject-contain"
             loading="lazy"
           />
         </Fragment>
@@ -311,10 +322,10 @@ const automate = [
       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
-            src={FeatureImgTwo}
+            src={OutsourcingSoftware}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="h-full w-full object-contain"
+            class="object-contain"
             loading="lazy"
           />
         </Fragment>
@@ -329,7 +340,7 @@ const automate = [
         <Fragment slot="image">
           <!-- // svg image. cannot use <picture/> as of now -->
           <Image
-            src={IntegrationImg}
+            src={CharitableDonation}
             alt="Feature image"
             width="909"
             height="823"
@@ -422,7 +433,7 @@ const automate = [
         <Card color="indigo" size="sm">
           <Fragment slot="image">
             <Picture
-              src={FeatureImgThree}
+              src={Champion}
               alt="Feature image"
               formats={["avif", "webp"]}
               class="h-full w-full object-contain"
@@ -439,7 +450,7 @@ const automate = [
         <Card color="purple" size="sm">
           <Fragment slot="image">
             <Picture
-              src={FeatureImgTwo}
+              src={NewIdeas}
               alt="Feature image"
               formats={["avif", "webp"]}
               class="h-full w-full object-contain"
@@ -457,7 +468,7 @@ const automate = [
           <Fragment slot="image">
             <!-- // svg image. cannot use <picture/> as of now -->
             <Image
-              src={IntegrationImg}
+              src={Education}
               alt="Feature image"
               width="909"
               height="823"
