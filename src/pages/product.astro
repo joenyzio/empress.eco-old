@@ -31,9 +31,6 @@ import DashboardDevelopment from "../assets/features/dashboard-development.png";
 import ModernCity from "../assets/features/modern-city.svg";
 
 
-
-
-
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
@@ -63,7 +60,7 @@ const data = [
         {
             "heading": "Elevate Collaboration",
             "title": "Empress OS",
-            "description": "Comprehensive platform for crafting, managing, and refining digital experiences."
+            "description": "Comprehensive platform for collaborating, managing, and optimizing business growth."
         },
         {
             "heading": "Engage Globally",
@@ -80,11 +77,11 @@ const data = [
     {
   "heading": "Empress OS",
   "title": "Centralize, Streamline, Collaborate on Your Projects",
-  "description": "Empress OS redefines how teams work together, offering a single platform where content management is effortless, collaboration is intuitive, and workflow efficiency is the norm.",
+  "description": "Empress OS redefines how teams work together, offering a single platform where information is effortless, collaboration is intuitive, and workflow efficiency is the norm.",
   "bulletPoints": [
-    "Simplify management with efficient and intuitive tools.",
-    "Enhance team productivity with seamless collaborative features.",
-    "Streamline your business processes with workflows that drive success."
+      "Simplify management with intuitive tools",
+      "Boost team productivity with collaborative features",
+      "Streamline business processes for success"
   ],
   "buttons": [
     {
@@ -102,9 +99,9 @@ const data = [
   "title": "Converse with AI-Precision, Connect with Human Touch",
   "description": "Introducing Empress Chat – the intelligent bot designed to seamlessly integrate with Empress OS, enhancing both internal team collaboration and external customer engagement.",
   "bulletPoints": [
-    "Bridge communication gaps with intuitive, AI-driven interactions",
-    "Streamline workflows by connecting with Empress OS's suite of tools",
-    "Elevate support with 24/7 responsive and intelligent chat capabilities"
+      "Enhance communication with smart AI interactions",
+      "Efficiently connect workflows with Empress OS tools",
+      "Improve support with 24/7 smart chat"
   ],
   "buttons": [
     {
@@ -122,9 +119,9 @@ const data = [
   "title": "Transform Your Data into Actionable Strategies",
   "description": "Harness the full spectrum of analytics with Empress Insights. Our robust dashboards bring the power of advanced data analysis to your fingertips, enabling smarter, faster business decisions.",
   "bulletPoints": [
-    "Transform data into actionable strategies with cutting-edge analytics",
-    "Custom dashboards with key metrics for targeted decision-making",
-    "Leverage predictive insights for a competitive edge in your market"
+    "Turn data into strategies with advanced analytics",
+    "Use custom dashboards for focused decisions",
+    "Gain market advantage with predictive insights"
   ],
   "buttons": [
     {
