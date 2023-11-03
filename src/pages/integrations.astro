@@ -13,6 +13,13 @@ import {
 
 const integrations = [
   {
+    name: "Accounting",
+    description:
+      "Get notified in your Slack channels when a new order is placed.",
+    Icon: Slack,
+    link: "/integration/slack",
+  },
+  {
     name: "Slack",
     description:
       "Get notified in your Slack channels when a new order is placed.",
@@ -76,12 +83,13 @@ const integrations = [
             <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
               <item.Icon class="w-8 h-8" />
             </div>
-
-            <h3 class="text-xl lg:text-2xl font-medium mt-4">{item.name}</h3>
+            
+            <!-- Updated class attributes for consistency -->
+            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
             <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
               {item.description}
             </p>
-
+    
             <div class="mt-3">
               <a
                 href={item.link}
@@ -93,7 +101,7 @@ const integrations = [
           </div>
         ))
       }
-    </div>
+    </div>    
   </Container>
 </Layout>
 

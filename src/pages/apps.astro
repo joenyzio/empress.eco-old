@@ -1,0 +1,695 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Picture, Image } from "astro:assets";
+import {
+  Slack,
+  Zapier,
+  Intercom,
+  Shopify,
+  Messenger,
+  Discord,
+} from "@components/ui/icons";
+
+
+import WebsiteBuilder from "../assets/apps/website.svg";
+import ECommerce from "../assets/apps/ecommerce.svg";
+import Blogs from "../assets/apps/blog.svg";
+import Forum from "../assets/apps/forum.svg";
+import eLearning from "../assets/apps/elearning.svg";
+import LiveChat from "../assets/apps/live-chat.svg";
+
+import CRM from "../assets/apps/crm.svg";
+import Sales from "../assets/apps/sales.svg";
+import PointOfSale from "../assets/apps/point-of-sale.svg";
+import Subscriptions from "../assets/apps/subscriptions.svg";
+import Rental from "../assets/apps/rental.svg";
+
+
+import Accounting from "../assets/apps/accounting.svg";
+import Invoicing from "../assets/apps/invoicing.svg";
+import Expenses from "../assets/apps/expenses.svg";
+import Documents from "../assets/apps/documents.svg";
+import Sign from "../assets/apps/sign.svg";
+
+import Inventory from "../assets/apps/inventory.svg";
+import Manufacturing from "../assets/apps/manufacturing.svg";
+import PLM from "../assets/apps/PLM.svg";
+import Purchase from "../assets/apps/purchase.svg";
+import Maintenance from "../assets/apps/maintenance.svg";
+import Quality from "../assets/apps/quality.svg";
+
+import Employees from "../assets/apps/employees.svg";
+import Recruitment from "../assets/apps/recruitment.svg";
+import TimeOff from "../assets/apps/time-off.svg";
+import Appraisals from "../assets/apps/appraisals.svg";
+import Referrals from "../assets/apps/referrals.svg";
+import Fleet from "../assets/apps/fleet.svg";
+
+import MarketingAutomation from "../assets/apps/marketing-automation.svg";
+import EmailMarketing from "../assets/apps/email-marketing.svg";
+import SMSMarketing from "../assets/apps/sms-marketing.svg";
+import SocialMarketing from "../assets/apps/social-marketing.svg";
+import Events from "../assets/apps/events.svg";
+import Surveys from "../assets/apps/surveys.svg";
+
+import Project from "../assets/apps/project.svg";
+import Timesheet from "../assets/apps/timesheet.svg";
+import FieldService from "../assets/apps/field-service.svg";
+import Helpdesk from "../assets/apps/helpdesk.svg";
+import Planning from "../assets/apps/planning.svg";
+import Appointments from "../assets/apps/appointments.svg";
+
+import Discuss from "../assets/apps/discuss.svg";
+import Approvals from "../assets/apps/discuss.svg";
+import VoIP from "../assets/apps/voip.svg";
+
+
+const WebsiteApps = [
+  {
+    name: "Website Builder",
+    description: "A robust tool for creating and customizing websites with ease.",
+    icon: WebsiteBuilder,  // Replace "Slack" with the appropriate icon name if different
+    link: "/website/website-builder",
+  },
+  {
+    name: "eCommerce",
+    description: "Seamlessly sell products online and manage your online store.",
+    icon: ECommerce,  // Replace "Slack" with the appropriate icon name if different
+    link: "/website/ecommerce",
+  },
+  {
+    name: "Blogs",
+    description: "Share insights, news, and updates through a dynamic blogging platform.",
+    icon: Blogs,  // Replace "Slack" with the appropriate icon name if different
+    link: "/website/blogs",
+  },
+  {
+    name: "Forum",
+    description: "Engage your community and foster discussions in a structured online forum.",
+    icon: Forum,  // Replace "Slack" with the appropriate icon name if different
+    link: "/website/forum",
+  },
+  {
+    name: "eLearning",
+    description: "Deliver online courses and manage educational content.",
+    icon: eLearning,  // Replace "Slack" with the appropriate icon name if different
+    link: "/website/elearning",
+  },
+  {
+    name: "Live Chat",
+    description: "Engage with visitors and customers in real-time through live chat.",
+    icon: LiveChat,  // Replace "Slack" with the appropriate icon name if different
+    link: "/website/live-chat",
+  },
+];
+
+const SalesApps = [
+  {
+    name: "CRM",
+    description: "Manage customer relationships and sales processes efficiently.",
+    icon: CRM,  // Replace "Slack" with the appropriate icon name if different
+    link: "/sales/crm",
+  },
+  {
+    name: "Sales",
+    description: "Drive sales and manage leads through a comprehensive tool.",
+    icon: Sales,  // Replace "Slack" with the appropriate icon name if different
+    link: "/sales/sales",
+  },
+  {
+    name: "Point of Sale",
+    description: "Simplify and streamline in-person sales transactions.",
+    icon: PointOfSale,  // Replace "Slack" with the appropriate icon name if different
+    link: "/sales/point-of-sale",
+  },
+  {
+    name: "Subscriptions",
+    description: "Manage and automate recurring billing and subscriptions.",
+    icon: Subscriptions,  // Replace "Slack" with the appropriate icon name if different
+    link: "/sales/subscriptions",
+  },
+  {
+    name: "Rental",
+    description: "Facilitate rental operations and manage inventory.",
+    icon: Rental,  // Replace "Slack" with the appropriate icon name if different
+    link: "/sales/rental",
+  },
+];
+
+const FinanceApps = [
+  {
+    name: "Accounting",
+    description: "Handle all accounting needs, from ledgers to balance sheets.",
+    icon: Accounting,  // Replace "Slack" with the appropriate icon name if different
+    link: "/finance/accounting",
+  },
+  {
+    name: "Invoicing",
+    description: "Generate and manage customer invoices seamlessly.",
+    icon: Invoicing,  // Replace "Slack" with the appropriate icon name if different
+    link: "/finance/invoicing",
+  },
+  {
+    name: "Expenses",
+    description: "Track, approve, and monitor expenses with ease.",
+    icon: Expenses,  // Replace "Slack" with the appropriate icon name if different
+    link: "/finance/expenses",
+  },
+  {
+    name: "Documents",
+    description: "Store, organize, and retrieve financial documents.",
+    icon: Documents,  // Replace "Slack" with the appropriate icon name if different
+    link: "/finance/documents",
+  },
+  {
+    name: "Sign",
+    description: "Digitally share, sign, and manage documents.",
+    icon: Sign,  // Replace "Slack" with the appropriate icon name if different
+    link: "/finance/sign",
+  },
+];
+
+const InventoryManufacturingApps = [
+  {
+    name: "Inventory",
+    description: "Control stock levels and manage inventory operations.",
+    icon: Inventory,  // Replace "Slack" with the appropriate icon name if different
+    link: "/inventory-manufacturing/inventory",
+  },
+  {
+    name: "Manufacturing (MRP)",
+    description: "Oversee manufacturing processes and workflows.",
+    icon: Manufacturing,  // Replace "Slack" with the appropriate icon name if different
+    link: "/inventory-manufacturing/manufacturing-mrp",
+  },
+  {
+    name: "Product Lifecycle Management",
+    description: "Product Lifecycle Management for streamlined product development.",
+    icon: PLM,  // Replace "Slack" with the appropriate icon name if different
+    link: "/inventory-manufacturing/plm",
+  },
+  {
+    name: "Purchase",
+    description: "Manage vendor relations and purchasing operations.",
+    icon: Purchase,  // Replace "Slack" with the appropriate icon name if different
+    link: "/inventory-manufacturing/purchase",
+  },
+  {
+    name: "Maintenance",
+    description: "Ensure timely maintenance of equipment and assets.",
+    icon: Maintenance,  // Replace "Slack" with the appropriate icon name if different
+    link: "/inventory-manufacturing/maintenance",
+  },
+  {
+    name: "Quality",
+    description: "Uphold product quality and manage quality checks.",
+    icon: Quality,  // Replace "Slack" with the appropriate icon name if different
+    link: "/inventory-manufacturing/quality",
+  },
+];
+
+const HumanResourcesApps = [
+  {
+    name: "Employees",
+    description: "Centralize employee data and manage HR operations.",
+    icon: Employees,  // Replace "Slack" with the appropriate icon name if different
+    link: "/human-resources/employees",
+  },
+  {
+    name: "Recruitment",
+    description: "Streamline recruitment and candidate tracking.",
+    icon: Recruitment,  // Replace "Slack" with the appropriate icon name if different
+    link: "/human-resources/recruitment",
+  },
+  {
+    name: "Time Off",
+    description: "Coordinate employee leave and absence schedules.",
+    icon: TimeOff,  // Replace "Slack" with the appropriate icon name if different
+    link: "/human-resources/time-off",
+  },
+  {
+    name: "Appraisals",
+    description: "Easily conduct and manage employee evaluations.",
+    icon: Appraisals,  // Replace "Slack" with the appropriate icon name if different
+    link: "/human-resources/appraisals",
+  },
+  {
+    name: "Referrals",
+    description: "Empower employees to refer potential candidates.",
+    icon: Referrals,  // Replace "Slack" with the appropriate icon name if different
+    link: "/human-resources/referrals",
+  },
+  {
+    name: "Fleet",
+    description: "Manage company vehicles and related operations.",
+    icon: Fleet,  // Replace "Slack" with the appropriate icon name if different
+    link: "/human-resources/fleet",
+  },
+];
+
+const MarketingApps = [
+  {
+    name: "Marketing Automation",
+    description: "Automate marketing campaigns and workflows.",
+    icon: MarketingAutomation,  // Replace "Slack" with the appropriate icon name if different
+    link: "/marketing/marketing-automation",
+  },
+  {
+    name: "Email Marketing",
+    description: "Send targeted email campaigns to your audience.",
+    icon: EmailMarketing,  // Replace "Slack" with the appropriate icon name if different
+    link: "/marketing/email-marketing",
+  },
+  {
+    name: "SMS Marketing",
+    description: "Engage customers through SMS marketing campaigns.",
+    icon: SMSMarketing,  // Replace "Slack" with the appropriate icon name if different
+    link: "/marketing/sms-marketing",
+  },
+  {
+    name: "Social Marketing",
+    description: "Promote your brand on social media platforms.",
+    icon: SocialMarketing,  // Replace "Slack" with the appropriate icon name if different
+    link: "/marketing/social-marketing",
+  },
+  {
+    name: "Events",
+    description: "Efficiently coordinate, streamline, and oversee events.",
+    icon: Events,  // Replace "Slack" with the appropriate icon name if different
+    link: "/marketing/events",
+  },
+  {
+    name: "Surveys",
+    description: "Gather feedback and insights through surveys.",
+    icon: Surveys,  // Replace "Slack" with the appropriate icon name if different
+    link: "/marketing/surveys",
+  },
+];
+
+const ServicesApps = [
+  {
+    name: "Project",
+    description: "Manage projects and collaborate with teams.",
+    icon: Project,  // Replace "Slack" with the appropriate icon name if different
+    link: "/services/project",
+  },
+  {
+    name: "Timesheet",
+    description: "Track and manage employee working hours across projects.",
+    icon: Timesheet,  // Replace "Slack" with the appropriate icon name if different
+    link: "/services/timesheet",
+  },
+  {
+    name: "Field Service",
+    description: "Coordinate and manage field service operations.",
+    icon: FieldService,  // Replace "Slack" with the appropriate icon name if different
+    link: "/services/field-service",
+  },
+  {
+    name: "Helpdesk",
+    description: "Provide support to customers through a ticketing system.",
+    icon: Helpdesk,  // Replace "Slack" with the appropriate icon name if different
+    link: "/services/helpdesk",
+  },
+  {
+    name: "Planning",
+    description: "Schedule tasks, appointments, and manage calendars.",
+    icon: Planning,  // Replace "Slack" with the appropriate icon name if different
+    link: "/services/planning",
+  },
+  {
+    name: "Appointments",
+    description: "Allow customers to book appointments online.",
+    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
+    link: "/services/appointments",
+  },
+];
+
+const ProductivityApps = [
+  {
+    name: "Discuss",
+    description: "A platform for team communication and collaboration.",
+    icon: Discuss,  // Replace "Slack" with the appropriate icon name if different
+    link: "/productivity/discuss",
+  },
+  {
+    name: "Approvals",
+    description: "Streamline and manage the approval process.",
+    icon: Approvals,  // Replace "Slack" with the appropriate icon name if different
+    link: "/productivity/approvals",
+  },
+  {
+    name: "Voice Calls",
+    description: "Make voice calls over the internet and manage communications.",
+    icon: VoIP,  // Replace "Slack
+    link: "/productivity/VoIP",
+  }
+]
+
+---
+
+<Layout title="apps">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Applications</Fragment>
+      <Fragment slot="desc">
+        Power your business with specialized apps.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+    <!-- Websites -->
+
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
+      Build Your Online Presence
+    </h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+      {
+      WebsiteApps.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp", "svg"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
+            </div>
+    
+            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
+            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                {item.description}
+            </p>
+    
+            <div class="mt-3 text-center">
+                <a
+                href={item.link}
+                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    View App
+                    <span class="absolute inset-0" />
+                </a>
+            </div>
+        </div>
+      ))
+      }
+    </div>    
+
+    <!-- Sales Apps -->
+
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
+      Boost Your Sales Performance
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+      {
+      SalesApps.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp", "svg"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
+            </div>
+    
+            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
+            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                {item.description}
+            </p>
+    
+            <div class="mt-3 text-center">
+                <a
+                href={item.link}
+                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    View App
+                    <span class="absolute inset-0" />
+                </a>
+            </div>
+        </div>
+      ))
+      }
+    </div>  
+
+    <!-- Finance Apps -->
+
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
+      Streamline Your Financial Operations
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+      {
+      FinanceApps.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp", "svg"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
+            </div>
+    
+            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
+            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                {item.description}
+            </p>
+    
+            <div class="mt-3 text-center">
+                <a
+                href={item.link}
+                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    View App
+                    <span class="absolute inset-0" />
+                </a>
+            </div>
+        </div>
+      ))
+      }
+    </div>  
+
+    <!-- Inventory & Manufacturing Apps -->
+
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
+      Optimize Inventory & Production
+    </h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+      {
+      InventoryManufacturingApps.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp", "svg"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
+            </div>
+    
+            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
+            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                {item.description}
+            </p>
+    
+            <div class="mt-3 text-center">
+                <a
+                href={item.link}
+                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    View App
+                    <span class="absolute inset-0" />
+                </a>
+            </div>
+        </div>
+      ))
+      }
+    </div>  
+
+    <!-- Human Resources Apps -->
+
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
+      Empower Your Workforce
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+      {
+      HumanResourcesApps.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp", "svg"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
+            </div>
+    
+            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
+            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                {item.description}
+            </p>
+    
+            <div class="mt-3 text-center">
+                <a
+                href={item.link}
+                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    View App
+                    <span class="absolute inset-0" />
+                </a>
+            </div>
+        </div>
+      ))
+      }
+    </div>  
+
+    <!-- Marketing Apps -->
+
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
+      Amplify Your Marketing Impact
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+      {
+      MarketingApps.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp", "svg"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
+            </div>
+    
+            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
+            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                {item.description}
+            </p>
+    
+            <div class="mt-3 text-center">
+                <a
+                href={item.link}
+                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    View App
+                    <span class="absolute inset-0" />
+                </a>
+            </div>
+        </div>
+      ))
+      }
+    </div>  
+
+    <!-- Services -->
+
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
+      Elevate Your Service Delivery
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+      {
+      ServicesApps.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp", "svg"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
+            </div>
+    
+            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
+            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                {item.description}
+            </p>
+    
+            <div class="mt-3 text-center">
+                <a
+                href={item.link}
+                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    View App
+                    <span class="absolute inset-0" />
+                </a>
+            </div>
+        </div>
+      ))
+      }
+    </div>  
+
+        <!-- Productivity Apps -->
+
+        <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
+          Enhance Workplace Productivity
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+          {
+          ProductivityApps.map((item) => (
+            <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+                <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+                  <Picture
+                    src={item.icon}
+                    alt={`${item.name} icon`}
+                    formats={["avif", "webp", "svg"]}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    widths={[240, 540, 720]}
+                    loading="lazy"
+                    fetchpriority="high"
+                    class="w-8 h-8"
+                  />
+                </div>
+        
+                <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
+                <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+                    {item.description}
+                </p>
+        
+                <div class="mt-3 text-center">
+                    <a
+                    href={item.link}
+                    class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                        View App
+                        <span class="absolute inset-0" />
+                    </a>
+                </div>
+            </div>
+          ))
+          }
+        </div>  
+
+
+  </Container>
+</Layout>
+
