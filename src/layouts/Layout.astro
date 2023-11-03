@@ -66,13 +66,20 @@ const makeTitle = title
     <ViewTransitions />
   </head>
   <body>
-    <div class="hidden md:block">
+    <!-- <div class="hidden md:block">
       <Navbar />
     </div>
     <div class="block md:hidden">
       <MobileNavbar />
-    </div>
-    <!-- <Navbar /> -->
+    </div> -->
+    <header class="sticky top-0 z-50 bg-white"> <!-- You can adjust the z-index and bg color as per your need -->
+      <div class="hidden md:block">
+        <Navbar />
+      </div>
+      <div class="block md:hidden">
+        <MobileNavbar />
+      </div>
+    </header>
     <slot />
     <Footer margin={footerMargin} />
         <!-- Chat Embed Script -->
