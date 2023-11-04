@@ -36,6 +36,8 @@ import TargetMarketing from "../assets/features/target-marketing.svg";
 import Education from "../assets/features/education.svg";
 import NewIdeas from "../assets/features/search-for-new-ideas-technologies-technological-innovations.svg";
 import Champion from "../assets/features/champion.svg";
+import CloudServices from "../assets/features/cloud-services.svg";
+import MobileApp from "../assets/features/mobile-apps.svg";
 
 
 
@@ -50,17 +52,17 @@ const appsIntegrations = [
   {
     name: "Applications",
     description:
-      "Get notified in your Slack channels when a new order is placed.",
-    Icon: Slack,
-    link: "/integration/slack",
+      "Power your business with specialized apps.",
+    Icon: MobileApp,
+    link: "/apps",
   },
 
   {
     name: "Integrations",
     description:
       "Connect over 200+ tools with our easy to use Zapier integrations.",
-    Icon: Zapier,
-    link: "/integration/zapier",
+    Icon: CloudServices,
+    link: "/integrations",
   }
 ];
 
@@ -380,11 +382,19 @@ const automate = [
       <div class="grid md:grid-cols-2 lg:grid-cols-2 my-24 gap-x-10 gap-y-24">
         {
           appsIntegrations.map((item) => (
-            <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-              <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
-                <item.Icon class="w-8 h-8" />
-              </div>
-  
+          <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+                <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                    src={item.Icon}
+                    alt={`${item.name} icon`}
+                    formats={["avif", "webp", "svg"]}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    widths={[240, 540, 720]}
+                    loading="lazy"
+                    fetchpriority="high"
+                    class="w-8 h-8"
+                  />
+                </div>
               <h3 class="text-xl lg:text-2xl font-medium mt-4">{item.name}</h3>
               <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
                 {item.description}
