@@ -4,7 +4,7 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import { Picture, Image } from "astro:assets";
 import {
-  Slack,
+  trello,
   Zapier,
   Intercom,
   Shopify,
@@ -27,7 +27,6 @@ import talkyard from "../assets/integrations/talkyard.svg";
 import ted from "../assets/integrations/ted.svg";
 import transifex from "../assets/integrations/transifex.svg";
 import twitch from "../assets/integrations/twitch.svg";
-import typeform from "../assets/integrations/typeform.svg";
 import disqus from "../assets/integrations/disqus.svg";
 
 // WEBP imports
@@ -57,7 +56,7 @@ import captivate from "../assets/integrations/captivate.webp";
 import chartmogul from "../assets/integrations/chartmogul.webp";
 import churnbuster from "../assets/integrations/churnbuster.webp";
 import circle from "../assets/integrations/circle.webp";
-import cloudinary from "../assets/integrations/cloudinary.webp";
+import cloudinary from "../assets/integrations/cloudinary.png";
 import codepen from "../assets/integrations/codepen.webp";
 import cookieyes from "../assets/integrations/cookieyes.webp";
 import discord from "../assets/integrations/discord.webp";
@@ -70,7 +69,6 @@ import gaslogo from "../assets/integrations/gaslogo.webp";
 import gathercontent from "../assets/integrations/gathercontent.webp";
 import geckoboard from "../assets/integrations/geckoboard.webp";
 import ghostLogo from "../assets/integrations/ghost-logo.webp";
-import ghost from "../assets/integrations/ghost.webp";
 import giphy from "../assets/integrations/giphy.webp";
 import gumroad from "../assets/integrations/gumroad.webp";
 import helpscout from "../assets/integrations/helpscout.webp";
@@ -83,11 +81,8 @@ import intercom from "../assets/integrations/intercom.webp";
 import intravert from "../assets/integrations/intravert.webp";
 import jotform from "../assets/integrations/jotform.webp";
 import listenNotes from "../assets/integrations/listen-notes.webp";
-import livechat from "../assets/integrations/livechat.webp";
-import loom from "../assets/integrations/loom.webp";
 import mailchimp from "../assets/integrations/mailchimp.webp";
 import mailer from "../assets/integrations/mailer.webp";
-import matomo from "../assets/integrations/matomo.webp";
 import netlify from "../assets/integrations/netlify.webp";
 import patreon from "../assets/integrations/patreon.webp";
 import paypal from "../assets/integrations/paypal.webp";
@@ -99,12 +94,10 @@ import rss from "../assets/integrations/rss.webp";
 import segmention from "../assets/integrations/segmention.webp";
 import setka from "../assets/integrations/setka.webp";
 import simpleAnalytics from "../assets/integrations/simple-analytics.webp";
-import slack from "../assets/integrations/slack.webp";
 import slideshare from "../assets/integrations/slideshare.webp";
 import snipcart from "../assets/integrations/snipcart.webp";
 import spotify from "../assets/integrations/spotify.webp";
 import tally from "../assets/integrations/tally.webp";
-import transistor from "../assets/integrations/transistor.webp";
 import trello from "../assets/integrations/trello.webp";
 import twitter from "../assets/integrations/twitter.webp";
 import udesly from "../assets/integrations/udesly.webp";
@@ -115,8 +108,63 @@ import vwo from "../assets/integrations/vwo.svg";
 import writeAs from "../assets/integrations/write-as.webp";
 import wufoo from "../assets/integrations/wufoo.svg";
 import xCart from "../assets/integrations/x-cart.webp";
-import youtube from "../assets/integrations/youtube.webp";
 import zapier from "../assets/integrations/zapier.webp";
+import slack from "../assets/integrations/slack.png";
+import zendesk from "../assets/integrations/zendesk.svg";
+import salesforce from "../assets/integrations/salesforce.png";
+import asana from "../assets/integrations/asana.png";
+import airtable from "../assets/integrations/airtable.png";
+import gitlab from "../assets/integrations/gitlab.png";
+import notion from "../assets/integrations/notion.png";
+import microsoftTeams from "../assets/integrations/microsoft-teams.png";
+import zoom from "../assets/integrations/zoom.png";
+import loom from "../assets/integrations/loom.png";
+import flock from "../assets/integrations/flock.png";
+import clickup from "../assets/integrations/clickup.png";
+import basecamp from "../assets/integrations/basecamp.png";
+import monday from "../assets/integrations/monday.png";
+import doodle from "../assets/integrations/doodle.png";
+import calendly from "../assets/integrations/calendly.png";
+import miro from "../assets/integrations/miro.png";
+import livechat from "../assets/integrations/livechat.png";
+import freshdesk from "../assets/integrations/freshdesk.png";
+import pipedrive from "../assets/integrations/pipedrive.png";
+import copperCRM from "../assets/integrations/copper.png";
+import zoho from "../assets/integrations/zoho.png";
+import drift from "../assets/integrations/drift.avif";
+import kayako from "../assets/integrations/kayako.png";
+import groove from "../assets/integrations/groove.png";
+import helpjuice from "../assets/integrations/helpjuice.png";
+import tidio from "../assets/integrations/tidio.png";
+import matomo from "../assets/integrations/matomo.png";
+import segment from "../assets/integrations/segment.png";
+import mixpanel from "../assets/integrations/mixpanel.png";
+import looker from "../assets/integrations/looker.png";
+import tableau from "../assets/integrations/tableau.png";
+import powerbi from "../assets/integrations/powerbi.png";
+import datastudio from "../assets/integrations/datastudio.png";
+import keenio from "../assets/integrations/keenio.png";
+import baremetrics from "../assets/integrations/baremetrics.png";
+import heap from "../assets/integrations/heap.png";
+import typeform from "../assets/integrations/typeform.png";
+import transistor from "../assets/integrations/transistor.png";
+import shopify from "../assets/integrations/shopify.svg";
+import youtube from "../assets/integrations/youtube.png";
+import weglot from "../assets/integrations/weglot.png";
+import ghost from "../assets/integrations/ghost.png";
+import googleadsense from "../assets/integrations/googleadsense.png";
+import googleadmanager from "../assets/integrations/googleadmanager.png";
+import amazons3 from "../assets/integrations/amazons3.png";
+import azurestorage from "../assets/integrations/azurestorage.png";
+import docker from "../assets/integrations/docker.png";
+import kubernetes from "../assets/integrations/kubernetes.png";
+import heroku from "../assets/integrations/heroku.png";
+import vercel from "../assets/integrations/vercel.png";
+import digitalocean from "../assets/integrations/digitalocean.png";
+import awslambda from "../assets/integrations/awslambda.png";
+import serverless from "../assets/integrations/serverless.png";
+import travisci from "../assets/integrations/travisci.png";
+import jenkins from "../assets/integrations/jenkins.png";
 
 
 
@@ -124,181 +172,186 @@ const popular = [
   {
     name: "Slack",
     description:
-      "Get notified in your Slack channels when a new order is placed.",
-    Icon: WebsiteBuilder,
-    link: "/integration/slack",
+      "Get notified in your trello channels when a new order is placed.",
+    Icon: slack,
+    link: "/contact",
   },
 
   {
     name: "Zapier",
     description:
       "Connect over 200+ tools with our easy to use Zapier integrations.",
-    Icon: WebsiteBuilder,
-    link: "/integration/zapier",
+    Icon: zapier,
+    link: "/contact",
   },
 
   {
     name: "Trello",
     description:
       "Send order updates and emails to your customers via Intercom.",
-    Icon: WebsiteBuilder,
-    link: "/integration/intercom",
+    Icon: trello,
+    link: "/contact",
   },
 
   {
     name: "Intercom",
     description:
       "Create orders and customers in Shopify when a new order is placed.",
-    Icon: WebsiteBuilder,
-    link: "/integration/shopify",
+    Icon: intercom,
+    link: "/contact",
   },
 
   {
     name: "Zendesk",
     description: "Notify your Facebook Messenger when a new order is placed.",
-    Icon: WebsiteBuilder,
-    link: "/integration/messenger",
+    Icon: zendesk,
+    link: "/contact",
   },
-
   {
     name: "Google Analytics",
     description: "Notify your Discord server when a new order is placed.",
-    Icon: WebsiteBuilder,
-    link: "/integration/discord",
+    Icon: googleAnalytics,
+    link: "/contact",
   },
   {
     name: "Mailchimp",
     description: "Notify your Discord server when a new order is placed.",
-    Icon: WebsiteBuilder,
-    link: "/integration/discord",
+    Icon: mailchimp,
+    link: "/contact",
   },
   {
     name: "Salesforce",
     description: "Notify your Discord server when a new order is placed.",
-    Icon: WebsiteBuilder,
-    link: "/integration/discord",
+    Icon: salesforce,
+    link: "/contact",
   },
+  {
+    name: "Shopify",
+    description: "E-commerce store setup and management.",
+    Icon: shopify,
+    link: "/contact",
+  }
 ];
 
 const ProductivityAndCollaboration = [
   {
     name: "Slack",
     description: "Streamline team communication.",
-    Icon: Slack,
+    Icon: slack,
     link: "/contact",
   },
   {
     name: "Discord",
     description: "Engage communities via live voice, video, and chat.",
-    Icon: Discord,
+    Icon: discord,
     link: "/contact",
   },
   {
     name: "Trello",
     description: "Simplify project tracking with visual boards.",
-    Icon: Slack,
+    Icon: trello,
     link: "/contact",
   },
   {
     name: "Asana",
     description: "Clarify projects with task timelines and assignments.",
-    Icon: Slack,
+    Icon: asana,
     link: "/contact",
   },
   {
     name: "Airtable",
     description: "Blend spreadsheets and databases for dynamic data management.",
-    Icon: Slack,
+    Icon: airtable,
     link: "/contact",
   },
   {
     name: "Google Docs",
     description: "Edit documents collaboratively in real-time.",
-    Icon: Slack,
+    Icon: googleDocs,
     link: "/contact",
   },
   {
     name: "Google Forms",
     description: "Create and collect responses with easy forms.",
-    Icon: Slack,
+    Icon: googleForms,
     link: "/contact",
   },
   {
     name: "GitHub",
     description: "Advance code work with version control.",
-    Icon: Slack,
+    Icon: github,
     link: "/contact",
   },
   {
     name: "GitLab",
     description: "Efficient code deployment with integrated DevOps.",
-    Icon: Slack,
+    Icon: gitlab,
     link: "/contact",
   },
   {
     name: "Notion",
     description: "Centralize notes, tasks, and docs.",
-    Icon: Slack,
+    Icon: notion,
     link: "/contact",
   },
   {
     name: "Microsoft Teams",
     description: "Merge chat and video for team cohesion.",
-    Icon: Slack,
+    Icon: microsoftTeams,
     link: "/contact",
   },
   {
     name: "Zoom",
     description: "Host virtual meetings with video tech.",
-    Icon: Slack,
+    Icon: zoom,
     link: "/contact",
   },
   {
     name: "Loom",
     description: "Quickly share info with video messages.",
-    Icon: Slack,
+    Icon: loom,
     link: "/contact",
   },
   {
     name: "Flock",
     description: "Enhance team efficiency with integrated tools.",
-    Icon: Slack,
+    Icon: flock,
     link: "/contact",
   },
   {
     name: "ClickUp",
     description: "Adapt task management to any workflow.",
-    Icon: Slack,
+    Icon: clickup,
     link: "/contact",
   },
   {
     name: "Basecamp",
     description: "Gather project components in one spot.",
-    Icon: Slack,
+    Icon: basecamp,
     link: "/contact",
   },
   {
     name: "Monday.com",
     description: "Customize and visualize workflow management.",
-    Icon: Slack,
+    Icon: monday,
     link: "/contact",
   },
   {
     name: "Doodle",
     description: "Quick and simple meeting scheduling.",
-    Icon: Slack,
+    Icon: doodle,
     link: "/contact",
   },
   {
     name: "Calendly",
     description: "Streamline booking and calendar management.",
-    Icon: Slack,
+    Icon: calendly,
     link: "/contact",
   },
   {
     name: "Miro",
     description: "Interactive whiteboarding for team ideation.",
-    Icon: Slack,
+    Icon: miro,
     link: "/contact",
   },
 ];
@@ -307,91 +360,91 @@ const CustomerSupportAndCRM = [
   {
     name: "Intercom",
     description: "Integrated chat for customer dialogue.",
-    Icon: Slack,
+    Icon: intercom,
     link: "/contact",
   },
   {
     name: "Help Scout",
     description: "Efficient help desk for customer support.",
-    Icon: Slack,
+    Icon: helpscout,
     link: "/contact",
   },
   {
     name: "LiveChat",
     description: "Instant customer connection with live chat.",
-    Icon: Slack,
+    Icon: livechat,
     link: "/contact",
   },
   {
     name: "Zendesk",
     description: "Versatile platform for superior customer service.",
-    Icon: Slack,
+    Icon: zendesk,
     link: "/contact",
   },
   {
     name: "Freshdesk",
     description: "Unified help desk for multi-channel customer chats.",
-    Icon: Slack,
+    Icon: freshdesk,
     link: "/contact",
   },
   {
     name: "Salesforce",
     description: "Robust CRM for enhanced customer relations.",
-    Icon: Slack,
+    Icon: salesforce,
     link: "/contact",
   },
   {
     name: "Pipedrive",
     description: "Focused sales pipeline for optimized activities.",
-    Icon: Slack,
+    Icon: pipedrive,
     link: "/contact",
   },
   {
     name: "Copper CRM",
     description: "CRM integration with Google Workspace.",
-    Icon: Slack,
+    Icon: copperCRM,
     link: "/contact",
   },
   {
     name: "Hubspot",
     description: "Unified CRM and marketing engagement.",
-    Icon: Slack,
+    Icon: hubspot,
     link: "/contact",
   },
   {
     name: "Zoho CRM",
     description: "Integrated CRM for sales and marketing.",
-    Icon: Slack,
+    Icon: zoho,
     link: "/contact",
   },
   {
     name: "Drift",
     description: "Interactive chats for increased lead conversion.",
-    Icon: Slack,
+    Icon: drift,
     link: "/contact",
   },
   {
     name: "Kayako",
     description: "Integrated tool for cohesive customer support.",
-    Icon: Slack,
+    Icon: kayako,
     link: "/contact",
   },
   {
     name: "Groove",
     description: "Simple support desk for small teams.",
-    Icon: Slack,
+    Icon: groove,
     link: "/contact",
   },
   {
     name: "Helpjuice",
     description: "Knowledge consolidation for enhanced support.",
-    Icon: Slack,
+    Icon: helpjuice,
     link: "/contact",
   },
   {
     name: "Tidio",
     description: "Quick customer response with chat automation.",
-    Icon: Slack,
+    Icon: tidio,
     link: "/contact",
   },
 ];
@@ -400,103 +453,103 @@ const AnalyticsAndDataManagement = [
   {
     name: "Google Analytics",
     description: "Website performance insights to inform marketing.",
-    Icon: Slack,
+    Icon: googleAnalytics,
     link: "/contact",
   },
   {
     name: "Amplitude",
     description: "User behavior analytics for product refinement.",
-    Icon: Slack,
+    Icon: amplitude,
     link: "/contact",
   },
   {
     name: "ChartMogul",
     description: "Analytics for subscription revenue and customer loyalty.",
-    Icon: Slack,
+    Icon: chartmogul,
     link: "/contact",
   },
   {
     name: "Hotjar",
     description: "Heatmaps for improved website user interaction.",
-    Icon: Slack,
+    Icon: hotjar,
     link: "/contact",
   },
   {
     name: "Fathom Analytics",
     description: "Privacy-first essential web metrics.",
-    Icon: Slack,
+    Icon: fathom,
     link: "/contact",
   },
   {
     name: "Matomo",
     description: "User data analytics with privacy control.",
-    Icon: Slack,
+    Icon: matomo,
     link: "/contact",
   },
   {
     name: "Plausible",
     description: "Minimalist, privacy-focused web insights.",
-    Icon: Slack,
+    Icon: plausible,
     link: "/contact",
   },
   {
     name: "Simple Analytics",
     description: "Basic web analytics with privacy emphasis.",
-    Icon: Slack,
+    Icon: simpleAnalytics,
     link: "/contact",
   },
   {
     name: "Segment",
     description: "Customer data integration for analytics and marketing.",
-    Icon: Slack,
+    Icon: segment,
     link: "/contact",
   },
   {
     name: "Mixpanel",
     description: "In-depth interaction analytics for engagement boost.",
-    Icon: Slack,
+    Icon: mixpanel,
     link: "/contact",
   },
   {
     name: "Looker",
     description: "Data-driven business intelligence decision-making.",
-    Icon: Slack,
+    Icon: looker,
     link: "/contact",
   },
   {
     name: "Tableau",
     description: "Data visualization for business insights.",
-    Icon: Slack,
+    Icon: tableau,
     link: "/contact",
   },
   {
     name: "Power BI",
     description: "Customized data dashboards for insights.",
-    Icon: Slack,
+    Icon: powerbi,
     link: "/contact",
   },
   {
     name: "Data Studio",
     description: "Customizable data reporting and visualization.",
-    Icon: Slack,
+    Icon: datastudio,
     link: "/contact",
   },
   {
     name: "Keen IO",
     description: "Custom analytics for application user insights.",
-    Icon: Slack,
+    Icon: keenio,
     link: "/contact",
   },
   {
     name: "Baremetrics",
     description: "SaaS and financial metric tracking for strategy.",
-    Icon: Slack,
+    Icon: baremetrics,
     link: "/contact",
   },
   {
     name: "Heap",
     description: "Automatic user data capture for gapless analysis.",
-    Icon: Slack,
+    Icon: heap,
     link: "/contact",
   },
 ];
@@ -505,223 +558,223 @@ const MarketingAndSales = [
   {
     name: "FirstPromoter",
     description: "Referral program management for increased sales.",
-    Icon: Slack,
+    Icon: firstpromoter,
     link: "/contact",
   },
   {
     name: "Viral Loops",
     description: "Referral campaign tools to boost customer growth.",
-    Icon: Slack,
+    Icon: viralLoops,
     link: "/contact",
   },
   {
     name: "Mailchimp",
     description: "Automated email marketing for audience engagement.",
-    Icon: Slack,
+    Icon: mailchimp,
     link: "/contact",
   },
   {
     name: "Mailerlite",
     description: "User-friendly email campaign automation.",
-    Icon: Slack,
+    Icon: mailer,
     link: "/contact",
   },
   {
     name: "Typeform",
     description: "Engaging forms and surveys for lead capture.",
-    Icon: Slack,
+    Icon: typeform,
     link: "/contact",
   },
   {
     name: "ConvertKit",
     description: "Email outreach personalization to build audience relationships.",
-    Icon: Slack,
+    Icon: convertkit,
     link: "/contact",
   },
   {
     name: "Captivate",
     description: "Podcasting with insightful listener analytics.",
-    Icon: Slack,
+    Icon: captivate,
     link: "/contact",
   },
   {
     name: "Transistor",
     description: "Podcast hosting with audience insights.",
-    Icon: Slack,
+    Icon: transistor,
     link: "/contact",
   },
   {
     name: "Patreon",
     description: "Content monetization through memberships.",
-    Icon: Slack,
+    Icon: patreon,
     link: "/contact",
   },
   {
     name: "Circle",
     description: "Community building for customer loyalty.",
-    Icon: Slack,
+    Icon: circle,
     link: "/contact",
   },
   {
     name: "Shopify",
     description: "E-commerce store setup and management.",
-    Icon: Slack,
+    Icon: shopify,
     link: "/contact",
   },
   {
     name: "Churnbuster",
     description: "Payment failure reduction via customer outreach.",
-    Icon: Slack,
+    Icon: churnbuster,
     link: "/contact",
   },
   {
     name: "Gumroad",
     description: "Consumer-direct e-commerce solution.",
-    Icon: Slack,
+    Icon: gumroad,
     link: "/contact",
   },
   {
     name: "Stripe",
     description: "Seamless online payment processing.",
-    Icon: Slack,
+    Icon: stripe,
     link: "/contact",
   },
   {
     name: "PayPal",
     description: "Trusted payment processing for customers.",
-    Icon: Slack,
+    Icon: paypal,
     link: "/contact",
   },
   {
     name: "BigCommerce",
     description: "Large-scale e-commerce optimization.",
-    Icon: Slack,
+    Icon: bigcommerce,
     link: "/contact",
   },
   {
     name: "Snipcart",
     description: "Quick, customizable shopping cart addition.",
-    Icon: Slack,
+    Icon: snipcart,
     link: "/contact",
   },
   {
     name: "ActiveCampaign",
     description: "Automated outreach for personalized customer journeys.",
-    Icon: Slack,
+    Icon: activecampaign,
     link: "/contact",
   },
   {
     name: "Campaign Monitor",
     description: "Engaging email crafting for customer retention.",
-    Icon: Slack,
+    Icon: campaignMonitor,
     link: "/contact",
   },
   {
     name: "EmailOctopus",
     description: "Cost-effective email marketing campaigns.",
-    Icon: Slack,
+    Icon: emailOctopus,
     link: "/contact",
   },
   {
     name: "Facebook",
     description: "Broad network social media marketing.",
-    Icon: Slack,
+    Icon: facebook,
     link: "/contact",
   },
   {
     name: "Instagram",
     description: "Visual storytelling on a social platform.",
-    Icon: Slack,
+    Icon: instagram,
     link: "/contact",
   },
   {
     name: "Pinterest",
     description: "Visually-driven audience connection.",
-    Icon: Slack,
+    Icon: pinterest,
     link: "/contact",
   },
   {
     name: "Twitter",
     description: "Instant customer engagement via tweets.",
-    Icon: Slack,
+    Icon: twitter,
     link: "/contact",
   },
   {
     name: "Vimeo",
     description: "Professional-grade video presentation.",
-    Icon: Slack,
+    Icon: vimeo,
     link: "/contact",
   },
   {
     name: "YouTube",
     description: "Mass audience reach through video content.",
-    Icon: Slack,
+    Icon: youtube,
     link: "/contact",
   },
   {
     name: "Hubspot",
     description: "Integrated CRM for comprehensive customer management.",
-    Icon: Slack,
+    Icon: hubspot,
     link: "/contact",
   },
   {
     name: "Buffer",
     description: "Social media content planning and publishing.",
-    Icon: Slack,
+    Icon: buffer,
     link: "/contact",
   },
   {
     name: "Disqus",
     description: "Robust commenting system for reader engagement.",
-    Icon: Slack,
+    Icon: disqus,
     link: "/contact",
   },
   {
     name: "Cove Comments",
     description: "Simple site discussions to engage visitors.",
-    Icon: Slack,
+    Icon: cove,
     link: "/contact",
   },
   {
     name: "Placid",
     description: "Branded social media image creation.",
-    Icon: Slack,
+    Icon: placid,
     link: "/contact",
   },
   {
     name: "Weglot",
     description: "Website translation for an international audience.",
-    Icon: Slack,
+    Icon: weglot,
     link: "/contact",
   },
   {
-    name: "Ghost Bookmarker",
-    description: "Content bookmarking to boost site engagement.",
-    Icon: Slack,
+    name: "Ghost",
+    description: "Independent technology for modern publishing.",
+    Icon: ghost,
     link: "/contact",
   },
   {
     name: "Talkyard",
     description: "Forums and comments to enhance community engagement.",
-    Icon: Slack,
+    Icon: talkyard,
     link: "/contact",
   },
   {
     name: "Intravert",
     description: "Native advertising integration for websites.",
-    Icon: Slack,
+    Icon: intravert,
     link: "/contact",
   },
   {
     name: "Google AdSense",
     description: "Ad revenue generation with Google ads.",
-    Icon: Slack,
+    Icon: googleadsense,
     link: "/contact",
   },
   {
     name: "Google Ad Manager",
     description: "Ad management optimization for revenue maximization.",
-    Icon: Slack,
+    Icon: googleadmanager,
     link: "/contact",
   }
 ];
@@ -730,121 +783,115 @@ const DeveloperToolsAndCloudServices = [
   {
     name: "Netlify",
     description: "Automated web deployment and CDN.",
-    Icon: Slack,
+    Icon: netlify,
     link: "/contact",
   },
   {
     name: "Cloudinary",
     description: "Dynamic media asset optimization.",
-    Icon: Slack,
+    Icon: cloudinary,
     link: "/contact",
   },
   {
     name: "Amazon S3",
     description: "Scalable cloud storage solutions.",
-    Icon: Slack,
+    Icon: amazons3,
     link: "/contact",
   },
   {
     name: "Azure Storage",
     description: "Flexible cloud storage services.",
-    Icon: Slack,
+    Icon: azurestorage,
     link: "/contact",
   },
   {
     name: "Google Cloud",
     description: "Extensive cloud computing services.",
-    Icon: Slack,
+    Icon: googleCloudStorage,
     link: "/contact",
   },
   {
     name: "Google Drive",
     description: "Accessible cloud file storage and sharing.",
-    Icon: Slack,
+    Icon: googleDrive,
     link: "/contact",
   },
   {
     name: "Backblaze",
     description: "Simple, affordable cloud backup.",
-    Icon: Slack,
+    Icon: backblaze,
     link: "/contact",
   },
   {
     name: "GitHub",
     description: "Collaborative code hosting and version control.",
-    Icon: Slack,
+    Icon: github,
     link: "/contact",
   },
   {
     name: "GitLab",
     description: "Complete DevOps platform for lifecycle management.",
-    Icon: Slack,
+    Icon: gitlab,
     link: "/contact",
   },
   {
     name: "Docker",
     description: "Consistent app deployment with containers.",
-    Icon: Slack,
+    Icon: docker,
     link: "/contact",
   },
   {
     name: "Kubernetes",
     description: "Container orchestration for efficiency.",
-    Icon: Slack,
+    Icon: kubernetes,
     link: "/contact",
   },
   {
     name: "Heroku",
     description: "Cloud PaaS for easy app scaling.",
-    Icon: Slack,
+    Icon: heroku,
     link: "/contact",
   },
   {
     name: "Vercel",
     description: "Front-end application deployment and scaling.",
-    Icon: Slack,
+    Icon: vercel,
     link: "/contact",
   },
   {
     name: "DigitalOcean",
     description: "Simplified cloud infrastructure hosting.",
-    Icon: Slack,
-    link: "/contact",
-  },
-  {
-    name: "Linode",
-    description: "Linux servers for app deployment.",
-    Icon: Slack,
+    Icon: digitalocean,
     link: "/contact",
   },
   {
     name: "AWS Lambda",
     description: "Serverless code execution.",
-    Icon: Slack,
+    Icon: awslambda,
     link: "/contact",
   },
   {
     name: "Serverless",
     description: "Serverless architecture development.",
-    Icon: Slack,
+    Icon: serverless,
     link: "/contact",
   },
   {
     name: "CircleCI",
     description: "Continuous integration and delivery automation.",
-    Icon: Slack,
+    Icon: circle,
     link: "/contact",
   },
   {
     name: "Travis CI",
     description: "Secure CI for build and deployment.",
-    Icon: Slack,
+    Icon: travisci,
     link: "/contact",
   },
   {
     name: "Jenkins",
     description: "Open-source CI automation server.",
-    Icon: Slack,
+    Icon: jenkins,
     link: "/contact",
   },
 ];
@@ -854,9 +901,9 @@ const DeveloperToolsAndCloudServices = [
 <Layout title="Integrations">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Apps & Integrations</Fragment>
+      <Fragment slot="title">Integrations</Fragment>
       <Fragment slot="desc">
-        Connect over 200+ tools with our easy to use apps & integrations.
+        Connect over 200+ tools with our easy to use integrations.
       </Fragment>
     </Sectionhead>
 
@@ -894,7 +941,7 @@ const DeveloperToolsAndCloudServices = [
                 <a
                 href={item.link}
                 class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                    View App
+                    View Integration
                     <span class="absolute inset-0" />
                 </a>
             </div>
@@ -907,156 +954,196 @@ const DeveloperToolsAndCloudServices = [
       Productivity and Collaboration
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 my-24 gap-x-10 gap-y-24">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
-        ProductivityAndCollaboration.map((item) => (
-          <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
-              <item.Icon class="w-8 h-8" />
+      ProductivityAndCollaboration.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.Icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
             </div>
-            
-            <!-- Updated class attributes for consistency -->
+    
             <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
             <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-              {item.description}
+                {item.description}
             </p>
     
-            <div class="mt-3">
-              <a
+            <div class="mt-3 text-center">
+                <a
                 href={item.link}
                 class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                View Integration
-                <span class="absolute inset-0" />
-              </a>
+                    View Integration
+                    <span class="absolute inset-0" />
+                </a>
             </div>
-          </div>
-        ))
+        </div>
+      ))
       }
-    </div> 
+    </div>  
 
     <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
       Customer Support and CRM
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 my-24 gap-x-10 gap-y-24">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
-        CustomerSupportAndCRM.map((item) => (
-          <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
-              <item.Icon class="w-8 h-8" />
+      CustomerSupportAndCRM.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.Icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
             </div>
-            
-            <!-- Updated class attributes for consistency -->
+    
             <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
             <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-              {item.description}
+                {item.description}
             </p>
     
-            <div class="mt-3">
-              <a
+            <div class="mt-3 text-center">
+                <a
                 href={item.link}
                 class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                View Integration
-                <span class="absolute inset-0" />
-              </a>
+                    View Integration
+                    <span class="absolute inset-0" />
+                </a>
             </div>
-          </div>
-        ))
+        </div>
+      ))
       }
-    </div> 
+    </div>  
 
     <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
       Analytics and Data Management
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 my-24 gap-x-10 gap-y-24">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
-        AnalyticsAndDataManagement.map((item) => (
-          <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
-              <item.Icon class="w-8 h-8" />
+      AnalyticsAndDataManagement.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.Icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
             </div>
-            
-            <!-- Updated class attributes for consistency -->
+    
             <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
             <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-              {item.description}
+                {item.description}
             </p>
     
-            <div class="mt-3">
-              <a
+            <div class="mt-3 text-center">
+                <a
                 href={item.link}
                 class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                View Integration
-                <span class="absolute inset-0" />
-              </a>
+                    View Integration
+                    <span class="absolute inset-0" />
+                </a>
             </div>
-          </div>
-        ))
+        </div>
+      ))
       }
-    </div> 
+    </div>  
 
     <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
       Marketing And Sales
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 my-24 gap-x-10 gap-y-24">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
-        MarketingAndSales.map((item) => (
-          <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
-              <item.Icon class="w-8 h-8" />
+      MarketingAndSales.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.Icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
             </div>
-            
-            <!-- Updated class attributes for consistency -->
+    
             <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
             <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-              {item.description}
+                {item.description}
             </p>
     
-            <div class="mt-3">
-              <a
+            <div class="mt-3 text-center">
+                <a
                 href={item.link}
                 class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                View Integration
-                <span class="absolute inset-0" />
-              </a>
+                    View Integration
+                    <span class="absolute inset-0" />
+                </a>
             </div>
-          </div>
-        ))
+        </div>
+      ))
       }
-    </div> 
+    </div>
 
     <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
       Developer Tools and Cloud Services
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 my-24 gap-x-10 gap-y-24">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
-        DeveloperToolsAndCloudServices.map((item) => (
-          <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
-              <item.Icon class="w-8 h-8" />
+      DeveloperToolsAndCloudServices.map((item) => (
+        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
+              <Picture
+                src={item.Icon}
+                alt={`${item.name} icon`}
+                formats={["avif", "webp"]}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                widths={[240, 540, 720]}
+                loading="lazy"
+                fetchpriority="high"
+                class="w-8 h-8"
+              />
             </div>
-            
-            <!-- Updated class attributes for consistency -->
+    
             <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
             <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-              {item.description}
+                {item.description}
             </p>
     
-            <div class="mt-3">
-              <a
+            <div class="mt-3 text-center">
+                <a
                 href={item.link}
                 class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                View Integration
-                <span class="absolute inset-0" />
-              </a>
+                    View Integration
+                    <span class="absolute inset-0" />
+                </a>
             </div>
-          </div>
-        ))
+        </div>
+      ))
       }
-    </div> 
+    </div>
   </Container>
 </Layout>
 
