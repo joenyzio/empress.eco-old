@@ -39,31 +39,37 @@ const apps = [
   {
     "title": "CRM",
     "description": "Customer relationship management",
-    "icon": "fluent:weather-sunny-high-24-regular",
+    "icon": "fluent:people-add-24-regular",
     "link": "/app/sales/crm"
   },
   {
-    "title": "Sales",
-    "description": "Drive revenue growth",
-    "icon": "fluent:arrow-step-in-right-24-filled",
-    "link": "/app/sales/sales"
+    "title": "Quotes",
+    "description": "Generate customer quotes",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/sales/quotes"
+  },
+  {
+    "title": "Email",
+    "description": "Targeted email campaigns ",
+    "icon": "fluent:mail-copy-24-regular",
+    "link": "/app/sales/quotes"
   },
   {
     "title": "Point of Sale",
     "description": "Retail transaction processing",
-    "icon": "fluent:cellular-data-cellular-unavailable-24-regular",
+    "icon": "fluent:payment-24-regular",
     "link": "/app/sales/point-of-sale"
   },
   {
     "title": "Subscriptions",
     "description": "Manage recurring payments",
-    "icon": "fluent:inprivate-account-24-filled",
+    "icon": "fluent:add-circle-24-regular",
     "link": "/app/sales/subscriptions"
   },
   {
     "title": "Rental",
     "description": "Equipment leasing solutions",
-    "icon": "fluent:device-meeting-room-remote-24-regular",
+    "icon": "fluent:box-arrow-left-24-regular",
     "link": "/app/sales/rental"
   }
 ];
@@ -315,7 +321,7 @@ const featureBlocks = data[0].featureBlocks;
       Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
     </p>
   </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-5 mt-16 gap-8 md:gap-16">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
     {
       apps.map((item) => (
         <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
