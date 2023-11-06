@@ -12,6 +12,7 @@ import {
   Discord,
 } from "@components/ui/icons";
 
+import { Icon } from "astro-icon";
 
 import WebsiteBuilder from "../assets/apps/website.svg";
 import ECommerce from "../assets/apps/ecommerce.svg";
@@ -68,283 +69,289 @@ import VoIP from "../assets/apps/voip.svg";
 
 const WebsiteApps = [
   {
-    name: "Websites",
-    description: "A robust tool for creating and customizing websites with ease.",
-    icon: WebsiteBuilder,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Website Builder",
+    "description": "Create personal websites",
+    "icon": "fluent:phone-24-regular",
+    "link": "/app/websites/website-builder"
   },
   {
-    name: "eCommerce",
-    description: "Seamlessly sell products online and manage your online store.",
-    icon: ECommerce,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "eCommerce",
+    "description": "Online store setup",
+    "icon": "fluent:cart-24-regular",
+    "link": "/app/websites/ecommerce"
   },
   {
-    name: "Blogs",
-    description: "Share insights, news, and updates through a dynamic blogging platform.",
-    icon: Blogs,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Blogs",
+    "description": "Share engaging content",
+    "icon": "fluent:textbox-align-top-24-regular",
+    "link": "/app/websites/blogs"
   },
   {
-    name: "Forums",
-    description: "Engage your community and foster discussions in a structured online forum.",
-    icon: Forum,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Forum",
+    "description": "Community discussion platform",
+    "icon": "fluent:chat-multiple-24-regular",
+    "link": "/app/websites/forum"
   },
   {
-    name: "eLearning",
-    description: "Deliver online courses and manage educational content.",
-    icon: eLearning,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "eLearning",
+    "description": "Online courses platform",
+    "icon": "fluent:food-apple-24-regular",
+    "link": "/app/websites/elearning"
   },
   {
-    name: "Live Chat",
-    description: "Engage with visitors and customers in real-time through live chat.",
-    icon: LiveChat,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
-  },
+    "title": "Live Chat",
+    "description": "Instant customer support",
+    "icon": "fluent:chat-24-regular",
+    "link": "/app/websites/live-chat"
+  }
 ];
 
 const SalesApps = [
-  {
-    name: "Customer Relationship Management",
-    description: "Manage customer relationships and sales processes with our CRM.",
-    icon: CRM,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+{
+    "title": "CRM",
+    "description": "Customer relationship management",
+    "icon": "fluent:people-add-24-regular",
+    "link": "/app/sales/crm"
   },
   {
-    name: "Sales",
-    description: "Drive sales and manage leads through a comprehensive tool.",
-    icon: Sales,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Quotes",
+    "description": "Generate customer quotes",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/sales/quotes"
   },
   {
-    name: "Point of Sale",
-    description: "Simplify and streamline in-person sales transactions.",
-    icon: PointOfSale,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Email",
+    "description": "Targeted email campaigns ",
+    "icon": "fluent:mail-copy-24-regular",
+    "link": "/app/sales/quotes"
   },
   {
-    name: "Subscriptions",
-    description: "Manage and automate recurring billing and subscriptions.",
-    icon: Subscriptions,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Point of Sale",
+    "description": "Retail transaction processing",
+    "icon": "fluent:payment-24-regular",
+    "link": "/app/sales/point-of-sale"
   },
   {
-    name: "Rental",
-    description: "Facilitate rental operations and manage inventory.",
-    icon: Rental,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Subscriptions",
+    "description": "Manage recurring payments",
+    "icon": "fluent:add-circle-24-regular",
+    "link": "/app/sales/subscriptions"
   },
+  {
+    "title": "Rental",
+    "description": "Equipment leasing solutions",
+    "icon": "fluent:box-arrow-left-24-regular",
+    "link": "/app/sales/rental"
+  }
 ];
 
 const FinanceApps = [
   {
-    name: "Accounting",
-    description: "Handle all accounting needs, from ledgers to balance sheets.",
-    icon: Accounting,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Accounting",
+    "description": "Manage financial records",
+    "icon": "fluent:mail-all-accounts-24-regular",
+    "link": "/app/finance/accounting"
   },
   {
-    name: "Invoicing",
-    description: "Generate and manage customer invoices seamlessly.",
-    icon: Invoicing,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Invoicing",
+    "description": "Create and send invoices",
+    "icon": "fluent:document-checkmark-24-regular",
+    "link": "/app/finance/invoicing"
   },
   {
-    name: "Expenses",
-    description: "Track, approve, and monitor expenses with ease.",
-    icon: Expenses,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Expenses",
+    "description": "Track business expenses",
+    "icon": "fluent:payment-24-regular",
+    "link": "/app/finance/expenses"
   },
   {
-    name: "Documents",
-    description: "Store, organize, and retrieve financial documents.",
-    icon: Documents,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
-  },
-  {
-    name: "Sign",
-    description: "Digitally share, sign, and manage documents.",
-    icon: Sign,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
-  },
+    "title": "Documents",
+    "description": "Organize financial documents",
+    "icon": "fluent:document-one-page-24-regular",
+    "link": "/app/finance/documents"
+  }
 ];
 
 const InventoryManufacturingApps = [
   {
-    name: "Inventory",
-    description: "Control stock levels and manage inventory operations.",
-    icon: Inventory,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Inventory",
+    "description": "Stock tracking system",
+    "icon": "fluent:tray-item-add-24-regular",
+    "link": "/app/inventory/inventory"
   },
   {
-    name: "Manufacturing (MRP)",
-    description: "Oversee manufacturing processes and workflows.",
-    icon: Manufacturing,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Manufacturing (MRP)",
+    "description": "Production planning control",
+    "icon": "fluent:manufacturer-24-regular",
+    "link": "/app/inventory/manufacturing"
   },
   {
-    name: "Product Lifecycle Management",
-    description: "Product Lifecycle Management for streamlined product development.",
-    icon: PLM,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "PLM",
+    "description": "Product lifecycle management",
+    "icon": "fluent:production-24-regular",
+    "link": "/app/inventory/plm"
   },
   {
-    name: "Purchase",
-    description: "Manage vendor relations and purchasing operations.",
-    icon: Purchase,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Purchase",
+    "description": "Procurement management system",
+    "icon": "fluent:shopping-bag-24-regular",
+    "link": "/app/inventory/purchase"
   },
   {
-    name: "Maintenance",
-    description: "Ensure timely maintenance of equipment and assets.",
-    icon: Maintenance,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Maintenance",
+    "description": "Equipment upkeep scheduler",
+    "icon": "fluent:wrench-screwdriver-24-regular",
+    "link": "/app/inventory/maintenance"
   },
   {
-    name: "Quality",
-    description: "Uphold product quality and manage quality checks.",
-    icon: Quality,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
-  },
+    "title": "Quality",
+    "description": "Quality assurance protocol",
+    "icon": "fluent:checkmark-starburst-24-regular",
+    "link": "/app/inventory/quality"
+  }
 ];
 
 const HumanResourcesApps = [
-  {
-    name: "Employees",
-    description: "Centralize employee data and manage HR operations.",
-    icon: Employees,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+{
+    "title": "Employees",
+    "description": "Staff management hub",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/app/hr/employees"
   },
   {
-    name: "Recruitment",
-    description: "Streamline recruitment and candidate tracking.",
-    icon: Recruitment,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Recruitment",
+    "description": "Streamline hiring process",
+    "icon": "fluent:people-team-add-24-regular",
+    "link": "/app/hr/recruitment"
   },
   {
-    name: "Time Off",
-    description: "Coordinate employee leave and absence schedules.",
-    icon: TimeOff,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Time Off",
+    "description": "Leave management system",
+    "icon": "fluent:beach-24-regular",
+    "link": "/app/hr/time-off"
   },
   {
-    name: "Appraisals",
-    description: "Easily conduct and manage employee evaluations.",
-    icon: Appraisals,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Appraisals",
+    "description": "Performance review tool",
+    "icon": "fluent:star-emphasis-24-regular",
+    "link": "/app/hr/appraisals"
   },
   {
-    name: "Referrals",
-    description: "Empower employees to refer potential candidates.",
-    icon: Referrals,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Referrals",
+    "description": "Employee referral program",
+    "icon": "fluent:comment-arrow-left-24-regular",
+    "link": "/app/hr/referrals"
   },
   {
-    name: "Fleet",
-    description: "Manage company vehicles and related operations.",
-    icon: Fleet,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
-  },
+    "title": "Fleet",
+    "description": "Vehicle management system",
+    "icon": "fluent:vehicle-bus-24-regular",
+    "link": "/app/hr/fleet"
+  }
 ];
 
 const MarketingApps = [
-  {
-    name: "Marketing Automation",
-    description: "Automate marketing campaigns and workflows.",
-    icon: MarketingAutomation,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+{
+    "title": "Automation",
+    "description": "Streamline marketing tasks",
+    "icon": "fluent:bot-24-regular",
+    "link": "/app/marketing/automation"
   },
   {
-    name: "Email Marketing",
-    description: "Send targeted email campaigns to your audience.",
-    icon: EmailMarketing,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Email",
+    "description": "Targeted email campaigns",
+    "icon": "fluent:mail-add-24-regular",
+    "link": "/app/marketing/email"
   },
   {
-    name: "SMS Marketing",
-    description: "Engage customers through SMS marketing campaigns.",
-    icon: SMSMarketing,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "SMS",
+    "description": "Direct text outreach",
+    "icon": "fluent:phone-add-24-regular",
+    "link": "/app/marketing/sms"
   },
   {
-    name: "Social Marketing",
-    description: "Promote your brand on social media platforms.",
-    icon: SocialMarketing,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Social",
+    "description": "Social media engagement",
+    "icon": "fluent:share-android-24-regular",
+    "link": "/app/marketing/social"
   },
   {
-    name: "Events",
-    description: "Efficiently coordinate, streamline, and oversee events.",
-    icon: Events,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Events",
+    "description": "Organize promotional events",
+    "icon": "fluent:calendar-24-regular",
+    "link": "/app/marketing/events"
   },
   {
-    name: "Surveys",
-    description: "Gather feedback and insights through surveys.",
-    icon: Surveys,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
-  },
+    "title": "Surveys",
+    "description": "Gather customer feedback",
+    "icon": "fluent:clipboard-task-24-regular",
+    "link": "/app/marketing/surveys"
+  }
 ];
 
 const ServicesApps = [
   {
-    name: "Project",
-    description: "Manage projects and collaborate with teams.",
-    icon: Project,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Project Management",
+    "description": "Organize work structure",
+    "icon": "fluent:tasks-app-24-regular",
+    "link": "/app/services/project"
   },
   {
-    name: "Timesheet",
-    description: "Track and manage employee working hours across projects.",
-    icon: Timesheet,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Timesheet",
+    "description": "Track work hours",
+    "icon": "fluent:clock-24-regular",
+    "link": "/app/services/timesheet"
   },
   {
-    name: "Field Service",
-    description: "Coordinate and manage field service operations.",
-    icon: FieldService,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Field Service",
+    "description": "On-site service management",
+    "icon": "fluent:service-bell-24-regular",
+    "link": "/app/services/field-service"
   },
   {
-    name: "Helpdesk",
-    description: "Provide support to customers through a ticketing system.",
-    icon: Helpdesk,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Helpdesk",
+    "description": "Support ticket system",
+    "icon": "fluent:question-circle-24-regular",
+    "link": "/app/services/help-desk"
   },
   {
-    name: "Planning",
-    description: "Schedule tasks, appointments, and manage calendars.",
-    icon: Planning,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Planning",
+    "description": "Strategic project planning",
+    "icon": "fluent:gantt-chart-24-regular",
+    "link": "/app/services/planning"
   },
   {
-    name: "Appointments",
-    description: "Allow customers to book appointments online.",
-    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
-  },
+    "title": "Appointments",
+    "description": "Schedule client meetings",
+    "icon": "fluent:calendar-24-regular",
+    "link": "/app/services/appointments"
+  }
 ];
 
 const ProductivityApps = [
-  {
-    name: "Discuss",
-    description: "A platform for team communication and collaboration.",
-    icon: Discuss,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+{
+    "title": "Manage",
+    "description": "Organize project tasks",
+    "icon": "fluent:tasks-app-24-regular",
+    "link": "/app/projects/manage"
   },
   {
-    name: "Approvals",
-    description: "Streamline and manage the approval process.",
-    icon: Approvals,  // Replace "Slack" with the appropriate icon name if different
-    link: "/contact",
+    "title": "Approve",
+    "description": "Review project decisions",
+    "icon": "fluent:approvals-app-24-regular",
+    "link": "/app/projects/approve"
   },
   {
-    name: "Voice Calls",
-    description: "Make voice calls over the internet and manage communications.",
-    icon: VoIP,  // Replace "Slack
-    link: "/contact",
+    "title": "Discuss",
+    "description": "Collaborative communication hub",
+    "icon": "fluent:chat-multiple-24-regular",
+    "link": "/app/projects/discuss"
+  },
+  {
+    "title": "Automate",
+    "description": "Workflow efficiency enhancement",
+    "icon": "fluent:bot-24-regular",
+    "link": "/app/projects/automate"
   }
 ]
 
@@ -355,7 +362,7 @@ const ProductivityApps = [
     <Sectionhead>
       <Fragment slot="title">Applications</Fragment>
       <Fragment slot="desc">
-        Power your business with specialized apps.
+        Select from our comprehensive list of business applications.
       </Fragment>
     </Sectionhead>
 
@@ -364,10 +371,30 @@ const ProductivityApps = [
     <!-- Websites -->
 
     <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
-      Build Your Online Presence
+      Build Your <span class="text-indigo-600">Online Presence</span>
     </h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        WebsiteApps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
     
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+    
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
       WebsiteApps.map((item) => (
         <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
@@ -400,15 +427,33 @@ const ProductivityApps = [
         </div>
       ))
       }
-    </div>    
+    </div>     -->
 
     <!-- Sales Apps -->
 
-    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
-      Boost Your Sales Performance
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
+      Boost Your <span class="text-indigo-600">Sales Performance</span>
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        SalesApps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
       SalesApps.map((item) => (
         <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
@@ -441,15 +486,33 @@ const ProductivityApps = [
         </div>
       ))
       }
-    </div>  
+    </div>   -->
 
     <!-- Finance Apps -->
 
-    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
-      Streamline Your Financial Operations
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
+      Streamline Your <span class="text-indigo-600">Financial Operations</span>
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+      {
+        FinanceApps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
       FinanceApps.map((item) => (
         <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
@@ -482,15 +545,33 @@ const ProductivityApps = [
         </div>
       ))
       }
-    </div>  
+    </div>   -->
 
     <!-- Inventory & Manufacturing Apps -->
 
-    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
-      Optimize Inventory & Production
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
+      Optimize Your <span class="text-indigo-600">Inventory & Production</span>
     </h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        InventoryManufacturingApps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
     
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
       InventoryManufacturingApps.map((item) => (
         <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
@@ -523,15 +604,33 @@ const ProductivityApps = [
         </div>
       ))
       }
-    </div>  
+    </div>   -->
 
     <!-- Human Resources Apps -->
 
-    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
-      Empower Your Workforce
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
+      Empower Your <span class="text-indigo-600">Workforce</span>
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        HumanResourcesApps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
       HumanResourcesApps.map((item) => (
         <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
@@ -564,15 +663,33 @@ const ProductivityApps = [
         </div>
       ))
       }
-    </div>  
+    </div>   -->
 
     <!-- Marketing Apps -->
 
-    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
-      Amplify Your Marketing Impact
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
+      Amplify Your <span class="text-indigo-600">Marketing Impact</span>
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        MarketingApps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
       MarketingApps.map((item) => (
         <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
@@ -605,15 +722,33 @@ const ProductivityApps = [
         </div>
       ))
       }
-    </div>  
+    </div>   -->
 
     <!-- Services -->
 
-    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
-      Elevate Your Service Delivery
+    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
+      Elevate Your <span class="text-indigo-600">Service Delivery</span>
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        ServicesApps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
       {
       ServicesApps.map((item) => (
         <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
@@ -646,15 +781,33 @@ const ProductivityApps = [
         </div>
       ))
       }
-    </div>  
+    </div>   -->
 
         <!-- Productivity Apps -->
 
-        <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
-          Enhance Workplace Productivity
+        <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
+          Enhance Your <span class="text-indigo-600">Workplace Productivity</span>
         </h2>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 mb-30 gap-8 md:gap-16">
+          {
+            ProductivityApps.map((item) => (
+              <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+                  <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                    <Icon class="text-indigo-500" name={item.icon} size="24" />
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-lg">{item.title}</h3>
+                    <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+
+        <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
           {
           ProductivityApps.map((item) => (
             <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
@@ -687,9 +840,8 @@ const ProductivityApps = [
             </div>
           ))
           }
-        </div>  
-
+        </div>   -->
+        <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
   </Container>
 </Layout>
-
