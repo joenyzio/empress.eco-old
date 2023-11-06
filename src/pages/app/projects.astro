@@ -1,0 +1,623 @@
+---
+
+import { getCollection } from "astro:content";
+import Badge from "@components/ui/badge.astro";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+import Cta from "@components/cta.astro";
+import Card from "@components/card.astro";
+
+import { Icon } from "astro-icon";
+import ArrowIcon from "@components/ui/icons/arrow.astro"
+
+import Logos from "@components/logos.astro";
+import heroImage from "../../assets/hero-screenshot.png";
+import IntegrationImg from "../../assets/integrations.svg?url";
+import FeatureImgOne from "../../assets/features/2.png";
+import FeatureImgTwo from "../../assets/features/2.png";
+import FeatureImgThree from "../../assets/features/3.png";
+import FeatureImg1 from "../../assets/features/6.png";
+import FeatureImg2 from "../../assets/features/2.png";
+import { Picture, Image } from "astro:assets";
+import EmployeeImg from "../../assets/employee.jpg";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import Education from "../../assets/features/education.svg";
+import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../../assets/features/dashboard-development.png";
+
+const { nomargin } = Astro.props;
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+const apps = [
+  {
+    "title": "Manage",
+    "description": "Organize project tasks",
+    "icon": "fluent:weather-sunny-high-24-regular",
+    "link": "/app/projects/manage"
+  },
+  {
+    "title": "Approve",
+    "description": "Review project decisions",
+    "icon": "fluent:arrow-step-in-right-24-filled",
+    "link": "/app/projects/approve"
+  },
+  {
+    "title": "Discuss",
+    "description": "Collaborative communication hub",
+    "icon": "fluent:cellular-data-cellular-unavailable-24-regular",
+    "link": "/app/projects/discuss"
+  },
+  {
+    "title": "Automate",
+    "description": "Workflow efficiency enhancement",
+    "icon": "fluent:cellular-data-cellular-unavailable-24-regular",
+    "link": "/app/projects/automate"
+  }
+];
+
+const data = [
+{
+    "mainHeading": "Elevate Human Resources with Empress",
+    "subtext": "Unlock the future of HR with AI-powered insights, ensuring streamlined recruitment, tailored employee experiences, and optimized HR processes.",
+    "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Empress for HR",
+    "offering": {
+      "title": "Next Generation HR Transformation",
+      "subtext": "Leverage a comprehensive platform to enhance every facet of your HR operations."
+    },
+    "valueBlocks": [
+    {
+      "heading": "Empress OS",
+      "title": "Unify HR Efforts",
+      "description": "Centralize HR data, boost collaboration across teams, and automate workflows for optimal efficiency."
+    },
+    {
+      "heading": "Empress Chat",
+      "title": "Scale Employee Support",
+      "description": "Boost internal alignment and engage external stakeholders with precision, ensuring scalable operations."
+    },
+    {
+      "heading": "Empress Insights",
+      "title": "Empower HR Decisions",
+      "description": "Align HR strategies with organization goals and optimize workforce productivity with insightful dashboards."
+    }
+  ],
+    "featureBlocks": [
+    {
+  "heading": "OS for HR",
+  "title": "Unify, Collaborate, and Simplify HR Processes",
+  "description": "Harness the power of Empress OS to centralize HR information, boost interdepartmental synergy, and craft seamless and automated HR workflows.",
+  "bulletPoints": [
+  "Centralize HR documents on one platform",
+"Enable collaboration across HR and departments",
+"Streamline HR tasks from hiring to exit."
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+{
+  "heading": "Chat for HR",
+  "title": "Streamline Internal and External Communication",
+  "description": "Seamlessly connect Empress OS's robust tools with its users. Experience unmatched efficiency in both internal team interactions and external stakeholder communication.",
+  "bulletPoints": [
+  "Provide immediate, precise answers to frequent questions",
+"Improve communication for faster resolutions",
+"Connect with stakeholders through tailored, clear messaging"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+
+{
+  "heading": "Insights for HR",
+  "title": "Empower HR with Data-Driven Decisions",
+  "description": "Harness the power of insightful dashboards and data-driven recommendations to align HR strategies with organizational goals and enhance workforce productivity.",
+  "bulletPoints": [
+  "Track talent trends, retention, and training success",
+"Refine hiring tactics with data-driven recruitment insights",
+"Enhance engagement and satisfaction through trend analysis"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+        ]
+      }
+    ],
+    "featureHeading": "Features for HR",
+    "featureTitle": "We're Here to Support You",
+    "featureAssurance": "Guaranteeing transformative and consistent support for all HR initiatives."
+  }
+];
+
+const features = [
+  {
+    "title": "Continuous Learning",
+    "description": "Promote talent growth with AI-driven resources and courses, ensuring employees remain at the forefront of their fields.",
+    "icon": "fluent:food-apple-24-regular"
+  },
+  {
+    "title": "Seamless Integrations",
+    "description": "Optimize HR tasks by integrating effortlessly with essential tools, facilitating rapid communication and efficient workflows.",
+    "icon": "fluent:plug-connected-24-regular"
+  },
+  {
+    "title": "AI Empowerment",
+    "description": "Leverage AI insights to predict trends, refine decision-making processes, and usher in the future of human resources.",
+    "icon": "fluent:cellular-data-1-24-regular"
+  },
+  {
+    "title": "Interactive HR Bots",
+    "description": "Facilitate employee queries, deliver instant support, and optimize HR processes with our state-of-the-art bots.",
+    "icon": "fluent:bot-24-regular"
+  },
+  {
+    "title": "Multilingual Support",
+    "description": "Cater to a global workforce with multilingual capabilities, ensuring clear communication and understanding.",
+    "icon": "fluent:local-language-zi-24-regular"
+  },
+  {
+    "title": "Uniform HR Experience",
+    "description": "Offer a consistent HR experience across all touchpoints, ensuring personalized, intuitive interactions, whether on mobile or desktop.",
+    "icon": "fluent:weather-sunny-high-24-regular"
+  }
+]
+
+const faq = [
+  {
+    question: "How does Empress OS enhance HR operations?",
+    answer: "Empress OS centralizes HR content, enhances team collaboration, and automates workflows, resulting in increased efficiency and streamlined HR processes across the entire employee lifecycle."
+  },
+  {
+    question: "What support does Empress Chat provide for HR teams?",
+    answer: "Empress Chat scales employee support by providing instant and accurate responses to inquiries, bolstering internal communication, and engaging external stakeholders with personalized interactions."
+  },
+  {
+    question: "Can Empress Insights improve our HR decision-making?",
+    answer: "Yes, Empress Insights offers data-driven dashboards that provide actionable insights, helping to align HR strategies with organizational goals, and optimize workforce productivity through analytics."
+  },
+  {
+    question: "What integrations are available with Empress for HR tasks?",
+    answer: "Empress offers seamless integrations with essential HR tools to facilitate rapid communication, efficient workflows, and streamline tasks such as recruitment, onboarding, and employee management."
+  },
+  {
+    question: "How can AI within Empress transform HR practices?",
+    answer: "Empress leverages AI to predict employee and talent trends, refine decision-making, and provide AI-driven resources for continuous learning, effectively ushering in the next generation of HR."
+  },
+  {
+    question: "What functionalities do interactive HR bots provide?",
+    answer: "Interactive HR bots within Empress facilitate employee queries, deliver instant support, help with routine HR tasks, and improve overall HR process efficiency."
+  },
+  {
+    question: "Does Empress support a multilingual workforce?",
+    answer: "Yes, Empress caters to a global workforce with multilingual support capabilities, ensuring clear and effective communication across different languages."
+  }
+];
+
+
+const featureBlocks = data[0].featureBlocks;
+
+---
+
+
+<Layout title="About" footerMargin={false}>
+  
+  <!-- <div class="overflow-x-clip">
+    <Container>
+      <main class="grid lg:grid-cols-5 place-items-center relative">
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
+        </div>
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
+        </div>
+        <div class="max-w-sm md:max-w-max lg:col-span-2">
+          <h1
+            class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
+            {data[0].mainHeading}
+          </h1>
+          <p
+            class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
+            {data[0].subtext}
+          </p>
+          <div
+            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+          <Link
+              href={data[0].headingButtons[0].link}
+              class="flex gap-1 items-center justify-center bg-brand"
+              rel="noopener">
+              {data[0].headingButtons[0].text}
+          </Link>
+          
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href={data[0].headingButtons[1].link}
+            class="flex gap-1 items-center justify-center border-brand text-brand">
+            {data[0].headingButtons[1].text}
+          </Link>
+          </div>
+        </div>
+        <div class="py-3 lg:col-span-3 lg:-mr-44">
+          <Picture
+            src={Education}
+            alt="Astronaut in the air"
+            formats={["avif", "webp"]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            widths={[240, 540, 720, heroImage.width]}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </main>
+    </Container>
+  </div> -->
+
+  <Container>
+  <div>
+    <div
+    class:list={[
+      "max-w-4xl mx-auto flex flex-col items-center justify-center",
+      !nomargin && "mt-24",
+    ]}>
+    <Badge color="purple">Empress for Project Management</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      Optimize Your <span class="text-indigo-600">Projects with Empress</span>
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
+    </p>
+  </div>
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+    {
+      apps.map((item) => (
+        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+  </div>
+</Container>
+  
+  <div class="grid md:grid-cols-2 py-10"></div>
+  
+
+  <Container>
+  
+
+    <!-- Feature 1 -->
+
+    <div class="grid md:grid-cols-2 py-10">
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">{data[0].featureBlocks[0].heading}</Badge>
+          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+            {data[0].featureBlocks[0].title}
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+            {data[0].featureBlocks[0].description}
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+            {data[0].featureBlocks[0].bulletPoints.map((point) => (
+              <li class="flex items-center gap-3 text-neutral-800">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                <span class="text-sm">{point}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            {data[0].featureBlocks[0].buttons?.map((button, index) => {
+              if (index === 0) {
+                return (
+                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                    <span>{button.text}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </Link>
+                );
+              } else {
+                return (
+                  <a 
+                    href={button.link} 
+                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    {button.text}
+                  </a>
+                );
+              }
+            })}
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <LottieAnimation id="lottie" src="../../../../chemical-laboratory.json" autoplay="true" style="width: 100%; height: auto;"/>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="grid md:grid-cols-2 py-10">
+      <div class="">
+        <LottieAnimation id="lottie" src="../../../../global-education.json" autoplay="true" style="width: 100%; height: auto;"/>
+      </div>
+
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">{data[0].featureBlocks[1].heading}</Badge>
+          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+            {data[0].featureBlocks[1].title}
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+            {data[0].featureBlocks[1].description}
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+            {data[0].featureBlocks[1].bulletPoints.map((point) => (
+              <li class="flex items-center gap-3 text-neutral-800">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                <span class="text-sm">{point}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            {data[0].featureBlocks[1].buttons?.map((button, index) => {
+              if (index === 0) {
+                return (
+                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                    <span>{button.text}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </Link>
+                );
+              } else {
+                return (
+                  <a 
+                    href={button.link} 
+                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    {button.text}
+                  </a>
+                );
+              }
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Feature 3 -->
+
+  <div class="grid md:grid-cols-2 py-10">
+
+    <div class="grid place-items-center">
+      <div class="max-w-lg">
+        <Badge color="purple" class="-ml-px">{data[0].featureBlocks[2].heading}</Badge>
+        <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+          {data[0].featureBlocks[2].title}
+        </h3>
+        <p class="mt-4 text-slate-600 [text-wrap:balance]">
+          {data[0].featureBlocks[2].description}
+        </p>
+        <ul class="grid mt-6 text-left gap-y-4">
+          {data[0].featureBlocks[2].bulletPoints.map((point) => (
+            <li class="flex items-center gap-3 text-neutral-800">
+              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+              <span class="text-sm">{point}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="flex items-center gap-4 mt-6">
+          {data[0].featureBlocks[2].buttons?.map((button, index) => {
+            if (index === 0) {
+              return (
+                <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                  <span>{button.text}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </Link>
+              );
+            } else {
+              return (
+                <a 
+                  href={button.link} 
+                  class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  {button.text}
+                </a>
+              );
+            }
+          })}
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <LottieAnimation id="lottie" src="../../../../nuclear-research-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+    </div>
+  </div>
+
+  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+    <Badge color="purple">{data[0].sectionHeading}</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      {data[0].offering.title}
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      {data[0].offering.subtext}
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+    <Card color="indigo" size="sm">
+      <Fragment slot="image">
+        <Picture
+          src={NetworkServerManagement}
+          alt="Feature image"
+          formats={["avif", "webp"]}
+          class="object-contain"
+          loading="lazy"
+        />
+      </Fragment>
+      <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+      <span slot="title">{data[0].valueBlocks[0].title}</span>
+      <span slot="desc">{data[0].valueBlocks[0].description}</span>
+    </Card>
+    
+    <Card color="purple" size="sm">
+      <Fragment slot="image">
+        <Picture
+          src={AutomatedMarketing}
+          alt="Feature image"
+          formats={["avif", "webp"]}
+          class="object-contain"
+          loading="lazy"
+        />
+      </Fragment>
+      <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+      <span slot="title">{data[0].valueBlocks[1].title}</span>
+      <span slot="desc">{data[0].valueBlocks[1].description}</span>
+    </Card>
+    
+    <Card size="sm">
+      <Fragment slot="image">
+        <!-- // svg image. cannot use <picture/> as of now -->
+        <Image
+          src={DashboardDevelopment}
+          alt="Feature image"
+          width="909"
+          height="823"
+          class="object-contain"
+          loading="lazy"
+        />
+      </Fragment>
+      <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+      <span slot="title">{data[0].valueBlocks[2].title}</span>
+      <span slot="desc">{data[0].valueBlocks[2].description}</span>
+    </Card>
+  </div>
+
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].featureHeading}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].featureTitle}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].featureAssurance}
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        features.map((item) => (
+          <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+  
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+  </Container>
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+  
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  
+
+  <Cta />
+</Layout>
+

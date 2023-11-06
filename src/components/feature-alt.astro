@@ -13,23 +13,149 @@ import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 
+import Appointments from "../assets/apps/appointments.svg";
+
 const { nomargin } = Astro.props;
+
+const Apps = [
+  {
+    name: "Sales",
+    description: "Drive Customer Growth",
+    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
+    link: "/contact",
+  },
+  {
+    name: "Marketing",
+    description: "",
+    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
+    link: "/contact",
+  },
+  {
+    name: "Websites",
+    description: "",
+    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
+    link: "/contact",
+  },
+  {
+    name: "Services",
+    description: "",
+    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
+    link: "/contact",
+  },
+  {
+    name: "Finance",
+    description: "",
+    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
+    link: "/contact",
+  },
+  {
+    name: "Human Resources",
+    description: "",
+    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
+    link: "/contact",
+  },
+  {
+    name: "Inventory",
+    description: "",
+    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
+    link: "/contact",
+  },
+  {
+    name: "Projects",
+    description: "",
+    icon: Appointments,  // Replace "Slack" with the appropriate icon name if different
+    link: "/contact",
+  },
+];
+
+const features = [
+  {
+    "title": "Sales",
+    "description": "Drive Customer Growth",
+    "icon": "fluent:weather-sunny-high-24-regular",
+    "link": "/app/sales"
+  },
+  {
+    "title": "Marketing",
+    "description": "Enhance Market Engagement",
+    "icon": "fluent:arrow-step-in-right-24-filled",
+    "link": "/app/marketing"
+  },
+  {
+    "title": "Websites",
+    "description": "Establish Digital Presence",
+    "icon": "fluent:cellular-data-cellular-unavailable-24-regular",
+    "link": "/app/websites"
+  },
+
+    {
+    "title": "Services",
+    "description": "Excel in Customer Service",
+    "icon": "fluent:inprivate-account-24-filled",
+    "link": "/app/services"
+  },
+  {
+    "title": "Finance",
+    "description": "Optimize Financial Management",
+    "icon": "fluent:device-meeting-room-remote-24-regular",
+    "link": "/app/finance"
+  },
+  {
+    "title": "Human Resources",
+    "description": "Simplify Human Resources",
+    "icon": "fluent:chat-bubbles-question-24-regular",
+    "link": "/app/human-resources"
+  },
+  {
+    "title": "Inventory",
+    "description": "Streamline Inventory Control",
+    "icon": "fluent:device-meeting-room-remote-24-regular",
+    "link": "/app/inventory"
+  },
+  {
+    "title": "Projects",
+    "description": "Maximize Workflow Efficiency",
+    "icon": "fluent:chat-bubbles-question-24-regular",
+    "link": "/app/projects"
+  }
+];
+
 ---
 
-
-<div
+<div>
+  <div
   class:list={[
     "max-w-4xl mx-auto flex flex-col items-center justify-center",
     !nomargin && "mt-24",
   ]}>
   <Badge color="purple">Welcome to Empress</Badge>
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-    Making Business Better for Everyone
+    Making Business <span class="text-indigo-600">Better for Everyone</span>
   </h2>
   <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-    Streamline your business management with Empress, the all-in-one platform that offers solutions to enhance productivity and drive growth.
+    Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
   </p>
 </div>
+<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+  {
+    features.map((item) => (
+      <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+          <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+            <Icon class="text-indigo-500" name={item.icon} size="24" />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      </a>
+    ))
+  }
+</div>
+</div>
+
+<div class="grid md:grid-cols-2 py-10"></div>
 
   <div class="grid md:grid-cols-2 py-10">
     <div class="">

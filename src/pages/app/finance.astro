@@ -1,0 +1,624 @@
+---
+
+import { getCollection } from "astro:content";
+import Badge from "@components/ui/badge.astro";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+import Cta from "@components/cta.astro";
+import Card from "@components/card.astro";
+
+import { Icon } from "astro-icon";
+import ArrowIcon from "@components/ui/icons/arrow.astro"
+
+import Logos from "@components/logos.astro";
+import heroImage from "../../assets/hero-screenshot.png";
+import IntegrationImg from "../../assets/integrations.svg?url";
+import FeatureImgOne from "../../assets/features/2.png";
+import FeatureImgTwo from "../../assets/features/2.png";
+import FeatureImgThree from "../../assets/features/3.png";
+import FeatureImg1 from "../../assets/features/6.png";
+import FeatureImg2 from "../../assets/features/2.png";
+import { Picture, Image } from "astro:assets";
+import EmployeeImg from "../../assets/employee.jpg";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import Education from "../../assets/features/education.svg";
+import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../../assets/features/dashboard-development.png";
+
+const { nomargin } = Astro.props;
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+const apps = [
+  {
+    "title": "Accounting",
+    "description": "Manage financial records",
+    "icon": "fluent:weather-sunny-high-24-regular",
+    "link": "/app/finance/accounting"
+  },
+  {
+    "title": "Invoicing",
+    "description": "Create and send invoices",
+    "icon": "fluent:arrow-step-in-right-24-filled",
+    "link": "/app/finance/invoicing"
+  },
+  {
+    "title": "Expenses",
+    "description": "Track business expenses",
+    "icon": "fluent:cellular-data-cellular-unavailable-24-regular",
+    "link": "/app/finance/expenses"
+  },
+  {
+    "title": "Documents",
+    "description": "Organize financial documents",
+    "icon": "fluent:inprivate-account-24-filled",
+    "link": "/app/finance/documents"
+  }
+];
+
+
+const data = [
+{
+    "mainHeading": "Elevate Your Financial Services with Empress",
+    "subtext": "Centralize your financial information, ensure compliance, streamline operations, optimize communications, and harness real-time analytics for insightful decision-making.",
+    "headingButtons": [
+        {
+            "text": "Get Started",
+            "link": "/contact"
+        },
+        {
+            "text": "View pricing",
+            "link": "/pricing"
+        }
+    ],
+    "sectionHeading": "Financial Services Reimagined",
+    "offering": {
+        "title": "AI-Powered Financial Solutions",
+        "subtext": "Craft personalized financial journeys leveraging real-time data, analytics, and seamless integrations."
+    },
+    "valueBlocks": [
+    {
+        "heading": "Empress OS",
+        "title": "Simplify Coordination",
+        "description": "Centralize financial data, ensure regulatory compliance, and elevate operational workflows."
+    },
+    {
+        "heading": "Empress Chat",
+        "title": "Build Client Relationships",
+        "description": "Ensure rapid responses and optimize both internal and client-facing with compliance, tailored to drive financial outcomes."
+    },
+    {
+        "heading": "Empress Insights",
+        "title": "Boost Financial Outcomes",
+        "description": "Access real-time actionable analytics to understand client behaviors to optimize performance."
+    }
+],
+    "featureBlocks": [
+    {
+  "heading": "OS for Financial",
+  "title": "Transform Financial Operations & Collaboration",
+  "description": "Leverage Empress OS to redefine how financial services handle information, drive team synergy, and optimize intricate workflows for unmatched efficiency and compliance.",
+  "bulletPoints": [
+"Consolidate financial data for quick, secure retrieval",
+"Collaborate easily while complying with regulations",
+"Simplify financial tasks for better service"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+{
+  "heading": "Chat for Financial",
+  "title": "Revolutionize Financial Communication",
+  "description": "Empress Chat seamlessly integrates with Empress OS, enabling efficient communication that caters to the unique demands of the financial sector, from internal collaboration to client engagement.",
+  "bulletPoints": [
+  "Provide immediate, personalized financial responses",
+"Maintain secure, compliant data communication",
+"Enhance client relations with engagement and insights"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+{
+  "heading": "Insights for Finance",
+  "title": "Data-Driven Financial Performance",
+  "description": "Equip your financial firm with the advanced analytics and intuitive dashboards crucial for agile decision-making in a dynamic financial landscape.",
+  "bulletPoints": [
+  "Simplify financial analysis for strategic action",
+"Gain immediate client insights for proactive service",
+"Refine strategies with advanced performance metrics"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+    ],
+    "featureHeading": "Financial Services Benefits",
+    "featureTitle": "We're Here to Support You",
+    "featureAssurance": "A suite crafted meticulously for the evolving financial landscape.",
+  }
+];
+
+const features = [
+    {
+        "title": "Precision-Driven Content",
+        "description": "Revolutionize your financial operations. Deliver tailored experiences using our comprehensive toolkit.",
+        "icon": "fluent:arrow-routing-24-regular",
+    },
+    {
+        "title": "Integrated Software Solutions",
+        "description": "Integrate existing platforms effortlessly. Simplify tracking, optimization, and decision-making.",
+        "icon": "fluent:plug-connected-24-regular",
+    },
+    {
+        "title": "Comprehensive Insights",
+        "description": "Stay on top of your financial engagements with a unified dashboard, bringing analytics, client data, and insights under one roof.",
+        "icon": "fluent:cellular-data-1-24-regular",
+    },
+    {
+        "title": "Intuitive Customer Journeys",
+        "description": "Shape intuitive financial journeys with our design toolkit. From client portals to transaction histories, make every interaction meaningful.",
+        "icon": "fluent:heart-24-regular",
+    },
+    {
+        "title": "Secure & Seamless Integration",
+        "description": "Safety first. Seamlessly merge your existing financial tools with ours, ensuring top-tier security and data protection.",
+        "icon": "fluent:shield-24-regular",
+    },
+    {
+        "title": "Predictive Analytics",
+        "description": "A 360° view of your financial engagements and client communications. Simplify complex data with visual analytics.",
+        "icon": "fluent:data-usage-24-regular",
+    }
+];
+
+
+const faq = [
+  {
+    question: "How does Empress OS centralize financial information?",
+    answer: "Empress OS creates a centralized hub for all your financial data, ensuring easy and secure access while maintaining regulatory compliance and elevating operational workflows."
+  },
+  {
+    question: "What client relationship tools does Empress offer for financial services?",
+    answer: "Empress Chat delivers rapid, compliant, and personalized communication options tailored to financial services, optimizing client engagement and satisfaction."
+  },
+  {
+    question: "Can Empress Insights enhance my firm's financial performance?",
+    answer: "Yes, Empress Insights provides real-time analytics and dashboards to dissect client behaviors and engagement patterns, enabling data-driven strategies that boost financial outcomes."
+  },
+  {
+    question: "How does Empress ensure compliance in financial operations?",
+    answer: "Empress prioritizes compliance by streamlining operations through secure platforms and communication channels that adhere to regulatory standards."
+  },
+  {
+    question: "What makes Empress a suitable choice for collaboration?",
+    answer: "Empress fosters seamless collaboration within financial services by integrating a secure and compliant environment that promotes teamwork and enhances service delivery."
+  },
+  {
+    question: "How does Empress integrate with existing financial software?",
+    answer: "Empress seamlessly integrates with existing financial platforms, simplifying tracking and decision-making while ensuring data integrity and security."
+  },
+  {
+    question: "What advantages does Empress offer for designing customer journeys?",
+    answer: "Empress provides design tools to create intuitive financial journeys for clients, ensuring meaningful interactions from portals to chat histories."
+  }
+];
+
+
+const featureBlocks = data[0].featureBlocks;
+
+---
+
+
+<Layout title="About" footerMargin={false}>
+  
+  <!-- <div class="overflow-x-clip">
+    <Container>
+      <main class="grid lg:grid-cols-5 place-items-center relative">
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
+        </div>
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
+        </div>
+        <div class="max-w-sm md:max-w-max lg:col-span-2">
+          <h1
+            class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
+            {data[0].mainHeading}
+          </h1>
+          <p
+            class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
+            {data[0].subtext}
+          </p>
+          <div
+            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+          <Link
+              href={data[0].headingButtons[0].link}
+              class="flex gap-1 items-center justify-center bg-brand"
+              rel="noopener">
+              {data[0].headingButtons[0].text}
+          </Link>
+          
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href={data[0].headingButtons[1].link}
+            class="flex gap-1 items-center justify-center border-brand text-brand">
+            {data[0].headingButtons[1].text}
+          </Link>
+          </div>
+        </div>
+        <div class="py-3 lg:col-span-3 lg:-mr-44">
+          <Picture
+            src={Education}
+            alt="Astronaut in the air"
+            formats={["avif", "webp"]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            widths={[240, 540, 720, heroImage.width]}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </main>
+    </Container>
+  </div> -->
+
+  <Container>
+  <div>
+    <div
+    class:list={[
+      "max-w-4xl mx-auto flex flex-col items-center justify-center",
+      !nomargin && "mt-24",
+    ]}>
+    <Badge color="purple">Empress for Finance</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      Elevate Your <span class="text-indigo-600">Finances with Empress</span>
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
+    </p>
+  </div>
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+    {
+      apps.map((item) => (
+        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+  </div>
+</Container>
+  
+  <div class="grid md:grid-cols-2 py-10"></div>
+  
+
+  <Container>
+  
+
+    <!-- Feature 1 -->
+
+    <div class="grid md:grid-cols-2 py-10">
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">{data[0].featureBlocks[0].heading}</Badge>
+          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+            {data[0].featureBlocks[0].title}
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+            {data[0].featureBlocks[0].description}
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+            {data[0].featureBlocks[0].bulletPoints.map((point) => (
+              <li class="flex items-center gap-3 text-neutral-800">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                <span class="text-sm">{point}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            {data[0].featureBlocks[0].buttons?.map((button, index) => {
+              if (index === 0) {
+                return (
+                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                    <span>{button.text}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </Link>
+                );
+              } else {
+                return (
+                  <a 
+                    href={button.link} 
+                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    {button.text}
+                  </a>
+                );
+              }
+            })}
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <LottieAnimation id="lottie" src="../../../../chemical-laboratory.json" autoplay="true" style="width: 100%; height: auto;"/>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="grid md:grid-cols-2 py-10">
+      <div class="">
+        <LottieAnimation id="lottie" src="../../../../global-education.json" autoplay="true" style="width: 100%; height: auto;"/>
+      </div>
+
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">{data[0].featureBlocks[1].heading}</Badge>
+          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+            {data[0].featureBlocks[1].title}
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+            {data[0].featureBlocks[1].description}
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+            {data[0].featureBlocks[1].bulletPoints.map((point) => (
+              <li class="flex items-center gap-3 text-neutral-800">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                <span class="text-sm">{point}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            {data[0].featureBlocks[1].buttons?.map((button, index) => {
+              if (index === 0) {
+                return (
+                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                    <span>{button.text}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </Link>
+                );
+              } else {
+                return (
+                  <a 
+                    href={button.link} 
+                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    {button.text}
+                  </a>
+                );
+              }
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Feature 3 -->
+
+  <div class="grid md:grid-cols-2 py-10">
+
+    <div class="grid place-items-center">
+      <div class="max-w-lg">
+        <Badge color="purple" class="-ml-px">{data[0].featureBlocks[2].heading}</Badge>
+        <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+          {data[0].featureBlocks[2].title}
+        </h3>
+        <p class="mt-4 text-slate-600 [text-wrap:balance]">
+          {data[0].featureBlocks[2].description}
+        </p>
+        <ul class="grid mt-6 text-left gap-y-4">
+          {data[0].featureBlocks[2].bulletPoints.map((point) => (
+            <li class="flex items-center gap-3 text-neutral-800">
+              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+              <span class="text-sm">{point}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="flex items-center gap-4 mt-6">
+          {data[0].featureBlocks[2].buttons?.map((button, index) => {
+            if (index === 0) {
+              return (
+                <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                  <span>{button.text}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </Link>
+              );
+            } else {
+              return (
+                <a 
+                  href={button.link} 
+                  class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  {button.text}
+                </a>
+              );
+            }
+          })}
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <LottieAnimation id="lottie" src="../../../../nuclear-research-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+    </div>
+  </div>
+
+  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+    <Badge color="purple">{data[0].sectionHeading}</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      {data[0].offering.title}
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      {data[0].offering.subtext}
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+    <Card color="indigo" size="sm">
+      <Fragment slot="image">
+        <Picture
+          src={NetworkServerManagement}
+          alt="Feature image"
+          formats={["avif", "webp"]}
+          class="object-contain"
+          loading="lazy"
+        />
+      </Fragment>
+      <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+      <span slot="title">{data[0].valueBlocks[0].title}</span>
+      <span slot="desc">{data[0].valueBlocks[0].description}</span>
+    </Card>
+    
+    <Card color="purple" size="sm">
+      <Fragment slot="image">
+        <Picture
+          src={AutomatedMarketing}
+          alt="Feature image"
+          formats={["avif", "webp"]}
+          class="object-contain"
+          loading="lazy"
+        />
+      </Fragment>
+      <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+      <span slot="title">{data[0].valueBlocks[1].title}</span>
+      <span slot="desc">{data[0].valueBlocks[1].description}</span>
+    </Card>
+    
+    <Card size="sm">
+      <Fragment slot="image">
+        <!-- // svg image. cannot use <picture/> as of now -->
+        <Image
+          src={DashboardDevelopment}
+          alt="Feature image"
+          width="909"
+          height="823"
+          class="object-contain"
+          loading="lazy"
+        />
+      </Fragment>
+      <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+      <span slot="title">{data[0].valueBlocks[2].title}</span>
+      <span slot="desc">{data[0].valueBlocks[2].description}</span>
+    </Card>
+  </div>
+
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].featureHeading}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].featureTitle}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].featureAssurance}
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        features.map((item) => (
+          <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+  
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+  </Container>
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+  
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  
+
+  <Cta />
+</Layout>
+
