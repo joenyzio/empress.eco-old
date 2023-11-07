@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Accounting",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Accounting: Manage Financial Records",
+    "subtext": "Harness a specialized suite of accounting tools designed for precise financial record management and fiscal clarity.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Financial Clarity",
+    "offering": {
+      "title": "Streamline Your Financial Operations",
+      "subtext": "Leverage a platform that simplifies financial tracking, enhances accuracy, and supports strategic financial decisions."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Comprehensive Accounting",
+        "title": "Master Your Finances",
+        "description": "Command a complete overview of your financial landscape with tools that manage and reconcile accounts with precision and ease."
+      },
+      {
+        "heading": "Real-time Reporting",
+        "title": "Make Informed Decisions",
+        "description": "Gain real-time insights into your financial status, enabling quick and informed decision-making based on accurate data."
+      },
+      {
+        "heading": "Secure Transactions",
+        "title": "Trust in Every Transaction",
+        "description": "Ensure the security and accuracy of every financial transaction, backed by a system that prioritizes data integrity and compliance."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Ledger Integration",
+        "title": "Centralize Your Financial Data",
+        "description": "Consolidate all financial records in a single, integrated ledger system that enhances data transparency and audit readiness.",
+        "bulletPoints": [
+          "Integrate seamlessly with existing financial operations",
+          "Automate data entry for accuracy and efficiency",
+          "Facilitate audit processes with consolidated financial data"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,120 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Expense Tracking",
+        "title": "Monitor Expenditures with Precision",
+        "description": "Keep a vigilant eye on expenditures with a tool that categorizes and tracks expenses, helping you stay on budget and reduce financial waste.",
+        "bulletPoints": [
+          "Categorize and track all expenses automatically",
+          "Identify cost-saving opportunities",
+          "Integrate expense data with financial reports"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Tax Compliance",
+        "title": "Simplify Tax Management",
+        "description": "Navigate the complexities of tax compliance with tools that automate tax calculations, filings, and remittance.",
+        "bulletPoints": [
+          "Automate tax calculations to save time and reduce errors",
+          "Keep up-to-date with changing tax laws and requirements",
+          "Simplify the tax filing and remittance process"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Accounting Features",
+    "featureTitle": "Enhance Your Financial Oversight",
+    "featureAssurance": "Our comprehensive set of accounting tools is designed to provide you with the utmost precision and control over your financial records."
   }
 ];
+
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Cash Flow Analysis",
+    "description": "Monitor and forecast your cash flow in real-time with advanced analytics to maintain a healthy financial state and anticipate future needs.",
+    "icon": "fluent:money-calculator-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Budget Planning",
+    "description": "Create, manage, and track your budgets with ease, allowing for effective allocation of resources and financial planning.",
+    "icon": "fluent:chart-multiple-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Accounts Receivable Automation",
+    "description": "Automate invoicing and follow-ups to ensure timely payments, improve cash inflow, and reduce manual workload.",
+    "icon": "fluent:receipt-money-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Financial Forecasting",
+    "description": "Leverage predictive modeling to gain insights into future revenue and expenses, and prepare your business for what's ahead.",
+    "icon": "fluent:weather-sunny-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "Asset Management",
+    "description": "Track and manage your company's assets with a comprehensive asset management system, ensuring accurate valuation and depreciation calculations.",
+    "icon": "fluent:building-shop-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Regulatory Compliance Tracking",
+    "description": "Stay ahead of regulatory changes with tools that help you adjust your financial practices to meet industry standards and compliance requirements.",
+    "icon": "fluent:shield-24-regular",
   }
 ];
-
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    question: "How can the 'Cash Flow Analysis' feature benefit my business?",
+    answer: "Our Cash Flow Analysis feature offers real-time monitoring and forecasting to provide you with a clear picture of your financial health. It enables you to anticipate cash needs, identify potential shortfalls, and make informed decisions to ensure your business remains financially secure."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    question: "Is 'Budget Planning' easy to integrate with my current financial system?",
+    answer: "Absolutely. Our Budget Planning tool is designed for seamless integration, allowing you to effortlessly merge it with your existing financial systems. This ensures a smooth transition and continued financial planning without the need to overhaul your current processes."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    question: "What does 'Accounts Receivable Automation' do to improve my payment processes?",
+    answer: "The Accounts Receivable Automation feature streamlines your invoicing and collection processes. It automates reminders and follow-ups for overdue payments, reducing manual efforts and helping to secure your cash inflow more efficiently."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    question: "How accurate is the 'Financial Forecasting' tool?",
+    answer: "Our Financial Forecasting utilizes advanced predictive modeling to provide highly accurate insights into your future financial performance. This allows you to make proactive decisions to navigate your business effectively through upcoming fiscal periods."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    question: "Can 'Asset Management' handle multiple types of assets?",
+    answer: "Yes, our Asset Management system is comprehensive and capable of tracking a variety of assets. Whether it's property, equipment, or intangible assets, our system ensures accurate tracking, valuation, and depreciation for all asset types."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    question: "What kind of support do I get with 'Regulatory Compliance Tracking'?",
+    answer: "Our Regulatory Compliance Tracking feature provides you with updates on the latest compliance standards and assists you in adjusting your financial practices accordingly. Additionally, we offer support to ensure you understand the changes and how to apply them to your business operations."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    question: "How secure are my financial transactions with your accounting system?",
+    answer: "Security is a top priority in our accounting system. We employ robust security measures to protect every transaction, maintain data integrity, and ensure compliance with financial regulations. You can trust that your financial data is secure with our technology."
   }
 ];
+
 
 
 

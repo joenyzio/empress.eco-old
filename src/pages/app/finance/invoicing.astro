@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Invoicing",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Invoicing: Create and Send Invoices",
+    "subtext": "Simplify your billing process with our comprehensive invoicing tool, designed for swift creation and delivery of invoices.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Streamlined Invoicing for Your Business",
+    "offering": {
+      "title": "Create and Send Invoices with Ease",
+      "subtext": "Our platform ensures a professional, efficient, and accurate invoicing experience for you and your clients."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Customizable Invoices",
+        "title": "Personalize Your Billing",
+        "description": "Create invoices that reflect your brand with custom templates, logos, and personalized messages to enhance client trust and recognition."
+      },
+      {
+        "heading": "Automated Reminders",
+        "title": "Ensure Timely Payments",
+        "description": "Set up automated reminders for your clients, reducing the need for follow-ups and helping maintain a steady cash flow."
+      },
+      {
+        "heading": "Real-Time Tracking",
+        "title": "Monitor Invoice Status",
+        "description": "Track the status of each invoice in real-time, from sent to seen to paid, keeping you informed at every step."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Effortless Invoicing",
+        "title": "Professional Invoices in a Few Clicks",
+        "description": "Generate detailed invoices quickly using preset items and services, and send them instantly via email or downloadable link.",
+        "bulletPoints": [
+          "Speed up the invoicing process with presets and templates",
+          "Send invoices directly to clients with integrated emailing",
+          "Offer easy payment through secure online gateways"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,166 +90,123 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Invoice Customization",
+        "title": "Tailor Invoices for Every Client",
+        "description": "Adapt each invoice to meet the specific needs of your clients, from currency to language, ensuring clarity and compliance.",
+        "bulletPoints": [
+          "Support for multiple currencies and languages",
+          "Customizable fields to meet diverse client requirements",
+          "Save client profiles for faster processing"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Reporting and Analytics",
+        "title": "Gain Financial Insights",
+        "description": "Use our analytics to monitor payment patterns, client behavior, and overall financial health to make informed business decisions.",
+        "bulletPoints": [
+          "Detailed reports for financial tracking and forecasting",
+          "Insights into client payment habits for better relationship management",
+          "Data-driven strategy planning for growth and efficiency"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Invoicing Features",
+    "featureTitle": "Empower Your Billing Process",
+    "featureAssurance": "Our invoicing tools are crafted to provide a seamless, professional billing experience, ensuring accuracy and reliability for your business."
   }
 ];
+
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Multi-Currency Support",
+    "description": "Bill international clients with ease, thanks to multi-currency support that allows you to invoice in various currencies, adhering to global business standards.",
+    "icon": "fluent:money-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Invoice Scheduling",
+    "description": "Automate your invoicing process by scheduling invoices to be sent out on specific dates and times, ensuring consistency and punctuality in billing.",
+    "icon": "fluent:calendar-later-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Payment Reconciliation",
+    "description": "Keep your accounts organized with automatic payment reconciliation, matching incoming payments with the appropriate invoices for streamlined bookkeeping.",
+    "icon": "fluent:clipboard-task-list-ltr-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Custom Discounts & Taxes",
+    "description": "Apply custom discounts, taxes, and surcharges directly on your invoices, providing full transparency and adapting to different client agreements and tax regulations.",
+    "icon": "fluent:calculator-multiple-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "Client Portal Access",
+    "description": "Offer your clients secure access to a personalized portal where they can view their invoice history, pending invoices, and make payments directly.",
+    "icon": "fluent:people-team-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Mobile Invoicing",
+    "description": "Issue invoices on-the-go from any mobile device, ensuring business continuity and flexibility, no matter where you are.",
+    "icon": "fluent:phone-mobile-24-regular",
   }
 ];
-
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    question: "How can I personalize my invoices to match my brand identity?",
+    answer: "Our customizable invoices feature allows you to add your logo, brand colors, and personalized messages to your invoices, ensuring they align with your company’s brand identity."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    question: "What are the benefits of automated reminders for invoices?",
+    answer: "Automated reminders help reduce the need for manual follow-ups, prompt clients to make timely payments, and assist in maintaining a healthy cash flow for your business."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    question: "Can I track the status of my invoices in real-time?",
+    answer: "Yes, our real-time tracking system allows you to monitor each invoice's status as it progresses from sent, to seen, to paid, keeping you updated at every step."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    question: "Is it possible to send invoices in multiple currencies and languages?",
+    answer: "Absolutely, our invoice customization supports multiple currencies and languages, providing the flexibility needed to cater to a diverse clientele."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    question: "How can reporting and analytics help me manage my finances?",
+    answer: "With our reporting and analytics, you can gain valuable insights into payment patterns, client behaviors, and financial health to help you make informed decisions and strategize for growth."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    question: "How does the client portal enhance the invoicing experience?",
+    answer: "The client portal offers a secure, personalized space for clients to view their invoice history, manage pending invoices, and make payments, simplifying the process for both parties."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    question: "Can I create and send invoices from my mobile device?",
+    answer: "Yes, our mobile invoicing feature ensures you can create and send invoices directly from your mobile device, providing convenience and flexibility to manage your billing anytime, anywhere."
+  },
+  {
+    question: "What options are available for clients to make payments through the invoices?",
+    answer: "Clients can pay via secure online gateways that are integrated with our invoicing system, making the payment process quick and easy for them."
   }
 ];
-
-
-
 
 const featureBlocks = data[0].featureBlocks;
 

@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Expenses",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Expenses: Track Business Expenses",
+    "subtext": "Harness the power of detailed expense tracking to ensure financial accuracy and budget management.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Master Your Expenses",
+    "offering": {
+      "title": "Elevate Your Expense Management",
+      "subtext": "Utilize advanced tracking to monitor, categorize, and control your business expenditures effectively."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Expense Analytics",
+        "title": "Understand Your Spend",
+        "description": "Gain insights into your spending patterns and identify opportunities for cost-saving with comprehensive analytics."
+      },
+      {
+        "heading": "Receipt Tracking",
+        "title": "Capture Every Expense",
+        "description": "Easily scan and store receipts digitally, ensuring every expense is accounted for without the clutter."
+      },
+      {
+        "heading": "Budgeting Tools",
+        "title": "Stay Within Budget",
+        "description": "Set and manage budgets for different categories or projects to keep your finances on track."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Expense Tracking Integration",
+        "title": "Streamline Your Expense Reporting",
+        "description": "Integrate your expense data with accounting software to simplify the reporting and reconciliation process.",
+        "bulletPoints": [
+          "Automated data entry to save time and reduce errors",
+          "Seamless integration with leading accounting platforms",
+          "Simplified end-of-month reconciliations"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,123 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Mobile Expense Management",
+        "title": "Manage Expenses Anytime, Anywhere",
+        "description": "Use our mobile app to track expenses on-the-go, ensuring real-time updates and financial control.",
+        "bulletPoints": [
+          "Mobile receipt scanning for on-the-spot expense capture",
+          "Real-time budget updates and alerts",
+          "Accessible financial data from any device"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Tax Compliant Reporting",
+        "title": "Prepare for Tax Season with Ease",
+        "description": "Automate tax categorization and keep track of deductible expenses to streamline your tax preparation process.",
+        "bulletPoints": [
+          "Automatic categorization of expenses for tax purposes",
+          "Easily identify deductible expenses to maximize returns",
+          "Generate tax-ready financial reports with a click"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Expense Management Features",
+    "featureTitle": "Control Your Costs with Confidence",
+    "featureAssurance": "Our tools are designed to offer you complete command over your business expenses, contributing to your financial success."
   }
 ];
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Real-Time Expense Approval",
+    "description": "Streamline your workflow with instant alerts and approvals, enabling managers to review and approve expenses as they occur.",
+    "icon": "fluent:checkmark-circle-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Project-Based Tracking",
+    "description": "Assign expenses to specific projects for more accurate tracking and billing, giving you a clear picture of project profitability.",
+    "icon": "fluent:clipboard-task-add-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Integrated Expense Policies",
+    "description": "Enforce your expense policies directly within the system to ensure compliance and reduce unauthorized spending.",
+    "icon": "fluent:shield-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Recurring Expense Automation",
+    "description": "Automate recurring expenses to save time on data entry and ensure consistent financial recording and analysis.",
+    "icon": "fluent:arrow-repeat-all-off-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "Advanced Expense Filtering",
+    "description": "Filter and sort expenses by date, category, project, or any custom parameter to quickly find the information you need.",
+    "icon": "fluent:filter-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Mileage Tracking",
+    "description": "Accurately log and calculate mileage with GPS verification for employee reimbursements and tax deductions.",
+    "icon": "fluent:vehicle-car-profile-ltr-24-regular",
   }
 ];
-
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    question: "How can I get started with tracking my business expenses?",
+    answer: "Getting started is simple. Click on 'Get Started' from any of the feature blocks on our site, or visit our 'Contact' page to set up your account. Once registered, you can immediately begin tracking your expenses using our suite of tools."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    question: "Is the mobile expense management feature available on all devices?",
+    answer: "Yes, our mobile expense management app is designed to be compatible across a variety of devices, including iOS and Android platforms, ensuring you can manage your expenses anytime, anywhere."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    question: "Can the system automatically approve recurring expenses?",
+    answer: "Absolutely. Our Recurring Expense Automation feature allows you to set up rules for recurring expenses which can then be automatically approved, saving you time and ensuring consistency in your financial records."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    question: "What kind of support is available for setting up integrated expense policies?",
+    answer: "We provide comprehensive support to help you set up and enforce your integrated expense policies. This includes assistance from our customer service team, as well as online resources and documentation."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    question: "How does the real-time approval process work?",
+    answer: "Our Real-Time Expense Approval system sends instant notifications to managers when an expense is submitted. Managers can then review details immediately and either approve or request changes, all within the system."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    question: "How does the mileage tracking feature work?",
+    answer: "Our Mileage Tracking feature uses GPS verification to log drives automatically. You can also manually add trips, and the system will calculate the mileage based on current IRS rates, ready for reimbursement and tax deduction purposes."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    question: "Are the expense tracking and tax report features compliant with IRS regulations?",
+    answer: "Yes, our tax report features comply with IRS regulations. We ensure that expense categorization aligns with tax requirements, and our reports can be used to support your filings."
+  },
+  {
+    question: "What types of payments can be tracked with the expense tracking tool?",
+    answer: "Our tool can track a wide array of payment types including cash, credit/debit card transactions, bank transfers, and electronic payments. The system allows for a comprehensive view of your business spending regardless of the payment method."
   }
 ];
+
 
 
 
