@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Sales",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Simplify Your Sales Quotes",
+    "subtext": "Streamline your sales process with our intuitive quote management system designed to empower sales teams.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Quotes for Sales Excellence",
+    "offering": {
+      "title": "Accelerate Your Quote-to-Close Rate",
+      "subtext": "Craft, send, and track outstanding sales quotes with ease, speeding up your path from initial interest to final approval."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Seamless Quote Creation",
+        "title": "Generate Quotes Effortlessly",
+        "description": "Create professional and accurate sales quotes with a few clicks, customizing for each client's needs."
+      },
+      {
+        "heading": "Interactive Quote Tracking",
+        "title": "Monitor Quote Progress",
+        "description": "Keep tabs on the status of each quote, from sent to seen to accepted, ensuring timely follow-ups."
+      },
+      {
+        "heading": "Smart Quote Management",
+        "title": "Manage All Quotes Centrally",
+        "description": "Organize and access all your sales quotes in one place, simplifying management and revisions."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "OS for Quotes",
+        "title": "Central Hub for Quote Management",
+        "description": "Unify your quoting process in a single platform, reducing complexity and enhancing productivity.",
+        "bulletPoints": [
+          "Create customizable quotes with predefined templates",
+          "Track quote statuses and client interactions",
+          "Streamline revisions and approvals with in-built tools"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,120 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Chat for Quotes",
+        "title": "Enhance Engagement with Quoting",
+        "description": "Directly engage with clients from within the application, ensuring clear communication and faster decision-making.",
+        "bulletPoints": [
+          "Instantly send and receive quote feedback",
+          "Negotiate terms in real-time within the platform",
+          "Use chat for immediate clarification and updates"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Insights for Quotes",
+        "title": "Drive Decisions with Quote Analytics",
+        "description": "Access data-driven insights into quote performance, helping refine your sales strategy for better outcomes.",
+        "bulletPoints": [
+          "Analyze win/loss ratios to improve quoting strategies",
+          "Identify trends to anticipate customer needs",
+          "Leverage historical data for accurate future quotes"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Advanced Quoting Features",
+    "featureTitle": "Empower Sales with Intelligent Quoting",
+    "featureAssurance": "Dedicated to providing sales teams with a powerful quoting tool that simplifies the sales cycle and enhances client relations."
   }
 ];
 
+
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
+    "title": "Round-the-Clock Quote Support",
+    "description": "Enable your sales teams to provide 24/7 support on quotes, ensuring client queries are resolved promptly, leading to faster deal closures.",
     "icon": "fluent:clock-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
+    "title": "Streamlined Quoting Journeys",
+    "description": "Deliver a seamless and intuitive quoting experience. Simplify the journey from quote creation to approval, making every step efficient.",
     "icon": "fluent:person-arrow-right-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
+    "title": "Effortless Quote Integration",
+    "description": "Integrate effortlessly with existing CRM and sales tools, making quote management a seamless part of your sales ecosystem.",
     "icon": "fluent:plug-connected-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
+    "title": "Proactive Quote Insights",
+    "description": "Anticipate client needs and market changes with advanced insights, ensuring your quotes are always ahead of the curve and competitive.",
     "icon": "fluent:cellular-data-1-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
+    "title": "Consistent Quoting Experience",
+    "description": "Offer a consistent user experience with uniform quoting processes, increasing reliability and trust in your sales interactions.",
     "icon": "fluent:heart-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
+    "title": "Comprehensive Quoting Ecosystem",
+    "description": "From initial quote drafts to final sign-off, create a coherent ecosystem that supports every aspect of quote management.",
     "icon": "fluent:arrow-repeat-all-24-regular",
   }
 ];
 
-
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    question: "How can I quickly generate a sales quote?",
+    answer: "With our 'Quotes' application, you can generate professional, accurate sales quotes with just a few clicks using customizable templates, ensuring you meet each client's specific needs efficiently."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    question: "Is there a way to track the status of my quotes?",
+    answer: "Absolutely! 'Quotes' provides interactive tracking features that let you monitor the status of each quote from sent to seen to accepted, so you can ensure timely follow-ups and never miss a beat."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    question: "Can I manage all my quotes in one place?",
+    answer: "Yes, our Smart Quote Management system allows you to organize and access all your sales quotes centrally, simplifying the management process and making it easy to revise and refer to quotes as needed."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    question: "How can I engage with clients during the quoting process?",
+    answer: "Our Chat for Quotes feature enables you to engage directly with clients within the application, allowing for immediate feedback, real-time negotiations, and quick clarification on any quote-related queries."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    question: "What insights can I gain from my quote performance?",
+    answer: "Insights for Quotes offers data-driven analytics to help you understand win/loss ratios, identify customer trends, and leverage historical data to make informed decisions for future quotes."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    question: "How does 'Quotes' integrate with existing CRM and sales tools?",
+    answer: "Our application integrates effortlessly with your existing CRM and sales tools to maintain a seamless flow within your sales ecosystem, making quote management an integral, hassle-free component of your sales process."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    question: "What support is available for using 'Quotes'?",
+    answer: "We offer round-the-clock quote support to ensure that any queries or issues can be resolved promptly, day or night, to help you close deals faster and more efficiently."
   }
 ];
+
 
 
 
