@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Fleet",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Fleet: Vehicle Management System",
+    "subtext": "Streamline your vehicle management operations with a powerful and intuitive system designed for efficiency and scalability.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Advanced Fleet Management",
+    "offering": {
+      "title": "Drive Operational Efficiency and Fleet Performance",
+      "subtext": "Unlock the full potential of your fleet with integrated vehicle tracking, maintenance alerts, and fuel management."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Fleet Tracking",
+        "title": "Streamline Fleet Operations",
+        "description": "Monitor vehicle locations, optimize routes, and enhance the safety of your fleet with real-time GPS tracking."
+      },
+      {
+        "heading": "Fleet Maintenance",
+        "title": "Minimize Downtime",
+        "description": "Automate maintenance scheduling, track service history, and receive alerts for upcoming vehicle maintenance needs."
+      },
+      {
+        "heading": "Fuel Management",
+        "title": "Reduce Fuel Costs",
+        "description": "Monitor fuel usage, identify inefficiencies, and optimize consumption with comprehensive fuel management tools."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Vehicle Management System",
+        "title": "Centralize Your Fleet Operations",
+        "description": "From acquisition to disposal, manage all aspects of your fleet lifecycle in one place for unmatched operational oversight.",
+        "bulletPoints": [
+          "Track vehicle usage and lifecycle data",
+          "Manage vehicle acquisition and disposal",
+          "Keep detailed records for compliance and reporting"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,124 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Driver Management",
+        "title": "Safeguard Your Operations with Driver Management",
+        "description": "Ensure driver safety and compliance with tools that help you manage licenses, training, and performance metrics.",
+        "bulletPoints": [
+          "Track driver licenses and certifications",
+          "Monitor driver behavior and performance",
+          "Schedule and record training sessions"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Fleet Analytics",
+        "title": "Inform Your Decisions with Fleet Analytics",
+        "description": "Make informed decisions with analytics that provide insights into fleet performance, utilization, and operational costs.",
+        "bulletPoints": [
+          "Analyze fleet performance data",
+          "Improve vehicle utilization and efficiency",
+          "Optimize fleet-related costs and budgeting"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Features for Fleet Management",
+    "featureTitle": "Elevate Your Fleet Operations",
+    "featureAssurance": "Our fleet vehicle management system is designed to grow with your business, ensuring that as your fleet expands, your ability to manage effectively does too."
   }
 ];
+
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Compliance Management",
+    "description": "Keep your fleet in line with regulations using our compliance management tools, ensuring your vehicles and drivers adhere to legal requirements.",
+    "icon": "fluent:shield-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Accident Management",
+    "description": "Efficiently handle vehicle incidents with an integrated accident management system that helps to minimize downtime and manage costs.",
+    "icon": "fluent:vehicle-car-collision-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Eco-Friendly Routing",
+    "description": "Reduce your carbon footprint with routes optimized for fuel efficiency, helping you make cost-effective and environmentally friendly decisions.",
+    "icon": "fluent:leaf-three-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Real-Time Notifications",
+    "description": "Stay updated with real-time alerts for vehicle maintenance, route deviations, and unauthorized usage, keeping you in control at all times.",
+    "icon": "fluent:alert-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "Custom Reporting",
+    "description": "Generate custom reports for insights into fleet operations, driver performance, and cost management to aid strategic decision-making.",
+    "icon": "fluent:chart-multiple-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Asset Management",
+    "description": "Track all your fleet assets in one place, from vehicles to equipment, ensuring optimal allocation and reducing unnecessary expenses.",
+    "icon": "fluent:briefcase-24-regular",
   }
 ];
-
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    "question": "How does the Fleet Vehicle Management System improve operational efficiency?",
+    "answer": "Our system enhances operational efficiency by providing real-time GPS tracking, automated maintenance scheduling, and fuel management tools. These features work together to optimize routes, minimize vehicle downtime, and reduce fuel costs."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    "question": "Can the Fleet Management System help with driver safety and compliance?",
+    "answer": "Absolutely. The system includes driver management tools that track licenses, certifications, and performance metrics, promoting safety and ensuring compliance with transport regulations."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    "question": "Is it possible to manage the entire lifecycle of a vehicle within this system?",
+    "answer": "Yes, our Vehicle Management System is designed to manage all aspects of your fleet's lifecycle from acquisition to disposal, including usage tracking, maintenance records, and compliance reporting."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    "question": "How does the Accident Management feature work?",
+    "answer": "The Accident Management feature helps you handle incidents by recording details, tracking claims, and managing repairs. This system streamlines the process to minimize downtime and costs associated with vehicle accidents."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    "question": "What kind of analytics can be accessed with the Fleet Analytics feature?",
+    "answer": "Fleet Analytics provides insights into vehicle performance, utilization, and operational costs. This data helps in making informed decisions that can improve efficiency and optimize expenses."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    "question": "How will I be alerted to vehicle maintenance needs?",
+    "answer": "Our system sends real-time notifications for maintenance alerts based on service history and scheduled maintenance plans, ensuring that you can proactively manage vehicle upkeep."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    "question": "What type of reports can I generate with the Custom Reporting feature?",
+    "answer": "You can generate a variety of custom reports including, but not limited to, fleet utilization, cost management, driver performance, and maintenance records, all of which can be tailored to your specific business needs."
+  },
+  {
+    "question": "How does Eco-Friendly Routing contribute to cost savings?",
+    "answer": "Eco-Friendly Routing optimizes your fleet's routes for fuel efficiency, not only contributing to cost savings by reducing fuel consumption but also supporting your company's sustainability efforts."
   }
 ];
+
 
 
 

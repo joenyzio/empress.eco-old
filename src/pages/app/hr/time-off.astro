@@ -36,10 +36,53 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Time Off",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Time Off: Leave Management System",
+    "subtext": "Streamline your leave management process with a comprehensive system designed for ease and efficiency.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Enhance Your Leave Management",
+    "offering": {
+      "title": "Automate Your Leave Processes and Policies",
+      "subtext": "Implement a leave management system that automates requests, approvals, and tracking to save time and reduce errors."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Leave Request Automation",
+        "title": "Streamline Leave Applications",
+        "description": "Automate the leave request process to ensure a smooth workflow from application to approval, minimizing administrative tasks."
+      },
+      {
+        "heading": "Real-time Leave Balances",
+        "title": "Monitor Leave Accurately",
+        "description": "Keep track of leave balances and accruals in real-time, allowing for accurate forecasting and planning."
+      },
+      {
+        "heading": "Compliance Management",
+        "title": "Ensure Policy Adherence",
+        "description": "Stay compliant with labor laws and company policies through automated checks and balances within the leave management system."
+      }
+    ],
+
+    "featureBlocks": [
+      {
+        "heading": "System Integration",
+        "title": "Seamlessly Integrate with HR Systems",
+        "description": "Easily integrate with existing HR systems for a unified approach to employee data management and leave tracking.",
+        "bulletPoints": [
+          "Synchronize data across platforms for consistency",
+          "Reduce duplication of effort with automated data updates",
+          "Ensure integrity and confidentiality of employee leave data"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,161 +91,118 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+
+      {
+        "heading": "Leave Planning Tools",
+        "title": "Plan and Predict Leave Needs",
+        "description": "Use advanced planning tools to predict leave trends and manage staffing needs proactively.",
+        "bulletPoints": [
+          "Visualize leave trends with analytics dashboards",
+          "Manage staffing levels effectively during peak leave times",
+          "Optimize resource allocation and reduce understaffing"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Mobile Accessibility",
+        "title": "Manage Leave Anytime, Anywhere",
+        "description": "Empower employees with mobile access to leave applications and managers with the ability to approve requests on-the-go.",
+        "bulletPoints": [
+          "Facilitate leave management through mobile devices",
+          "Enable quick response times for leave requests",
+          "Enhance employee experience with user-friendly mobile options"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Dedicated Leave Management Features",
+    "featureTitle": "Optimize Time Off with Our System",
+    "featureAssurance": "Our Leave Management System is crafted to bring you peace of mind in managing time off effectively and efficiently."
   }
 ];
+
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Customizable Leave Types",
+    "description": "Tailor different types of leaves to fit the unique policies of your organization, from annual and sick leave to maternity and sabbatical.",
+    "icon": "fluent:clipboard-task-list-rtl-20-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
-  },
-  {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
-  },
-  {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
+    "title": "Advanced Reporting",
+    "description": "Generate comprehensive reports on leave usage, trends, and patterns to aid in decision-making and policy adjustments.",
     "icon": "fluent:cellular-data-1-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "Employee Self-Service Portal",
+    "description": "Empower your employees with a self-service portal to manage their leave requests, view balances, and access policy information.",
+    "icon": "fluent:people-community-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Alerts and Notifications",
+    "description": "Receive timely alerts and notifications for leave requests, approvals, and balance changes to keep all parties informed.",
+    "icon": "fluent:alert-24-regular",
+  },
+  {
+    "title": "Integration with Payroll",
+    "description": "Seamlessly connect the leave management system with payroll to automatically adjust for absences and maintain accurate payment records.",
+    "icon": "fluent:money-calculator-20-regular",
+  },
+  {
+    "title": "Calendar Sync",
+    "description": "Sync leave schedules with company calendars for better visibility and resource planning across all departments.",
+    "icon": "fluent:calendar-sync-20-regular",
   }
 ];
 
-
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    "question": "How does the Time Off: Leave Management System simplify the leave application process?",
+    "answer": "Our system automates the entire leave application process from start to finish. Employees can submit requests through an easy-to-use portal, and managers receive notifications to approve or decline with just a click. This reduces the administrative burden and speeds up the process, ensuring a seamless operation."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    "question": "Can the leave management system be customized to our company's specific leave policies?",
+    "answer": "Absolutely. The system is highly customizable, allowing you to configure different types of leave according to your company's policies, whether it's annual, sick, maternity, or any other specialized leave types."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    "question": "Is it possible to generate reports on leave data for analysis?",
+    "answer": "Yes, our system provides advanced reporting features that allow you to generate detailed reports on leave usage, trends, and employee absence patterns. This can help in strategic planning and decision-making."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    "question": "Does the system provide tools to help manage compliance with labor laws?",
+    "answer": "Yes, our leave management system includes compliance management tools that help ensure your leave policies adhere to relevant labor laws and company regulations, reducing the risk of non-compliance."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    "question": "How does the system integrate with existing HR and payroll systems?",
+    "answer": "Our leave management system is designed to integrate smoothly with your existing HR and payroll systems. This integration ensures data consistency, avoids duplication, and maintains the integrity and confidentiality of employee data."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    "question": "Are there any mobile capabilities for managing leave requests and approvals?",
+    "answer": "Yes, our system is mobile-friendly, giving employees the ability to submit leave requests from anywhere, at any time. Similarly, managers can approve or decline requests on-the-go, which ensures quick response times and a better overall experience."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    "question": "Can the leave management system help with planning and forecasting staffing needs?",
+    "answer": "Definitely. With our advanced leave planning tools and analytics dashboards, you can visualize leave trends and forecast future needs to manage staffing levels proactively, ensuring your operations run smoothly even during peak leave periods."
   }
 ];
 

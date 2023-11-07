@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Appraisals",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Appraisals: Performance Review Tool",
+    "subtext": "Harness a focused suite of performance evaluation tools designed for comprehensive employee development and organizational growth.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Empower Your Workforce",
+    "offering": {
+      "title": "Elevate Performance with Targeted Reviews",
+      "subtext": "Utilize a structured platform for constructive feedback, employee growth, and strategic workforce development."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Appraisal Analytics",
+        "title": "Make Informed Decisions",
+        "description": "Leverage data-driven insights to conduct thorough employee reviews, identify areas for improvement, and make informed personnel decisions."
+      },
+      {
+        "heading": "Real-time Feedback",
+        "title": "Encourage Ongoing Development",
+        "description": "Implement continuous feedback loops to keep your team engaged, informed, and constantly developing their skills."
+      },
+      {
+        "heading": "Goal Alignment",
+        "title": "Align Individual Goals with Company Vision",
+        "description": "Ensure employees' personal career objectives are in harmony with your organization's strategic goals, fostering a cohesive and motivated workforce."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Appraisal Management System",
+        "title": "Streamline Your Performance Review Process",
+        "description": "Our system simplifies performance evaluations, offering tools for feedback collection, progress tracking, and actionable insights.",
+        "bulletPoints": [
+          "Automate review cycles and feedback collection",
+          "Track employee progress and development",
+          "Gain actionable insights for workforce planning"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,124 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "360-Degree Feedback",
+        "title": "Cultivate a Holistic Review Environment",
+        "description": "Collect comprehensive feedback from peers, subordinates, and managers to provide employees with well-rounded performance insights.",
+        "bulletPoints": [
+          "Gather multiple perspectives for balanced reviews",
+          "Foster a culture of transparency and trust",
+          "Identify hidden strengths and areas for development"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Development Planning",
+        "title": "Facilitate Targeted Employee Growth",
+        "description": "Our tools help you create personalized development plans that align with career aspirations and business needs, ensuring mutual advancement.",
+        "bulletPoints": [
+          "Customize development plans to drive performance",
+          "Connect employee aspirations with business objectives",
+          "Monitor and adjust plans for continuous improvement"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Performance Review Features",
+    "featureTitle": "Build a Foundation for Success",
+    "featureAssurance": "Our Performance Review Tool is engineered to support and streamline your appraisal process, fostering a culture of achievement and excellence."
   }
 ];
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Custom Review Cycles",
+    "description": "Create flexible and adaptive review cycles to accommodate the unique rhythm and flow of your business operations.",
+    "icon": "fluent:calendar-ltr-20-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Peer Recognition Platform",
+    "description": "Encourage a culture of recognition with a platform that allows peers to commend each other's achievements and milestones.",
+    "icon": "fluent:people-team-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Competency Tracking",
+    "description": "Track and analyze individual competencies to identify skill gaps and focus areas for professional development and training.",
+    "icon": "fluent:clipboard-task-list-ltr-20-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Anonymous Feedback",
+    "description": "Collect anonymous feedback to ensure honest and constructive communication, enabling a transparent appraisal environment.",
+    "icon": "fluent:chat-multiple-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "Progress Reporting",
+    "description": "Access detailed progress reports that provide insights into employee growth, highlighting achievements and areas for future development.",
+    "icon": "fluent:clipboard-data-bar-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Rewards and Compensation Alignment",
+    "description": "Align performance outcomes with compensation and rewards, reinforcing positive behavior and outstanding achievements.",
+    "icon": "fluent:money-24-regular",
   }
 ];
 
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    "question": "How does the Appraisal Management System enhance the performance review process?",
+    "answer": "Our Appraisal Management System streamlines the review process through automated review cycles, efficient feedback collection, and by providing actionable insights that aid in effective workforce planning. This allows for more timely, objective, and comprehensive evaluations."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    "question": "What is 360-Degree Feedback and how can it benefit our organization?",
+    "answer": "360-Degree Feedback is a review system that gathers feedback from a staff member's managers, peers, and subordinates, as well as self-evaluation. This holistic approach promotes transparency, uncovers a more balanced view of performance, and identifies areas for development that might be missed in traditional appraisals."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    "question": "Can we customize development plans using your performance review tool?",
+    "answer": "Absolutely. Our tool allows for the creation of personalized development plans that can be aligned with both individual career goals and the broader objectives of your organization, enabling tailored pathways for employee growth and advancement."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    "question": "How does Custom Review Cycles feature cater to different business operations?",
+    "answer": "Custom Review Cycles give you the ability to tailor the timing and structure of your appraisal processes to fit the unique schedules and workflow of your business, offering flexibility to conduct reviews in a manner that best suits your operational needs."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    "question": "What is the purpose of the Peer Recognition Platform?",
+    "answer": "The Peer Recognition Platform is designed to build a positive work environment by allowing employees to acknowledge their colleagues' work, efforts, and achievements. This fosters a culture of appreciation and can boost morale and productivity."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    "question": "How does the Anonymous Feedback feature work and why is it important?",
+    "answer": "Our Anonymous Feedback feature allows employees to share their thoughts and suggestions without disclosing their identity. This encourages candid and constructive feedback, which can lead to more honest communication and actionable insights for improvement."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    "question": "What is the role of Competency Tracking in employee appraisals?",
+    "answer": "Competency Tracking helps in identifying and analyzing the strengths and weaknesses of employees in specific skill areas. This aids in focusing development efforts, designing targeted training programs, and ultimately closing the skill gaps within the team."
+  },
+  {
+    "question": "How does Rewards and Compensation Alignment influence employee performance?",
+    "answer": "By linking performance outcomes with appropriate rewards and compensation, employees are motivated to excel in their roles. This feature supports the objective of reinforcing exceptional work and aligning individual achievements with company-wide success."
   }
 ];
+
 
 
 
