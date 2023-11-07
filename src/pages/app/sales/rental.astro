@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Rental",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Rental Software Solutions",
+    "subtext": "Your one-stop platform for a complete rental process — from scheduling to invoicing, all consolidated in one intuitive interface.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Seamless Rental Management",
+    "offering": {
+      "title": "Streamline Your Rental Operations",
+      "subtext": "Leverage our platform to manage your rental quotations, orders, scheduling, delivery, and invoicing — all from a single, unified view."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Rental Scheduling",
+        "title": "Optimize Asset Allocation",
+        "description": "Enhance efficiency with our Gantt view scheduling, ensuring optimal utilization of your inventory and assets."
+      },
+      {
+        "heading": "Rental Quotations",
+        "title": "Generate Professional Quotations",
+        "description": "Create transparent and tailored rental agreements, maximizing your revenue opportunities with configurable products and optional add-ons."
+      },
+      {
+        "heading": "Rental Insights",
+        "title": "Gain a Real-time Overview",
+        "description": "Stay informed with a comprehensive dashboard, providing a real-time overview of rental statuses, maintenance windows, and inventory availability."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Unified Rental Platform",
+        "title": "Intuitive Rental Lifecycle Management",
+        "description": "Our all-in-one platform ensures a smooth workflow from the first customer interaction to the final invoice, integrating all steps in the rental cycle.",
+        "bulletPoints": [
+          "All-inclusive rental order management",
+          "Automated scheduling and invoicing",
+          "Maintenance and quality checks with padding time"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,120 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
-        ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
+        ]
+      },
+      {
+  "heading": "Advanced Analytics Suite",
+  "title": "Strategic Insights for Proactive Management",
+  "description": "Harness the power of data with our analytics suite, designed to give you a 360-degree view of your rental operations, enabling informed decision-making and strategic planning.",
   "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
+    "Real-time revenue and utilization tracking",
+    "Predictive maintenance and demand forecasting",
+    "Customizable reports for performance optimization"
   ],
   "buttons": [
     {
       "text": "Get Started",
-      "link": "/contact"
+      "link": "/analytics"
     },
     {
       "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
+      "link": "/pricing-analytics"
     }
   ]
 },
 {
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
+  "heading": "Smart Automation",
+  "title": "Streamline Your Rental Operations with AI",
+  "description": "Leverage advanced AI-driven workflow automation to enhance efficiency and accuracy across your rental management processes.",
   "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
+    "AI-powered scheduling optimizes asset utilization",
+    "Automated maintenance triggers and inventory management",
+    "Intelligent insights for improving rental lifecycle"
   ],
   "buttons": [
     {
-      "text": "Get Started",
-      "link": "/contact"
+      "text": "Embrace Automation",
+      "link": "/contact-automation"
     },
     {
-      "text": "View Pricing",
-      "link": "/pricing"
+      "text": "Discover AI Benefits",
+      "link": "/ai-rental"
     }
   ]
-},  
+}
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Your Rental, Your Rules",
+    "featureTitle": "Empower Your Rental Business",
+    "featureAssurance": "Our software is designed to adapt to your unique rental needs, supporting your business growth at every step."
   }
 ];
 
+
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
+    "title": "Round-the-Clock Rental Service",
+    "description": "Offer unparalleled convenience with 24/7 rental services. Enable customers to place orders, schedule deliveries, and process payments at any time, from anywhere.",
     "icon": "fluent:clock-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
+    "title": "Intuitive Booking Experience",
+    "description": "Provide a frictionless booking interface that simplifies the rental process, ensuring a pleasant user experience from start to finish.",
     "icon": "fluent:person-arrow-right-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
+    "title": "Seamless Operational Sync",
+    "description": "Achieve a symphony of efficiency with seamless integration of inventory, scheduling, and customer management systems, ensuring smooth operations.",
     "icon": "fluent:plug-connected-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
+    "title": "Predictive Rental Analytics",
+    "description": "Anticipate customer needs and market trends with predictive analytics, enabling proactive asset management and strategic business growth.",
     "icon": "fluent:cellular-data-1-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
+    "title": "Uniform Rental Standards",
+    "description": "Guarantee consistent quality and service standards across all customer interactions, building trust and reliability in your rental brand.",
     "icon": "fluent:heart-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
+    "title": "Comprehensive Rental Ecosystem",
+    "description": "Deliver a full-service rental experience with a robust ecosystem that covers every aspect of the rental journey, enhancing customer satisfaction and loyalty.",
     "icon": "fluent:arrow-repeat-all-24-regular",
   }
 ];
 
-
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    question: "How does the Gantt view scheduling enhance rental operations?",
+    answer: "Our Gantt view scheduling provides a visual timeline for all your assets and inventory, allowing for efficient allocation and minimizing idle time. It's designed to give you a clear overview of your bookings, so you can optimize your operations and improve overall efficiency."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    question: "Can I create custom rental agreements with your platform?",
+    answer: "Absolutely! Our software enables you to generate professional, transparent rental agreements that are customizable to suit the unique needs of your business, complete with configurable products and optional add-ons to maximize revenue opportunities."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    question: "What kind of insights can I expect from the rental dashboard?",
+    answer: "Our comprehensive dashboard offers a real-time overview of your rental operations, including current rental statuses, upcoming maintenance windows, and inventory levels, helping you make informed decisions and stay proactive."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    question: "How does the predictive maintenance feature work?",
+    answer: "Using data analytics, our software predicts maintenance needs before they become critical. It allows for the scheduling of preventive maintenance, ensuring your assets are always in top condition and reducing unexpected downtime."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    question: "What are the benefits of AI-powered scheduling?",
+    answer: "AI-powered scheduling optimizes asset utilization by predicting the best allocation strategies based on rental patterns, ensuring that you get the most out of your inventory while reducing overhead costs."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    question: "Is there support available for setting up and using the rental software?",
+    answer: "Definitely. We offer round-the-clock support to help you set up and make the best use of our rental software. Our team is available to assist you with any queries or issues you may encounter, ensuring a seamless experience."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    question: "How can the all-in-one rental ecosystem benefit my business?",
+    answer: "Our all-in-one rental ecosystem streamlines every touchpoint of the rental process, from browsing products to post-sale support. This ensures a seamless experience for your customers and helps maintain a consistent service standard that fosters customer loyalty and trust."
   }
 ];
+
 
 
 
