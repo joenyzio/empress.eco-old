@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Blogs",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Share Engaging Blog Content",
+    "subtext": "Harness the power of compelling content to captivate your audience and keep them returning for more.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Empress for Blogging",
+    "offering": {
+      "title": "Engage and Grow Your Audience",
+      "subtext": "Create an impactful blog that drives traffic, fosters engagement, and builds a community around your brand."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Blog Strategy",
+        "title": "Craft Your Content",
+        "description": "Strategically develop blog content that resonates with your audience and elevates your brand's voice."
+      },
+      {
+        "heading": "Blog Engagement",
+        "title": "Connect with Readers",
+        "description": "Engage your readers with interactive content, encouraging comments, shares, and fostering a loyal readership."
+      },
+      {
+        "heading": "Blog Analytics",
+        "title": "Measure Your Impact",
+        "description": "Use data-driven insights to track your blog's performance, understand your audience, and refine your content strategy."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Content Management for Blogs",
+        "title": "Simplify Your Blog Operations",
+        "description": "From drafting to publication, streamline your blogging process with our user-friendly content management system.",
+        "bulletPoints": [
+          "Easily organize and schedule posts",
+          "Integrate multimedia for dynamic content",
+          "Optimize your blog for search engines"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,124 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Community Building for Blogs",
+        "title": "Cultivate Your Online Community",
+        "description": "Build a thriving online community around your blog, turning casual readers into brand ambassadors.",
+        "bulletPoints": [
+          "Facilitate discussions and community engagement",
+          "Connect with your audience through comments and forums",
+          "Nurture relationships with regular, relevant content"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Insights for Blogs",
+        "title": "Optimize Your Blog with Analytics",
+        "description": "Leverage analytics to gain a deep understanding of your audience and tailor your content to meet their needs.",
+        "bulletPoints": [
+          "Analyze reader engagement and content performance",
+          "Adjust your content strategy based on real-time feedback",
+          "Identify trends to keep your content fresh and relevant"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Features for Engaging Blogs",
+    "featureTitle": "Empower Your Blogging Journey",
+    "featureAssurance": "Our comprehensive blogging tools are designed to help you publish impactful content and build a loyal audience."
   }
 ];
+
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Intuitive Content Scheduler",
+    "description": "Plan and schedule your content effectively with our advanced scheduling tools to ensure consistent engagement without manual oversight.",
+    "icon": "fluent:calendar-ltr-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Multimedia Libraries",
+    "description": "Access a vast library of high-quality, royalty-free images and videos to enhance your blog posts and captivate your audience.",
+    "icon": "fluent:image-shadow-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Responsive Design Templates",
+    "description": "Create visually appealing blogs with our mobile-responsive templates that ensure a seamless reading experience on any device.",
+    "icon": "fluent:table-stack-below-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Content Collaboration",
+    "description": "Collaborate with your team in real-time, with multiple users able to draft, edit, and publish content efficiently.",
+    "icon": "fluent:people-team-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "User Engagement Analytics",
+    "description": "Track how your audience interacts with your content through advanced analytics to better tailor your content strategy.",
+    "icon": "fluent:data-usage-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Content Archiving",
+    "description": "Keep your blog organized and manageable with easy-to-use archiving features that help you maintain a clutter-free content space.",
+    "icon": "fluent:archive-24-regular",
   }
 ];
-
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    question: "How do I get started with creating a blog on your platform?",
+    answer: "Getting started is simple. Click on the 'Get Started' button, fill out your contact information, and one of our team members will guide you through the setup process. We'll assist you in choosing a design template, setting up your content management system, and introducing you to our suite of tools to maximize your blog's potential."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    question: "Can I schedule my blog posts in advance?",
+    answer: "Yes, our Intuitive Content Scheduler allows you to plan and schedule your posts in advance. This ensures that you maintain a regular posting schedule, which is key to building and retaining your audience."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    question: "Do you offer any resources for creating more engaging content?",
+    answer: "Absolutely! We provide access to multimedia libraries filled with high-quality, royalty-free images and videos. Plus, we offer responsive design templates and collaboration tools to make your content more engaging and to ease the content creation process."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    question: "Is there a way to track reader engagement on my blog?",
+    answer: "Definitely. With our User Engagement Analytics, you can track your audience's interactions, see which posts are performing best, and understand your readers' preferences. This data is invaluable for refining your content strategy and enhancing engagement."
+  },
+{
+    question: "How can I make sure my blog looks good on mobile devices?",
+    answer: "Our Responsive Design Templates are crafted to provide an optimal viewing experience across all devices, including mobiles. They automatically adjust the layout of your blog to fit the screen size of your readers' devices."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    question: "What if I need help managing the content that I've already published?",
+    answer: "Our Content Archiving feature allows you to easily organize your published content. You can archive old posts, categorize your content, and keep your blog space tidy and reader-friendly."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    question: "Can multiple people work on the blog at the same time?",
+    answer: "Yes, with our Content Collaboration tools, your team can work together in real-time. You can have multiple contributors draft, edit, and publish content, making it a seamless process to manage large volumes of blog posts."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    question: "How can I build a community with my blog?",
+    answer: "Our Community Building features facilitate discussions, enable easy connection with your audience through comments and forums, and help you nurture these relationships. Regular, relevant content is key, and we provide the tools to keep your community engaged and growing."
   }
 ];
+
 
 
 
