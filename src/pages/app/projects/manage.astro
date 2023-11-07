@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Manage",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Task Management",
+    "subtext": "Streamline your project management with our organizational tools designed to bring efficiency and order to your tasks.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Master Task Organization",
+    "offering": {
+      "title": "Effortless Organization, Exceptional Results",
+      "subtext": "Perfect the art of task organization to ensure that every project component is executed with precision."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Task-Centric OS",
+        "title": "Systemize Your Workflow",
+        "description": "Utilize our Operating System to bring a structured approach to your project tasks, boosting productivity and ensuring no detail is overlooked."
+      },
+      {
+        "heading": "Collaborative Task Management",
+        "title": "Collaborate and Deliver",
+        "description": "Encourage teamwork with a shared space for task management, where everyone knows their responsibilities and deadlines."
+      },
+      {
+        "heading": "Insightful Task Analytics",
+        "title": "Track and Improve",
+        "description": "Leverage analytical insights from task progression to enhance future planning and drive continuous improvement in your processes."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Organized Task Interface",
+        "title": "Navigate Tasks with Ease",
+        "description": "Manage your project tasks with an intuitive interface that organizes each component for easy access and tracking.",
+        "bulletPoints": [
+          "Intuitive task categorization for streamlined operations",
+          "Visual progress tracking to keep everyone aligned",
+          "Automated alerts to keep tasks on track"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,124 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Task Communication Platform",
+        "title": "Optimize Team Interaction",
+        "description": "Facilitate clear and direct communication paths within your team, centered around task updates and completions.",
+        "bulletPoints": [
+          "Instantly update teams on task changes",
+          "Easily share task-related files and instructions",
+          "Foster a collaborative environment with task-focused discussions"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Analytical Task Oversight",
+        "title": "Informed Task Management",
+        "description": "Access comprehensive task analytics to gain insights on efficiency and team performance, informing your strategy and task distribution.",
+        "bulletPoints": [
+          "Evaluate task completion rates to assess team efficiency",
+          "Analyze task duration and outcomes for process optimization",
+          "Utilize predictive analytics for better task forecasting"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Advanced Task Management",
+    "featureTitle": "Elevate Your Project Success",
+    "featureAssurance": "Trust in our advanced task management system to empower your projects with unparalleled organization and clarity."
   }
 ];
+
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Task Prioritization",
+    "description": "Easily prioritize tasks based on deadlines, team availability, and project urgency to ensure a smooth workflow.",
+    "icon": "fluent:arrow-sort-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Integrated Time Tracking",
+    "description": "Track the time spent on individual tasks with integrated timers to help with productivity analysis and accurate billing.",
+    "icon": "fluent:timer-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Customizable Task Boards",
+    "description": "Create custom boards for different projects or teams, with the ability to tailor features and workflows to suit specific task requirements.",
+    "icon": "fluent:board-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Task Delegation System",
+    "description": "Easily delegate tasks to team members with clear instructions and defined outcomes, improving accountability and efficiency.",
+    "icon": "fluent:people-team-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "Recurring Task Automation",
+    "description": "Set up recurring tasks that automatically reset upon completion, ensuring routine critical tasks are never overlooked.",
+    "icon": "fluent:bot-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Task Dependency Mapping",
+    "description": "Visualize and manage task dependencies to ensure projects proceed in logical progression and resources are allocated effectively.",
+    "icon": "fluent:branch-fork-link-24-regular",
   }
 ];
-
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    "question": "How can I get started with organizing my project tasks?",
+    "answer": "Getting started is simple. Click on the 'Get Started' button on our website to sign up. You’ll be guided through the setup process, where you can immediately begin organizing your tasks using our Task-Centric OS and Collaborative Task Management features."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    "question": "What makes your Task Management system different from others?",
+    "answer": "Our system is built with a focus on ease of use, collaborative features, and insightful analytics. The intuitive design of our Organized Task Interface and the depth of our Analytical Task Oversight set us apart, providing not just tools for management but also for continuous improvement and strategic planning."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    "question": "Can I prioritize tasks within the system?",
+    "answer": "Yes, with our Task Prioritization feature, you can arrange your tasks based on various criteria such as deadlines, importance, or resources available. This helps keep your workflow efficient and your projects moving forward effectively."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    "question": "Is there a way to track the time spent on tasks?",
+    "answer": "Absolutely. Our Integrated Time Tracking feature allows you and your team to record the time spent on each task. This is ideal for productivity analysis, ensuring accountability, and if needed, accurate client billing."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    "question": "How does the Task Delegation System work?",
+    "answer": "Our Task Delegation System lets you assign tasks to team members directly within the platform. You can add specific instructions, set deadlines, and track progress, making it easy to manage team workload and enhance accountability."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    "question": "Does your platform support recurring tasks?",
+    "answer": "Yes, it does. With Recurring Task Automation, you can create tasks that will automatically reset after completion, which is perfect for routine activities that need to occur on a regular schedule, ensuring they’re never missed."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    "question": "How does Task Dependency Mapping help in project management?",
+    "answer": "Task Dependency Mapping allows you to see and manage the relationships between different tasks. By understanding how tasks are interconnected, you can plan more effectively, avoid bottlenecks, and ensure resources are allocated where they’re needed most."
+  },
+  {
+    "question": "Can I customize the task boards to fit my project needs?",
+    "answer": "Yes, our Customizable Task Boards can be tailored to fit the unique requirements of your projects or teams. You can create and customize boards, add columns for different task stages, and set up individual workflows to match your project management style."
   }
 ];
+
 
 
 
