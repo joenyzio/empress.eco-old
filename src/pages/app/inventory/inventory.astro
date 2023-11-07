@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Inventory",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Inventory: Stock Tracking System",
+    "subtext": "Streamline your inventory management with precision tracking and real-time insights to ensure cost-efficiency and optimal stock levels.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Precision Inventory Management",
+    "offering": {
+      "title": "Optimize Stock Levels and Reduce Waste",
+      "subtext": "Utilize a robust stock tracking system to maintain the perfect balance between supply and demand."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Real-Time Inventory Tracking",
+        "title": "Gain Visibility into Your Stock",
+        "description": "Monitor your inventory levels in real-time to make informed decisions and prevent stockouts or excess."
+      },
+      {
+        "heading": "Automated Restocking",
+        "title": "Automate Your Ordering Process",
+        "description": "Set custom thresholds to automatically reorder products and manage supplier relationships with ease."
+      },
+      {
+        "heading": "Inventory Analytics",
+        "title": "Make Data-Driven Inventory Decisions",
+        "description": "Analyze patterns and sales data to forecast demand and adjust inventory levels accordingly."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Comprehensive Inventory OS",
+        "title": "Centralize Your Inventory Management",
+        "description": "Keep all your inventory data in one place with features that support tracking, analysis, and reporting for better decision-making.",
+        "bulletPoints": [
+          "Unified view of inventory across all channels",
+          "Detailed reporting for inventory tracking",
+          "Integration with existing business systems"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,126 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Supplier Interaction Tools",
+        "title": "Streamline Your Supplier Communications",
+        "description": "Improve your procurement process with tools designed to facilitate communication and manage supplier interactions efficiently.",
+        "bulletPoints": [
+          "Easy-to-use communication platform for quick orders",
+          "Track supplier performance and manage contracts",
+          "Negotiate better terms with integrated supplier history"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Inventory Forecasting",
+        "title": "Predict and Prepare with Smart Forecasting",
+        "description": "Use historical data and predictive analytics to forecast future inventory needs and avoid costly overstock or stockouts.",
+        "bulletPoints": [
+          "Demand forecasting for effective stock management",
+          "Alerts for low stock and seasonal peaks",
+          "Insights into product performance and lifecycle"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Inventory System Features",
+    "featureTitle": "Empower Your Inventory Management",
+    "featureAssurance": "Our stock tracking system is tailored to support your growth, adapting to your changing inventory needs while providing detailed insights for strategic planning."
   }
 ];
+
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Intuitive Dashboard",
+    "description": "Access a user-friendly dashboard that provides a snapshot of your inventory health, with quick links to key tasks and real-time stock levels.",
+    "icon": "fluent:document-landscape-data-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Barcode Scanning",
+    "description": "Effortlessly add and manage stock with integrated barcode scanning, reducing errors and saving time in inventory processing.",
+    "icon": "fluent:barcode-scanner-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Multi-location Management",
+    "description": "Oversee inventory across multiple locations from a single platform, ensuring consistent stock levels and streamlined distribution.",
+    "icon": "fluent:location-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Stock Alerts",
+    "description": "Receive notifications when stock reaches critical levels, allowing for proactive reordering and inventory review.",
+    "icon": "fluent:alert-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "Product Categorization",
+    "description": "Organize your inventory with custom categories, making it easier to manage and analyze product ranges.",
+    "icon": "fluent:production-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Mobile Inventory Access",
+    "description": "Manage and monitor your inventory on the go with a mobile-friendly interface, ensuring you're always connected to your stock.",
+    "icon": "fluent:phone-mobile-24-regular",
   }
 ];
+
 
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    question: "How can the Real-Time Inventory Tracking system prevent stockouts?",
+    answer: "Our Real-Time Inventory Tracking feature provides immediate updates on your stock levels, enabling you to make quick decisions to reorder or reallocate inventory before a stockout occurs."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    question: "Is the Automated Restocking customizable for different products?",
+    answer: "Absolutely! You can set custom thresholds for each product based on your sales velocity, seasonality, and supplier lead times to ensure automated restocking meets your unique business needs."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    question: "What kind of analytics can I expect from the Inventory Analytics tool?",
+    answer: "Our Inventory Analytics tool offers a range of metrics including sales trends, stock levels, and turnover rates. It provides predictive insights to help you anticipate demand and adjust your inventory management strategies."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    question: "Can the Comprehensive Inventory OS integrate with other business systems?",
+    answer: "Yes, our Inventory OS is designed to seamlessly integrate with various business systems including ERP, accounting software, and e-commerce platforms for a unified business management experience."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    question: "How does the Supplier Interaction Tools improve procurement processes?",
+    answer: "Our Supplier Interaction Tools streamline communication with suppliers, provide performance tracking, and allow you to manage contracts all in one place, thus improving order accuracy and negotiation outcomes."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    question: "Can Inventory Forecasting adjust to sudden market changes?",
+    answer: "Our forecasting algorithms take into account historical data, market trends, and seasonality, offering flexibility to adjust forecasts in response to sudden market changes or unexpected demand."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    question: "Is there support available for setting up and using the Mobile Inventory Access feature?",
+    answer: "Certainly! We offer comprehensive support to help you set up and make the most of our mobile inventory features, ensuring you have access to your stock information whenever you need it, wherever you are."
+  },
+  {
+    question: "How secure is the data within the Inventory: Stock Tracking System?",
+    answer: "We prioritize data security with robust encryption and compliance with industry-leading standards to protect your inventory information from unauthorized access."
   }
 ];
+
 
 
 
