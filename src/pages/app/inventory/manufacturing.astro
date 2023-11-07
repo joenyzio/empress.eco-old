@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Manufacturing",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Manufacturing: Product Planning Control",
+    "subtext": "Harness a specialized suite of tools designed for maximizing manufacturing efficiency and product lifecycle management.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Empower Manufacturing Precision",
+    "offering": {
+      "title": "Optimize Your Production Cycle and Resource Utilization",
+      "subtext": "Coordinate, control, and streamline all aspects of your manufacturing process for lean production and reduced time-to-market."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Precision Planning OS",
+        "title": "Command Your Manufacturing Operations",
+        "description": "Centralize production planning, manage resources effectively, and optimize manufacturing workflows for peak performance."
+      },
+      {
+        "heading": "Real-Time Production Chat",
+        "title": "Communicate Instantly on the Shop Floor",
+        "description": "Facilitate immediate communication between teams, ensuring swift resolution of manufacturing issues and continuity of production."
+      },
+      {
+        "heading": "Manufacturing Insights",
+        "title": "Enhance Your Strategic Decision-Making",
+        "description": "Convert production data into insightful analytics to drive decision-making, reduce waste, and predict maintenance needs."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "OS for Manufacturing",
+        "title": "Transform Your Production Efficiency",
+        "description": "Leverage a robust OS tailored to unify product planning, automate processes, and harmonize manufacturing cycles.",
+        "bulletPoints": [
+          "Centralized control over product lifecycle",
+          "Automated scheduling for optimized workflow",
+          "Integrated systems for streamlined operations"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,122 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Chat for Manufacturing",
+        "title": "Optimize Shop Floor Interactions",
+        "description": "Deploy an on-the-floor chat solution to quickly address production questions, accelerate troubleshooting, and ensure uninterrupted operations.",
+        "bulletPoints": [
+          "Instant communication for faster issue resolution",
+          "Seamless integration with production systems",
+          "Real-time feedback to enhance process controls"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Insights for Manufacturing",
+        "title": "Master Your Production Data",
+        "description": "Utilize advanced analytics to gain clarity on your production processes, identify bottlenecks, and predict future production needs.",
+        "bulletPoints": [
+          "Detailed analytics for process optimization",
+          "Predictive maintenance for reduced downtime",
+          "Real-time tracking of KPIs and production trends"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Product Planning Control Features",
+    "featureTitle": "Enhance Your Manufacturing Workflow",
+    "featureAssurance": "Our integrated tools are engineered to drive the success of your manufacturing operations, supporting your growth at every step."
   }
 ];
+
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Advanced Resource Allocation",
+    "description": "Utilize intelligent algorithms to assign resources optimally, reducing waste and increasing production efficiency.",
+    "icon": "fluent:people-team-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Quality Control Automation",
+    "description": "Automate quality checks throughout the manufacturing process to ensure product consistency and reduce errors.",
+    "icon": "fluent:checkmark-circle-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Custom Production Reporting",
+    "description": "Create customizable reports that provide insights into production metrics, helping you make informed decisions quickly.",
+    "icon": "fluent:clipboard-task-list-ltr-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Maintenance Scheduling",
+    "description": "Schedule regular maintenance effortlessly with predictive algorithms to minimize downtime and extend equipment life.",
+    "icon": "fluent:toolbox-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "Energy Consumption Analysis",
+    "description": "Monitor and analyze energy usage to identify savings opportunities and reduce the carbon footprint of your production.",
+    "icon": "fluent:leaf-three-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Supplier Integration Platform",
+    "description": "Integrate supplier data seamlessly into your production planning for synchronized supply chain management.",
+    "icon": "fluent:link-edit-24-regular",
   }
 ];
+
 
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    question: "How can Precision Planning enhance my current manufacturing operations?",
+    answer: "Precision Planning centralizes your production planning, allowing for effective management of resources and optimized workflows. It leads to peak performance by reducing bottlenecks and enhancing your ability to respond to changes in production demands quickly."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    question: "What communication benefits does Real-Time Production Chat offer on the shop floor?",
+    answer: "Our Real-Time Production Chat facilitates immediate communication between teams on the shop floor, ensuring that manufacturing issues are resolved swiftly and that production continues without interruption, significantly reducing downtime."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    question: "In what ways can Manufacturing Insights improve my strategic decision-making?",
+    answer: "Manufacturing Insights turns your production data into actionable analytics, which aids in driving strategic decisions. This enables you to reduce waste, streamline production processes, and proactively manage maintenance, resulting in a leaner and more cost-effective operation."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    question: "What kind of reports can I generate with Custom Production Reporting?",
+    answer: "Custom Production Reporting allows you to generate detailed reports on various production metrics such as efficiency, output quality, and resource utilization. These reports are customizable, ensuring you get the precise information needed to make quick and informed decisions."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    question: "How does Maintenance Scheduling work to reduce equipment downtime?",
+    answer: "Our Maintenance Scheduling feature uses predictive algorithms to anticipate potential equipment failures before they occur, allowing you to schedule maintenance proactively. This not only minimizes downtime but also extends the life of your machinery."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    question: "Can Energy Consumption Analysis really help my manufacturing process become more sustainable?",
+    answer: "Absolutely. By monitoring and analyzing energy consumption, you can identify inefficiencies and opportunities for energy savings. This not only helps in reducing operational costs but also assists in lowering the environmental impact of your manufacturing processes."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    question: "How does the Supplier Integration Platform aid in supply chain management?",
+    answer: "The Supplier Integration Platform allows for real-time data exchange with your suppliers, ensuring that your production planning is fully synchronized with your supply chain. This integration enables better inventory management, reduces shortages or overstock situations, and ensures a smoother manufacturing operation."
   }
 ];
+
 
 
 

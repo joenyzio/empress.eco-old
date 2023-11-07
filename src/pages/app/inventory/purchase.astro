@@ -36,10 +36,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
 const data = [
-{
-    "mainHeading": "Purchase",
-    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
+  {
+    "mainHeading": "Purchase: Procurement Management System",
+    "subtext": "Unlock procurement efficiency and supply chain excellence with our advanced procurement management tools.",
     "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Elevate Your Procurement Process",
+    "offering": {
+      "title": "Streamline Procurement and Maximize Cost Savings",
+      "subtext": "Harness the power of automation and data analytics to refine your purchasing strategy and vendor management."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Purchase Intelligence",
+        "title": "Enhance Your Buying Decisions",
+        "description": "Utilize data-driven insights to make informed procurement choices, reduce costs, and improve supply chain resilience."
+      },
+      {
+        "heading": "Vendor Management",
+        "title": "Cultivate Strong Supplier Relationships",
+        "description": "Manage all your vendor interactions in one place, ensuring compliance, performance tracking, and strategic partnerships."
+      },
+      {
+        "heading": "Purchase Automation",
+        "title": "Automate and Accelerate Procurement",
+        "description": "Leverage automation to streamline the purchasing process, from requisition to purchase order, invoicing, and payment."
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Procurement Dashboard",
+        "title": "Centralize Your Purchasing Operations",
+        "description": "Gain a holistic view of your procurement activities with a dashboard that simplifies management and enhances operational control.",
+        "bulletPoints": [
+          "Monitor key procurement metrics at a glance",
+          "Streamline purchase order and contract management",
+          "Track supplier performance and risk"
+        ],
+        "buttons": [
           {
             "text": "Get Started",
             "link": "/contact"
@@ -48,163 +90,124 @@ const data = [
             "text": "View Pricing",
             "link": "/pricing"
           }
+        ]
+      },
+      {
+        "heading": "Supplier Collaboration Platform",
+        "title": "Empower Suppliers with Collaborative Tools",
+        "description": "Improve communication and collaboration with suppliers through a dedicated platform to ensure product quality and on-time delivery.",
+        "bulletPoints": [
+          "Facilitate real-time communication and updates",
+          "Share documents and compliance requirements",
+          "Engage in collaborative planning and forecasting"
         ],
-    "sectionHeading": "Empress for E-Commerce",
-    "offering": {
-      "title": "Maximize Your Sales and Enhance Customer Experience",
-      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
-    },
-    "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Optimize Your Operations",
-    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Respond in Real Time",
-    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Elevate Conversion Rates",
-    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
-  }
-],
-
-    "featureBlocks": [
-    {
-  "heading": "OS for E-Commerce",
-  "title": "Revolutionize Your Online Retail Performance",
-  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
-  "bulletPoints": [
-"Consolidate product information for brand consistency",
-"Unify marketing, sales, and operations",
-"Enhance support and efficiency with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Chat for E-Commerce",
-  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
-  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
-  "bulletPoints": [
-  "Boost sales with immediate, personalized customer responses",
-"Improve user experience with guided product selection",
-"Gather feedback to consistently improve user interactions"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for E-Commerce",
-  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
-  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
-  "bulletPoints": [
-  "Use shopper data to boost sales strategies",
-"Spot bestsellers for smarter inventory control",
-"Forecast trends to fine-tune sales tactics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},  
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Cost Analysis Tools",
+        "title": "Optimize Spend with Intelligent Analysis",
+        "description": "Employ advanced analytics for a thorough cost analysis to identify savings opportunities and make strategic buying decisions.",
+        "bulletPoints": [
+          "Analyze spending patterns and categories",
+          "Negotiate better terms with spend visibility",
+          "Identify opportunities for bulk purchasing"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
-    "featureHeading": "Features for E-Commerce",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
+    "featureHeading": "Procurement Management Features",
+    "featureTitle": "Optimize Every Aspect of Your Procurement",
+    "featureAssurance": "Our comprehensive procurement system is designed to bring efficiency and strategic value to your purchasing activities."
   }
 ];
+
 
 const features = [
   {
-    "title": "Provide 24/7 Support",
-    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
-    "icon": "fluent:clock-24-regular",
+    "title": "Risk Management Module",
+    "description": "Identify, assess, and mitigate risks in your procurement process with our comprehensive risk management tools.",
+    "icon": "fluent:shield-error-24-regular",
   },
   {
-    "title": "Optimize User Journeys",
-    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
-    "icon": "fluent:person-arrow-right-24-regular",
+    "title": "Contract Lifecycle Management",
+    "description": "Manage contracts effortlessly from creation to renewal with automated workflows and alerts.",
+    "icon": "fluent:document-briefcase-24-regular",
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
-    "icon": "fluent:plug-connected-24-regular",
+    "title": "Procurement Reporting Suite",
+    "description": "Create detailed reports with custom dashboards to track procurement performance and drive strategic decision-making.",
+    "icon": "fluent:data-trending-24-regular",
   },
   {
-    "title": "Future-Proof Insights",
-    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
-    "icon": "fluent:cellular-data-1-24-regular",
+    "title": "Spend Analysis System",
+    "description": "Gain insights into your spending patterns with advanced analytics, helping you to optimize your procurement budget.",
+    "icon": "fluent:money-24-regular",
   },
   {
-    "title": "Consistent Experiences",
-    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
-    "icon": "fluent:heart-24-regular",
+    "title": "E-Procurement Integration",
+    "description": "Seamlessly integrate with e-procurement systems for electronic purchasing, invoicing, and payment processing.",
+    "icon": "fluent:link-square-24-regular",
   },
   {
-    "title": "All-In-One Ecosystem",
-    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
-    "icon": "fluent:arrow-repeat-all-24-regular",
+    "title": "Inventory Management Integration",
+    "description": "Sync with inventory systems to ensure procurement aligns with current stock levels and demand forecasting.",
+    "icon": "fluent:clipboard-pulse-24-regular",
   }
 ];
-
 
 const faq = [
   {
-    question: "How can Empress OS optimize my e-commerce operations?",
-    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+    question: "How does the Purchase Intelligence feature benefit my procurement strategy?",
+    answer: "Our Purchase Intelligence utilizes advanced data analytics to provide you with actionable insights, helping you make smarter procurement decisions, cut costs, and strengthen your supply chain against disruptions."
   },
   {
-    question: "What does Empress Chat offer for my e-commerce platform?",
-    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+    question: "Can I manage multiple vendors through your Vendor Management system?",
+    answer: "Absolutely, our Vendor Management system is designed to handle all your supplier interactions centrally. This includes compliance tracking, performance reviews, and fostering strategic supplier partnerships for long-term success."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+    question: "Is the procurement process fully automated with Purchase Automation?",
+    answer: "Yes, Purchase Automation streamlines the entire procurement process from requisition to purchase order, and right through to invoicing and payment, all to increase efficiency and reduce manual errors."
   },
   {
-    question: "How does Empress ensure 24/7 support for e-commerce customers?",
-    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+    question: "What type of metrics can I monitor on the Procurement Dashboard?",
+    answer: "The Procurement Dashboard gives you visibility over key metrics such as spend by supplier, purchase order cycle times, contract compliance rates, and supplier risk profiles, enabling comprehensive management of your procurement activities."
   },
   {
-    question: "In what way does Empress contribute to optimizing user journeys?",
-    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+    question: "How does the Supplier Collaboration Platform enhance supplier relationships?",
+    answer: "Our platform ensures clear and efficient communication with your suppliers, sharing vital documents and compliance requirements. It also enables collaborative planning and forecasting, which contributes to higher product quality and timely delivery."
   },
   {
-    question: "What seamless integrations does Empress offer for e-commerce?",
-    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+    question: "What kind of spend analysis can I perform with the Cost Analysis Tools?",
+    answer: "Our Cost Analysis Tools allow for in-depth examination of spending patterns, category analysis, and the identification of bulk purchasing opportunities. This helps in negotiating better terms with suppliers and discovering cost-saving opportunities."
   },
   {
-    question: "How does Empress help in future-proofing my e-commerce business?",
-    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+    question: "Can the system be integrated with existing e-procurement and inventory management systems?",
+    answer: "Definitely. Our E-Procurement Integration and Inventory Management Integration features are designed to seamlessly connect with your current systems for a synchronized and efficient procurement process."
+  },
+  {
+    question: "What measures are in place to manage risks within the procurement process?",
+    answer: "Our Risk Management Module is equipped to help you identify potential risks early, assess their possible impact, and implement strategies to mitigate them, ensuring a robust and secure procurement process."
   }
 ];
+
 
 
 
