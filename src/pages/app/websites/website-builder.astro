@@ -28,6 +28,7 @@ import AutomatedMarketing from "../../../assets/features/automated-marketing.svg
 import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
 
+const { nomargin } = Astro.props;
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -35,9 +36,49 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 });
 
 
+const templates = [
+  {
+    "title": "Business Site",
+    "description": "Establish Online Presence",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/business-site"
+  },
+  {
+    "title": "Portfolio Showcase",
+    "description": "Showcase Your Work",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/portfolio-showcase"
+  },
+  {
+    "title": "Job Board",
+    "description": "Connect with Talent",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/job-board"
+  },
+  {
+    "title": "Landing Page",
+    "description": "Campaign Landing Page",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/landing-page"
+  },
+  {
+    "title": "Company Blog",
+    "description": "Share Industry Insights",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/company-blog"
+  },
+  {
+    "title": "Event Site",
+    "description": "Streamline Event Management",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/event-site"
+  }
+];
+
+
 const data = [
   {
-    "mainHeading": "Design Your Personal Website",
+    "mainHeading": "Establish Your Online Presence",
     "subtext": "Leverage intuitive tools to craft and personalize your own website with ease and precision.",
     "headingButtons": [
       {
@@ -49,9 +90,9 @@ const data = [
         "link": "/pricing-website-builder"
       }
     ],
-    "sectionHeading": "Empress for Personal Websites",
+    "sectionHeading": "Empress for Business Websites",
     "offering": {
-      "title": "Create Your Digital Presence",
+      "title": "Create Your Website",
       "subtext": "Express your personal brand and connect with your audience through a bespoke website that’s all your own."
     },
     "valueBlocks": [
@@ -174,7 +215,6 @@ const features = [
 ];
 
 
-
 const faq = [
   {
     "question": "How easy is it to build a website with the Empress Site Creator?",
@@ -280,54 +320,40 @@ const featureBlocks = data[0].featureBlocks;
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-      <Card color="indigo" size="sm">
-        <Fragment slot="image">
-          <Picture
-            src={NetworkServerManagement}
-            alt="Feature image"
-            formats={["avif", "webp"]}
-            class="object-contain"
-            loading="lazy"
-          />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-        <span slot="title">{data[0].valueBlocks[0].title}</span>
-        <span slot="desc">{data[0].valueBlocks[0].description}</span>
-      </Card>
-      
-      <Card color="purple" size="sm">
-        <Fragment slot="image">
-          <Picture
-            src={AutomatedMarketing}
-            alt="Feature image"
-            formats={["avif", "webp"]}
-            class="object-contain"
-            loading="lazy"
-          />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-        <span slot="title">{data[0].valueBlocks[1].title}</span>
-        <span slot="desc">{data[0].valueBlocks[1].description}</span>
-      </Card>
-      
-      <Card size="sm">
-        <Fragment slot="image">
-          <!-- // svg image. cannot use <picture/> as of now -->
-          <Image
-            src={DashboardDevelopment}
-            alt="Feature image"
-            width="909"
-            height="823"
-            class="object-contain"
-            loading="lazy"
-          />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-        <span slot="title">{data[0].valueBlocks[2].title}</span>
-        <span slot="desc">{data[0].valueBlocks[2].description}</span>
-      </Card>
+    <div>
+      <div
+      class:list={[
+        "max-w-4xl mx-auto flex flex-col items-center justify-center",
+        !nomargin && "mt-0",
+      ]}>
+      <!-- <Badge color="purple">Templates</Badge> -->
+      <!-- <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        Choose from a Variety <span class="text-indigo-600">of Templates</span>
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
+      </p> -->
     </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        templates.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    </div>
+    
 
     <!-- Feature 1 -->
 

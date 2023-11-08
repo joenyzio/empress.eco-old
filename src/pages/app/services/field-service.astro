@@ -34,6 +34,48 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
+const { nomargin } = Astro.props;
+
+const templates = [
+  {
+    "title": "Service Appointment Scheduler",
+    "description": "Schedule On-site Appointments",
+    "icon": "fluent:calendar-checkmark-24-regular",
+    "link": "/templates/service-appointment-scheduler"
+  },
+  {
+    "title": "Service Technician Dispatch",
+    "description": "Assign Field Tasks Efficiently",
+    "icon": "fluent:settings-24-regular",
+    "link": "/templates/service-technician-dispatch"
+  },
+  {
+  "title": "Service Inventory Tracker",
+  "description": "Efficiently Manage Service Inventory",
+  "icon": "fluent:box-24-regular",
+  "link": "/templates/service-inventory-tracker"
+  },
+  {
+    "title": "Work Order Management",
+    "description": "Track Service Orders",
+    "icon": "fluent:box-24-regular",
+    "link": "/templates/work-order-management"
+  },
+  {
+    "title": "GPS Tracking",
+    "description": "Monitor Technician Locations",
+    "icon": "fluent:calendar-checkmark-24-regular",
+    "link": "/templates/gps-tracking"
+  },
+  {
+    "title": "Service Report Generator",
+    "description": "Create Service Reports",
+    "icon": "fluent:calendar-checkmark-24-regular",
+    "link": "/templates/service-report-generator"
+  }
+];
+
+
 
 const data = [
 {
@@ -284,7 +326,26 @@ const featureBlocks = data[0].featureBlocks;
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        templates.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
       <Card color="indigo" size="sm">
         <Fragment slot="image">
           <Picture
@@ -317,7 +378,6 @@ const featureBlocks = data[0].featureBlocks;
       
       <Card size="sm">
         <Fragment slot="image">
-          <!-- // svg image. cannot use <picture/> as of now -->
           <Image
             src={DashboardDevelopment}
             alt="Feature image"
@@ -331,7 +391,7 @@ const featureBlocks = data[0].featureBlocks;
         <span slot="title">{data[0].valueBlocks[2].title}</span>
         <span slot="desc">{data[0].valueBlocks[2].description}</span>
       </Card>
-    </div>
+    </div> -->
 
     <!-- Feature 1 -->
 
