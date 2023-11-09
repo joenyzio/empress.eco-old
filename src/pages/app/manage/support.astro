@@ -1,0 +1,619 @@
+---
+
+import { getCollection } from "astro:content";
+import Badge from "@components/ui/badge.astro";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+import Cta from "@components/cta.astro";
+import Card from "@components/card.astro";
+
+import { Icon } from "astro-icon";
+import ArrowIcon from "@components/ui/icons/arrow.astro"
+
+import Logos from "@components/logos.astro";
+import heroImage from "../../../assets/hero-screenshot.png";
+import IntegrationImg from "../../../assets/integrations.svg?url";
+import FeatureImgOne from "../../../assets/features/2.png";
+import FeatureImgTwo from "../../../assets/features/2.png";
+import FeatureImgThree from "../../../assets/features/3.png";
+import FeatureImg1 from "../../../assets/features/6.png";
+import FeatureImg2 from "../../../assets/features/2.png";
+import { Picture, Image } from "astro:assets";
+import EmployeeImg from "../../../assets/employee.jpg";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
+import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
+
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+const { nomargin } = Astro.props;
+
+const templates = [
+  {
+    "title": "User Access Control",
+    "description": "Manage user permissions",
+    "icon": "fluent:shield-keyhole-24-regular",
+    "link": "/templates/user-access-control"
+  },
+  {
+    "title": "Onboarding Checklist",
+    "description": "Guide users on setup",
+    "icon": "fluent:shield-keyhole-24-regular",
+    "link": "/templates/onboarding-checklist"
+  },
+  {
+    "title": "Knowledge Base",
+    "description": "Access support resources",
+    "icon": "fluent:library-24-regular",
+    "link": "/templates/knowledge-base"
+  },
+  {
+    "title": "Support Ticketing",
+    "description": "Manage support requests",
+    "icon": "fluent:shield-keyhole-24-regular",
+    "link": "/templates/support-ticketing"
+  },
+  {
+    "title": "Training Modules",
+    "description": "Provide user training",
+    "icon": "fluent:shield-keyhole-24-regular",
+    "link": "/templates/training-modules"
+  },
+  {
+    "title": "User Feedback",
+    "description": "Gather user insights",
+    "icon": "fluent:comment-checkmark-24-regular",
+    "link": "/templates/user-feedback"
+  }
+];
+
+
+const data = [
+{
+    "mainHeading": "Support",
+    "subtext": "Harness the power of informed decision-making for project approvals that propel your business forward.",
+    "headingButtons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+    ],
+    "sectionHeading": "Authority in Action",
+    "offering": {
+      "title": "Accelerate Decision-Making and Drive Project Success",
+      "subtext": "Leverage a streamlined approval process for swift and sound project decision-making."
+    },
+    "valueBlocks": [
+  {
+    "heading": "Approve OS",
+    "title": "Refine Your Approval Operations",
+    "description": "Simplify your decision-making process with a system designed for quick and effective project approvals, ensuring no momentum is lost."
+  },
+  {
+    "heading": "Approve Chat",
+    "title": "Communicate Decisions Instantly",
+    "description": "Facilitate rapid communication of approvals, engage stakeholders efficiently, and secure critical feedback for informed decision-making."
+  },
+  {
+    "heading": "Approve Insights",
+    "title": "Inform Your Approvals",
+    "description": "Convert project data into valuable insights to guide your approval strategy, ensuring each decision is backed by solid data."
+  }
+],
+
+    "featureBlocks": [
+    {
+  "heading": "OS for Approvals",
+  "title": "Master Your Approval Workflow",
+  "description": "Coordinate your project approvals with a central system that aligns all stakeholders for immediate action and operational excellence.",
+  "bulletPoints": [
+"Centralize decision-making for streamlined project flow",
+"Connect teams for unified project management",
+"Automate approval processes to enhance productivity"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+
+{
+  "heading": "Chat for Approvals",
+  "title": "Real-Time Decision Dialogue",
+  "description": "Keep the conversation going with an approval-focused chat tool that ensures all parties are informed and ready to move forward together.",
+  "bulletPoints": [
+  "Speed up approvals with instant communication",
+"Streamline feedback loops to refine decision-making",
+"Build consensus quickly with collaborative discussion threads"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+{
+  "heading": "Insights for Approvals",
+  "title": "Data-Driven Decision Authority",
+  "description": "Employ advanced analytics to illuminate the approval pathway, highlighting the most informed choices and aligning your team with data-backed confidence.",
+  "bulletPoints": [
+  "Analyze performance data for solid project approvals",
+"Identify key decision points with predictive analytics",
+"Enable proactive project adjustments with real-time data insights"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},  
+    ],
+    "featureHeading": "Approval Features",
+    "featureTitle": "Your Strategic Approval Partner",
+    "featureAssurance": "Empower your projects with a suite of tools designed for efficient and effective decision-making processes."
+  }
+];
+
+
+const features = [
+  {
+    "title": "Provide 24/7 Support",
+    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
+    "icon": "fluent:clock-24-regular",
+  },
+  {
+    "title": "Optimize User Journeys",
+    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
+    "icon": "fluent:person-arrow-right-24-regular",
+  },
+  {
+    "title": "Seamless Integrations",
+    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
+    "icon": "fluent:plug-connected-24-regular",
+  },
+  {
+    "title": "Future-Proof Insights",
+    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
+    "icon": "fluent:cellular-data-1-24-regular",
+  },
+  {
+    "title": "Consistent Experiences",
+    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
+    "icon": "fluent:heart-24-regular",
+  },
+  {
+    "title": "All-In-One Ecosystem",
+    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
+    "icon": "fluent:arrow-repeat-all-24-regular",
+  }
+];
+
+
+const faq = [
+  {
+    question: "How can Empress OS optimize my e-commerce operations?",
+    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
+  },
+  {
+    question: "What does Empress Chat offer for my e-commerce platform?",
+    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
+  },
+  {
+    question: "Can Empress Insights help increase my conversion rates?",
+    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
+  },
+  {
+    question: "How does Empress ensure 24/7 support for e-commerce customers?",
+    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
+  },
+  {
+    question: "In what way does Empress contribute to optimizing user journeys?",
+    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
+  },
+  {
+    question: "What seamless integrations does Empress offer for e-commerce?",
+    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
+  },
+  {
+    question: "How does Empress help in future-proofing my e-commerce business?",
+    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
+  }
+];
+
+
+
+
+const featureBlocks = data[0].featureBlocks;
+
+---
+
+<Layout title="About" footerMargin={false}>
+  <div class="overflow-x-clip">
+    <Container>
+      <main class="grid lg:grid-cols-5 place-items-center relative">
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
+        </div>
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
+        </div>
+        <div class="max-w-sm md:max-w-max lg:col-span-2">
+          <h1
+            class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
+            {data[0].mainHeading}
+          </h1>
+          <p
+            class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
+            {data[0].subtext}
+          </p>
+          <div
+            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+          <Link
+              href={data[0].headingButtons[0].link}
+              class="flex gap-1 items-center justify-center bg-brand"
+              rel="noopener">
+              {data[0].headingButtons[0].text}
+          </Link>
+          
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href={data[0].headingButtons[1].link}
+            class="flex gap-1 items-center justify-center border-brand text-brand">
+            {data[0].headingButtons[1].text}
+          </Link>
+          </div>
+        </div>
+        <div class="py-3 lg:col-span-3 lg:-mr-44">
+          <Picture
+            src={ECommerce}
+            alt="Astronaut in the air"
+            formats={["avif", "webp"]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            widths={[240, 540, 720, heroImage.width]}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </main>
+    </Container>
+  </div>
+  
+
+  <Container>
+  
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].offering.title}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].offering.subtext}
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        templates.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+      <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+        <Card color="indigo" size="sm">
+          <Fragment slot="image">
+            <Picture
+              src={NetworkServerManagement}
+              alt="Feature image"
+              formats={["avif", "webp"]}
+              class="object-contain"
+              loading="lazy"
+            />
+          </Fragment>
+          <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+          <span slot="title">{data[0].valueBlocks[0].title}</span>
+          <span slot="desc">{data[0].valueBlocks[0].description}</span>
+        </Card> -->
+        
+        <!-- <Card color="purple" size="sm">
+          <Fragment slot="image">
+            <Picture
+              src={AutomatedMarketing}
+              alt="Feature image"
+              formats={["avif", "webp"]}
+              class="object-contain"
+              loading="lazy"
+            />
+          </Fragment>
+          <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+          <span slot="title">{data[0].valueBlocks[1].title}</span>
+          <span slot="desc">{data[0].valueBlocks[1].description}</span>
+        </Card>
+        
+        <Card size="sm">
+          <Fragment slot="image">
+            <Image
+              src={DashboardDevelopment}
+              alt="Feature image"
+              width="909"
+              height="823"
+              class="object-contain"
+              loading="lazy"
+            />
+          </Fragment>
+          <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+          <span slot="title">{data[0].valueBlocks[2].title}</span>
+          <span slot="desc">{data[0].valueBlocks[2].description}</span>
+        </Card>
+      </div> -->
+
+    <!-- Feature 1 -->
+
+    <div class="grid md:grid-cols-2 py-10">
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">{data[0].featureBlocks[0].heading}</Badge>
+          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+            {data[0].featureBlocks[0].title}
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+            {data[0].featureBlocks[0].description}
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+            {data[0].featureBlocks[0].bulletPoints.map((point) => (
+              <li class="flex items-center gap-3 text-neutral-800">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                <span class="text-sm">{point}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            {data[0].featureBlocks[0].buttons?.map((button, index) => {
+              if (index === 0) {
+                return (
+                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                    <span>{button.text}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </Link>
+                );
+              } else {
+                return (
+                  <a 
+                    href={button.link} 
+                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    {button.text}
+                  </a>
+                );
+              }
+            })}
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <LottieAnimation id="lottie" src="../../../../../../business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="grid md:grid-cols-2 py-10">
+      <div class="">
+        <LottieAnimation id="lottie" src="../../../../../../auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
+      </div>
+
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">{data[0].featureBlocks[1].heading}</Badge>
+          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+            {data[0].featureBlocks[1].title}
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+            {data[0].featureBlocks[1].description}
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+            {data[0].featureBlocks[1].bulletPoints.map((point) => (
+              <li class="flex items-center gap-3 text-neutral-800">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                <span class="text-sm">{point}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            {data[0].featureBlocks[1].buttons?.map((button, index) => {
+              if (index === 0) {
+                return (
+                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                    <span>{button.text}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </Link>
+                );
+              } else {
+                return (
+                  <a 
+                    href={button.link} 
+                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    {button.text}
+                  </a>
+                );
+              }
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Feature 3 -->
+
+  <div class="grid md:grid-cols-2 py-10">
+
+    <div class="grid place-items-center">
+      <div class="max-w-lg">
+        <Badge color="purple" class="-ml-px">{data[0].featureBlocks[2].heading}</Badge>
+        <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+          {data[0].featureBlocks[2].title}
+        </h3>
+        <p class="mt-4 text-slate-600 [text-wrap:balance]">
+          {data[0].featureBlocks[2].description}
+        </p>
+        <ul class="grid mt-6 text-left gap-y-4">
+          {data[0].featureBlocks[2].bulletPoints.map((point) => (
+            <li class="flex items-center gap-3 text-neutral-800">
+              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+              <span class="text-sm">{point}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="flex items-center gap-4 mt-6">
+          {data[0].featureBlocks[2].buttons?.map((button, index) => {
+            if (index === 0) {
+              return (
+                <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                  <span>{button.text}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </Link>
+              );
+            } else {
+              return (
+                <a 
+                  href={button.link} 
+                  class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  {button.text}
+                </a>
+              );
+            }
+          })}
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <LottieAnimation id="lottie" src="../../../../../../pie-chart-bar.json" autoplay="true" style="width: 100%; height: auto;"/>
+    </div>
+  </div>
+
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].featureHeading}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].featureTitle}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].featureAssurance}
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        features.map((item) => (
+          <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+  
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+  </Container>
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+  
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  
+
+  <Cta />
+</Layout>
+

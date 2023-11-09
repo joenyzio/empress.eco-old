@@ -36,29 +36,41 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 });
 
 const apps = [
-  {
+{
     "title": "Accounting",
-    "description": "Manage financial records",
-    "icon": "fluent:mail-all-accounts-24-regular",
+    "description": "Manage financial transactions",
+    "icon": "fluent:money-24-regular",
     "link": "/app/finance/accounting"
   },
   {
-    "title": "Invoicing",
-    "description": "Create and send invoices",
-    "icon": "fluent:document-checkmark-24-regular",
-    "link": "/app/finance/invoicing"
-  },
-  {
     "title": "Expenses",
-    "description": "Track business expenses",
-    "icon": "fluent:payment-24-regular",
+    "description": "Track business spending",
+    "icon": "fluent:receipt-24-regular",
     "link": "/app/finance/expenses"
   },
   {
-    "title": "Documents",
-    "description": "Organize financial documents",
-    "icon": "fluent:document-one-page-24-regular",
-    "link": "/app/finance/documents"
+    "title": "Invoicing",
+    "description": "Create and manage invoices",
+    "icon": "fluent:document-24-regular",
+    "link": "/app/finance/invoicing"
+  },
+  {
+    "title": "Payroll",
+    "description": "Process employee salaries",
+    "icon": "fluent:wallet-24-regular",
+    "link": "/app/finance/payroll"
+  },
+  {
+    "title": "Analytics",
+    "description": "Analyze financial data",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/finance/analytics"
+  },
+  {
+    "title": "Taxes",
+    "description": "Manage tax compliance",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/finance/taxes"
   }
 ];
 
@@ -307,7 +319,7 @@ const featureBlocks = data[0].featureBlocks;
       Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
     </p>
   </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
     {
       apps.map((item) => (
         <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">

@@ -1,0 +1,620 @@
+---
+
+import { getCollection } from "astro:content";
+import Badge from "@components/ui/badge.astro";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+import Cta from "@components/cta.astro";
+import Card from "@components/card.astro";
+
+import { Icon } from "astro-icon";
+import ArrowIcon from "@components/ui/icons/arrow.astro"
+
+import Logos from "@components/logos.astro";
+import heroImage from "../../../assets/hero-screenshot.png";
+import IntegrationImg from "../../../assets/integrations.svg?url";
+import FeatureImgOne from "../../../assets/features/2.png";
+import FeatureImgTwo from "../../../assets/features/2.png";
+import FeatureImgThree from "../../../assets/features/3.png";
+import FeatureImg1 from "../../../assets/features/6.png";
+import FeatureImg2 from "../../../assets/features/2.png";
+import { Picture, Image } from "astro:assets";
+import EmployeeImg from "../../../assets/employee.jpg";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
+import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
+
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+const { nomargin } = Astro.props;
+
+const templates = [
+  {
+    "title": "Resource Allocation",
+    "description": "Optimize resource allocation for projects.",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/resource-allocation"
+  },
+  {
+    "title": "Workflow Automation",
+    "description": "Automate and streamline operations.",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/workflow-automation"
+  },
+  {
+    "title": "Process Optimization",
+    "description": "Enhance processes for efficiency gains.",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/process-optimization"
+  },
+  {
+    "title": "Performance Metrics",
+    "description": "Monitor and improve performance metrics.",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/performance-metrics"
+  },
+  {
+    "title": "Inventory Control",
+    "description": "Streamline inventory management.",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/inventory-control"
+  },
+  {
+    "title": "Project Scaling",
+    "description": "Scale and expand project operations.",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/project-scaling"
+  }
+];
+
+
+
+const data = [
+{
+    "mainHeading": "Optimize",
+    "subtext": "Cultivate an environment where team communication and collaboration are at the forefront of operational success.",
+    "headingButtons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ],
+    "sectionHeading": "Central Hub for E-Commerce Teams",
+    "offering": {
+      "title": "Enhance Team Synergy and Customer Relations",
+      "subtext": "Foster a unified platform for dynamic team interaction and customer engagement."
+    },
+    "valueBlocks": [
+  {
+    "heading": "Discuss OS",
+    "title": "Streamline Communication",
+    "description": "Create a seamless flow of information across your business with a centralized communication operating system."
+  },
+  {
+    "heading": "Discuss Chat",
+    "title": "Engage in Dialogue",
+    "description": "Offer a real-time chat solution for your teams to interact with each other and with customers effectively."
+  },
+  {
+    "heading": "Discuss Insights",
+    "title": "Gain Collaborative Insights",
+    "description": "Leverage the power of collaborative feedback to enhance decision-making and customer understanding."
+  }
+],
+
+    "featureBlocks": [
+    {
+  "heading": "OS for Communication",
+  "title": "Empower Your Team's Collaboration",
+  "description": "Equip your teams with a robust operating system designed to improve communication and facilitate a collaborative culture.",
+  "bulletPoints": [
+"Streamline team dialogue for enhanced project alignment",
+"Integrate cross-departmental communication effortlessly",
+"Empower teams with tools to collaborate in real time"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+
+{
+  "heading": "Chat for Teamwork",
+  "title": "Transform Team Interactions",
+  "description": "Enable immediate and transparent communication within your e-commerce team, fostering a culture of open dialogue and quick feedback.",
+  "bulletPoints": [
+  "Drive team engagement through fast, effective chat channels",
+"Deliver instant customer support collaboratively",
+"Share insights and feedback rapidly amongst team members"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+{
+  "heading": "Insights through Discussion",
+  "title": "Leverage Collective Wisdom",
+  "description": "Harness the collective insights of your team, utilizing communication data to make informed decisions that propel customer satisfaction and sales.",
+  "bulletPoints": [
+  "Analyze discussion patterns to improve team performance",
+"Capitalize on team feedback for strategic improvements",
+"Adapt to market changes with a communicative agile approach"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},  
+    ],
+    "featureHeading": "Communication Features",
+    "featureTitle": "Reimagine How Your Team Connects",
+    "featureAssurance": "With Discuss, embrace a new era of collaborative communication to revolutionize your e-commerce operations.",
+  }
+];
+
+
+const features = [
+  {
+    "title": "Instant Sync Across Devices",
+    "description": "Ensure your team stays updated with real-time synchronization across all devices, facilitating uninterrupted collaboration.",
+    "icon": "fluent:arrow-sort-24-regular",
+  },
+  {
+    "title": "Custom Discussion Channels",
+    "description": "Create tailored channels for various departments and projects, enabling focused discussions and streamlined communication flows.",
+    "icon": "fluent:chat-multiple-24-regular",
+  },
+  {
+    "title": "Interactive Message Boards",
+    "description": "Leverage interactive boards for announcements and strategic discussions, ensuring important messages are highlighted and acknowledged.",
+    "icon": "fluent:board-24-regular",
+  },
+  {
+    "title": "Smart Notification System",
+    "description": "Receive smart, customizable notifications to stay informed about critical updates without the noise of less urgent messages.",
+    "icon": "fluent:timer-24-regular",
+  },
+  {
+    "title": "Integrated Task Management",
+    "description": "Combine the power of discussion with task management, allowing teams to assign, track, and discuss tasks within a single platform.",
+    "icon": "fluent:tasks-app-24-regular",
+  },
+  {
+    "title": "Secure File Sharing",
+    "description": "Share files securely within your discussions, with robust encryption and permission settings to safeguard sensitive information.",
+    "icon": "fluent:shield-24-regular",
+  }
+];
+
+const faq = [
+  {
+    question: "How can Discuss help improve our team's communication?",
+    answer: "Discuss offers a centralized communication hub that streamlines information flow, enabling real-time interaction, tailored discussion channels, and interactive message boards, which enhance team synergy and operational efficiency."
+  },
+  {
+    question: "Is Discuss compatible with multiple devices?",
+    answer: "Absolutely, Discuss is designed for today’s versatile work environment. It ensures real-time synchronization across all devices, so your team can stay connected and collaborate from anywhere, on any device."
+  },
+  {
+    question: "Can we create private channels for sensitive projects?",
+    answer: "Yes, Discuss allows you to create custom discussion channels, which can be made private, for your teams to focus on specific projects or sensitive matters, ensuring confidentiality and targeted communication."
+  },
+  {
+    question: "How does the smart notification system work?",
+    answer: "Our smart notification system intelligently filters and sends alerts for important updates and messages, allowing you to customize the notification preferences to reduce interruptions and maintain focus."
+  },
+  {
+    question: "Does Discuss integrate task management within the communication platform?",
+    answer: "Yes, with Discuss, task management is integrated within the communication platform, permitting your team to assign, track, and converse about tasks all in one place, thereby enhancing productivity and ensuring accountability."
+  },
+  {
+    question: "How secure is file sharing on Discuss?",
+    answer: "Discuss prioritizes security with robust encryption and detailed permission settings for file sharing, ensuring that sensitive information is protected and only accessible to authorized personnel."
+  },
+  {
+    question: "Are there analytics to track team performance and customer engagement?",
+    answer: "Discuss Insights offers powerful analytics to monitor discussion patterns, team performance, and customer engagement, giving you actionable data to drive strategic decision-making and improve overall performance."
+  }
+];
+
+
+
+
+
+const featureBlocks = data[0].featureBlocks;
+
+---
+
+<Layout title="About" footerMargin={false}>
+  <div class="overflow-x-clip">
+    <Container>
+      <main class="grid lg:grid-cols-5 place-items-center relative">
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
+        </div>
+        <div
+          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
+        </div>
+        <div class="max-w-sm md:max-w-max lg:col-span-2">
+          <h1
+            class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
+            {data[0].mainHeading}
+          </h1>
+          <p
+            class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
+            {data[0].subtext}
+          </p>
+          <div
+            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+          <Link
+              href={data[0].headingButtons[0].link}
+              class="flex gap-1 items-center justify-center bg-brand"
+              rel="noopener">
+              {data[0].headingButtons[0].text}
+          </Link>
+          
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href={data[0].headingButtons[1].link}
+            class="flex gap-1 items-center justify-center border-brand text-brand">
+            {data[0].headingButtons[1].text}
+          </Link>
+          </div>
+        </div>
+        <div class="py-3 lg:col-span-3 lg:-mr-44">
+          <Picture
+            src={ECommerce}
+            alt="Astronaut in the air"
+            formats={["avif", "webp"]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            widths={[240, 540, 720, heroImage.width]}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </main>
+    </Container>
+  </div>
+  
+
+  <Container>
+  
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].offering.title}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].offering.subtext}
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        templates.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+      <Card color="indigo" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={NetworkServerManagement}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
+      </Card>
+      
+      <Card color="purple" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={AutomatedMarketing}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
+      </Card>
+      
+      <Card size="sm">
+        <Fragment slot="image">
+          <Image
+            src={DashboardDevelopment}
+            alt="Feature image"
+            width="909"
+            height="823"
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
+      </Card>
+    </div> -->
+
+    <!-- Feature 1 -->
+
+    <div class="grid md:grid-cols-2 py-10">
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">{data[0].featureBlocks[0].heading}</Badge>
+          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+            {data[0].featureBlocks[0].title}
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+            {data[0].featureBlocks[0].description}
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+            {data[0].featureBlocks[0].bulletPoints.map((point) => (
+              <li class="flex items-center gap-3 text-neutral-800">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                <span class="text-sm">{point}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            {data[0].featureBlocks[0].buttons?.map((button, index) => {
+              if (index === 0) {
+                return (
+                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                    <span>{button.text}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </Link>
+                );
+              } else {
+                return (
+                  <a 
+                    href={button.link} 
+                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    {button.text}
+                  </a>
+                );
+              }
+            })}
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <LottieAnimation id="lottie" src="../../../../../../business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="grid md:grid-cols-2 py-10">
+      <div class="">
+        <LottieAnimation id="lottie" src="../../../../../../auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
+      </div>
+
+      <div class="grid place-items-center">
+        <div class="max-w-lg">
+          <Badge color="purple" class="-ml-px">{data[0].featureBlocks[1].heading}</Badge>
+          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+            {data[0].featureBlocks[1].title}
+          </h3>
+          <p class="mt-4 text-slate-600 [text-wrap:balance]">
+            {data[0].featureBlocks[1].description}
+          </p>
+          <ul class="grid mt-6 text-left gap-y-4">
+            {data[0].featureBlocks[1].bulletPoints.map((point) => (
+              <li class="flex items-center gap-3 text-neutral-800">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+                <span class="text-sm">{point}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex items-center gap-4 mt-6">
+            {data[0].featureBlocks[1].buttons?.map((button, index) => {
+              if (index === 0) {
+                return (
+                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                    <span>{button.text}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </Link>
+                );
+              } else {
+                return (
+                  <a 
+                    href={button.link} 
+                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                    {button.text}
+                  </a>
+                );
+              }
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Feature 3 -->
+
+  <div class="grid md:grid-cols-2 py-10">
+
+    <div class="grid place-items-center">
+      <div class="max-w-lg">
+        <Badge color="purple" class="-ml-px">{data[0].featureBlocks[2].heading}</Badge>
+        <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+          {data[0].featureBlocks[2].title}
+        </h3>
+        <p class="mt-4 text-slate-600 [text-wrap:balance]">
+          {data[0].featureBlocks[2].description}
+        </p>
+        <ul class="grid mt-6 text-left gap-y-4">
+          {data[0].featureBlocks[2].bulletPoints.map((point) => (
+            <li class="flex items-center gap-3 text-neutral-800">
+              <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+              <span class="text-sm">{point}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="flex items-center gap-4 mt-6">
+          {data[0].featureBlocks[2].buttons?.map((button, index) => {
+            if (index === 0) {
+              return (
+                <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                  <span>{button.text}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </Link>
+              );
+            } else {
+              return (
+                <a 
+                  href={button.link} 
+                  class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  {button.text}
+                </a>
+              );
+            }
+          })}
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <LottieAnimation id="lottie" src="../../../../../../pie-chart-bar.json" autoplay="true" style="width: 100%; height: auto;"/>
+    </div>
+  </div>
+
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].featureHeading}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].featureTitle}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].featureAssurance}
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        features.map((item) => (
+          <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+            <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+  
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+  </Container>
+
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc">Frequently asked questions</Fragment>
+    </Sectionhead>
+  
+    <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+      {faq.map(item => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span>{item.question}</span>
+              <span class="transition group-open:rotate-180">
+                <ArrowIcon />
+              </span>
+            </summary>
+            <p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+              {item.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+  </Container>
+  
+
+  <Cta />
+</Layout>
+

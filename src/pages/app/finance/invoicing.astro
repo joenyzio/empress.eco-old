@@ -34,10 +34,51 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
+const { nomargin } = Astro.props;
+
+
+const templates = [
+  {
+    "title": "Invoice Creation",
+    "description": "Generate customizable invoices",
+    "icon": "fluent:document-24-regular",
+    "link": "/templates/invoice-creation"
+  },
+  {
+    "title": "Recurring Invoices",
+    "description": "Automate billing cycles",
+    "icon": "fluent:document-24-regular",
+    "link": "/templates/recurring-invoices"
+  },
+  {
+    "title": "Invoice Reminders",
+    "description": "Send payment notifications",
+    "icon": "fluent:document-24-regular",
+    "link": "/templates/invoice-reminders"
+  },
+  {
+    "title": "Payment Gateway Integration",
+    "description": "Enable online payments",
+    "icon": "fluent:document-24-regular",
+    "link": "/templates/payment-gateway-integration"
+  },
+  {
+    "title": "Invoice Tracking",
+    "description": "Monitor payment status",
+    "icon": "fluent:document-24-regular",
+    "link": "/templates/invoice-tracking"
+  },
+  {
+    "title": "Multi-Currency Invoicing",
+    "description": "Bill in global currencies",
+    "icon": "fluent:document-24-regular",
+    "link": "/templates/multi-currency-invoicing"
+  }
+];
 
 const data = [
   {
-    "mainHeading": "Invoicing: Create and Send Invoices",
+    "mainHeading": "Invoicing",
     "subtext": "Simplify your billing process with our comprehensive invoicing tool, designed for swift creation and delivery of invoices.",
     "headingButtons": [
       {
@@ -278,7 +319,25 @@ const featureBlocks = data[0].featureBlocks;
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        templates.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
       <Card color="indigo" size="sm">
         <Fragment slot="image">
           <Picture
@@ -293,8 +352,8 @@ const featureBlocks = data[0].featureBlocks;
         <span slot="title">{data[0].valueBlocks[0].title}</span>
         <span slot="desc">{data[0].valueBlocks[0].description}</span>
       </Card>
-      
-      <Card color="purple" size="sm">
+
+       <Card color="purple" size="sm">
         <Fragment slot="image">
           <Picture
             src={AutomatedMarketing}
@@ -310,8 +369,7 @@ const featureBlocks = data[0].featureBlocks;
       </Card>
       
       <Card size="sm">
-        <Fragment slot="image">
-          <!-- // svg image. cannot use <picture/> as of now -->
+        <Fragment slot="image"
           <Image
             src={DashboardDevelopment}
             alt="Feature image"
@@ -325,7 +383,7 @@ const featureBlocks = data[0].featureBlocks;
         <span slot="title">{data[0].valueBlocks[2].title}</span>
         <span slot="desc">{data[0].valueBlocks[2].description}</span>
       </Card>
-    </div>
+    </div> -->
 
     <!-- Feature 1 -->
 
