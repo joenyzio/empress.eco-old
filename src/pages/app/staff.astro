@@ -37,47 +37,48 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const apps = [
   {
-    "title": "Project Management",
-    "description": "Organize work structure",
-    "icon": "fluent:tasks-app-24-regular",
-    "link": "/app/services/project"
+    "title": "Team",
+    "description": "Staff management hub",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/app/staff/team"
+  },
+  {
+    "title": "Recruit",
+    "description": "Streamline hiring process",
+    "icon": "fluent:people-team-add-24-regular",
+    "link": "/app/staff/recruit"
   },
   {
     "title": "Timesheet",
-    "description": "Track work hours",
-    "icon": "fluent:clock-24-regular",
-    "link": "/app/services/timesheet"
+    "description": "Work hours tracking",
+    "icon": "fluent:beach-24-regular",
+    "link": "/app/staff/timesheet"
   },
   {
-    "title": "Field Service",
-    "description": "On-site service management",
-    "icon": "fluent:service-bell-24-regular",
-    "link": "/app/services/field-service"
+    "title": "Review",
+    "description": "Performance review tool",
+    "icon": "fluent:star-emphasis-24-regular",
+    "link": "/app/staff/review"
   },
   {
-    "title": "Helpdesk",
-    "description": "Support ticket system",
-    "icon": "fluent:question-circle-24-regular",
-    "link": "/app/services/help-desk"
+    "title": "Referral",
+    "description": "Employee referral program",
+    "icon": "fluent:comment-arrow-left-24-regular",
+    "link": "/app/staff/referral"
   },
   {
-    "title": "Planning",
-    "description": "Strategic project planning",
-    "icon": "fluent:gantt-chart-24-regular",
-    "link": "/app/services/planning"
-  },
-  {
-    "title": "Appointments",
-    "description": "Schedule client meetings",
-    "icon": "fluent:calendar-24-regular",
-    "link": "/app/services/appointments"
+    "title": "Assets",
+    "description": "Manage company resources",
+    "icon": "fluent:vehicle-bus-24-regular",
+    "link": "/app/staff/assets"
   }
 ];
 
+
 const data = [
-  {
-    "mainHeading": "Empower Customer Support with Empress",
-    "subtext": "Revolutionize customer support operations, information management, and engagement. Experience a blend of efficiency, adaptability, and real-time insights.",
+{
+    "mainHeading": "Elevate Human Resources with Empress",
+    "subtext": "Unlock the future of HR with AI-powered insights, ensuring streamlined recruitment, tailored employee experiences, and optimized HR processes.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -88,159 +89,158 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for Customer Support",
+    "sectionHeading": "Empress for HR",
     "offering": {
-      "title": "Streamline Support and Optimize Customer Assistance",
-      "subtext": "Centralize, update, and swiftly retrieve vital information, ensuring your users always have answers at their fingertips."
+      "title": "Next Generation HR Transformation",
+      "subtext": "Leverage a comprehensive platform to enhance every facet of your HR operations."
     },
     "valueBlocks": [
     {
-        "heading": "Empress OS",
-        "title": "Streamline Your Messaging",
-        "description": "Revolutionize customer support through centralized information management, team collaboration, and streamlined workflows. "
+      "heading": "Empress OS",
+      "title": "Unify HR Efforts",
+      "description": "Centralize HR data, boost collaboration across teams, and automate workflows for optimal efficiency."
     },
     {
-        "heading": "Empress Chat",
-        "title": "Enhance Your Support",
-        "description": "Connect your team with tools, provide swift responses, and enhance both internal and external communication."
+      "heading": "Empress Chat",
+      "title": "Scale Employee Support",
+      "description": "Boost internal alignment and engage external stakeholders with precision, ensuring scalable operations."
     },
     {
-        "heading": "Empress Insights",
-        "title": "Boost Service Metrics",
-        "description": "Gain insights into customer feedback, identify areas of improvement, and make data-informed decisions."
+      "heading": "Empress Insights",
+      "title": "Empower HR Decisions",
+      "description": "Align HR strategies with organization goals and optimize workforce productivity with insightful dashboards."
     }
   ],
     "featureBlocks": [
     {
-    "heading": "OS for Customer Support",
-    "title": "Modernize Your Customer Support Strategy",
-    "description": "A cutting-edge unified platform crafted to revolutionize customer support by centralizing information, promoting synergy among teams, and offering seamless workflows.",
-    "bulletPoints": [
-    "Centralize support information for easy access",
-"Collaborate in real time for quicker issue resolution",
-"Automate support to free up focus for growth"
-    ],
-    "buttons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
+  "heading": "OS for HR",
+  "title": "Unify, Collaborate, and Simplify HR Processes",
+  "description": "Harness the power of Empress OS to centralize HR information, boost interdepartmental synergy, and craft seamless and automated HR workflows.",
+  "bulletPoints": [
+  "Centralize HR documents on one platform",
+"Enable collaboration across HR and departments",
+"Streamline HR tasks from hiring to exit."
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
       "text": "View Pricing",
       "link": "/pricing"
     }
-    ]
+  ]
 },
 {
-    "heading": "Chat for Customer Support",
-    "title": "Elevate, Automate, and Optimize Support Interactions",
-    "description": "An intelligent chatbot engineered to seamlessly connect your support team with the powerful tools of Empress OS, ensuring swift and effective communication both internally and with customers.",
-    "bulletPoints": [
-    "Quickly resolve common inquiries to cut wait times",
-"Unify team communication for better coordination",
-"Improve customer interactions with personalized, efficient replies"
-    ],
-    "buttons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
+  "heading": "Chat for HR",
+  "title": "Streamline Internal and External Communication",
+  "description": "Seamlessly connect Empress OS's robust tools with its users. Experience unmatched efficiency in both internal team interactions and external stakeholder communication.",
+  "bulletPoints": [
+  "Provide immediate, precise answers to frequent questions",
+"Improve communication for faster resolutions",
+"Connect with stakeholders through tailored, clear messaging"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
       "text": "View Pricing",
       "link": "/pricing"
     }
-    ]
+  ]
 },
-{
-    "heading": "Insights for Customer Support",
-    "title": "Drive Support Excellence Through Analytics",
-    "description": "Harness the power of sophisticated analytics and intuitive dashboards tailored for customer support. Transform raw data into actionable strategies, enabling your team to anticipate needs, spot trends, and make confident decisions.",
-    "bulletPoints": [
-    "Track customer feedback and trends instantly",
-"Pinpoint and improve support bottlenecks",
-"Allocate resources effectively using data insights"
-    ],
-    "buttons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-    ]
-}
 
+{
+  "heading": "Insights for HR",
+  "title": "Empower HR with Data-Driven Decisions",
+  "description": "Harness the power of insightful dashboards and data-driven recommendations to align HR strategies with organizational goals and enhance workforce productivity.",
+  "bulletPoints": [
+  "Track talent trends, retention, and training success",
+"Refine hiring tactics with data-driven recruitment insights",
+"Enhance engagement and satisfaction through trend analysis"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+        ]
+      }
     ],
-    "featureHeading": "Customer Support Features",
+    "featureHeading": "Features for HR",
     "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Empress delivers a data-driven approach, ensuring efficient, responsive support and enhancing customer loyalty."
+    "featureAssurance": "Guaranteeing transformative and consistent support for all HR initiatives."
   }
 ];
 
 const features = [
   {
-    "title": "Integrated Tools Suite",
-    "description": "Optimize communication and user engagement with a wide array of integrated tools, fine-tuned for superior support.",
-    "icon": "fluent:connector-24-regular"
+    "title": "Continuous Learning",
+    "description": "Promote talent growth with AI-driven resources and courses, ensuring employees remain at the forefront of their fields.",
+    "icon": "fluent:food-apple-24-regular"
   },
   {
-    "title": "Seamless Chat Integration",
-    "description": "Respond at the speed of thought. Directly integrate support queries into common tools for lightning-fast resolutions.",
-    "icon": "fluent:chat-bubbles-question-24-regular"
+    "title": "Seamless Integrations",
+    "description": "Optimize HR tasks by integrating effortlessly with essential tools, facilitating rapid communication and efficient workflows.",
+    "icon": "fluent:plug-connected-24-regular"
   },
   {
-    "title": "Instant Email Updates",
-    "description": "Stay ahead by updating users in real-time. Cultivate trust with transparent support progress reports.",
-    "icon": "fluent:mail-add-24-regular"
+    "title": "AI Empowerment",
+    "description": "Leverage AI insights to predict trends, refine decision-making processes, and usher in the future of human resources.",
+    "icon": "fluent:cellular-data-1-24-regular"
   },
   {
-    "title": "Messenger-Assisted Support",
-    "description": "Leverage platforms like Messenger for real-time support, ensuring superior and prompt assistance.",
-    "icon": "fluent:person-question-mark-24-regular"
+    "title": "Interactive HR Bots",
+    "description": "Facilitate employee queries, deliver instant support, and optimize HR processes with our state-of-the-art bots.",
+    "icon": "fluent:bot-24-regular"
   },
   {
-    "title": "Community-Centric Discord Support",
-    "description": "Engage and support your community on Discord with real-time interventions, building trust and rapport.",
-    "icon": "fluent:people-community-24-regular"
+    "title": "Multilingual Support",
+    "description": "Cater to a global workforce with multilingual capabilities, ensuring clear communication and understanding.",
+    "icon": "fluent:local-language-zi-24-regular"
   },
   {
-    "title": "Global User Engagement",
-    "description": "Overcome language barriers with AI-assisted translations, ensuring all users feel cherished and understood.",
-    "icon": "fluent:globe-24-regular"
+    "title": "Uniform HR Experience",
+    "description": "Offer a consistent HR experience across all touchpoints, ensuring personalized, intuitive interactions, whether on mobile or desktop.",
+    "icon": "fluent:weather-sunny-high-24-regular"
   }
-];
-
+]
 
 const faq = [
   {
-    question: "How does Empress OS streamline customer support operations?",
-    answer: "Empress OS centralizes information management and enables team collaboration, creating streamlined workflows. It helps teams access vital information quickly and efficiently, ensuring customers always have answers at their fingertips."
+    question: "How does Empress OS enhance HR operations?",
+    answer: "Empress OS centralizes HR content, enhances team collaboration, and automates workflows, resulting in increased efficiency and streamlined HR processes across the entire employee lifecycle."
   },
   {
-    question: "What capabilities does Empress Chat offer for customer support?",
-    answer: "Empress Chat provides instant responses to common customer inquiries, reduces wait times, and supports team coordination with unified communication tools, resulting in tailored and efficient customer experiences."
+    question: "What support does Empress Chat provide for HR teams?",
+    answer: "Empress Chat scales employee support by providing instant and accurate responses to inquiries, bolstering internal communication, and engaging external stakeholders with personalized interactions."
   },
   {
-    question: "In what ways can Empress Insights boost my customer service metrics?",
-    answer: "Empress Insights gives you real-time visibility into customer feedback and service trends, helping you identify areas for improvement, optimize resource allocation, and make data-informed decisions to enhance support services."
+    question: "Can Empress Insights improve our HR decision-making?",
+    answer: "Yes, Empress Insights offers data-driven dashboards that provide actionable insights, helping to align HR strategies with organizational goals, and optimize workforce productivity through analytics."
   },
   {
-    question: "What does Empress offer to modernize customer support strategies?",
-    answer: "Empress provides a unified platform that centralizes customer support infomation, fosters real-time team collaboration, and automates workflows, allowing teams to focus more on growth and customer satisfaction."
+    question: "What integrations are available with Empress for HR tasks?",
+    answer: "Empress offers seamless integrations with essential HR tools to facilitate rapid communication, efficient workflows, and streamline tasks such as recruitment, onboarding, and employee management."
   },
   {
-    question: "How can Messenger-assisted support improve customer interactions?",
-    answer: "By leveraging platforms like Messenger for real-time support, Empress ensures swift and effective assistance, thereby improving response times and overall customer satisfaction."
+    question: "How can AI within Empress transform HR practices?",
+    answer: "Empress leverages AI to predict employee and talent trends, refine decision-making, and provide AI-driven resources for continuous learning, effectively ushering in the next generation of HR."
   },
   {
-    question: "What solutions does Empress provide for supporting global customers?",
-    answer: "Empress overcomes language barriers with AI-assisted translations, making sure all users receive support in their preferred language, which enriches the customer experience and fosters global user engagement."
+    question: "What functionalities do interactive HR bots provide?",
+    answer: "Interactive HR bots within Empress facilitate employee queries, deliver instant support, help with routine HR tasks, and improve overall HR process efficiency."
   },
   {
-    question: "How does the integrated tools suite enhance customer support?",
-    answer: "The integrated tools suite optimizes communication and user engagement through a comprehensive set of tools, ensuring a smooth and efficient support experience for both the support team and the customers."
+    question: "Does Empress support a multilingual workforce?",
+    answer: "Yes, Empress caters to a global workforce with multilingual support capabilities, ensuring clear and effective communication across different languages."
   }
 ];
 
@@ -311,9 +311,9 @@ const featureBlocks = data[0].featureBlocks;
       "max-w-4xl mx-auto flex flex-col items-center justify-center",
       !nomargin && "mt-24",
     ]}>
-    <Badge color="purple">Empress for Services</Badge>
+    <Badge color="purple">Empress for Human Resources</Badge>
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      Empower Your <span class="text-indigo-600">Services with Empress</span>
+      Elevate Your <span class="text-indigo-600">HR with Empress</span>
     </h2>
     <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
       Streamline your business management with an all-in-one suite to enhance productivity and drive growth.

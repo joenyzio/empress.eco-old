@@ -12,8 +12,10 @@ import Card from "@components/card.astro";
 import { Icon } from "astro-icon";
 import ArrowIcon from "@components/ui/icons/arrow.astro"
 
-import Logos from "@components/logos.astro";
 import heroImage from "../../assets/hero-screenshot.png";
+
+import Logos from "@components/logos.astro";
+// import heroImage from "../../assets/hero-screenshot.png";
 import IntegrationImg from "../../assets/integrations.svg?url";
 import FeatureImgOne from "../../assets/features/2.png";
 import FeatureImgTwo from "../../assets/features/2.png";
@@ -37,213 +39,212 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const apps = [
   {
-    "title": "Plan",
-    "description": "Task planning and organization",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/plan"
+    "title": "CRM",
+    "description": "Customer relationship management",
+    "icon": "fluent:people-add-24-regular",
+    "link": "/app/sell/crm"
   },
   {
-    "title": "Track",
-    "description": "Project analysis and reporting",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/track"
+    "title": "Quote",
+    "description": "Generate customer quotes",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/sell/quote"
   },
   {
-    "title": "Collaborate",
-    "description": "Connect, communicate, and update",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/collaborate"
+    "title": "Email",
+    "description": "Targeted email campaigns ",
+    "icon": "fluent:mail-copy-24-regular",
+    "link": "/app/sell/email"
   },
   {
-    "title": "Approve",
-    "description": "Permissions and approvals",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/approve"
+    "title": "Point of Sale",
+    "description": "Retail transaction processing",
+    "icon": "fluent:payment-24-regular",
+    "link": "/app/sell/pos"
   },
   {
-    "title": "Strategize",
-    "description": "Manage and support users",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/strategize"
+    "title": "Subscription",
+    "description": "Manage recurring payments",
+    "icon": "fluent:add-circle-24-regular",
+    "link": "/app/sell/subscription"
   },
   {
-    "title": "Optimize",
-    "description": "Scale operations efficiently",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/optimize"
-  },
+    "title": "Rental",
+    "description": "Equipment leasing solutions",
+    "icon": "fluent:box-arrow-left-24-regular",
+    "link": "/app/sell/rental"
+  }
 ];
 
 
 const data = [
   {
-    "mainHeading": "Optimize Project Management with Empress",
-    "subtext": "Harness AI-enhanced tools to streamline project workflows, improve team coordination, and ensure project success.",
+    "mainHeading": "Sales Empowerment",
+    "subtext": "Unleash the full potential of your sales force with Empress solutions tailored for maximal revenue generation and customer satisfaction.",
     "headingButtons": [
       {
-        "text": "Get Started",
+        "text": "Boost Your Sales",
         "link": "/contact"
       },
       {
-        "text": "View Pricing",
+        "text": "Sales Pricing Plans",
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for Project Management",
+    "sectionHeading": "Ultimate Sales Tools",
     "offering": {
-      "title": "Innovative Project Management Solutions",
-      "subtext": "Transform your project management practices with AI-driven insights, enabling precise planning, execution, and delivery."
+      "title": "Sales Optimization Redefined",
+      "subtext": "Drive unprecedented sales performance with our intelligent sales platform, leveraging cutting-edge technology to enhance every customer interaction."
     },
     "valueBlocks": [
       {
-        "heading": "Empress OS",
-        "title": "Streamline Project Workflows",
-        "description": "Unify project data, enhance team collaboration, and automate routine tasks for increased project efficiency and reduced time to delivery."
+        "heading": "Empress OS for Sales",
+        "title": "Streamline Sales Processes",
+        "description": "Leverage a unified system to manage all sales operations, ensuring no opportunity slips through the cracks."
       },
       {
-        "heading": "Empress Chat",
-        "title": "Enhance Team Communication",
-        "description": "Facilitate real-time communication within project teams and with stakeholders to keep projects on track and teams aligned."
+        "heading": "Empress Chat for Sales",
+        "title": "Engage Effectively",
+        "description": "Connect instantly with prospects through real-time communication, providing timely assistance that closes deals."
       },
       {
-        "heading": "Empress Insights",
-        "title": "Inform Project Strategy",
-        "description": "Leverage advanced analytics for project trend analysis, risk assessment, and performance metrics to drive informed decision-making."
+        "heading": "Empress Insights for Sales",
+        "title": "Data-Driven Decisions",
+        "description": "Harness powerful analytics to understand customer needs, predict sales trends, and make informed strategic choices."
       }
     ],
     "featureBlocks": [
       {
-        "heading": "OS for Project Management",
-        "title": "Centralize and Automate Project Tasks",
-        "description": "Empower project teams with Empress OS to centralize project information, automate workflows, and facilitate seamless collaboration across all project stages.",
+        "heading": "OS for Sales",
+        "title": "Centralize Your Sales Hub",
+        "description": "Empress OS integrates all sales functions into a single, efficient platform, from customer management to deal closure.",
         "bulletPoints": [
-          "Integrate project planning and resource management",
-          "Automate task allocation and progress tracking",
-          "Synchronize cross-departmental project efforts"
+          "Organize customer data for optimal access",
+          "Automate sales tasks to increase productivity",
+          "Sync all sales communication for seamless operation"
         ],
         "buttons": [
           {
-            "text": "Get Started",
-            "link": "/contact"
+            "text": "Optimize with Empress OS",
+            "link": "/app/sales/crm"
           },
           {
-            "text": "View Pricing",
-            "link": "/pricing"
+            "text": "Discover Empress OS",
+            "link": "/os-info"
           }
         ]
       },
       {
-        "heading": "Chat for Project Alignment",
-        "title": "Communicate Effectively for Project Success",
-        "description": "Utilize Empress Chat to maintain clear communication channels across project teams, enabling quick problem-solving and ensuring that all stakeholders are informed and engaged.",
+        "heading": "Chat for Sales",
+        "title": "Improve Sales Interactions",
+        "description": "Empress Chat connects your sales team with clients, offering real-time engagement and support to boost conversion rates.",
         "bulletPoints": [
-          "Provide real-time updates and gather team feedback",
-          "Facilitate stakeholder engagement and updates",
-          "Resolve project queries with AI-powered assistance"
+          "Instant customer communication channel",
+          "Faster response times to sales inquiries",
+          "Personalized engagement for better customer relationships"
         ],
         "buttons": [
           {
-            "text": "Get Started",
-            "link": "/contact"
+            "text": "Enhance with Empress Chat",
+            "link": "/app/sales/chat"
           },
           {
-            "text": "View Pricing",
-            "link": "/pricing"
+            "text": "Learn About Empress Chat",
+            "link": "/chat-info"
           }
         ]
       },
       {
-        "heading": "Insights for Project Precision",
-        "title": "Make Data-Driven Project Decisions",
-        "description": "Adopt a strategic edge with Empress Insights, utilizing comprehensive dashboards to track project health, anticipate risks, and capitalize on opportunities for improvement.",
+        "heading": "Insights for Sales",
+        "title": "Craft Winning Sales Strategies",
+        "description": "Empress Insights provides the data intelligence you need to outmaneuver the competition and drive sales growth.",
         "bulletPoints": [
-          "Analyze real-time project performance data",
-          "Predict project outcomes and set benchmarks",
-          "Optimize resource allocation based on historical data"
+          "Deep dive into sales metrics and KPIs",
+          "Understand customer behaviors and patterns",
+          "Adapt and evolve with market changes promptly"
         ],
         "buttons": [
           {
-            "text": "Get Started",
-            "link": "/contact"
+            "text": "Drive Growth with Empress Insights",
+            "link": "/app/sales/insights"
           },
           {
-            "text": "View Pricing",
-            "link": "/pricing"
+            "text": "Explore Empress Insights",
+            "link": "/insights-info"
           }
         ]
       }
     ],
-    "featureHeading": "Advanced Project Management Features",
-    "featureTitle": "Elevate Your Project Execution",
-    "featureAssurance": "Dedicated to empowering project teams with sophisticated, AI-enhanced project management tools for superior results."
+    "featureHeading": "Sales Excellence with Empress",
+    "featureTitle": "Your Partner in Sales Success",
+    "featureAssurance": "Every Empress solution is crafted to not only meet but exceed the demanding needs of today’s sales teams."
   }
 ];
 
 
 const features = [
   {
-    "title": "Strategic Project Planning",
-    "description": "Utilize AI-driven analytics to optimize project timelines and resources, ensuring every plan is streamlined for maximum efficiency and effectiveness.",
-    "icon": "fluent:chart-multiple-24-regular"
+    "title": "Accelerate Sales Cycles",
+    "description": "Speed up the sales pipeline with streamlined processes and automation. Empress OS ensures you capitalize on every opportunity swiftly.",
+    "icon": "fluent:top-speed-24-regular",
   },
   {
-    "title": "Real-Time Collaboration",
-    "description": "Facilitate instant project updates and team collaboration through an integrated communication platform, keeping everyone on the same page.",
-    "icon": "fluent:people-team-24-regular"
+    "title": "Universal Sales Access",
+    "description": "Provide your sales team with omnipresent communication tools to engage clients on any platform, at any time.",
+    "icon": "fluent:bot-24-regular",
   },
   {
-    "title": "Predictive Task Management",
-    "description": "Implement AI forecasts to anticipate project bottlenecks, allocate resources effectively, and maintain steady progress with proactive task management.",
-    "icon": "fluent:task-list-square-ltr-24-regular"
+    "title": "Gain Deep Sales Insights",
+    "description": "With Empress Insights, dive into a deep analysis of sales trends and customer interactions to craft more effective sales strategies.",
+    "icon": "fluent:cellular-data-1-24-regular",
   },
   {
-    "title": "Automated Workflow Optimization",
-    "description": "Deploy intelligent automation to streamline project workflows, from initiation to delivery, ensuring a focus on value-added activities.",
-    "icon": "fluent:bot-24-regular"
+    "title": "Integrate Data Seamlessly",
+    "description": "Consolidate customer data across platforms with Empress OS, removing information silos and enhancing sales team efficiency.",
+    "icon": "fluent:database-link-24-regular",
   },
   {
-    "title": "Cross-Platform Project Integration",
-    "description": "Achieve a cohesive project management environment with cross-platform integrations, simplifying the oversight of multiple project components.",
-    "icon": "fluent:plug-connected-24-regular"
+    "title": "Predict Customer Trends",
+    "description": "Utilize predictive analytics to anticipate customer needs and market shifts, staying ahead of the curve with Empress Insights.",
+    "icon": "fluent:inprivate-account-24-regular",
   },
   {
-    "title": "Comprehensive Project Dashboards",
-    "description": "Monitor project KPIs and progress with comprehensive dashboards, offering a centralized view for informed decision-making and control.",
-    "icon": "fluent:data-trending-24-regular"
+    "title": "Engage Clients Personally",
+    "description": "Forge stronger relationships and drive sales with personalized engagement tools provided by Empress Chat.",
+    "icon": "fluent:chat-bubbles-question-24-regular",
   }
-]
-
+];
 
 const faq = [
   {
-    "question": "How does Empress enhance traditional project management?",
-    "answer": "Empress utilizes AI-driven analytics and machine learning to transform traditional project management. It streamlines workflows, enhances team collaboration, and provides real-time insights for more informed decision-making, ultimately leading to more successful project outcomes."
+    "question": "How can Empress OS streamline our sales pipeline?",
+    "answer": "Empress OS centralizes all your sales activities, from lead tracking to deal closure. It automates routine tasks, organizes data for optimal access, and synchronizes communications to ensure you can focus on building relationships and closing sales more efficiently."
   },
   {
-    "question": "What features does Empress OS offer for project management?",
-    "answer": "Empress OS offers centralized project data management, automated task workflows, and seamless collaboration across all project stages. It integrates planning and resource management to synchronize efforts and track progress effectively."
+    "question": "Is Empress Chat suitable for international sales teams?",
+    "answer": "Absolutely. Empress Chat provides real-time communication capabilities across different platforms and time zones, ensuring your international sales teams can engage with clients effectively, regardless of their location."
   },
   {
-    "question": "Can Empress Chat improve communication within my project team?",
-    "answer": "Absolutely. Empress Chat is designed to maintain clear, real-time communication channels within project teams and with stakeholders. It facilitates instant updates, feedback collection, and quick resolution of queries, ensuring everyone stays aligned and informed."
+    "question": "Can Empress Insights help with forecasting sales trends?",
+    "answer": "Yes, Empress Insights employs advanced analytics to interpret sales data, customer behaviors, and market patterns, helping your team make data-driven decisions and forecast trends with greater accuracy."
   },
   {
-    "question": "How does Empress Insights contribute to project strategy?",
-    "answer": "Empress Insights delivers advanced analytics for risk assessment, trend analysis, and performance tracking. These data-driven insights allow teams to predict outcomes, set benchmarks, and optimize resource allocation, contributing to a more precise project strategy."
+    "question": "What kind of support does Empress OS offer for managing customer relationships?",
+    "answer": "Empress OS offers a comprehensive CRM tool that helps you keep track of customer interactions, manage leads, and nurture client relationships, all in one platform to enhance customer satisfaction and loyalty."
   },
   {
-    "question": "In what ways can Empress' features save time and reduce project delivery cycles?",
-    "answer": "Empress features AI-driven planning tools, predictive task management, and automated workflows that eliminate bottlenecks and redundancies. This efficiency accelerates delivery cycles and frees up time for teams to focus on high-impact project areas."
+    "question": "How does Empress ensure data privacy and security for sales transactions?",
+    "answer": "Security is a priority for Empress. We employ robust encryption, compliance with industry standards, and regular security audits to ensure that all sales transactions and customer data are handled with the highest level of security and confidentiality."
   },
   {
-    "question": "How does the cross-platform integration feature work to manage projects?",
-    "answer": "Empress’ cross-platform integration allows for seamless interaction between different software and tools used in project management. This creates a unified environment, reducing the complexity of managing multiple project components and ensuring data consistency."
+    "question": "Can we integrate existing sales tools with Empress solutions?",
+    "answer": "Certainly. Empress solutions are designed to be flexible and compatible with a variety of sales tools and systems. We provide seamless integration capabilities to ensure you can continue to use your existing resources alongside our platform."
   },
   {
-    "question": "Can I track the progress of my projects in real-time with Empress?",
-    "answer": "Yes, with Empress' comprehensive dashboards, you can monitor your project's key performance indicators (KPIs) and progress in real-time. These dashboards provide a centralized control point for tracking, reporting, and decision-making."
+    "question": "What makes Empress solutions stand out for sales professionals?",
+    "answer": "Empress solutions stand out due to their holistic approach to sales enablement. We provide a suite of tools that cover every aspect of the sales process, from generating quotes and managing email campaigns to processing transactions and managing subscriptions, all designed to maximize efficiency and revenue generation."
   }
-]
+];
 
 
 
@@ -254,7 +255,7 @@ const featureBlocks = data[0].featureBlocks;
 
 <Layout title="About" footerMargin={false}>
   
-  <!-- <div class="overflow-x-clip">
+  <div class="overflow-x-clip">
     <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
@@ -304,7 +305,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </main>
     </Container>
-  </div> -->
+  </div>
 
   <Container>
   <div>
@@ -313,9 +314,9 @@ const featureBlocks = data[0].featureBlocks;
       "max-w-4xl mx-auto flex flex-col items-center justify-center",
       !nomargin && "mt-24",
     ]}>
-    <Badge color="purple">Empress for Project Management</Badge>
+    <Badge color="purple">Welcome to Empress</Badge>
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      Optimize Your <span class="text-indigo-600">Projects with Empress</span>
+      Streamline Your <span class="text-indigo-600">Sales with Empress</span>
     </h2>
     <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
       Streamline your business management with an all-in-one suite to enhance productivity and drive growth.

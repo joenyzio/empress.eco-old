@@ -14,6 +14,7 @@ import ArrowIcon from "@components/ui/icons/arrow.astro"
 
 import Logos from "@components/logos.astro";
 import heroImage from "../../assets/hero-screenshot.png";
+import directus from "../../assets/directus.png";
 import IntegrationImg from "../../assets/integrations.svg?url";
 import FeatureImgOne from "../../assets/features/2.png";
 import FeatureImgTwo from "../../assets/features/2.png";
@@ -22,8 +23,8 @@ import FeatureImg1 from "../../assets/features/6.png";
 import FeatureImg2 from "../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../assets/employee.jpg";
+import TargetMarketing from "../../assets/features/targeting-audience-for-marketing.svg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import Education from "../../assets/features/education.svg";
 import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
 import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../assets/features/dashboard-development.png";
@@ -37,48 +38,47 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const apps = [
   {
-    "title": "Employees",
-    "description": "Staff management hub",
-    "icon": "fluent:people-team-24-regular",
-    "link": "/app/hr/employees"
+    "title": "Website",
+    "description": "Create personal websites",
+    "icon": "fluent:phone-24-regular",
+    "link": "/app/build/website"
   },
   {
-    "title": "Recruitment",
-    "description": "Streamline hiring process",
-    "icon": "fluent:people-team-add-24-regular",
-    "link": "/app/hr/recruitment"
+    "title": "Store",
+    "description": "Online store setup",
+    "icon": "fluent:cart-24-regular",
+    "link": "/app/build/store"
   },
   {
-    "title": "Time Off",
-    "description": "Leave management system",
-    "icon": "fluent:beach-24-regular",
-    "link": "/app/hr/time-off"
+    "title": "Blog",
+    "description": "Share engaging content",
+    "icon": "fluent:textbox-align-top-24-regular",
+    "link": "/app/build/blog"
   },
   {
-    "title": "Appraisals",
-    "description": "Performance review tool",
-    "icon": "fluent:star-emphasis-24-regular",
-    "link": "/app/hr/appraisals"
+    "title": "Forum",
+    "description": "Community discussion platform",
+    "icon": "fluent:chat-multiple-24-regular",
+    "link": "/app/build/forum"
   },
   {
-    "title": "Referrals",
-    "description": "Employee referral program",
-    "icon": "fluent:comment-arrow-left-24-regular",
-    "link": "/app/hr/referrals"
+    "title": "Documentation",
+    "description": "Technical product support",
+    "icon": "fluent:chat-24-regular",
+    "link": "/app/build/documentation"
   },
   {
-    "title": "Fleet",
-    "description": "Vehicle management system",
-    "icon": "fluent:vehicle-bus-24-regular",
-    "link": "/app/hr/fleet"
-  }
+    "title": "Course",
+    "description": "Online learning platform",
+    "icon": "fluent:food-apple-24-regular",
+    "link": "/app/build/course"
+  },
 ];
 
-
 const data = [
-{
-    "mainHeading": "Elevate Human Resources with Empress",
-    "subtext": "Unlock the future of HR with AI-powered insights, ensuring streamlined recruitment, tailored employee experiences, and optimized HR processes.",
+  {
+    "mainHeading": "Bring Your Business Online with Empress",
+    "subtext": "Craft a compelling digital footprint that captivates your audience at every touchpoint.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -89,158 +89,178 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for HR",
+    "sectionHeading": "Empress: Your Digital Launchpad",
     "offering": {
-      "title": "Next Generation HR Transformation",
-      "subtext": "Leverage a comprehensive platform to enhance every facet of your HR operations."
+      "title": "Cultivate Your Online Brand",
+      "subtext": "Adopt a proactive stance in digital marketing with tools designed to tailor your brand narrative and foster meaningful connections online."
     },
     "valueBlocks": [
-    {
-      "heading": "Empress OS",
-      "title": "Unify HR Efforts",
-      "description": "Centralize HR data, boost collaboration across teams, and automate workflows for optimal efficiency."
-    },
-    {
-      "heading": "Empress Chat",
-      "title": "Scale Employee Support",
-      "description": "Boost internal alignment and engage external stakeholders with precision, ensuring scalable operations."
-    },
-    {
-      "heading": "Empress Insights",
-      "title": "Empower HR Decisions",
-      "description": "Align HR strategies with organization goals and optimize workforce productivity with insightful dashboards."
-    }
-  ],
-    "featureBlocks": [
-    {
-  "heading": "OS for HR",
-  "title": "Unify, Collaborate, and Simplify HR Processes",
-  "description": "Harness the power of Empress OS to centralize HR information, boost interdepartmental synergy, and craft seamless and automated HR workflows.",
-  "bulletPoints": [
-  "Centralize HR documents on one platform",
-"Enable collaboration across HR and departments",
-"Streamline HR tasks from hiring to exit."
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Chat for HR",
-  "title": "Streamline Internal and External Communication",
-  "description": "Seamlessly connect Empress OS's robust tools with its users. Experience unmatched efficiency in both internal team interactions and external stakeholder communication.",
-  "bulletPoints": [
-  "Provide immediate, precise answers to frequent questions",
-"Improve communication for faster resolutions",
-"Connect with stakeholders through tailored, clear messaging"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Insights for HR",
-  "title": "Empower HR with Data-Driven Decisions",
-  "description": "Harness the power of insightful dashboards and data-driven recommendations to align HR strategies with organizational goals and enhance workforce productivity.",
-  "bulletPoints": [
-  "Track talent trends, retention, and training success",
-"Refine hiring tactics with data-driven recruitment insights",
-"Enhance engagement and satisfaction through trend analysis"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-        ]
+      {
+        "heading": "Empress OS",
+        "title": "Unify Your Digital Strategies",
+        "description": "Create a cohesive digital experience by unifying your online marketing initiatives, ensuring consistent messaging and brand presence."
+      },
+      {
+        "heading": "Empress Chat",
+        "title": "Personalize Audience Interactions",
+        "description": "Deploy AI-driven chat solutions to engage with your audience in real-time, providing an immersive and personalized brand experience."
+      },
+      {
+        "heading": "Empress Insights",
+        "title": "Refine Your Digital Tactics",
+        "description": "Leverage advanced analytics to fine-tune your digital tactics, turning insights into improved conversion rates and customer retention."
       }
     ],
-    "featureHeading": "Features for HR",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Guaranteeing transformative and consistent support for all HR initiatives."
+    "featureBlocks": [
+  {
+    "heading": "Effortless Online Creation",
+    "title": "Launch Your Website Instantly",
+    "description": "Discover the new era of website design with Empress's intuitive platform, making the creation, management, and customization of your professional website straightforward and accessible to anyone.",
+    "bulletPoints": [
+      "Easily build and customize your site to perfection",
+      "Showcase your brand's identity with a complimentary domain name",
+      "Select from a variety of themes that resonate with your business image"
+    ],
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ]
+  },
+  {
+    "heading": "Design With Precision",
+    "title": "Craft Your Site Like a Pro",
+    "description": "Tap into your creative side with Empress’s user-friendly design tools. Adjust layouts, add filters, and bring life to your pages with animations – all with simple, direct on-page actions.",
+    "bulletPoints": [
+      "Design intuitively with user-friendly tools",
+      "Customize visuals to align with your brand",
+      "Infuse your site with animation for a lively presence"
+    ],
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ]
+  },
+  {
+    "heading": "Seamless Business Expansion",
+    "title": "Scale Your Online Presence",
+    "description": "Empress Website grows with your ambitions, providing an array of features that make business operations smooth and customer experiences richer, all on a single, integrated platform.",
+    "bulletPoints": [
+      "Easily scale your site as your business evolves",
+      "Integrate seamlessly for peak business performance",
+      "Unlock a comprehensive feature set without additional cost"
+    ],
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ]
+  }
+],
+
+    "featureHeading": "Additional Features",
+    "featureTitle": "Build More With Empress",
+    "featureAssurance": "Tools designed to make your website not just functional, but captivating"
   }
 ];
 
 const features = [
   {
-    "title": "Continuous Learning",
-    "description": "Promote talent growth with AI-driven resources and courses, ensuring employees remain at the forefront of their fields.",
-    "icon": "fluent:food-apple-24-regular"
+    "title": "Streamline",
+    "description": "Optimize workflow efficiency",
+    "icon": "fluent:data-trending-24-regular",
+    "link": "/app/build/website"
   },
   {
-    "title": "Seamless Integrations",
-    "description": "Optimize HR tasks by integrating effortlessly with essential tools, facilitating rapid communication and efficient workflows.",
-    "icon": "fluent:plug-connected-24-regular"
+    "title": "Analyze",
+    "description": "Unlock data insights",
+    "icon": "fluent:data-trending-24-regular",
+    "link": "/app/build/website"
   },
   {
-    "title": "AI Empowerment",
-    "description": "Leverage AI insights to predict trends, refine decision-making processes, and usher in the future of human resources.",
-    "icon": "fluent:cellular-data-1-24-regular"
+    "title": "Automate",
+    "description": "Automate routine tasks",
+    "icon": "fluent:data-trending-24-regular",
+    "link": "/app/build/website"
   },
   {
-    "title": "Interactive HR Bots",
-    "description": "Facilitate employee queries, deliver instant support, and optimize HR processes with our state-of-the-art bots.",
-    "icon": "fluent:bot-24-regular"
+    "title": "Access",
+    "description": "Control visibility",
+    "icon": "fluent:data-trending-24-regular",
+    "link": "/app/build/website"
   },
   {
-    "title": "Multilingual Support",
-    "description": "Cater to a global workforce with multilingual capabilities, ensuring clear communication and understanding.",
-    "icon": "fluent:local-language-zi-24-regular"
+    "title": "Chat",
+    "description": "Engage users live",
+    "icon": "fluent:chat-24-regular",
+    "link": "/app/build/website"
   },
   {
-    "title": "Uniform HR Experience",
-    "description": "Offer a consistent HR experience across all touchpoints, ensuring personalized, intuitive interactions, whether on mobile or desktop.",
-    "icon": "fluent:weather-sunny-high-24-regular"
+    "title": "Forecast",
+    "description": "Anticipate trends",
+    "icon": "fluent:predictions-24-regular",
+    "link": "/app/build/website"
+  },
+  {
+    "title": "Collaborate",
+    "description": "Connect with collaborators",
+    "icon": "fluent:chat-24-regular",
+    "link": "/app/build/website"
+  },
+  {
+    "title": "Integrate",
+    "description": "Seamless tool integration",
+    "icon": "fluent:predictions-24-regular",
+    "link": "/app/build/website"
   }
-]
+];
+
+
 
 const faq = [
   {
-    question: "How does Empress OS enhance HR operations?",
-    answer: "Empress OS centralizes HR content, enhances team collaboration, and automates workflows, resulting in increased efficiency and streamlined HR processes across the entire employee lifecycle."
+    "question": "How can Empress help me establish a strong digital presence?",
+    "answer": "Empress provides an integrated suite of tools that help you unify your digital strategies, personalize audience interactions, and refine your digital tactics with advanced analytics. This ensures consistent messaging, a cohesive brand experience, and improved engagement across all digital platforms."
   },
   {
-    question: "What support does Empress Chat provide for HR teams?",
-    answer: "Empress Chat scales employee support by providing instant and accurate responses to inquiries, bolstering internal communication, and engaging external stakeholders with personalized interactions."
+    "question": "What platforms does Empress integrate with?",
+    "answer": "Empress streamlines your digital presence across 200+ platforms, offering sophisticated tools that adapt to your strategic growth and help maintain a unified brand voice online."
   },
   {
-    question: "Can Empress Insights improve our HR decision-making?",
-    answer: "Yes, Empress Insights offers data-driven dashboards that provide actionable insights, helping to align HR strategies with organizational goals, and optimize workforce productivity through analytics."
+    "question": "Can Empress assist in enhancing my brand's digital interactions?",
+    "answer": "Absolutely, Empress Chat utilizes AI-driven solutions to engage your audience in real-time, fostering a more immersive and personalized experience with your brand across digital channels."
   },
   {
-    question: "What integrations are available with Empress for HR tasks?",
-    answer: "Empress offers seamless integrations with essential HR tools to facilitate rapid communication, efficient workflows, and streamline tasks such as recruitment, onboarding, and employee management."
+    "question": "How does Empress turn insights into better customer engagement?",
+    "answer": "Empress Insights leverages granular analytics and trend analysis to fine-tune your digital approach, leading to better conversion rates and customer retention by informing your digital strategy with data-driven decisions."
   },
   {
-    question: "How can AI within Empress transform HR practices?",
-    answer: "Empress leverages AI to predict employee and talent trends, refine decision-making, and provide AI-driven resources for continuous learning, effectively ushering in the next generation of HR."
+    "question": "Is there support for campaign management within Empress?",
+    "answer": "Yes, Empress OS centralizes all aspects of your digital presence, allowing you to manage assets, coordinate campaigns, and automate workflows from one platform, streamlining campaign management and amplifying reach."
   },
   {
-    question: "What functionalities do interactive HR bots provide?",
-    answer: "Interactive HR bots within Empress facilitate employee queries, deliver instant support, help with routine HR tasks, and improve overall HR process efficiency."
+    "question": "What kind of analytics can I expect with Empress?",
+    "answer": "Empress offers advanced analytics that provide real-time insights and trend predictions, enabling you to make informed decisions that sharpen your digital strategy and keep you ahead of the market curve."
   },
   {
-    question: "Does Empress support a multilingual workforce?",
-    answer: "Yes, Empress caters to a global workforce with multilingual support capabilities, ensuring clear and effective communication across different languages."
+    "question": "How does Empress ensure the consistency of my brand's voice?",
+    "answer": "Empress tools are designed to help maintain a consistent and recognizable brand voice across all your digital platforms, thereby enhancing brand recall and fostering loyalty."
   }
 ];
 
@@ -249,11 +269,11 @@ const featureBlocks = data[0].featureBlocks;
 
 ---
 
-
 <Layout title="About" footerMargin={false}>
-  
-  <!-- <div class="overflow-x-clip">
+
+  <div class="overflow-x-clip">
     <Container>
+
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
           class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
@@ -291,7 +311,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={Education}
+            src={TargetMarketing}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -302,44 +322,43 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </main>
     </Container>
-  </div> -->
+  </div>
+
 
   <Container>
-  <div>
-    <div
-    class:list={[
-      "max-w-4xl mx-auto flex flex-col items-center justify-center",
-      !nomargin && "mt-24",
-    ]}>
-    <Badge color="purple">Empress for Human Resources</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      Elevate Your <span class="text-indigo-600">HR with Empress</span>
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
-    </p>
-  </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-    {
-      apps.map((item) => (
-        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
+    <div>
+      <div
+      class:list={[
+        "max-w-4xl mx-auto flex flex-col items-center justify-center",
+        !nomargin && "mt-24",
+      ]}>
+      <Badge color="purple">Build with Empress</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        Choose Your <span class="text-indigo-600">Website</span>
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        Bring your idea to life with the tools you need to start building.
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        apps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          </div>
-        </a>
-      ))
-    }
-  </div>
-  </div>
-</Container>
-  
-  <div class="grid md:grid-cols-2 py-10"></div>
+          </a>
+        ))
+      }
+    </div>
+    </div>
+  </Container>
   
 
   <Container>
@@ -398,14 +417,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../../../chemical-laboratory.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../job-announcement.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../../../global-education.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../global-market-2.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -511,10 +530,114 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../../../nuclear-research-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../../../data-analysis-2.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
   </div>
 
+  </Container>
+  
+  <Container>
+
+  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+    <Badge color="purple">{data[0].featureHeading}</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      {data[0].featureTitle}
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      {data[0].featureAssurance}
+    </p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+    {
+      features.map((item) => (
+        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+  
+
+  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+
+  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+    <Badge color="purple">We're Here to Help</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      We're Here to Support You
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      Empress Advocates are committed to making the world a better place. Discover the values that drive our mission and vision:
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+    <Card color="indigo" size="sm">
+      <Fragment slot="image">
+        <Picture
+          src={NetworkServerManagement}
+          alt="Feature image"
+          formats={["avif", "webp"]}
+          class="h-full w-full object-contain"
+          loading="lazy"
+        />
+      </Fragment>
+      <span slot="badge">Interactive Learning</span>
+      <span slot="title">Empress Academy</span>
+      <span slot="desc">
+        Structured courses guided by industry experts.</span
+      >
+    </Card>
+  
+    <Card color="purple" size="sm">
+      <Fragment slot="image">
+        <Picture
+          src={NetworkServerManagement}
+          alt="Feature image"
+          formats={["avif", "webp"]}
+          class="h-full w-full object-contain"
+          loading="lazy"
+        />
+      </Fragment>
+      <span slot="badge">Self-paced Education</span>
+      <span slot="title">Empress Guides</span>
+      <span slot="desc">
+        Curated materials tailored to your learning pace.</span
+      >
+    </Card>
+  
+    <Card size="sm">
+      <Fragment slot="image">
+        <!-- // svg image. cannot use <picture/> as of now -->
+        <Image
+          src={NetworkServerManagement}
+          alt="Feature image"
+          width="909"
+          height="823"
+          class="h-full w-full object-contain"
+          loading="lazy"
+        />
+      </Fragment>
+      <span slot="badge">Latest Insights</span>
+      <span slot="title">Empress Blog</span>
+      <span slot="desc">
+        Stay updated with trends and actionable insights.</span
+      >
+    </Card>
+  </div>
+
+</Container>
+
+<!-- <Container>
   <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
     <Badge color="purple">{data[0].sectionHeading}</Badge>
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
@@ -558,7 +681,6 @@ const featureBlocks = data[0].featureBlocks;
     
     <Card size="sm">
       <Fragment slot="image">
-        <!-- // svg image. cannot use <picture/> as of now -->
         <Image
           src={DashboardDevelopment}
           alt="Feature image"
@@ -574,36 +696,9 @@ const featureBlocks = data[0].featureBlocks;
     </Card>
   </div>
 
-    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">{data[0].featureHeading}</Badge>
-      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        {data[0].featureTitle}
-      </h2>
-      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        {data[0].featureAssurance}
-      </p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-      {
-        features.map((item) => (
-          <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-            <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-
+</Container> -->
   
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
-
-  </Container>
 
   <Container>
     <Sectionhead>

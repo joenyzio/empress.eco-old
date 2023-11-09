@@ -13,72 +13,74 @@ import { Icon } from "astro-icon";
 import ArrowIcon from "@components/ui/icons/arrow.astro"
 
 import Logos from "@components/logos.astro";
-import heroImage from "../../assets/hero-screenshot.png";
-import IntegrationImg from "../../assets/integrations.svg?url";
-import FeatureImgOne from "../../assets/features/2.png";
-import FeatureImgTwo from "../../assets/features/2.png";
-import FeatureImgThree from "../../assets/features/3.png";
-import FeatureImg1 from "../../assets/features/6.png";
-import FeatureImg2 from "../../assets/features/2.png";
+import heroImage from "../../../assets/hero-screenshot.png";
+import IntegrationImg from "../../../assets/integrations.svg?url";
+import FeatureImgOne from "../../../assets/features/2.png";
+import FeatureImgTwo from "../../../assets/features/2.png";
+import FeatureImgThree from "../../../assets/features/3.png";
+import FeatureImg1 from "../../../assets/features/6.png";
+import FeatureImg2 from "../../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
-import EmployeeImg from "../../assets/employee.jpg";
+import EmployeeImg from "../../../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import Education from "../../assets/features/education.svg";
-import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
-import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
-import DashboardDevelopment from "../../assets/features/dashboard-development.png";
+import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
+import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
 
-const { nomargin } = Astro.props;
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
+const { nomargin } = Astro.props;
+
+const templates = [
   {
-    "title": "Inventory",
-    "description": "Stock tracking system",
-    "icon": "fluent:tray-item-add-24-regular",
-    "link": "/app/inventory/inventory"
+    "title": "Vehicle Inventory Management",
+    "description": "Track fleet vehicles",
+    "icon": "fluent:clipboard-checkmark-24-regular",
+    "link": "/templates/vehicle-inventory-management"
   },
   {
-    "title": "Manufacturing (MRP)",
-    "description": "Production planning control",
-    "icon": "fluent:manufacturer-24-regular",
-    "link": "/app/inventory/manufacturing"
+    "title": "Maintenance Scheduling",
+    "description": "Schedule vehicle maintenance",
+    "icon": "fluent:clipboard-checkmark-24-regular",
+    "link": "/templates/maintenance-scheduling"
   },
   {
-    "title": "PLM",
-    "description": "Product lifecycle management",
-    "icon": "fluent:production-24-regular",
-    "link": "/app/inventory/plm"
+    "title": "Fuel and Expense Tracking",
+    "description": "Monitor fuel and costs",
+    "icon": "fluent:clipboard-checkmark-24-regular",
+    "link": "/templates/fuel-and-expense-tracking"
   },
   {
-    "title": "Purchase",
-    "description": "Procurement management system",
-    "icon": "fluent:shopping-bag-24-regular",
-    "link": "/app/inventory/purchase"
+    "title": "Driver Assignment System",
+    "description": "Assign vehicles to drivers",
+    "icon": "fluent:clipboard-checkmark-24-regular",
+    "link": "/templates/driver-assignment-system"
   },
   {
-    "title": "Maintenance",
-    "description": "Equipment upkeep scheduler",
-    "icon": "fluent:wrench-screwdriver-24-regular",
-    "link": "/app/inventory/maintenance"
+    "title": "Vehicle Usage Analytics",
+    "description": "Analyze vehicle data",
+    "icon": "fluent:clipboard-checkmark-24-regular",
+    "link": "/templates/vehicle-usage-analytics"
   },
   {
-    "title": "Quality",
-    "description": "Quality assurance protocol",
-    "icon": "fluent:checkmark-starburst-24-regular",
-    "link": "/app/inventory/quality"
+    "title": "Compliance and Safety Checklists",
+    "description": "Ensure regulatory compliance",
+    "icon": "fluent:clipboard-checkmark-24-regular",
+    "link": "/templates/compliance-and-safety-checklists"
   }
 ];
 
 
+
 const data = [
   {
-    "mainHeading": "Revolutionize Inventory & Manufacturing with Empress",
-    "subtext": "Transform your inventory management and manufacturing processes with cutting-edge AI-driven analytics for maximized efficiency and productivity.",
+    "mainHeading": "Assets",
+    "subtext": "Streamline your vehicle management operations with a powerful and intuitive system designed for efficiency and scalability.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -89,37 +91,37 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for Inventory & Manufacturing",
+    "sectionHeading": "Advanced Fleet Management",
     "offering": {
-      "title": "Next-Level Operational Excellence",
-      "subtext": "Adopt an innovative approach to inventory management and manufacturing with a suite designed for precision and scalability."
+      "title": "Drive Operational Efficiency and Fleet Performance",
+      "subtext": "Unlock the full potential of your fleet with integrated vehicle tracking, maintenance alerts, and fuel management."
     },
     "valueBlocks": [
       {
-        "heading": "Empress OS",
-        "title": "Streamline Production Workflows",
-        "description": "Centralize your production data, synchronize operations, and automate manufacturing workflows to enhance productivity."
+        "heading": "Fleet Tracking",
+        "title": "Streamline Fleet Operations",
+        "description": "Monitor vehicle locations, optimize routes, and enhance the safety of your fleet with real-time GPS tracking."
       },
       {
-        "heading": "Empress Chat",
-        "title": "Optimize Supply Chain Communication",
-        "description": "Enhance communication with suppliers and customers for smoother operations, utilizing AI to manage inquiries and streamline service."
+        "heading": "Fleet Maintenance",
+        "title": "Minimize Downtime",
+        "description": "Automate maintenance scheduling, track service history, and receive alerts for upcoming vehicle maintenance needs."
       },
       {
-        "heading": "Empress Insights",
-        "title": "Strategize with Smart Data",
-        "description": "Inform your inventory decisions with smart analytics, optimizing stock levels and reducing waste through predictive insights."
+        "heading": "Fuel Management",
+        "title": "Reduce Fuel Costs",
+        "description": "Monitor fuel usage, identify inefficiencies, and optimize consumption with comprehensive fuel management tools."
       }
     ],
     "featureBlocks": [
       {
-        "heading": "OS for Inventory & Manufacturing",
-        "title": "Control and Visibility Over Your Operations",
-        "description": "Empress OS offers unparalleled control and insights into your manufacturing and inventory, ensuring every decision is data-backed and every process optimized.",
+        "heading": "Vehicle Management System",
+        "title": "Centralize Your Fleet Operations",
+        "description": "From acquisition to disposal, manage all aspects of your fleet lifecycle in one place for unmatched operational oversight.",
         "bulletPoints": [
-          "Track inventory levels in real-time",
-          "Predictive analytics for demand forecasting",
-          "Automate supply chain management"
+          "Track vehicle usage and lifecycle data",
+          "Manage vehicle acquisition and disposal",
+          "Keep detailed records for compliance and reporting"
         ],
         "buttons": [
           {
@@ -133,13 +135,13 @@ const data = [
         ]
       },
       {
-        "heading": "Chat for Supply Chain Excellence",
-        "title": "Instant Communication, Seamless Integration",
-        "description": "Use Empress Chat to facilitate instant, AI-assisted communication within the supply chain, reducing delays and enhancing partner relations.",
+        "heading": "Driver Management",
+        "title": "Safeguard Your Operations with Driver Management",
+        "description": "Ensure driver safety and compliance with tools that help you manage licenses, training, and performance metrics.",
         "bulletPoints": [
-          "Automate vendor and customer interactions",
-          "Quickly address supply chain queries",
-          "Maintain clear, consistent communication"
+          "Track driver licenses and certifications",
+          "Monitor driver behavior and performance",
+          "Schedule and record training sessions"
         ],
         "buttons": [
           {
@@ -153,13 +155,13 @@ const data = [
         ]
       },
       {
-        "heading": "Insights for Manufacturing Prowess",
-        "title": "Make Informed Production Decisions",
-        "description": "With Empress Insights, leverage deep analytics to optimize your manufacturing processes, predict maintenance, and reduce downtime.",
+        "heading": "Fleet Analytics",
+        "title": "Inform Your Decisions with Fleet Analytics",
+        "description": "Make informed decisions with analytics that provide insights into fleet performance, utilization, and operational costs.",
         "bulletPoints": [
-          "Monitor production efficiency",
-          "Analyze machine performance data",
-          "Plan and predict maintenance for uninterrupted production"
+          "Analyze fleet performance data",
+          "Improve vehicle utilization and efficiency",
+          "Optimize fleet-related costs and budgeting"
         ],
         "buttons": [
           {
@@ -173,77 +175,82 @@ const data = [
         ]
       }
     ],
-    "featureHeading": "Advanced Features for Inventory & Manufacturing",
-    "featureTitle": "Master Your Production and Inventory",
-    "featureAssurance": "At Empress, we're committed to equipping your business with the most sophisticated tools for a lean and proactive inventory and manufacturing operation."
+    "featureHeading": "Features for Fleet Management",
+    "featureTitle": "Elevate Your Fleet Operations",
+    "featureAssurance": "Our fleet vehicle management system is designed to grow with your business, ensuring that as your fleet expands, your ability to manage effectively does too."
   }
 ];
 
 
 const features = [
   {
-    "title": "Smart Inventory Management",
-    "description": "Utilize AI to maintain optimal stock levels, predict inventory needs, and reduce waste through data-driven management.",
-    "icon": "fluent:food-apple-24-regular"
+    "title": "Compliance Management",
+    "description": "Keep your fleet in line with regulations using our compliance management tools, ensuring your vehicles and drivers adhere to legal requirements.",
+    "icon": "fluent:shield-24-regular",
   },
   {
-    "title": "Integrated Manufacturing Systems",
-    "description": "Streamline manufacturing processes by seamlessly integrating with cutting-edge tools and platforms for increased operational efficiency.",
-    "icon": "fluent:plug-connected-24-regular"
+    "title": "Accident Management",
+    "description": "Efficiently handle vehicle incidents with an integrated accident management system that helps to minimize downtime and manage costs.",
+    "icon": "fluent:vehicle-car-collision-24-regular",
   },
   {
-    "title": "Predictive Analytics in Production",
-    "description": "Empower your manufacturing with AI analytics to anticipate market changes, optimize production planning, and stay ahead of demand curves.",
-    "icon": "fluent:cellular-data-1-24-regular"
+    "title": "Eco-Friendly Routing",
+    "description": "Reduce your carbon footprint with routes optimized for fuel efficiency, helping you make cost-effective and environmentally friendly decisions.",
+    "icon": "fluent:leaf-three-24-regular",
   },
   {
-    "title": "Automated Workflow Assistants",
-    "description": "Deploy advanced bots to streamline manufacturing workflows, from assembly line support to maintenance coordination.",
-    "icon": "fluent:bot-24-regular"
+    "title": "Real-Time Notifications",
+    "description": "Stay updated with real-time alerts for vehicle maintenance, route deviations, and unauthorized usage, keeping you in control at all times.",
+    "icon": "fluent:alert-24-regular",
   },
   {
-    "title": "Global Operational Support",
-    "description": "Our platform provides multilingual support to adapt to diverse manufacturing environments and facilitate clear, efficient communication.",
-    "icon": "fluent:local-language-zi-24-regular"
+    "title": "Custom Reporting",
+    "description": "Generate custom reports for insights into fleet operations, driver performance, and cost management to aid strategic decision-making.",
+    "icon": "fluent:chart-multiple-24-regular",
   },
   {
-    "title": "Consistent Manufacturing Interface",
-    "description": "Experience a unified user interface across devices, enabling a seamless interaction with manufacturing systems whether you're on the floor or on the go.",
-    "icon": "fluent:weather-sunny-high-24-regular"
+    "title": "Asset Management",
+    "description": "Track all your fleet assets in one place, from vehicles to equipment, ensuring optimal allocation and reducing unnecessary expenses.",
+    "icon": "fluent:briefcase-24-regular",
   }
-]
-
+];
 
 const faq = [
   {
-    "question": "How does Empress revolutionize inventory management?",
-    "answer": "Empress revolutionizes inventory management by leveraging AI-driven analytics to predict inventory needs, automate stock level optimization, and minimize waste, resulting in maximized efficiency and cost savings."
+    "question": "How does the Fleet Vehicle Management System improve operational efficiency?",
+    "answer": "Our system enhances operational efficiency by providing real-time GPS tracking, automated maintenance scheduling, and fuel management tools. These features work together to optimize routes, minimize vehicle downtime, and reduce fuel costs."
   },
   {
-    "question": "Can Empress OS integrate with my existing manufacturing systems?",
-    "answer": "Yes, Empress OS is designed to seamlessly integrate with your existing manufacturing systems, providing a centralized platform for streamlined operations and real-time insights into your production processes."
+    "question": "Can the Fleet Management System help with driver safety and compliance?",
+    "answer": "Absolutely. The system includes driver management tools that track licenses, certifications, and performance metrics, promoting safety and ensuring compliance with transport regulations."
   },
   {
-    "question": "What advantages does Empress Chat offer for supply chain communication?",
-    "answer": "Empress Chat offers the advantage of instant, AI-assisted communication, which helps reduce delays, automate interactions with vendors and customers, and maintain clear and consistent communication throughout the supply chain."
+    "question": "Is it possible to manage the entire lifecycle of a vehicle within this system?",
+    "answer": "Yes, our Vehicle Management System is designed to manage all aspects of your fleet's lifecycle from acquisition to disposal, including usage tracking, maintenance records, and compliance reporting."
   },
   {
-    "question": "How does Empress Insights enhance production decision-making?",
-    "answer": "Empress Insights enhances production decision-making by providing deep analytics that allow you to monitor efficiency, analyze performance data, and predict maintenance needs, ensuring reduced downtime and more informed manufacturing strategies."
+    "question": "How does the Accident Management feature work?",
+    "answer": "The Accident Management feature helps you handle incidents by recording details, tracking claims, and managing repairs. This system streamlines the process to minimize downtime and costs associated with vehicle accidents."
   },
   {
-    "question": "In what ways does smart inventory management through Empress reduce waste?",
-    "answer": "Smart inventory management through Empress uses AI to accurately forecast demand, preventing overstocking or stockouts, and ensuring that inventory levels are kept optimal, thus significantly reducing waste and associated costs."
+    "question": "What kind of analytics can be accessed with the Fleet Analytics feature?",
+    "answer": "Fleet Analytics provides insights into vehicle performance, utilization, and operational costs. This data helps in making informed decisions that can improve efficiency and optimize expenses."
   },
   {
-    "question": "How does Empress ensure its platform supports global manufacturing operations?",
-    "answer": "Empress ensures global support by providing a multilingual platform that caters to diverse manufacturing environments, allowing for clear communication and efficient operation across different regions and languages."
+    "question": "How will I be alerted to vehicle maintenance needs?",
+    "answer": "Our system sends real-time notifications for maintenance alerts based on service history and scheduled maintenance plans, ensuring that you can proactively manage vehicle upkeep."
   },
   {
-    "question": "Is the user interface of Empress conducive to on-the-go management for manufacturing?",
-    "answer": "Yes, the Empress user interface is designed for on-the-go management, providing a consistent and intuitive experience across all devices, ensuring that you can efficiently interact with your manufacturing systems, whether you're on the factory floor or away from the site."
+    "question": "What type of reports can I generate with the Custom Reporting feature?",
+    "answer": "You can generate a variety of custom reports including, but not limited to, fleet utilization, cost management, driver performance, and maintenance records, all of which can be tailored to your specific business needs."
+  },
+  {
+    "question": "How does Eco-Friendly Routing contribute to cost savings?",
+    "answer": "Eco-Friendly Routing optimizes your fleet's routes for fuel efficiency, not only contributing to cost savings by reducing fuel consumption but also supporting your company's sustainability efforts."
   }
-]
+];
+
+
 
 
 
@@ -251,10 +258,8 @@ const featureBlocks = data[0].featureBlocks;
 
 ---
 
-
 <Layout title="About" footerMargin={false}>
-  
-  <!-- <div class="overflow-x-clip">
+  <div class="overflow-x-clip">
     <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
@@ -293,7 +298,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={Education}
+            src={ECommerce}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -304,48 +309,86 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </main>
     </Container>
-  </div> -->
-
-  <Container>
-  <div>
-    <div
-    class:list={[
-      "max-w-4xl mx-auto flex flex-col items-center justify-center",
-      !nomargin && "mt-24",
-    ]}>
-    <Badge color="purple">Empress for Inventory & Manufacturing</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      Evolve Your <span class="text-indigo-600">Inventory with Empress</span>
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
-    </p>
   </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-    {
-      apps.map((item) => (
-        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          </div>
-        </a>
-      ))
-    }
-  </div>
-  </div>
-</Container>
-  
-  <div class="grid md:grid-cols-2 py-10"></div>
   
 
   <Container>
   
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].offering.title}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].offering.subtext}
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        templates.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+      <Card color="indigo" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={NetworkServerManagement}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
+      </Card>
+      
+      <Card color="purple" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={AutomatedMarketing}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
+      </Card>
+      
+      <Card size="sm">
+        <Fragment slot="image">
+          <Image
+            src={DashboardDevelopment}
+            alt="Feature image"
+            width="909"
+            height="823"
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
+      </Card>
+    </div> -->
 
     <!-- Feature 1 -->
 
@@ -400,14 +443,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../../../chemical-laboratory.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../../../global-education.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -513,67 +556,8 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../../../nuclear-research-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../../../../../pie-chart-bar.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
-  </div>
-
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">{data[0].sectionHeading}</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      {data[0].offering.title}
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      {data[0].offering.subtext}
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-    <Card color="indigo" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={NetworkServerManagement}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-      <span slot="title">{data[0].valueBlocks[0].title}</span>
-      <span slot="desc">{data[0].valueBlocks[0].description}</span>
-    </Card>
-    
-    <Card color="purple" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={AutomatedMarketing}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-      <span slot="title">{data[0].valueBlocks[1].title}</span>
-      <span slot="desc">{data[0].valueBlocks[1].description}</span>
-    </Card>
-    
-    <Card size="sm">
-      <Fragment slot="image">
-        <!-- // svg image. cannot use <picture/> as of now -->
-        <Image
-          src={DashboardDevelopment}
-          alt="Feature image"
-          width="909"
-          height="823"
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-      <span slot="title">{data[0].valueBlocks[2].title}</span>
-      <span slot="desc">{data[0].valueBlocks[2].description}</span>
-    </Card>
   </div>
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">

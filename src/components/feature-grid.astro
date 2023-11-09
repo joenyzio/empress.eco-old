@@ -15,21 +15,230 @@ import AutomatedMarketing from "../assets/features/automated-marketing.svg";
 import Education from "../assets/features/education.svg";
 import Devops from "../assets/features/devops.svg";
 import DashboardDevelopment from "../assets/features/dashboard-development.svg";
+import Badge from "@components/ui/badge.astro";
+import NetworkServerManagement from "../assets/features/network-server-endpoint-management.svg";
+import Link from "@components/ui/link.astro";
+
+import { Icon } from "astro-icon";
+
+const data = [
+  {
+    "mainHeading": "Bring Your Business Online with Empress",
+    "subtext": "Craft a compelling digital footprint that captivates your audience at every touchpoint.",
+    "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "sectionHeading": "Empress: Your Digital Launchpad",
+    "offering": {
+      "title": "Cultivate Your Online Brand",
+      "subtext": "Adopt a proactive stance in digital marketing with tools designed to tailor your brand narrative and foster meaningful connections online."
+    },
+    "valueBlocks": [
+      {
+        "heading": "Empress OS",
+        "title": "Unify Your Digital Strategies",
+        "description": "Create a cohesive digital experience by unifying your online marketing initiatives, ensuring consistent messaging and brand presence."
+      },
+      {
+        "heading": "Empress Chat",
+        "title": "Personalize Audience Interactions",
+        "description": "Deploy AI-driven chat solutions to engage with your audience in real-time, providing an immersive and personalized brand experience."
+      },
+      {
+        "heading": "Empress Insights",
+        "title": "Refine Your Digital Tactics",
+        "description": "Leverage advanced analytics to fine-tune your digital tactics, turning insights into improved conversion rates and customer retention."
+      }
+    ],
+    "featureBlocks": [
+  {
+    "heading": "Effortless Online Creation",
+    "title": "Launch Your Website Instantly",
+    "description": "Discover the new era of website design with Empress's intuitive platform, making the creation, management, and customization of your professional website straightforward and accessible to anyone.",
+    "bulletPoints": [
+      "Easily build and customize your site to perfection",
+      "Showcase your brand's identity with a complimentary domain name",
+      "Select from a variety of themes that resonate with your business image"
+    ],
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ]
+  },
+  {
+    "heading": "Design With Precision",
+    "title": "Craft Your Site Like a Pro",
+    "description": "Tap into your creative side with Empress’s user-friendly design tools. Adjust layouts, add filters, and bring life to your pages with animations – all with simple, direct on-page actions.",
+    "bulletPoints": [
+      "Design intuitively with user-friendly tools",
+      "Customize visuals to align with your brand",
+      "Infuse your site with animation for a lively presence"
+    ],
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ]
+  },
+  {
+    "heading": "Seamless Business Expansion",
+    "title": "Scale Your Online Presence",
+    "description": "Empress Website grows with your ambitions, providing an array of features that make business operations smooth and customer experiences richer, all on a single, integrated platform.",
+    "bulletPoints": [
+      "Easily scale your site as your business evolves",
+      "Integrate seamlessly for peak business performance",
+      "Unlock a comprehensive feature set without additional cost"
+    ],
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ]
+  }
+],
+
+    "featureHeading": "Additional Features",
+    "featureTitle": "Scale Your Business",
+    "featureAssurance": "Tools designed to make your website not just functional, but captivating"
+  }
+];
 
 
+
+const features = [
+  {
+    "title": "Streamline",
+    "description": "Optimize workflow efficiency",
+    "icon": "fluent:data-trending-24-regular",
+    "link": "/app/build/website"
+  },
+  {
+    "title": "Analyze",
+    "description": "Unlock data insights",
+    "icon": "fluent:data-trending-24-regular",
+    "link": "/app/build/website"
+  },
+  {
+    "title": "Automate",
+    "description": "Automate routine tasks",
+    "icon": "fluent:data-trending-24-regular",
+    "link": "/app/build/website"
+  },
+  {
+    "title": "Access",
+    "description": "Control visibility",
+    "icon": "fluent:data-trending-24-regular",
+    "link": "/app/build/website"
+  },
+  {
+    "title": "Chat",
+    "description": "Engage users live",
+    "icon": "fluent:chat-24-regular",
+    "link": "/app/build/website"
+  },
+  {
+    "title": "Forecast",
+    "description": "Anticipate trends",
+    "icon": "fluent:predictions-24-regular",
+    "link": "/app/build/website"
+  },
+  {
+    "title": "Collaborate",
+    "description": "Connect with collaborators",
+    "icon": "fluent:chat-24-regular",
+    "link": "/app/build/website"
+  },
+  {
+    "title": "Integrate",
+    "description": "Seamless tool integration",
+    "icon": "fluent:predictions-24-regular",
+    "link": "/app/build/website"
+  }
+];
 
 ---
 
-<div class="mt-24">
+
+
+<!-- <div class="mt-24">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     Business Performance <span class="text-indigo-600">Reimagined</span>
   </h2>
   <p class="text-lg mt-4 text-slate-600">
     Elevate your business through unified operations, seamless collaboration, and actionable insights.
   </p>
+</div> -->
+
+<div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+  <Badge color="purple">{data[0].featureHeading}</Badge>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+    {data[0].featureTitle}
+  </h2>
+  <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+    {data[0].featureAssurance}
+  </p>
 </div>
 
-<div class="grid md:grid-cols-2 lg:grid-cols-5 mt-16 gap-10">
+<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+  {
+    features.map((item) => (
+      <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+          <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+            <Icon class="text-indigo-500" name={item.icon} size="24" />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      </a>
+    ))
+  }
+</div>
+
+<div class="grid md:grid-cols-2 py-10"></div>
+
+<div class="flex justify-center items-center"> <!-- Full screen height and center content -->
+  <Link href="/apps" size="sm" class="inline-flex items-center justify-center group gap-px">
+    <span>View All Features</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+      <path
+        fill-rule="evenodd"
+        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </Link>
+</div>
+
+<!-- <div class="grid md:grid-cols-2 lg:grid-cols-5 mt-16 gap-10">
   <Card class="lg:col-span-3" color="purple">
     <Fragment slot="image">
       <Picture
@@ -101,7 +310,6 @@ import DashboardDevelopment from "../assets/features/dashboard-development.svg";
 
   <Card size="sm">
     <Fragment slot="image">
-      <!-- // svg image. cannot use <picture/> as of now -->
       <Image
         src={Devops}
         alt="Feature image"
@@ -117,4 +325,4 @@ import DashboardDevelopment from "../assets/features/dashboard-development.svg";
       Seamlessly integrate with hundreds of tools using webhooks and Zapier.</span
     >
   </Card>
-</div>
+</div> -->

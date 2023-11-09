@@ -14,6 +14,7 @@ import { Picture, Image } from "astro:assets";
 import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import FeatureImg8 from "../assets/features/8.png";
+import NetworkServerManagement from "../assets/features/network-server-endpoint-management.svg";
 
 const features = [
   {
@@ -103,7 +104,62 @@ const faq = [
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+  <Card color="indigo" size="sm">
+    <Fragment slot="image">
+      <Picture
+        src={NetworkServerManagement}
+        alt="Feature image"
+        formats={["avif", "webp"]}
+        class="h-full w-full object-contain"
+        loading="lazy"
+      />
+    </Fragment>
+    <span slot="badge">Interactive Learning</span>
+    <span slot="title">Empress Academy</span>
+    <span slot="desc">
+      Structured courses guided by industry experts.</span
+    >
+  </Card>
+
+  <Card color="purple" size="sm">
+    <Fragment slot="image">
+      <Picture
+        src={NetworkServerManagement}
+        alt="Feature image"
+        formats={["avif", "webp"]}
+        class="h-full w-full object-contain"
+        loading="lazy"
+      />
+    </Fragment>
+    <span slot="badge">Self-paced Education</span>
+    <span slot="title">Empress Guides</span>
+    <span slot="desc">
+      Curated materials tailored to your learning pace.</span
+    >
+  </Card>
+
+  <Card size="sm">
+    <Fragment slot="image">
+      <!-- // svg image. cannot use <picture/> as of now -->
+      <Image
+        src={NetworkServerManagement}
+        alt="Feature image"
+        width="909"
+        height="823"
+        class="h-full w-full object-contain"
+        loading="lazy"
+      />
+    </Fragment>
+    <span slot="badge">Latest Insights</span>
+    <span slot="title">Empress Blog</span>
+    <span slot="desc">
+      Stay updated with trends and actionable insights.</span
+    >
+  </Card>
+</div>
+
+<!-- <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
   {
     features.map((item) => (
       <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
@@ -117,7 +173,7 @@ const faq = [
       </div>
     ))
   }
-</div>
+</div> -->
 
 
 <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>

@@ -34,53 +34,53 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-
 const { nomargin } = Astro.props;
 
 const templates = [
   {
-    "title": "Data Dashboard",
-    "description": "Visualize and analyze data effectively.",
-    "icon": "fluent:export-24-regular",
-    "link": "/templates/data-dashboard"
+    "title": "Weekly Timesheet",
+    "description": "Record Weekly Work Hours",
+    "icon": "fluent:timer-24-regular",
+    "link": "/templates/weekly-timesheet"
   },
   {
-    "title": "Report Generator",
-    "description": "Create custom reports for insights.",
-    "icon": "fluent:export-24-regular",
-    "link": "/templates/report-generator"
+    "title": "Time Entry",
+    "description": "Track Hours On-the-Go",
+    "icon": "fluent:timer-24-regular",
+    "link": "/templates/time-entry"
   },
   {
-    "title": "Data Import",
-    "description": "Import, transform, and analyze data.",
-    "icon": "fluent:export-24-regular",
-    "link": "/templates/data-import"
+    "title": "Project-Based Timesheets",
+    "description": "Allocate Hours to Projects",
+    "icon": "fluent:timer-24-regular",
+    "link": "/templates/project-based-timesheets"
   },
   {
-    "title": "Chart Library",
-    "description": "Access a variety of chart options.",
-    "icon": "fluent:export-24-regular",
-    "link": "/templates/chart-library"
+    "title": "Overtime Tracker",
+    "description": "Monitor Overtime Work",
+    "icon": "fluent:timer-24-regular",
+    "link": "/templates/overtime-tracker"
   },
   {
-    "title": "Predictive Models",
-    "description": "Utilize predictive insights for decision-making.",
-    "icon": "fluent:lightbulb-24-regular",
-    "link": "/templates/predictive-models"
+    "title": "Timesheet Approval Workflow",
+    "description": "Streamline Approval Process",
+    "icon": "fluent:timer-24-regular",
+    "link": "/templates/timesheet-approval-workflow"
   },
   {
-    "title": "Data Export",
-    "description": "Export data for external analysis and reporting.",
-    "icon": "fluent:export-24-regular",
-    "link": "/templates/data-export"
+    "title": "Timesheet Analytics Dashboard",
+    "description": "Analyze Work Hours Data",
+    "icon": "fluent:timer-24-regular",
+    "link": "/templates/timesheet-analytics-dashboard"
   }
 ];
 
 
+
 const data = [
   {
-    "mainHeading": "Analyze",
-    "subtext": "Streamline your project management with our organizational tools designed to bring efficiency and order to your tasks.",
+    "mainHeading": "Feedback",
+    "subtext": "Track and manage work hours effortlessly, ensuring accurate timekeeping and streamlined payroll processing.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -91,37 +91,37 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Master Task Organization",
+    "sectionHeading": "Precision Timekeeping",
     "offering": {
-      "title": "Effortless Organization, Exceptional Results",
-      "subtext": "Perfect the art of task organization to ensure that every project component is executed with precision."
+      "title": "Enhance Productivity with Accurate Time Tracking",
+      "subtext": "Leverage precise timesheet tools to ensure fair compensation and clear accountability within your team."
     },
     "valueBlocks": [
       {
-        "heading": "Task-Centric OS",
-        "title": "Systemize Your Workflow",
-        "description": "Utilize our Operating System to bring a structured approach to your project tasks, boosting productivity and ensuring no detail is overlooked."
+        "heading": "Timesheet Centralization",
+        "title": "Simplify Time Management",
+        "description": "Centralize all work hours data within a single, intuitive platform, making time tracking transparent and easy to manage for both employees and supervisors."
       },
       {
-        "heading": "Collaborative Task Management",
-        "title": "Collaborate and Deliver",
-        "description": "Encourage teamwork with a shared space for task management, where everyone knows their responsibilities and deadlines."
+        "heading": "Automated Time Tracking",
+        "title": "Streamline Work Hours Logging",
+        "description": "Automate the time logging process, minimize errors, and free up your team to focus on their core work responsibilities."
       },
       {
-        "heading": "Insightful Task Analytics",
-        "title": "Track and Improve",
-        "description": "Leverage analytical insights from task progression to enhance future planning and drive continuous improvement in your processes."
+        "heading": "Timesheet Insights",
+        "title": "Gain Workforce Insights",
+        "description": "Analyze work patterns, manage overtime, and improve team productivity with data-driven timesheet insights."
       }
     ],
     "featureBlocks": [
       {
-        "heading": "Organized Task Interface",
-        "title": "Navigate Tasks with Ease",
-        "description": "Manage your project tasks with an intuitive interface that organizes each component for easy access and tracking.",
+        "heading": "Comprehensive Timesheet Management",
+        "title": "Track, Manage, and Optimize Your Team's Hours",
+        "description": "From clocking in to reporting, handle all aspects of time management with a robust set of features designed for efficiency and accuracy.",
         "bulletPoints": [
-          "Intuitive task categorization for streamlined operations",
-          "Visual progress tracking to keep everyone aligned",
-          "Automated alerts to keep tasks on track"
+          "Ensure precise timekeeping for billing and payroll",
+          "Support compliance with labor regulations",
+          "Facilitate easy reporting and timesheet approvals"
         ],
         "buttons": [
           {
@@ -135,13 +135,13 @@ const data = [
         ]
       },
       {
-        "heading": "Task Communication Platform",
-        "title": "Optimize Team Interaction",
-        "description": "Facilitate clear and direct communication paths within your team, centered around task updates and completions.",
+        "heading": "Real-Time Tracking",
+        "title": "Monitor Work Hours in Real Time",
+        "description": "Empower managers with the ability to monitor work hours as they are being logged, promoting transparency and enabling proactive management of team schedules.",
         "bulletPoints": [
-          "Instantly update teams on task changes",
-          "Easily share task-related files and instructions",
-          "Foster a collaborative environment with task-focused discussions"
+          "Track employee attendance accurately",
+          "Receive instant updates on work hour entries",
+          "Address time-related queries with real-time data"
         ],
         "buttons": [
           {
@@ -155,13 +155,13 @@ const data = [
         ]
       },
       {
-        "heading": "Analytical Task Oversight",
-        "title": "Informed Task Management",
-        "description": "Access comprehensive task analytics to gain insights on efficiency and team performance, informing your strategy and task distribution.",
+        "heading": "Advanced Analytics for Timesheets",
+        "title": "Make Informed Decisions with Timesheet Data",
+        "description": "Utilize comprehensive analytics to understand team workloads, project time expenditures, and optimize your workforce distribution.",
         "bulletPoints": [
-          "Evaluate task completion rates to assess team efficiency",
-          "Analyze task duration and outcomes for process optimization",
-          "Utilize predictive analytics for better task forecasting"
+          "Identify trends in work hours for better resource planning",
+          "Adjust project timelines based on accurate time data",
+          "Optimize operations with strategic time allocation"
         ],
         "buttons": [
           {
@@ -175,78 +175,74 @@ const data = [
         ]
       }
     ],
-    "featureHeading": "Advanced Task Management",
-    "featureTitle": "Elevate Your Project Success",
-    "featureAssurance": "Trust in our advanced task management system to empower your projects with unparalleled organization and clarity."
+    "featureHeading": "Timesheet Features",
+    "featureTitle": "Empower Your Team with Effective Time Tracking",
+    "featureAssurance": "Our timesheet tools are designed to provide your team with the clarity and structure needed to manage time efficiently and accurately."
   }
 ];
 
 
 const features = [
   {
-    "title": "Task Prioritization",
-    "description": "Easily prioritize tasks based on deadlines, team availability, and project urgency to ensure a smooth workflow.",
-    "icon": "fluent:arrow-sort-24-regular",
-  },
-  {
-    "title": "Integrated Time Tracking",
-    "description": "Track the time spent on individual tasks with integrated timers to help with productivity analysis and accurate billing.",
+    "title": "Overtime Calculations",
+    "description": "Automatically calculate overtime hours to ensure accurate pay for team members and compliance with labor laws.",
     "icon": "fluent:timer-24-regular",
   },
   {
-    "title": "Customizable Task Boards",
-    "description": "Create custom boards for different projects or teams, with the ability to tailor features and workflows to suit specific task requirements.",
-    "icon": "fluent:board-24-regular",
+    "title": "Leave and Absence Tracking",
+    "description": "Monitor and record all types of leave, providing a complete view of workforce availability and absence trends.",
+    "icon": "fluent:calendar-empty-24-regular",
   },
   {
-    "title": "Task Delegation System",
-    "description": "Easily delegate tasks to team members with clear instructions and defined outcomes, improving accountability and efficiency.",
-    "icon": "fluent:people-team-24-regular",
+    "title": "Mobile Time Tracking",
+    "description": "Enable on-the-go time entry with a mobile app, allowing remote and field employees to log hours from any location.",
+    "icon": "fluent:phone-mobile-24-regular",
   },
   {
-    "title": "Recurring Task Automation",
-    "description": "Set up recurring tasks that automatically reset upon completion, ensuring routine critical tasks are never overlooked.",
-    "icon": "fluent:bot-24-regular",
+    "title": "Billable Hours Tracker",
+    "description": "Distinguish between billable and non-billable hours with ease, facilitating accurate client invoicing and revenue tracking.",
+    "icon": "fluent:money-24-regular",
   },
   {
-    "title": "Task Dependency Mapping",
-    "description": "Visualize and manage task dependencies to ensure projects proceed in logical progression and resources are allocated effectively.",
-    "icon": "fluent:branch-fork-link-24-regular",
+    "title": "Project Time Budgets",
+    "description": "Set time budgets for projects to monitor progress and prevent scope creep, ensuring projects stay on time and within budget.",
+    "icon": "fluent:clock-24-regular",
+  },
+  {
+    "title": "Employee Time Off Requests",
+    "description": "Streamline the process of requesting and approving time off directly within the timesheet application for better planning and scheduling.",
+    "icon": "fluent:clipboard-task-list-ltr-24-regular",
   }
 ];
 
 const faq = [
   {
-    "question": "How can I get started with organizing my project tasks?",
-    "answer": "Getting started is simple. Click on the 'Get Started' button on our website to sign up. You’ll be guided through the setup process, where you can immediately begin organizing your tasks using our Task-Centric OS and Collaborative Task Management features."
+    question: "How does the Timesheet system ensure accurate time tracking?",
+    answer: "Our Timesheet system uses automated tracking and real-time monitoring to minimize errors and ensure precision in time logging. With features like automated clock-ins and alerts for irregularities, accuracy is at the forefront of our timekeeping process."
   },
   {
-    "question": "What makes your Task Management system different from others?",
-    "answer": "Our system is built with a focus on ease of use, collaborative features, and insightful analytics. The intuitive design of our Organized Task Interface and the depth of our Analytical Task Oversight set us apart, providing not just tools for management but also for continuous improvement and strategic planning."
+    question: "Can overtime hours be calculated within the system, and how is this done?",
+    answer: "Yes, the system automatically calculates overtime by keeping track of regular work hours and triggering overtime pay rates as employees work beyond their standard hours, ensuring compliance with labor laws and fair compensation."
   },
   {
-    "question": "Can I prioritize tasks within the system?",
-    "answer": "Yes, with our Task Prioritization feature, you can arrange your tasks based on various criteria such as deadlines, importance, or resources available. This helps keep your workflow efficient and your projects moving forward effectively."
+    question: "Is it possible to track employee leave and absences within the platform?",
+    answer: "Absolutely. Our system provides a comprehensive leave and absence tracking feature that records all types of leave, giving you a clear overview of workforce availability and helping you manage absence trends effectively."
   },
   {
-    "question": "Is there a way to track the time spent on tasks?",
-    "answer": "Absolutely. Our Integrated Time Tracking feature allows you and your team to record the time spent on each task. This is ideal for productivity analysis, ensuring accountability, and if needed, accurate client billing."
+    question: "Does the Timesheet system offer a mobile application for time tracking?",
+    answer: "Yes, we offer a user-friendly mobile app that allows employees to log their work hours on the go, making it convenient for remote and field workers to maintain accurate time records from any location."
   },
   {
-    "question": "How does the Task Delegation System work?",
-    "answer": "Our Task Delegation System lets you assign tasks to team members directly within the platform. You can add specific instructions, set deadlines, and track progress, making it easy to manage team workload and enhance accountability."
+    question: "How does the Timesheet system help with managing billable hours?",
+    answer: "Our system simplifies the distinction between billable and non-billable hours, providing you with the tools to track and report billable time accurately, which streamlines client invoicing and revenue tracking."
   },
   {
-    "question": "Does your platform support recurring tasks?",
-    "answer": "Yes, it does. With Recurring Task Automation, you can create tasks that will automatically reset after completion, which is perfect for routine activities that need to occur on a regular schedule, ensuring they’re never missed."
+    question: "Can the Timesheet system help in budgeting time for projects?",
+    answer: "Definitely. With our project time budgets feature, you can set time limits for projects to keep them on track and within budget, monitoring progress and preventing scope creep effectively."
   },
   {
-    "question": "How does Task Dependency Mapping help in project management?",
-    "answer": "Task Dependency Mapping allows you to see and manage the relationships between different tasks. By understanding how tasks are interconnected, you can plan more effectively, avoid bottlenecks, and ensure resources are allocated where they’re needed most."
-  },
-  {
-    "question": "Can I customize the task boards to fit my project needs?",
-    "answer": "Yes, our Customizable Task Boards can be tailored to fit the unique requirements of your projects or teams. You can create and customize boards, add columns for different task stages, and set up individual workflows to match your project management style."
+    question: "Is there a feature to manage employee time off requests?",
+    answer: "Yes, our system streamlines time off management by enabling employees to request leave and managers to approve it within the platform. This feature simplifies scheduling and ensures operational continuity."
   }
 ];
 

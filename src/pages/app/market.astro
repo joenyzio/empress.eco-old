@@ -22,8 +22,8 @@ import FeatureImg1 from "../../assets/features/6.png";
 import FeatureImg2 from "../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../assets/employee.jpg";
+import TargetMarketing from "../../assets/features/targeting-audience-for-marketing.svg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import Education from "../../assets/features/education.svg";
 import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
 import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../assets/features/dashboard-development.png";
@@ -37,48 +37,47 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const apps = [
   {
-    "title": "Plan",
-    "description": "Task planning and organization",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/plan"
+    "title": "Content",
+    "description": "Targeted content creation",
+    "icon": "fluent:bot-24-regular",
+    "link": "/app/market/content"
   },
   {
-    "title": "Track",
-    "description": "Project analysis and reporting",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/track"
+    "title": "Social",
+    "description": "Social media engagement",
+    "icon": "fluent:share-android-24-regular",
+    "link": "/app/market/social"
   },
   {
-    "title": "Collaborate",
-    "description": "Connect, communicate, and update",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/collaborate"
+    "title": "Event",
+    "description": "Organize promotional events",
+    "icon": "fluent:calendar-24-regular",
+    "link": "/app/market/event"
   },
   {
-    "title": "Approve",
-    "description": "Permissions and approvals",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/approve"
+    "title": "Email",
+    "description": "Targeted email campaigns",
+    "icon": "fluent:mail-add-24-regular",
+    "link": "/app/market/email"
   },
   {
-    "title": "Strategize",
-    "description": "Manage and support users",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/strategize"
+    "title": "SMS",
+    "description": "Direct text outreach",
+    "icon": "fluent:phone-add-24-regular",
+    "link": "/app/market/sms"
   },
   {
-    "title": "Optimize",
-    "description": "Scale operations efficiently",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/optimize"
-  },
+    "title": "Survey",
+    "description": "Gather customer feedback",
+    "icon": "fluent:form-new-24-regular",
+    "link": "/app/market/survey"
+  }
 ];
-
 
 const data = [
   {
-    "mainHeading": "Optimize Project Management with Empress",
-    "subtext": "Harness AI-enhanced tools to streamline project workflows, improve team coordination, and ensure project success.",
+    "mainHeading": "Elevate Your Marketing with Empress",
+    "subtext": "Unlock an all-encompassing tool suite, empowered by AI-driven insights, to revolutionize your marketing campaigns.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -89,161 +88,161 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for Project Management",
+    "sectionHeading": "Empress for Marketing",
     "offering": {
-      "title": "Innovative Project Management Solutions",
-      "subtext": "Transform your project management practices with AI-driven insights, enabling precise planning, execution, and delivery."
+      "title": "Transform Your Customer Engagement",
+      "subtext": "Utilize real-time and predictive analytics to sharpen your marketing campaigns, ensuring impactful outreach and deeper engagement."
     },
     "valueBlocks": [
-      {
-        "heading": "Empress OS",
-        "title": "Streamline Project Workflows",
-        "description": "Unify project data, enhance team collaboration, and automate routine tasks for increased project efficiency and reduced time to delivery."
-      },
-      {
-        "heading": "Empress Chat",
-        "title": "Enhance Team Communication",
-        "description": "Facilitate real-time communication within project teams and with stakeholders to keep projects on track and teams aligned."
-      },
-      {
-        "heading": "Empress Insights",
-        "title": "Inform Project Strategy",
-        "description": "Leverage advanced analytics for project trend analysis, risk assessment, and performance metrics to drive informed decision-making."
-      }
-    ],
+  {
+    "heading": "Empress OS",
+    "title": "Connect Marketing Efforts",
+    "description": "Manage and centralize all your marketing efforts, ensuring creative collaboration and fluid campaigns that resonate with your audience."
+  },
+  {
+    "heading": "Empress Chat",
+    "title": "Modernize Engagement",
+    "description": "On-demand AI-tailored communication, aligning your marketing teams and providing a personalized touch to your audience engagement."
+  },
+  {
+    "heading": "Empress Insights",
+    "title": "Increase Conversion Rates",
+    "description": "Dive deep into granular analytics and dashboards, enabling you to understand your audience better, optimize campaigns in real-time."
+  }
+],
     "featureBlocks": [
-      {
-        "heading": "OS for Project Management",
-        "title": "Centralize and Automate Project Tasks",
-        "description": "Empower project teams with Empress OS to centralize project information, automate workflows, and facilitate seamless collaboration across all project stages.",
-        "bulletPoints": [
-          "Integrate project planning and resource management",
-          "Automate task allocation and progress tracking",
-          "Synchronize cross-departmental project efforts"
-        ],
-        "buttons": [
-          {
-            "text": "Get Started",
-            "link": "/contact"
-          },
-          {
-            "text": "View Pricing",
-            "link": "/pricing"
-          }
-        ]
-      },
-      {
-        "heading": "Chat for Project Alignment",
-        "title": "Communicate Effectively for Project Success",
-        "description": "Utilize Empress Chat to maintain clear communication channels across project teams, enabling quick problem-solving and ensuring that all stakeholders are informed and engaged.",
-        "bulletPoints": [
-          "Provide real-time updates and gather team feedback",
-          "Facilitate stakeholder engagement and updates",
-          "Resolve project queries with AI-powered assistance"
-        ],
-        "buttons": [
-          {
-            "text": "Get Started",
-            "link": "/contact"
-          },
-          {
-            "text": "View Pricing",
-            "link": "/pricing"
-          }
-        ]
-      },
-      {
-        "heading": "Insights for Project Precision",
-        "title": "Make Data-Driven Project Decisions",
-        "description": "Adopt a strategic edge with Empress Insights, utilizing comprehensive dashboards to track project health, anticipate risks, and capitalize on opportunities for improvement.",
-        "bulletPoints": [
-          "Analyze real-time project performance data",
-          "Predict project outcomes and set benchmarks",
-          "Optimize resource allocation based on historical data"
-        ],
-        "buttons": [
-          {
-            "text": "Get Started",
-            "link": "/contact"
-          },
-          {
-            "text": "View Pricing",
-            "link": "/pricing"
-          }
-        ]
-      }
+    {
+  "heading": "OS for Marketing",
+  "title": "Optimize Your Marketing Performance",
+  "description": "Leverage Empress OS, the ultimate marketing companion that centralizes operations, fosters creative collaboration, and paves the way for seamless marketing campaigns.",
+  "bulletPoints": [
+  "Centralize marketing assets for easy access",
+"Enable real-time, team-wide campaign collaboration",
+"Streamline marketing with automated workflows"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+{
+  "heading": "Chat for Marketing",
+  "title": "Expand Your Marketing Communication",
+  "description": "Seamlessly connect your team with Empress OS's suite of tools, ensuring timely, effective, and well-aligned communication both internally and with your audience.",
+  "bulletPoints": [
+  "Improve campaign communication and feedback processes",
+"Use AI for tailored audience messaging",
+"Enhance team coordination for agile marketing"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+
+{
+  "heading": "Insights for Marketing",
+  "title": "Unlock Data-Driven Marketing Decisions",
+  "description": "Access cutting-edge analytics and dashboards that transform complex marketing data into actionable, strategic insights.",
+  "bulletPoints": [
+  "Analyze audience behavior to inform campaigns",
+"Adjust campaigns with live performance insights",
+"Anticipate trends to outpace competitors"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+
     ],
-    "featureHeading": "Advanced Project Management Features",
-    "featureTitle": "Elevate Your Project Execution",
-    "featureAssurance": "Dedicated to empowering project teams with sophisticated, AI-enhanced project management tools for superior results."
+    "featureHeading": "Features for Marketing",
+    "featureTitle": "We're Here to Support You",
+    "featureAssurance": "Maximize your marketing potential with seamless integrations tailored for marketers."
   }
 ];
 
-
 const features = [
   {
-    "title": "Strategic Project Planning",
-    "description": "Utilize AI-driven analytics to optimize project timelines and resources, ensuring every plan is streamlined for maximum efficiency and effectiveness.",
-    "icon": "fluent:chart-multiple-24-regular"
+    "title": "Automate with Precision",
+    "description": "Effortlessly integrate with 200+ platforms, offering versatile marketing solutions that adapt to ever-evolving strategies.",
+    "icon": "fluent:flash-settings-24-regular"
   },
   {
-    "title": "Real-Time Collaboration",
-    "description": "Facilitate instant project updates and team collaboration through an integrated communication platform, keeping everyone on the same page.",
-    "icon": "fluent:people-team-24-regular"
+    "title": "Optimize Your Strategy",
+    "description": "Redefine your strategy with our tailored solutions, delivering unparalleled marketing insights and guidance.",
+    "icon": "fluent:arrow-routing-24-regular"
   },
   {
-    "title": "Predictive Task Management",
-    "description": "Implement AI forecasts to anticipate project bottlenecks, allocate resources effectively, and maintain steady progress with proactive task management.",
-    "icon": "fluent:task-list-square-ltr-24-regular"
+    "title": "Brand Consistency Across Channels",
+    "description": "Ensure a cohesive brand voice throughout your campaigns, enhancing recall and fortifying brand identity.",
+    "icon": "fluent:mobile-optimized-24-regular"
   },
   {
-    "title": "Automated Workflow Optimization",
-    "description": "Deploy intelligent automation to streamline project workflows, from initiation to delivery, ensuring a focus on value-added activities.",
+    "title": "Tools for Marketing Excellence",
+    "description": "Unlock tools and insights that drive campaigns to unmatched success, making every marketing effort count.",
+    "icon": "fluent:window-dev-tools-24-regular"
+  },
+  {
+    "title": "Decisions Powered by Insights",
+    "description": "Empower your marketing strategies with data-driven decisions, ensuring unparalleled efficiency and impactful ROI.",
+    "icon": "fluent:cellular-data-1-24-regular"
+  },
+  {
+    "title": "Get AI Driven Support",
+    "description": "Combine AI, real-time analytics, and Empress insights to consistently raise your marketing standards and outcomes.",
     "icon": "fluent:bot-24-regular"
-  },
-  {
-    "title": "Cross-Platform Project Integration",
-    "description": "Achieve a cohesive project management environment with cross-platform integrations, simplifying the oversight of multiple project components.",
-    "icon": "fluent:plug-connected-24-regular"
-  },
-  {
-    "title": "Comprehensive Project Dashboards",
-    "description": "Monitor project KPIs and progress with comprehensive dashboards, offering a centralized view for informed decision-making and control.",
-    "icon": "fluent:data-trending-24-regular"
   }
-]
-
+];
 
 const faq = [
   {
-    "question": "How does Empress enhance traditional project management?",
-    "answer": "Empress utilizes AI-driven analytics and machine learning to transform traditional project management. It streamlines workflows, enhances team collaboration, and provides real-time insights for more informed decision-making, ultimately leading to more successful project outcomes."
+    question: "How can Empress OS enhance my marketing campaign management?",
+    answer: "Empress OS enhances marketing campaigns by centralizing marketing assets on a unified platform, facilitating real-time collaboration among teams, and automating workflows for consistent brand messaging."
   },
   {
-    "question": "What features does Empress OS offer for project management?",
-    "answer": "Empress OS offers centralized project data management, automated task workflows, and seamless collaboration across all project stages. It integrates planning and resource management to synchronize efforts and track progress effectively."
+    question: "What role does AI play in Empress Chat for audience engagement?",
+    answer: "Empress Chat uses AI to provide on-demand, personalized communication, ensuring that audience engagement is tailored and responsive, leading to a more modernized and efficient engagement strategy."
   },
   {
-    "question": "Can Empress Chat improve communication within my project team?",
-    "answer": "Absolutely. Empress Chat is designed to maintain clear, real-time communication channels within project teams and with stakeholders. It facilitates instant updates, feedback collection, and quick resolution of queries, ensuring everyone stays aligned and informed."
+    question: "Can Empress Insights help increase my conversion rates?",
+    answer: "Yes, Empress Insights dives into granular analytics and provides dashboards that help understand audience behavior and preferences, enabling real-time optimization of campaigns to boost conversion rates."
   },
   {
-    "question": "How does Empress Insights contribute to project strategy?",
-    "answer": "Empress Insights delivers advanced analytics for risk assessment, trend analysis, and performance tracking. These data-driven insights allow teams to predict outcomes, set benchmarks, and optimize resource allocation, contributing to a more precise project strategy."
+    question: "What integrations are available with Empress for marketing?",
+    answer: "Empress offers seamless integrations with over 200 platforms, providing versatile marketing solutions that can adapt to evolving strategies and ensuring brand consistency across channels."
   },
   {
-    "question": "In what ways can Empress' features save time and reduce project delivery cycles?",
-    "answer": "Empress features AI-driven planning tools, predictive task management, and automated workflows that eliminate bottlenecks and redundancies. This efficiency accelerates delivery cycles and frees up time for teams to focus on high-impact project areas."
+    question: "How does Empress ensure brand consistency across all marketing channels?",
+    answer: "Empress centralizes business management and automates marketing workflows, which helps in maintaining a cohesive brand voice and ensuring consistency across all marketing channels."
   },
   {
-    "question": "How does the cross-platform integration feature work to manage projects?",
-    "answer": "Empress’ cross-platform integration allows for seamless interaction between different software and tools used in project management. This creates a unified environment, reducing the complexity of managing multiple project components and ensuring data consistency."
+    question: "How do Empress tools contribute to marketing excellence?",
+    answer: "Empress provides tools that unlock insights and analytics, driving campaigns to success by making every marketing effort data-driven, strategic, and efficient."
   },
   {
-    "question": "Can I track the progress of my projects in real-time with Empress?",
-    "answer": "Yes, with Empress' comprehensive dashboards, you can monitor your project's key performance indicators (KPIs) and progress in real-time. These dashboards provide a centralized control point for tracking, reporting, and decision-making."
+    question: "What support does Empress provide for data-driven marketing decisions?",
+    answer: "Empress supports data-driven marketing strategies with advanced analytics and real-time insights, allowing marketers to make informed decisions that lead to impactful ROI."
   }
-]
+];
 
 
 
@@ -251,10 +250,8 @@ const featureBlocks = data[0].featureBlocks;
 
 ---
 
-
 <Layout title="About" footerMargin={false}>
-  
-  <!-- <div class="overflow-x-clip">
+  <div class="overflow-x-clip">
     <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
@@ -293,7 +290,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={Education}
+            src={TargetMarketing}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -304,44 +301,42 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </main>
     </Container>
-  </div> -->
+  </div>
 
   <Container>
-  <div>
-    <div
-    class:list={[
-      "max-w-4xl mx-auto flex flex-col items-center justify-center",
-      !nomargin && "mt-24",
-    ]}>
-    <Badge color="purple">Empress for Project Management</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      Optimize Your <span class="text-indigo-600">Projects with Empress</span>
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
-    </p>
-  </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-    {
-      apps.map((item) => (
-        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
+    <div>
+      <div
+      class:list={[
+        "max-w-4xl mx-auto flex flex-col items-center justify-center",
+        !nomargin && "mt-24",
+      ]}>
+      <Badge color="purple">Empress for Marketing</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        Elevate Your <span class="text-indigo-600">Marketing with Empress</span>
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        Unlock an all-encompassing tool suite to revolutionize your marketing campaigns.
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        apps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          </div>
-        </a>
-      ))
-    }
-  </div>
-  </div>
-</Container>
-  
-  <div class="grid md:grid-cols-2 py-10"></div>
+          </a>
+        ))
+      }
+    </div>
+    </div>
+  </Container>
   
 
   <Container>
@@ -400,14 +395,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../../../chemical-laboratory.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../job-announcement.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../../../global-education.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../global-market-2.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -513,7 +508,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../../../nuclear-research-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../../../data-analysis-2.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
   </div>
 

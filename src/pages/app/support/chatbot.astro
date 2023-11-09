@@ -13,234 +13,239 @@ import { Icon } from "astro-icon";
 import ArrowIcon from "@components/ui/icons/arrow.astro"
 
 import Logos from "@components/logos.astro";
-import heroImage from "../../assets/hero-screenshot.png";
-import IntegrationImg from "../../assets/integrations.svg?url";
-import FeatureImgOne from "../../assets/features/2.png";
-import FeatureImgTwo from "../../assets/features/2.png";
-import FeatureImgThree from "../../assets/features/3.png";
-import FeatureImg1 from "../../assets/features/6.png";
-import FeatureImg2 from "../../assets/features/2.png";
+import heroImage from "../../../assets/hero-screenshot.png";
+import IntegrationImg from "../../../assets/integrations.svg?url";
+import FeatureImgOne from "../../../assets/features/2.png";
+import FeatureImgTwo from "../../../assets/features/2.png";
+import FeatureImgThree from "../../../assets/features/3.png";
+import FeatureImg1 from "../../../assets/features/6.png";
+import FeatureImg2 from "../../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
-import EmployeeImg from "../../assets/employee.jpg";
-import TargetMarketing from "../../assets/features/targeting-audience-for-marketing.svg";
+import EmployeeImg from "../../../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
-import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
-import DashboardDevelopment from "../../assets/features/dashboard-development.png";
+import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
+import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
 
-const { nomargin } = Astro.props;
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
+const { nomargin } = Astro.props;
+
+const templates = [
   {
-    "title": "Websites",
-    "description": "Create personal websites",
-    "icon": "fluent:phone-24-regular",
-    "link": "/app/websites/website-builder"
+    "title": "Project Task Tracker",
+    "description": "Organize and Track Project Tasks",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/templates/project-task-tracker"
   },
   {
-    "title": "eCommerce",
-    "description": "Online store setup",
-    "icon": "fluent:cart-24-regular",
-    "link": "/app/websites/ecommerce"
+    "title": "Gantt Chart Planner",
+    "description": "Visualize Project Timelines",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/templates/gantt-chart-planner"
   },
   {
-    "title": "Blogs",
-    "description": "Share engaging content",
-    "icon": "fluent:textbox-align-top-24-regular",
-    "link": "/app/websites/blogs"
+    "title": "Kanban Board Workflow",
+    "description": "Streamline Task Management",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/templates/kanban-board-workflow"
   },
   {
-    "title": "Forum",
-    "description": "Community discussion platform",
-    "icon": "fluent:chat-multiple-24-regular",
-    "link": "/app/websites/forum"
+    "title": "Project Budget Tracker",
+    "description": "Manage Project Finances",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/templates/project-budget-tracker"
   },
   {
-    "title": "eLearning",
-    "description": "Online courses platform",
-    "icon": "fluent:food-apple-24-regular",
-    "link": "/app/websites/elearning"
+    "title": "Project Collaboration Hub",
+    "description": "Foster Team Collaboration",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/templates/project-collaboration-hub"
   },
   {
-    "title": "Live Chat",
-    "description": "Instant customer support",
-    "icon": "fluent:chat-24-regular",
-    "link": "/app/websites/live-chat"
+    "title": "Project Status Report",
+    "description": "Communicate Progress Effectively",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/templates/project-status-report"
   }
 ];
 
+
+
 const data = [
   {
-    "mainHeading": "Amplify Your Digital Presence with Empress",
-    "subtext": "Harness our suite of intuitive tools to craft a compelling digital footprint that captivates your audience at every touchpoint.",
+    "mainHeading": "Project Management",
+    "subtext": "Unlock the full potential of your team with a robust suite of project management tools designed for superior work structure organization.",
     "headingButtons": [
       {
-        "text": "Begin Your Journey",
+        "text": "Get Started",
         "link": "/contact"
       },
       {
-        "text": "Explore Pricing",
+        "text": "View Pricing",
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress: Your Digital Launchpad",
+    "sectionHeading": "Structured for Success",
     "offering": {
-      "title": "Cultivate Your Online Brand",
-      "subtext": "Adopt a proactive stance in digital marketing with tools designed to tailor your brand narrative and foster meaningful connections online."
+      "title": "Streamline Your Projects for Peak Performance",
+      "subtext": "Implement a framework that simplifies project tracking, team collaboration, and task completion for heightened productivity."
     },
     "valueBlocks": [
       {
-        "heading": "Empress OS",
-        "title": "Unify Your Digital Strategies",
-        "description": "Create a cohesive digital experience by unifying your online marketing initiatives, ensuring consistent messaging and brand presence."
+        "heading": "Project Centralization",
+        "title": "Centralize Your Project Landscape",
+        "description": "Unify all project aspects within a single platform, providing a clear overview and enabling efficient management of tasks, timelines, and resources."
       },
       {
-        "heading": "Empress Chat",
-        "title": "Personalize Audience Interactions",
-        "description": "Deploy AI-driven chat solutions to engage with your audience in real-time, providing an immersive and personalized brand experience."
+        "heading": "Team Collaboration",
+        "title": "Enhance Team Synergy",
+        "description": "Facilitate real-time collaboration and communication, ensuring team members are aligned and can contribute effectively to project goals."
       },
       {
-        "heading": "Empress Insights",
-        "title": "Refine Your Digital Tactics",
-        "description": "Leverage advanced analytics to fine-tune your digital tactics, turning insights into improved conversion rates and customer retention."
+        "heading": "Workflow Automation",
+        "title": "Automate for Agility",
+        "description": "Leverage automation to streamline project workflows, minimize manual tasks, and enable your team to focus on high-impact activities."
       }
     ],
     "featureBlocks": [
       {
-        "heading": "OS for Digital Mastery",
-        "title": "Centralize Your Online Presence",
-        "description": "Orchestrate all aspects of your digital presence from a singular platform, enhancing online visibility and audience reach.",
+        "heading": "Management OS",
+        "title": "Reimagine Project Management",
+        "description": "Simplify complex project landscapes with a tailored system that supports agile management and operational excellence.",
         "bulletPoints": [
-          "Manage digital assets with unparalleled ease",
-          "Coordinate online campaigns to amplify reach",
-          "Automate and streamline digital workflows"
+          "Integrate team communication for streamlined collaboration",
+          "Manage tasks and milestones with intuitive tools",
+          "Automate routine processes for increased efficiency"
         ],
         "buttons": [
           {
-            "text": "Start with Empress OS",
+            "text": "Get Started",
             "link": "/contact"
           },
           {
-            "text": "Pricing Details",
+            "text": "View Pricing",
             "link": "/pricing"
           }
         ]
       },
       {
-        "heading": "Chat for Dynamic Engagement",
-        "title": "Elevate Your Customer Conversations",
-        "description": "Utilize Empress Chat to open dynamic conversations with your customers, enhancing their journey with your brand across digital platforms.",
+        "heading": "Collaborative Workspace",
+        "title": "Build a Productive Team Environment",
+        "description": "Create a dynamic workspace that promotes visibility, accountability, and collaboration to drive project completion and team success.",
         "bulletPoints": [
-          "Initiate real-time dialogue with prospects",
-          "Leverage AI for consistent brand messaging",
-          "Streamline internal and external communications"
+          "Centralize documentation and task management",
+          "Facilitate seamless teamwork with shared workspaces",
+          "Track progress with integrated project dashboards"
         ],
         "buttons": [
           {
-            "text": "Enhance with Empress Chat",
+            "text": "Get Started",
             "link": "/contact"
           },
           {
-            "text": "Discover Chat Features",
+            "text": "View Pricing",
             "link": "/pricing"
           }
         ]
       },
       {
-        "heading": "Insights for Strategic Clarity",
-        "title": "Inform Your Digital Strategy",
-        "description": "Access granular data and trend analysis to craft a digital strategy that resonates with your target audience and stays ahead of market trends.",
+        "heading": "Insightful Analytics",
+        "title": "Inform Your Decisions with Data",
+        "description": "Harness the power of analytics to gain a clear perspective on project performance, helping to make informed decisions and adapt strategies for improved outcomes.",
         "bulletPoints": [
-          "Harness audience data to sharpen digital strategy",
-          "Make informed adjustments with real-time insights",
-          "Predict market trends to stay ahead of the curve"
+          "Monitor project metrics for continuous improvement",
+          "Identify bottlenecks and areas for optimization",
+          "Adapt resource allocation based on insightful reporting"
         ],
         "buttons": [
           {
-            "text": "Gain Insights with Empress",
+            "text": "Get Started",
             "link": "/contact"
           },
           {
-            "text": "Learn More",
+            "text": "View Pricing",
             "link": "/pricing"
           }
         ]
       }
     ],
-    "featureHeading": "Digital Marketing Excellence",
-    "featureTitle": "Empower Your Online Narrative",
-    "featureAssurance": "At Empress, we provide the full spectrum of tools to ensure your digital presence is as robust and engaging as possible."
+    "featureHeading": "Project Management Features",
+    "featureTitle": "Elevate Your Work Structure",
+    "featureAssurance": "Our project management tools are crafted to empower your team to achieve excellence through organized and structured work management."
   }
 ];
 
+
 const features = [
   {
-    "title": "Streamline Your Workflow",
-    "description": "Seamlessly blend your digital presence across platforms, utilizing adaptive tools that keep pace with your growth online.",
-    "icon": "fluent:flash-settings-24-regular"
+    "title": "Gantt & Timeline Views",
+    "description": "Visualize your project's timeline with interactive Gantt charts, making it easy to track progress and deadlines.",
+    "icon": "fluent:calendar-ltr-24-regular",
   },
   {
-    "title": "Refine Your Online Influence",
-    "description": "Craft and curate your online strategy with bespoke solutions that offer deep insights for a commanding digital presence.",
-    "icon": "fluent:arrow-routing-24-regular"
+    "title": "Task Prioritization",
+    "description": "Easily prioritize tasks with a drag-and-drop interface, ensuring your team knows what to focus on next.",
+    "icon": "fluent:arrow-sort-24-regular",
   },
   {
-    "title": "Unified Brand Voice Online",
-    "description": "Maintain a consistent and recognizable brand voice across all digital platforms, solidifying your identity and boosting brand loyalty.",
-    "icon": "fluent:mobile-optimized-24-regular"
+    "title": "Custom Workflow Creation",
+    "description": "Design custom workflows that match your team's process, allowing for seamless task progression and management.",
+    "icon": "fluent:flowchart-24-regular",
   },
   {
-    "title": "Digital Marketing Mastery",
-    "description": "Access a wealth of tools and insights that empower you to lead successful digital campaigns, maximizing every effort in building your online presence.",
-    "icon": "fluent:window-dev-tools-24-regular"
+    "title": "Resource Allocation & Management",
+    "description": "Allocate resources effectively with tools designed to prevent overloading team members and to balance work distribution.",
+    "icon": "fluent:people-team-24-regular",
   },
   {
-    "title": "Strategic Decisions with Data",
-    "description": "Harness the power of analytics to fuel your digital strategy, making decisions that enhance efficiency and maximize online engagement.",
-    "icon": "fluent:cellular-data-1-24-regular"
+    "title": "Time Tracking & Reporting",
+    "description": "Track the time spent on each task and project with integrated time tracking tools for accurate billing and productivity insights.",
+    "icon": "fluent:timer-24-regular",
   },
   {
-    "title": "Leverage AI for Digital Prowess",
-    "description": "Integrate AI with real-time analytics and deep insights to elevate your online tactics and drive superior digital results.",
-    "icon": "fluent:bot-24-regular"
+    "title": "Integrated File Sharing",
+    "description": "Share files directly within the project management tool, ensuring that all team members have access to the latest documents.",
+    "icon": "fluent:document-24-regular",
   }
 ];
 
 const faq = [
   {
-    "question": "How can Empress help me establish a strong digital presence?",
-    "answer": "Empress provides an integrated suite of tools that help you unify your digital strategies, personalize audience interactions, and refine your digital tactics with advanced analytics. This ensures consistent messaging, a cohesive brand experience, and improved engagement across all digital platforms."
+    question: "How can Project Centralization benefit my team?",
+    answer: "Project Centralization offers a unified platform where all project-related information is accessible, helping team members find what they need quickly, reducing miscommunication, and enabling efficient task and resource management for better project outcomes."
   },
   {
-    "question": "What platforms does Empress integrate with?",
-    "answer": "Empress streamlines your digital presence across 200+ platforms, offering sophisticated tools that adapt to your strategic growth and help maintain a unified brand voice online."
+    question: "What features does the Collaborative Workspace include?",
+    answer: "The Collaborative Workspace provides centralized documentation, task management, shared workspaces for team collaboration, and integrated dashboards for tracking progress, all designed to enhance teamwork and drive project success."
   },
   {
-    "question": "Can Empress assist in enhancing my brand's digital interactions?",
-    "answer": "Absolutely, Empress Chat utilizes AI-driven solutions to engage your audience in real-time, fostering a more immersive and personalized experience with your brand across digital channels."
+    question: "How does Workflow Automation improve project efficiency?",
+    answer: "Workflow Automation streamlines your project by minimizing repetitive manual tasks, allowing your team to focus on strategic work. It ensures that workflows are consistent and efficient, which reduces errors and saves time."
   },
   {
-    "question": "How does Empress turn insights into better customer engagement?",
-    "answer": "Empress Insights leverages granular analytics and trend analysis to fine-tune your digital approach, leading to better conversion rates and customer retention by informing your digital strategy with data-driven decisions."
+    question: "Can I customize the Management OS to fit my business processes?",
+    answer: "Absolutely. Our Management OS is designed to be flexible and can be tailored to match your specific business processes, allowing for a personalized project management experience that fits the way your team works."
   },
   {
-    "question": "Is there support for campaign management within Empress?",
-    "answer": "Yes, Empress OS centralizes all aspects of your digital presence, allowing you to manage assets, coordinate campaigns, and automate workflows from one platform, streamlining campaign management and amplifying reach."
+    question: "What type of analytics and reporting can I expect from Insightful Analytics?",
+    answer: "Insightful Analytics provides detailed reporting on project metrics, identifies bottlenecks, and offers resource allocation insights. This enables you to make data-driven decisions for continuous project improvement."
   },
   {
-    "question": "What kind of analytics can I expect with Empress?",
-    "answer": "Empress offers advanced analytics that provide real-time insights and trend predictions, enabling you to make informed decisions that sharpen your digital strategy and keep you ahead of the market curve."
+    question: "Is it possible to track individual contributions with Time Tracking & Reporting?",
+    answer: "Yes, with Time Tracking & Reporting, you can monitor the time each team member spends on tasks, allowing for accurate productivity tracking and ensuring equitable workload distribution."
   },
   {
-    "question": "How does Empress ensure the consistency of my brand's voice?",
-    "answer": "Empress tools are designed to help maintain a consistent and recognizable brand voice across all your digital platforms, thereby enhancing brand recall and fostering loyalty."
+    question: "How secure is the Integrated File Sharing feature?",
+    answer: "Our Integrated File Sharing is built with security in mind, ensuring that only authorized team members have access to sensitive documents, with encryption in transit and at rest to protect your data."
   }
 ];
+
 
 
 
@@ -250,7 +255,7 @@ const featureBlocks = data[0].featureBlocks;
 ---
 
 <Layout title="About" footerMargin={false}>
-  <!-- <div class="overflow-x-clip">
+  <div class="overflow-x-clip">
     <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
@@ -289,7 +294,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={TargetMarketing}
+            src={ECommerce}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -300,26 +305,24 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </main>
     </Container>
-  </div> -->
+  </div>
+  
 
   <Container>
-    <div>
-      <div
-      class:list={[
-        "max-w-4xl mx-auto flex flex-col items-center justify-center",
-        !nomargin && "mt-24",
-      ]}>
-      <Badge color="purple">Empress for Websites</Badge>
+  
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        Establish Your <span class="text-indigo-600">Digital Presence</span>
+        {data[0].offering.title}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Unlock an all-encompassing tool suite to revolutionize your marketing campaigns.
+        {data[0].offering.subtext}
       </p>
     </div>
+
     <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
       {
-        apps.map((item) => (
+        templates.map((item) => (
           <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
               <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
@@ -334,12 +337,54 @@ const featureBlocks = data[0].featureBlocks;
         ))
       }
     </div>
-    </div>
-  </Container>
-  
 
-  <Container>
-  
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+      <Card color="indigo" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={NetworkServerManagement}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
+      </Card>
+      
+      <Card color="purple" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={AutomatedMarketing}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
+      </Card>
+      
+      <Card size="sm">
+        <Fragment slot="image">
+          <Image
+            src={DashboardDevelopment}
+            alt="Feature image"
+            width="909"
+            height="823"
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
+      </Card>
+    </div> -->
 
     <!-- Feature 1 -->
 
@@ -394,14 +439,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../../../job-announcement.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../../../global-market-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -507,67 +552,8 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../../../data-analysis-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../../../../../pie-chart-bar.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
-  </div>
-
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">{data[0].sectionHeading}</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      {data[0].offering.title}
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      {data[0].offering.subtext}
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-    <Card color="indigo" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={NetworkServerManagement}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-      <span slot="title">{data[0].valueBlocks[0].title}</span>
-      <span slot="desc">{data[0].valueBlocks[0].description}</span>
-    </Card>
-    
-    <Card color="purple" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={AutomatedMarketing}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-      <span slot="title">{data[0].valueBlocks[1].title}</span>
-      <span slot="desc">{data[0].valueBlocks[1].description}</span>
-    </Card>
-    
-    <Card size="sm">
-      <Fragment slot="image">
-        <!-- // svg image. cannot use <picture/> as of now -->
-        <Image
-          src={DashboardDevelopment}
-          alt="Feature image"
-          width="909"
-          height="823"
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-      <span slot="title">{data[0].valueBlocks[2].title}</span>
-      <span slot="desc">{data[0].valueBlocks[2].description}</span>
-    </Card>
   </div>
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">

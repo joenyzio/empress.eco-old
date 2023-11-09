@@ -37,48 +37,48 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const apps = [
   {
-    "title": "Plan",
-    "description": "Task planning and organization",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/plan"
+    "title": "Stock",
+    "description": "Inventory tracking system",
+    "icon": "fluent:tray-item-add-24-regular",
+    "link": "/app/produce/stock"
   },
   {
-    "title": "Track",
-    "description": "Project analysis and reporting",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/track"
+    "title": "Manufacture",
+    "description": "Production planning control",
+    "icon": "fluent:manufacturer-24-regular",
+    "link": "/app/produce/manufacture"
   },
   {
-    "title": "Collaborate",
-    "description": "Connect, communicate, and update",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/collaborate"
+    "title": "Lifecycle",
+    "description": "Product lifecycle management",
+    "icon": "fluent:production-24-regular",
+    "link": "/app/produce/lifecycle"
   },
   {
-    "title": "Approve",
-    "description": "Permissions and approvals",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/approve"
+    "title": "Purchase",
+    "description": "Procurement management system",
+    "icon": "fluent:shopping-bag-24-regular",
+    "link": "/app/produce/purchase"
   },
   {
-    "title": "Strategize",
-    "description": "Manage and support users",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/strategize"
+    "title": "Maintenance",
+    "description": "Equipment upkeep scheduler",
+    "icon": "fluent:wrench-screwdriver-24-regular",
+    "link": "/app/produce/maintenance"
   },
   {
-    "title": "Optimize",
-    "description": "Scale operations efficiently",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/optimize"
-  },
+    "title": "Quality",
+    "description": "Quality assurance protocols",
+    "icon": "fluent:checkmark-starburst-24-regular",
+    "link": "/app/produce/quality"
+  }
 ];
 
 
 const data = [
   {
-    "mainHeading": "Optimize Project Management with Empress",
-    "subtext": "Harness AI-enhanced tools to streamline project workflows, improve team coordination, and ensure project success.",
+    "mainHeading": "Revolutionize Inventory & Manufacturing with Empress",
+    "subtext": "Transform your inventory management and manufacturing processes with cutting-edge AI-driven analytics for maximized efficiency and productivity.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -89,37 +89,37 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for Project Management",
+    "sectionHeading": "Empress for Inventory & Manufacturing",
     "offering": {
-      "title": "Innovative Project Management Solutions",
-      "subtext": "Transform your project management practices with AI-driven insights, enabling precise planning, execution, and delivery."
+      "title": "Next-Level Operational Excellence",
+      "subtext": "Adopt an innovative approach to inventory management and manufacturing with a suite designed for precision and scalability."
     },
     "valueBlocks": [
       {
         "heading": "Empress OS",
-        "title": "Streamline Project Workflows",
-        "description": "Unify project data, enhance team collaboration, and automate routine tasks for increased project efficiency and reduced time to delivery."
+        "title": "Streamline Production Workflows",
+        "description": "Centralize your production data, synchronize operations, and automate manufacturing workflows to enhance productivity."
       },
       {
         "heading": "Empress Chat",
-        "title": "Enhance Team Communication",
-        "description": "Facilitate real-time communication within project teams and with stakeholders to keep projects on track and teams aligned."
+        "title": "Optimize Supply Chain Communication",
+        "description": "Enhance communication with suppliers and customers for smoother operations, utilizing AI to manage inquiries and streamline service."
       },
       {
         "heading": "Empress Insights",
-        "title": "Inform Project Strategy",
-        "description": "Leverage advanced analytics for project trend analysis, risk assessment, and performance metrics to drive informed decision-making."
+        "title": "Strategize with Smart Data",
+        "description": "Inform your inventory decisions with smart analytics, optimizing stock levels and reducing waste through predictive insights."
       }
     ],
     "featureBlocks": [
       {
-        "heading": "OS for Project Management",
-        "title": "Centralize and Automate Project Tasks",
-        "description": "Empower project teams with Empress OS to centralize project information, automate workflows, and facilitate seamless collaboration across all project stages.",
+        "heading": "OS for Inventory & Manufacturing",
+        "title": "Control and Visibility Over Your Operations",
+        "description": "Empress OS offers unparalleled control and insights into your manufacturing and inventory, ensuring every decision is data-backed and every process optimized.",
         "bulletPoints": [
-          "Integrate project planning and resource management",
-          "Automate task allocation and progress tracking",
-          "Synchronize cross-departmental project efforts"
+          "Track inventory levels in real-time",
+          "Predictive analytics for demand forecasting",
+          "Automate supply chain management"
         ],
         "buttons": [
           {
@@ -133,13 +133,13 @@ const data = [
         ]
       },
       {
-        "heading": "Chat for Project Alignment",
-        "title": "Communicate Effectively for Project Success",
-        "description": "Utilize Empress Chat to maintain clear communication channels across project teams, enabling quick problem-solving and ensuring that all stakeholders are informed and engaged.",
+        "heading": "Chat for Supply Chain Excellence",
+        "title": "Instant Communication, Seamless Integration",
+        "description": "Use Empress Chat to facilitate instant, AI-assisted communication within the supply chain, reducing delays and enhancing partner relations.",
         "bulletPoints": [
-          "Provide real-time updates and gather team feedback",
-          "Facilitate stakeholder engagement and updates",
-          "Resolve project queries with AI-powered assistance"
+          "Automate vendor and customer interactions",
+          "Quickly address supply chain queries",
+          "Maintain clear, consistent communication"
         ],
         "buttons": [
           {
@@ -153,13 +153,13 @@ const data = [
         ]
       },
       {
-        "heading": "Insights for Project Precision",
-        "title": "Make Data-Driven Project Decisions",
-        "description": "Adopt a strategic edge with Empress Insights, utilizing comprehensive dashboards to track project health, anticipate risks, and capitalize on opportunities for improvement.",
+        "heading": "Insights for Manufacturing Prowess",
+        "title": "Make Informed Production Decisions",
+        "description": "With Empress Insights, leverage deep analytics to optimize your manufacturing processes, predict maintenance, and reduce downtime.",
         "bulletPoints": [
-          "Analyze real-time project performance data",
-          "Predict project outcomes and set benchmarks",
-          "Optimize resource allocation based on historical data"
+          "Monitor production efficiency",
+          "Analyze machine performance data",
+          "Plan and predict maintenance for uninterrupted production"
         ],
         "buttons": [
           {
@@ -173,75 +173,75 @@ const data = [
         ]
       }
     ],
-    "featureHeading": "Advanced Project Management Features",
-    "featureTitle": "Elevate Your Project Execution",
-    "featureAssurance": "Dedicated to empowering project teams with sophisticated, AI-enhanced project management tools for superior results."
+    "featureHeading": "Advanced Features for Inventory & Manufacturing",
+    "featureTitle": "Master Your Production and Inventory",
+    "featureAssurance": "At Empress, we're committed to equipping your business with the most sophisticated tools for a lean and proactive inventory and manufacturing operation."
   }
 ];
 
 
 const features = [
   {
-    "title": "Strategic Project Planning",
-    "description": "Utilize AI-driven analytics to optimize project timelines and resources, ensuring every plan is streamlined for maximum efficiency and effectiveness.",
-    "icon": "fluent:chart-multiple-24-regular"
+    "title": "Smart Inventory Management",
+    "description": "Utilize AI to maintain optimal stock levels, predict inventory needs, and reduce waste through data-driven management.",
+    "icon": "fluent:food-apple-24-regular"
   },
   {
-    "title": "Real-Time Collaboration",
-    "description": "Facilitate instant project updates and team collaboration through an integrated communication platform, keeping everyone on the same page.",
-    "icon": "fluent:people-team-24-regular"
-  },
-  {
-    "title": "Predictive Task Management",
-    "description": "Implement AI forecasts to anticipate project bottlenecks, allocate resources effectively, and maintain steady progress with proactive task management.",
-    "icon": "fluent:task-list-square-ltr-24-regular"
-  },
-  {
-    "title": "Automated Workflow Optimization",
-    "description": "Deploy intelligent automation to streamline project workflows, from initiation to delivery, ensuring a focus on value-added activities.",
-    "icon": "fluent:bot-24-regular"
-  },
-  {
-    "title": "Cross-Platform Project Integration",
-    "description": "Achieve a cohesive project management environment with cross-platform integrations, simplifying the oversight of multiple project components.",
+    "title": "Integrated Manufacturing Systems",
+    "description": "Streamline manufacturing processes by seamlessly integrating with cutting-edge tools and platforms for increased operational efficiency.",
     "icon": "fluent:plug-connected-24-regular"
   },
   {
-    "title": "Comprehensive Project Dashboards",
-    "description": "Monitor project KPIs and progress with comprehensive dashboards, offering a centralized view for informed decision-making and control.",
-    "icon": "fluent:data-trending-24-regular"
+    "title": "Predictive Analytics in Production",
+    "description": "Empower your manufacturing with AI analytics to anticipate market changes, optimize production planning, and stay ahead of demand curves.",
+    "icon": "fluent:cellular-data-1-24-regular"
+  },
+  {
+    "title": "Automated Workflow Assistants",
+    "description": "Deploy advanced bots to streamline manufacturing workflows, from assembly line support to maintenance coordination.",
+    "icon": "fluent:bot-24-regular"
+  },
+  {
+    "title": "Global Operational Support",
+    "description": "Our platform provides multilingual support to adapt to diverse manufacturing environments and facilitate clear, efficient communication.",
+    "icon": "fluent:local-language-zi-24-regular"
+  },
+  {
+    "title": "Consistent Manufacturing Interface",
+    "description": "Experience a unified user interface across devices, enabling a seamless interaction with manufacturing systems whether you're on the floor or on the go.",
+    "icon": "fluent:weather-sunny-high-24-regular"
   }
 ]
 
 
 const faq = [
   {
-    "question": "How does Empress enhance traditional project management?",
-    "answer": "Empress utilizes AI-driven analytics and machine learning to transform traditional project management. It streamlines workflows, enhances team collaboration, and provides real-time insights for more informed decision-making, ultimately leading to more successful project outcomes."
+    "question": "How does Empress revolutionize inventory management?",
+    "answer": "Empress revolutionizes inventory management by leveraging AI-driven analytics to predict inventory needs, automate stock level optimization, and minimize waste, resulting in maximized efficiency and cost savings."
   },
   {
-    "question": "What features does Empress OS offer for project management?",
-    "answer": "Empress OS offers centralized project data management, automated task workflows, and seamless collaboration across all project stages. It integrates planning and resource management to synchronize efforts and track progress effectively."
+    "question": "Can Empress OS integrate with my existing manufacturing systems?",
+    "answer": "Yes, Empress OS is designed to seamlessly integrate with your existing manufacturing systems, providing a centralized platform for streamlined operations and real-time insights into your production processes."
   },
   {
-    "question": "Can Empress Chat improve communication within my project team?",
-    "answer": "Absolutely. Empress Chat is designed to maintain clear, real-time communication channels within project teams and with stakeholders. It facilitates instant updates, feedback collection, and quick resolution of queries, ensuring everyone stays aligned and informed."
+    "question": "What advantages does Empress Chat offer for supply chain communication?",
+    "answer": "Empress Chat offers the advantage of instant, AI-assisted communication, which helps reduce delays, automate interactions with vendors and customers, and maintain clear and consistent communication throughout the supply chain."
   },
   {
-    "question": "How does Empress Insights contribute to project strategy?",
-    "answer": "Empress Insights delivers advanced analytics for risk assessment, trend analysis, and performance tracking. These data-driven insights allow teams to predict outcomes, set benchmarks, and optimize resource allocation, contributing to a more precise project strategy."
+    "question": "How does Empress Insights enhance production decision-making?",
+    "answer": "Empress Insights enhances production decision-making by providing deep analytics that allow you to monitor efficiency, analyze performance data, and predict maintenance needs, ensuring reduced downtime and more informed manufacturing strategies."
   },
   {
-    "question": "In what ways can Empress' features save time and reduce project delivery cycles?",
-    "answer": "Empress features AI-driven planning tools, predictive task management, and automated workflows that eliminate bottlenecks and redundancies. This efficiency accelerates delivery cycles and frees up time for teams to focus on high-impact project areas."
+    "question": "In what ways does smart inventory management through Empress reduce waste?",
+    "answer": "Smart inventory management through Empress uses AI to accurately forecast demand, preventing overstocking or stockouts, and ensuring that inventory levels are kept optimal, thus significantly reducing waste and associated costs."
   },
   {
-    "question": "How does the cross-platform integration feature work to manage projects?",
-    "answer": "Empress’ cross-platform integration allows for seamless interaction between different software and tools used in project management. This creates a unified environment, reducing the complexity of managing multiple project components and ensuring data consistency."
+    "question": "How does Empress ensure its platform supports global manufacturing operations?",
+    "answer": "Empress ensures global support by providing a multilingual platform that caters to diverse manufacturing environments, allowing for clear communication and efficient operation across different regions and languages."
   },
   {
-    "question": "Can I track the progress of my projects in real-time with Empress?",
-    "answer": "Yes, with Empress' comprehensive dashboards, you can monitor your project's key performance indicators (KPIs) and progress in real-time. These dashboards provide a centralized control point for tracking, reporting, and decision-making."
+    "question": "Is the user interface of Empress conducive to on-the-go management for manufacturing?",
+    "answer": "Yes, the Empress user interface is designed for on-the-go management, providing a consistent and intuitive experience across all devices, ensuring that you can efficiently interact with your manufacturing systems, whether you're on the factory floor or away from the site."
   }
 ]
 
@@ -313,9 +313,9 @@ const featureBlocks = data[0].featureBlocks;
       "max-w-4xl mx-auto flex flex-col items-center justify-center",
       !nomargin && "mt-24",
     ]}>
-    <Badge color="purple">Empress for Project Management</Badge>
+    <Badge color="purple">Empress for Inventory & Manufacturing</Badge>
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      Optimize Your <span class="text-indigo-600">Projects with Empress</span>
+      Evolve Your <span class="text-indigo-600">Inventory with Empress</span>
     </h2>
     <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
       Streamline your business management with an all-in-one suite to enhance productivity and drive growth.

@@ -13,113 +13,137 @@ import { Icon } from "astro-icon";
 import ArrowIcon from "@components/ui/icons/arrow.astro"
 
 import Logos from "@components/logos.astro";
-import heroImage from "../../assets/hero-screenshot.png";
-import IntegrationImg from "../../assets/integrations.svg?url";
-import FeatureImgOne from "../../assets/features/2.png";
-import FeatureImgTwo from "../../assets/features/2.png";
-import FeatureImgThree from "../../assets/features/3.png";
-import FeatureImg1 from "../../assets/features/6.png";
-import FeatureImg2 from "../../assets/features/2.png";
+import heroImage from "../../../assets/hero-screenshot.png";
+import IntegrationImg from "../../../assets/integrations.svg?url";
+import FeatureImgOne from "../../../assets/features/2.png";
+import FeatureImgTwo from "../../../assets/features/2.png";
+import FeatureImgThree from "../../../assets/features/3.png";
+import FeatureImg1 from "../../../assets/features/6.png";
+import FeatureImg2 from "../../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
-import EmployeeImg from "../../assets/employee.jpg";
+import EmployeeImg from "../../../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import Education from "../../assets/features/education.svg";
-import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
-import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
-import DashboardDevelopment from "../../assets/features/dashboard-development.png";
+import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
+import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
 
-const { nomargin } = Astro.props;
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
+const { nomargin } = Astro.props;
+
+const templates = [
   {
-    "title": "Account",
-    "description": "Manage financial transactions",
+    "title": "Expense Tracker",
+    "description": "Monitor and control expenses efficiently.",
     "icon": "fluent:money-24-regular",
-    "link": "/app/finance/account"
+    "link": "/templates/expense-tracker"
   },
   {
-    "title": "Expense",
-    "description": "Track business spending",
-    "icon": "fluent:receipt-24-regular",
-    "link": "/app/finance/expense"
+    "title": "Budget Planner",
+    "description": "Create, manage, and track budgets.",
+    "icon": "fluent:money-24-regular",
+    "link": "/templates/budget-planner"
   },
   {
-    "title": "Invoice",
-    "description": "Create and manage invoices",
+    "title": "Financial Reports",
+    "description": "Generate reports for financial analysis.",
+    "icon": "fluent:money-24-regular",
+    "link": "/templates/financial-reports"
+  },
+  {
+    "title": "Expense Approval",
+    "description": "Streamline expense approvals seamlessly.",
+    "icon": "fluent:money-24-regular",
+    "link": "/templates/expense-approval"
+  },
+  {
+    "title": "Invoice Management",
+    "description": "Manage invoices and financial records.",
     "icon": "fluent:document-24-regular",
-    "link": "/app/finance/invoice"
+    "link": "/templates/invoice-management"
   },
   {
-    "title": "Payroll",
-    "description": "Process employee salaries",
-    "icon": "fluent:wallet-24-regular",
-    "link": "/app/finance/payroll"
-  },
-  {
-    "title": "Budget",
-    "description": "Financial planning",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/finance/budget"
-  },
-  {
-    "title": "Tax",
-    "description": "Manage tax compliance",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/finance/tax"
+    "title": "Cost Estimation",
+    "description": "Estimate project costs with precision.",
+    "icon": "fluent:calculator-24-regular",
+    "link": "/templates/cost-estimation"
   }
 ];
+
 
 
 const data = [
 {
-    "mainHeading": "Elevate Your Financial Services with Empress",
-    "subtext": "Centralize your financial information, ensure compliance, streamline operations, optimize communications, and harness real-time analytics for insightful decision-making.",
+    "mainHeading": "Approve",
+    "subtext": "Access a comprehensive suite of tools tailored for optimal audience engagement and operational excellence.",
     "headingButtons": [
-        {
+          {
             "text": "Get Started",
             "link": "/contact"
-        },
-        {
-            "text": "View pricing",
+          },
+          {
+            "text": "View Pricing",
             "link": "/pricing"
-        }
-    ],
-    "sectionHeading": "Financial Services Reimagined",
+          }
+        ],
+    "sectionHeading": "Empress for E-Commerce",
     "offering": {
-        "title": "AI-Powered Financial Solutions",
-        "subtext": "Craft personalized financial journeys leveraging real-time data, analytics, and seamless integrations."
+      "title": "Maximize Your Sales and Enhance Customer Experience",
+      "subtext": "Integrate, automate, and optimize for a shopping experience that captivates and retains."
     },
     "valueBlocks": [
-    {
-        "heading": "Empress OS",
-        "title": "Simplify Coordination",
-        "description": "Centralize financial data, ensure regulatory compliance, and elevate operational workflows."
-    },
-    {
-        "heading": "Empress Chat",
-        "title": "Build Client Relationships",
-        "description": "Ensure rapid responses and optimize both internal and client-facing with compliance, tailored to drive financial outcomes."
-    },
-    {
-        "heading": "Empress Insights",
-        "title": "Boost Financial Outcomes",
-        "description": "Access real-time actionable analytics to understand client behaviors to optimize performance."
-    }
+  {
+    "heading": "Empress OS",
+    "title": "Optimize Your Operations",
+    "description": "Optimizing business management, customer engagement, and workflow automation for maximum operational efficiency."
+  },
+  {
+    "heading": "Empress Chat",
+    "title": "Respond in Real Time",
+    "description": "Provide instant customer interactions, guide product selection, and capturing pivotal feedback for continual platform improvement."
+  },
+  {
+    "heading": "Empress Insights",
+    "title": "Elevate Conversion Rates",
+    "description": "Transform raw shopper data into actionable intelligence, allowing operations to understand trends, optimize inventory, and adapt strategies."
+  }
 ],
+
     "featureBlocks": [
     {
-  "heading": "OS for Financial",
-  "title": "Transform Financial Operations & Collaboration",
-  "description": "Leverage Empress OS to redefine how financial services handle information, drive team synergy, and optimize intricate workflows for unmatched efficiency and compliance.",
+  "heading": "OS for E-Commerce",
+  "title": "Revolutionize Your Online Retail Performance",
+  "description": "Manage your product content, foster customer engagement, and optimize operational workflows to deliver a world-class shopping experience.",
   "bulletPoints": [
-"Consolidate financial data for quick, secure retrieval",
-"Collaborate easily while complying with regulations",
-"Simplify financial tasks for better service"
+"Consolidate product information for brand consistency",
+"Unify marketing, sales, and operations",
+"Enhance support and efficiency with automated workflows"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+
+{
+  "heading": "Chat for E-Commerce",
+  "title": "Optimize Engagement with Your Digital E-Commerce Assistant",
+  "description": "Seamlessly answer queries, guide shopping journeys, and ensure smooth interactions, all while providing pivotal feedback to your e-commerce platform.",
+  "bulletPoints": [
+  "Boost sales with immediate, personalized customer responses",
+"Improve user experience with guided product selection",
+"Gather feedback to consistently improve user interactions"
   ],
   "buttons": [
     {
@@ -133,13 +157,13 @@ const data = [
   ]
 },
 {
-  "heading": "Chat for Finance",
-  "title": "Revolutionize Financial Communication",
-  "description": "Empress Chat seamlessly integrates with Empress OS, enabling efficient communication that caters to the unique demands of the financial sector, from internal collaboration to client engagement.",
+  "heading": "Insights for E-Commerce",
+  "title": "Unlock Your Store's Full Potential with Advanced Analytics",
+  "description": "Understand customer behaviors, track product performance, and pinpoint areas of opportunity to maximize sales and customer satisfaction.",
   "bulletPoints": [
-  "Provide immediate, personalized financial responses",
-"Maintain secure, compliant data communication",
-"Enhance client relations with engagement and insights"
+  "Use shopper data to boost sales strategies",
+"Spot bestsellers for smarter inventory control",
+"Forecast trends to fine-tune sales tactics"
   ],
   "buttons": [
     {
@@ -151,108 +175,88 @@ const data = [
       "link": "/pricing"
     }
   ]
-},
-{
-  "heading": "Insights for Finance",
-  "title": "Data-Driven Financial Performance",
-  "description": "Equip your financial firm with the advanced analytics and intuitive dashboards crucial for agile decision-making in a dynamic financial landscape.",
-  "bulletPoints": [
-  "Simplify financial analysis for strategic action",
-"Gain immediate client insights for proactive service",
-"Refine strategies with advanced performance metrics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
+},  
     ],
-    "featureHeading": "Financial Services Benefits",
+    "featureHeading": "Features for E-Commerce",
     "featureTitle": "We're Here to Support You",
-    "featureAssurance": "A suite crafted meticulously for the evolving financial landscape.",
+    "featureAssurance": "Our suite of tools is committed to continuous evolution in your e-commerce adventure.",
   }
 ];
 
 const features = [
-    {
-        "title": "Precision-Driven Content",
-        "description": "Revolutionize your financial operations. Deliver tailored experiences using our comprehensive toolkit.",
-        "icon": "fluent:arrow-routing-24-regular",
-    },
-    {
-        "title": "Integrated Software Solutions",
-        "description": "Integrate existing platforms effortlessly. Simplify tracking, optimization, and decision-making.",
-        "icon": "fluent:plug-connected-24-regular",
-    },
-    {
-        "title": "Comprehensive Insights",
-        "description": "Stay on top of your financial engagements with a unified dashboard, bringing analytics, client data, and insights under one roof.",
-        "icon": "fluent:cellular-data-1-24-regular",
-    },
-    {
-        "title": "Intuitive Customer Journeys",
-        "description": "Shape intuitive financial journeys with our design toolkit. From client portals to transaction histories, make every interaction meaningful.",
-        "icon": "fluent:heart-24-regular",
-    },
-    {
-        "title": "Secure & Seamless Integration",
-        "description": "Safety first. Seamlessly merge your existing financial tools with ours, ensuring top-tier security and data protection.",
-        "icon": "fluent:shield-24-regular",
-    },
-    {
-        "title": "Predictive Analytics",
-        "description": "A 360° view of your financial engagements and client communications. Simplify complex data with visual analytics.",
-        "icon": "fluent:data-usage-24-regular",
-    }
+  {
+    "title": "Provide 24/7 Support",
+    "description": "Empower your customers with 24/7 support. Resolve their queries anytime, ensuring they always have a seamless shopping experience.",
+    "icon": "fluent:clock-24-regular",
+  },
+  {
+    "title": "Optimize User Journeys",
+    "description": "Delight your customers with captivating and intuitive interfaces. Elevate their shopping experience and make every click count.",
+    "icon": "fluent:person-arrow-right-24-regular",
+  },
+  {
+    "title": "Seamless Integrations",
+    "description": "Offer your customers a hassle-free shopping experience by integrating all essential e-commerce tools seamlessly.",
+    "icon": "fluent:plug-connected-24-regular",
+  },
+  {
+    "title": "Future-Proof Insights",
+    "description": "Stay ahead of customer demands by tapping into future trends to keep up with customers' evolving needs.",
+    "icon": "fluent:cellular-data-1-24-regular",
+  },
+  {
+    "title": "Consistent Experiences",
+    "description": "Provide your customers with a uniform shopping experience guaranteeing that every interaction on your platform is consistently delightful.",
+    "icon": "fluent:heart-24-regular",
+  },
+  {
+    "title": "All-In-One Ecosystem",
+    "description": "From browsing products to post-sale support, make sure every touchpoint adds value to their e-commerce experience.",
+    "icon": "fluent:arrow-repeat-all-24-regular",
+  }
 ];
 
 
 const faq = [
   {
-    question: "How does Empress OS centralize financial information?",
-    answer: "Empress OS creates a centralized hub for all your financial data, ensuring easy and secure access while maintaining regulatory compliance and elevating operational workflows."
+    question: "How can Empress OS optimize my e-commerce operations?",
+    answer: "Empress OS centralizes product management, enhances customer engagement, and automates workflows to increase your operational efficiency and provide a consistent brand experience."
   },
   {
-    question: "What client relationship tools does Empress offer for financial services?",
-    answer: "Empress Chat delivers rapid, compliant, and personalized communication options tailored to financial services, optimizing client engagement and satisfaction."
+    question: "What does Empress Chat offer for my e-commerce platform?",
+    answer: "Empress Chat provides instant customer service, guiding customers through product selections and capturing feedback, which is essential for continuous improvement of the platform."
   },
   {
-    question: "Can Empress Insights enhance my firm's financial performance?",
-    answer: "Yes, Empress Insights provides real-time analytics and dashboards to dissect client behaviors and engagement patterns, enabling data-driven strategies that boost financial outcomes."
+    question: "Can Empress Insights help increase my conversion rates?",
+    answer: "Yes, Empress Insights turns shopper data into actionable intelligence, allowing you to understand customer trends, optimize inventory, and adapt strategies to elevate conversion rates."
   },
   {
-    question: "How does Empress ensure compliance in financial operations?",
-    answer: "Empress prioritizes compliance by streamlining operations through secure platforms and communication channels that adhere to regulatory standards."
+    question: "How does Empress ensure 24/7 support for e-commerce customers?",
+    answer: "Empress utilizes AI-driven chat solutions to offer round-the-clock customer support, resolving queries instantly and ensuring a seamless shopping experience at any time."
   },
   {
-    question: "What makes Empress a suitable choice for collaboration?",
-    answer: "Empress fosters seamless collaboration within financial services by integrating a secure and compliant environment that promotes teamwork and enhances service delivery."
+    question: "In what way does Empress contribute to optimizing user journeys?",
+    answer: "Empress provides intuitive interfaces and personalizes the shopping experience, making navigation simple and helping customers make informed decisions quickly."
   },
   {
-    question: "How does Empress integrate with existing financial software?",
-    answer: "Empress seamlessly integrates with existing financial platforms, simplifying tracking and decision-making while ensuring data integrity and security."
+    question: "What seamless integrations does Empress offer for e-commerce?",
+    answer: "Empress offers integration with key e-commerce tools and platforms to create a hassle-free shopping experience, from product discovery to checkout and post-sale support."
   },
   {
-    question: "What advantages does Empress offer for designing customer journeys?",
-    answer: "Empress provides design tools to create intuitive financial journeys for clients, ensuring meaningful interactions from portals to chat histories."
+    question: "How does Empress help in future-proofing my e-commerce business?",
+    answer: "Empress delivers insights into emerging market trends and customer behaviors, enabling you to adapt and innovate ahead of demand, thus future-proofing your e-commerce business."
   }
 ];
+
+
 
 
 const featureBlocks = data[0].featureBlocks;
 
 ---
 
-
 <Layout title="About" footerMargin={false}>
-  
-  <!-- <div class="overflow-x-clip">
+  <div class="overflow-x-clip">
     <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
@@ -291,7 +295,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={Education}
+            src={ECommerce}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -302,48 +306,86 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </main>
     </Container>
-  </div> -->
-
-  <Container>
-  <div>
-    <div
-    class:list={[
-      "max-w-4xl mx-auto flex flex-col items-center justify-center",
-      !nomargin && "mt-24",
-    ]}>
-    <Badge color="purple">Empress for Finance</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      Elevate Your <span class="text-indigo-600">Finances with Empress</span>
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
-    </p>
   </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-    {
-      apps.map((item) => (
-        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          </div>
-        </a>
-      ))
-    }
-  </div>
-  </div>
-</Container>
-  
-  <div class="grid md:grid-cols-2 py-10"></div>
   
 
   <Container>
   
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].offering.title}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].offering.subtext}
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        templates.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+      <Card color="indigo" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={NetworkServerManagement}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
+      </Card>
+      
+      <Card color="purple" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={AutomatedMarketing}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
+      </Card>
+      
+      <Card size="sm">
+        <Fragment slot="image">
+          <Image
+            src={DashboardDevelopment}
+            alt="Feature image"
+            width="909"
+            height="823"
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
+      </Card>
+    </div> -->
 
     <!-- Feature 1 -->
 
@@ -398,14 +440,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../../../chemical-laboratory.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../../../global-education.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -511,67 +553,8 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../../../nuclear-research-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../../../../../pie-chart-bar.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
-  </div>
-
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">{data[0].sectionHeading}</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      {data[0].offering.title}
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      {data[0].offering.subtext}
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-    <Card color="indigo" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={NetworkServerManagement}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-      <span slot="title">{data[0].valueBlocks[0].title}</span>
-      <span slot="desc">{data[0].valueBlocks[0].description}</span>
-    </Card>
-    
-    <Card color="purple" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={AutomatedMarketing}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-      <span slot="title">{data[0].valueBlocks[1].title}</span>
-      <span slot="desc">{data[0].valueBlocks[1].description}</span>
-    </Card>
-    
-    <Card size="sm">
-      <Fragment slot="image">
-        <!-- // svg image. cannot use <picture/> as of now -->
-        <Image
-          src={DashboardDevelopment}
-          alt="Feature image"
-          width="909"
-          height="823"
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-      <span slot="title">{data[0].valueBlocks[2].title}</span>
-      <span slot="desc">{data[0].valueBlocks[2].description}</span>
-    </Card>
   </div>
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">

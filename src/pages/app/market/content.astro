@@ -13,237 +13,236 @@ import { Icon } from "astro-icon";
 import ArrowIcon from "@components/ui/icons/arrow.astro"
 
 import Logos from "@components/logos.astro";
-import heroImage from "../../assets/hero-screenshot.png";
-import IntegrationImg from "../../assets/integrations.svg?url";
-import FeatureImgOne from "../../assets/features/2.png";
-import FeatureImgTwo from "../../assets/features/2.png";
-import FeatureImgThree from "../../assets/features/3.png";
-import FeatureImg1 from "../../assets/features/6.png";
-import FeatureImg2 from "../../assets/features/2.png";
+import heroImage from "../../../assets/hero-screenshot.png";
+import IntegrationImg from "../../../assets/integrations.svg?url";
+import FeatureImgOne from "../../../assets/features/2.png";
+import FeatureImgTwo from "../../../assets/features/2.png";
+import FeatureImgThree from "../../../assets/features/3.png";
+import FeatureImg1 from "../../../assets/features/6.png";
+import FeatureImg2 from "../../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
-import EmployeeImg from "../../assets/employee.jpg";
-import TargetMarketing from "../../assets/features/targeting-audience-for-marketing.svg";
+import EmployeeImg from "../../../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
-import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
-import DashboardDevelopment from "../../assets/features/dashboard-development.png";
+import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
+import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
 
-const { nomargin } = Astro.props;
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
+const { nomargin } = Astro.props;
+
+const templates = [
   {
-    "title": "Automation",
-    "description": "Streamline marketing tasks",
-    "icon": "fluent:bot-24-regular",
-    "link": "/app/marketing/automation"
+    "title": "Marketing Workflow Automation",
+    "description": "Streamline Marketing Tasks",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/marketing-workflow-automation"
   },
   {
-    "title": "Email",
-    "description": "Targeted email campaigns",
-    "icon": "fluent:mail-add-24-regular",
-    "link": "/app/marketing/email"
+    "title": "Lead Nurturing Automation",
+    "description": "Nurture Leads Automatically",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/lead-nurturing-automation"
   },
   {
-    "title": "SMS",
-    "description": "Direct text outreach",
-    "icon": "fluent:phone-add-24-regular",
-    "link": "/app/marketing/sms"
+    "title": "Campaign Analytics Dashboard",
+    "description": "Analyze Marketing Campaigns",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/campaign-analytics-dashboard"
   },
   {
-    "title": "Social",
-    "description": "Social media engagement",
-    "icon": "fluent:share-android-24-regular",
-    "link": "/app/marketing/social"
+    "title": "Personalization Engine",
+    "description": "Create Customized Content",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/personalization-engine"
   },
   {
-    "title": "Events",
-    "description": "Organize promotional events",
-    "icon": "fluent:calendar-24-regular",
-    "link": "/app/marketing/events"
+    "title": "Data Integration Solutions",
+    "description": "Integrate Marketing Data",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/data-integration-solutions"
   },
   {
-    "title": "Surveys",
-    "description": "Gather customer feedback",
-    "icon": "fluent:form-new-24-regular",
-    "link": "/app/marketing/surveys"
+    "title": "A/B Testing Tools",
+    "description": "Optimize Campaigns with Testing",
+    "icon": "fluent:chat-24-regular",
+    "link": "/templates/ab-testing-tools"
   }
 ];
 
 const data = [
   {
-    "mainHeading": "Elevate Your Marketing with Empress",
-    "subtext": "Unlock an all-encompassing tool suite, empowered by AI-driven insights, to revolutionize your marketing campaigns.",
+    "mainHeading": "Create Engaging Content",
+    "subtext": "Elevate your operational efficiency with bespoke automation designed to streamline your business processes.",
     "headingButtons": [
       {
-        "text": "Get Started",
-        "link": "/contact"
+        "text": "Start Automating",
+        "link": "/contact-automation"
       },
       {
-        "text": "View Pricing",
-        "link": "/pricing"
+        "text": "Automation Pricing",
+        "link": "/pricing-automation"
       }
     ],
-    "sectionHeading": "Empress for Marketing",
+    "sectionHeading": "Operational Excellence through Automation",
     "offering": {
-      "title": "Transform Your Customer Engagement",
-      "subtext": "Utilize real-time and predictive analytics to sharpen your marketing campaigns, ensuring impactful outreach and deeper engagement."
+      "title": "Revolutionize Your Workflow",
+      "subtext": "Empower your team with tools that automate tasks, simplify workflows, and maximize productivity."
     },
     "valueBlocks": [
-  {
-    "heading": "Empress OS",
-    "title": "Connect Marketing Efforts",
-    "description": "Manage and centralize all your marketing efforts, ensuring creative collaboration and fluid campaigns that resonate with your audience."
-  },
-  {
-    "heading": "Empress Chat",
-    "title": "Modernize Engagement",
-    "description": "On-demand AI-tailored communication, aligning your marketing teams and providing a personalized touch to your audience engagement."
-  },
-  {
-    "heading": "Empress Insights",
-    "title": "Increase Conversion Rates",
-    "description": "Dive deep into granular analytics and dashboards, enabling you to understand your audience better, optimize campaigns in real-time."
-  }
-],
-    "featureBlocks": [
-    {
-  "heading": "OS for Marketing",
-  "title": "Optimize Your Marketing Performance",
-  "description": "Leverage Empress OS, the ultimate marketing companion that centralizes operations, fosters creative collaboration, and paves the way for seamless marketing campaigns.",
-  "bulletPoints": [
-  "Centralize marketing assets for easy access",
-"Enable real-time, team-wide campaign collaboration",
-"Streamline marketing with automated workflows"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Chat for Marketing",
-  "title": "Expand Your Marketing Communication",
-  "description": "Seamlessly connect your team with Empress OS's suite of tools, ensuring timely, effective, and well-aligned communication both internally and with your audience.",
-  "bulletPoints": [
-  "Improve campaign communication and feedback processes",
-"Use AI for tailored audience messaging",
-"Enhance team coordination for agile marketing"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
-{
-  "heading": "Insights for Marketing",
-  "title": "Unlock Data-Driven Marketing Decisions",
-  "description": "Access cutting-edge analytics and dashboards that transform complex marketing data into actionable, strategic insights.",
-  "bulletPoints": [
-  "Analyze audience behavior to inform campaigns",
-"Adjust campaigns with live performance insights",
-"Anticipate trends to outpace competitors"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-
+      {
+        "heading": "Workflow Automation",
+        "title": "Simplify Complex Processes",
+        "description": "Our platform enables the creation of custom automation that tackles complex tasks effortlessly, reducing manual input and increasing accuracy."
+      },
+      {
+        "heading": "Smart Interactions",
+        "title": "Enhanced Customer Interaction",
+        "description": "Automated systems interact with customers, providing quick responses and seamless support, driving engagement and satisfaction."
+      },
+      {
+        "heading": "Insightful Analytics",
+        "title": "Intelligent Data Utilization",
+        "description": "Automatically aggregate and analyze data to uncover insights, enhance decision-making, and predict future trends."
+      }
     ],
-    "featureHeading": "Features for Marketing",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Maximize your marketing potential with seamless integrations tailored for marketers."
+    "featureBlocks": [
+      {
+        "heading": "Task Automation",
+        "title": "Effortless Task Management",
+        "description": "From scheduling to billing, automate repetitive tasks and focus on what really matters - growing your business.",
+        "bulletPoints": [
+          "Customizable task automation",
+          "Improved process efficiency",
+          "Error reduction and time savings"
+        ],
+        "buttons": [
+          {
+            "text": "Automate Tasks",
+            "link": "/contact-tasks"
+          },
+          {
+            "text": "Task Automation Pricing",
+            "link": "/pricing-tasks"
+          }
+        ]
+      },
+      {
+        "heading": "Intelligent Automation",
+        "title": "Smart Solutions for Every Need",
+        "description": "Utilize AI-driven automation to streamline your operations, from customer queries to inventory management.",
+        "bulletPoints": [
+          "Adaptive AI technologies",
+          "Proactive operational management",
+          "Strategic resource deployment"
+        ],
+        "buttons": [
+          {
+            "text": "Implement AI",
+            "link": "/contact-ai"
+          },
+          {
+            "text": "AI Solutions Pricing",
+            "link": "/pricing-ai"
+          }
+        ]
+      },
+      {
+        "heading": "Proactive Analytics",
+        "title": "Automate for the Future",
+        "description": "Use advanced analytics to not just understand the current state of your business, but to also predict and prepare for future challenges.",
+        "bulletPoints": [
+          "Predictive analytics for trend spotting",
+          "Automated reporting for continuous insights",
+          "Data-driven strategy formulation"
+        ],
+        "buttons": [
+          {
+            "text": "Explore Analytics",
+            "link": "/contact-analytics"
+          },
+          {
+            "text": "Analytics Pricing",
+            "link": "/pricing-analytics"
+          }
+        ]
+      }
+    ],
+    "featureHeading": "Tailored Automation",
+    "featureTitle": "Craft Your Automated Business Landscape",
+    "featureAssurance": "Our automation tools are designed with flexibility in mind, to provide tailored solutions that align with your specific business needs and challenges."
   }
 ];
 
+
 const features = [
   {
-    "title": "Automate with Precision",
-    "description": "Effortlessly integrate with 200+ platforms, offering versatile marketing solutions that adapt to ever-evolving strategies.",
-    "icon": "fluent:flash-settings-24-regular"
+    "title": "Real-time Process Optimization",
+    "description": "Instantly identify bottlenecks and optimize your workflows in real-time with dynamic automation that adapts to your operational needs.",
+    "icon": "fluent:arrow-trending-lines-24-regular",
   },
   {
-    "title": "Optimize Your Strategy",
-    "description": "Redefine your strategy with our tailored solutions, delivering unparalleled marketing insights and guidance.",
-    "icon": "fluent:arrow-routing-24-regular"
+    "title": "Automated Customer Journeys",
+    "description": "Create seamless customer journeys with automation that guides your customers from discovery to purchase, boosting conversion rates.",
+    "icon": "fluent:people-swap-24-regular",
   },
   {
-    "title": "Brand Consistency Across Channels",
-    "description": "Ensure a cohesive brand voice throughout your campaigns, enhancing recall and fortifying brand identity.",
-    "icon": "fluent:mobile-optimized-24-regular"
+    "title": "Dynamic Resource Allocation",
+    "description": "Maximize efficiency with automated resource allocation, ensuring optimal use of your assets and personnel.",
+    "icon": "fluent:clipboard-task-list-ltr-24-regular",
   },
   {
-    "title": "Tools for Marketing Excellence",
-    "description": "Unlock tools and insights that drive campaigns to unmatched success, making every marketing effort count.",
-    "icon": "fluent:window-dev-tools-24-regular"
+    "title": "Precision Scheduling",
+    "description": "Automate your scheduling to ensure that meetings, deliveries, and services are organized efficiently without conflicts or overlap.",
+    "icon": "fluent:calendar-ltr-24-regular",
   },
   {
-    "title": "Decisions Powered by Insights",
-    "description": "Empower your marketing strategies with data-driven decisions, ensuring unparalleled efficiency and impactful ROI.",
-    "icon": "fluent:cellular-data-1-24-regular"
+    "title": "Seamless Data Integration",
+    "description": "Automate the consolidation of data across platforms, providing a unified view of your business for better decision-making.",
+    "icon": "fluent:data-trending-24-regular",
   },
   {
-    "title": "Get AI Driven Support",
-    "description": "Combine AI, real-time analytics, and Empress insights to consistently raise your marketing standards and outcomes.",
-    "icon": "fluent:bot-24-regular"
+    "title": "Intelligent Automation",
+    "description": "Incorporate AI that learns from your processes, predicting outcomes and making intelligent decisions to improve efficiency over time.",
+    "icon": "fluent:brain-circuit-24-regular",
   }
 ];
 
 const faq = [
   {
-    question: "How can Empress OS enhance my marketing campaign management?",
-    answer: "Empress OS enhances marketing campaigns by centralizing marketing assets on a unified platform, facilitating real-time collaboration among teams, and automating workflows for consistent brand messaging."
+    question: "How does automation enhance operational efficiency?",
+    answer: "Automation streamlines business processes by reducing manual efforts, minimizing errors, and speeding up task completion, which leads to enhanced operational efficiency and productivity."
   },
   {
-    question: "What role does AI play in Empress Chat for audience engagement?",
-    answer: "Empress Chat uses AI to provide on-demand, personalized communication, ensuring that audience engagement is tailored and responsive, leading to a more modernized and efficient engagement strategy."
+    question: "Can the automation be customized to fit my specific business needs?",
+    answer: "Yes, our automation solutions are designed to be flexible and can be tailored to meet the unique requirements and challenges of your business, ensuring a perfect fit for your operational model."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights dives into granular analytics and provides dashboards that help understand audience behavior and preferences, enabling real-time optimization of campaigns to boost conversion rates."
+    question: "Will implementing automation disrupt my current workflow?",
+    answer: "Our approach to implementing automation is designed to be as smooth as possible, with minimal disruption. We focus on integrating with your current workflow and enhancing it without major interruptions."
   },
   {
-    question: "What integrations are available with Empress for marketing?",
-    answer: "Empress offers seamless integrations with over 200 platforms, providing versatile marketing solutions that can adapt to evolving strategies and ensuring brand consistency across channels."
+    question: "How secure is automated data handling on your platform?",
+    answer: "Data security is paramount on our platform. We use advanced encryption and security protocols to ensure that all data handled by our automation tools is secure and compliant with relevant regulations."
   },
   {
-    question: "How does Empress ensure brand consistency across all marketing channels?",
-    answer: "Empress centralizes business management and automates marketing workflows, which helps in maintaining a cohesive brand voice and ensuring consistency across all marketing channels."
+    question: "What kind of support can I expect after automating my processes?",
+    answer: "We provide continuous support post-automation with regular check-ins, updates, and dedicated assistance to ensure that the automated systems are functioning optimally and evolving with your business."
   },
   {
-    question: "How do Empress tools contribute to marketing excellence?",
-    answer: "Empress provides tools that unlock insights and analytics, driving campaigns to success by making every marketing effort data-driven, strategic, and efficient."
+    question: "How can I measure the impact of automation on my business?",
+    answer: "Our platform includes analytics and reporting tools that allow you to track key performance indicators (KPIs) and measure the impact of automation on your business in real-time, giving you clear insights into your ROI."
   },
   {
-    question: "What support does Empress provide for data-driven marketing decisions?",
-    answer: "Empress supports data-driven marketing strategies with advanced analytics and real-time insights, allowing marketers to make informed decisions that lead to impactful ROI."
+    question: "Can automation help me understand and predict customer behavior?",
+    answer: "Absolutely, by utilizing data analytics and predictive modeling, our automation tools can help you gain insights into customer behaviors, forecast trends, and make informed decisions to stay ahead of the market."
   }
 ];
-
 
 
 const featureBlocks = data[0].featureBlocks;
@@ -251,7 +250,7 @@ const featureBlocks = data[0].featureBlocks;
 ---
 
 <Layout title="About" footerMargin={false}>
-  <!-- <div class="overflow-x-clip">
+  <div class="overflow-x-clip">
     <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
@@ -290,7 +289,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={TargetMarketing}
+            src={ECommerce}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -301,26 +300,24 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </main>
     </Container>
-  </div> -->
+  </div>
+  
 
   <Container>
-    <div>
-      <div
-      class:list={[
-        "max-w-4xl mx-auto flex flex-col items-center justify-center",
-        !nomargin && "mt-24",
-      ]}>
-      <Badge color="purple">Empress for Marketing</Badge>
+  
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
       <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        Elevate Your <span class="text-indigo-600">Marketing with Empress</span>
+        {data[0].offering.title}
       </h2>
       <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Unlock an all-encompassing tool suite to revolutionize your marketing campaigns.
+        {data[0].offering.subtext}
       </p>
     </div>
+
     <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
       {
-        apps.map((item) => (
+        templates.map((item) => (
           <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
               <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
@@ -335,12 +332,54 @@ const featureBlocks = data[0].featureBlocks;
         ))
       }
     </div>
-    </div>
-  </Container>
-  
 
-  <Container>
-  
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+      <Card color="indigo" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={NetworkServerManagement}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
+      </Card>
+      
+      <Card color="purple" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={AutomatedMarketing}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
+      </Card>
+      
+      <Card size="sm">
+        <Fragment slot="image">
+          <Image
+            src={DashboardDevelopment}
+            alt="Feature image"
+            width="909"
+            height="823"
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
+      </Card>
+    </div> -->
 
     <!-- Feature 1 -->
 
@@ -395,14 +434,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../../../job-announcement.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../../../global-market-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -508,67 +547,8 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../../../data-analysis-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../../../../../pie-chart-bar.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
-  </div>
-
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">{data[0].sectionHeading}</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      {data[0].offering.title}
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      {data[0].offering.subtext}
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-    <Card color="indigo" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={NetworkServerManagement}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-      <span slot="title">{data[0].valueBlocks[0].title}</span>
-      <span slot="desc">{data[0].valueBlocks[0].description}</span>
-    </Card>
-    
-    <Card color="purple" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={AutomatedMarketing}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-      <span slot="title">{data[0].valueBlocks[1].title}</span>
-      <span slot="desc">{data[0].valueBlocks[1].description}</span>
-    </Card>
-    
-    <Card size="sm">
-      <Fragment slot="image">
-        <!-- // svg image. cannot use <picture/> as of now -->
-        <Image
-          src={DashboardDevelopment}
-          alt="Feature image"
-          width="909"
-          height="823"
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-      <span slot="title">{data[0].valueBlocks[2].title}</span>
-      <span slot="desc">{data[0].valueBlocks[2].description}</span>
-    </Card>
   </div>
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">

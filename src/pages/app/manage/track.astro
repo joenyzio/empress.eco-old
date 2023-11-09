@@ -13,72 +13,74 @@ import { Icon } from "astro-icon";
 import ArrowIcon from "@components/ui/icons/arrow.astro"
 
 import Logos from "@components/logos.astro";
-import heroImage from "../../assets/hero-screenshot.png";
-import IntegrationImg from "../../assets/integrations.svg?url";
-import FeatureImgOne from "../../assets/features/2.png";
-import FeatureImgTwo from "../../assets/features/2.png";
-import FeatureImgThree from "../../assets/features/3.png";
-import FeatureImg1 from "../../assets/features/6.png";
-import FeatureImg2 from "../../assets/features/2.png";
+import heroImage from "../../../assets/hero-screenshot.png";
+import IntegrationImg from "../../../assets/integrations.svg?url";
+import FeatureImgOne from "../../../assets/features/2.png";
+import FeatureImgTwo from "../../../assets/features/2.png";
+import FeatureImgThree from "../../../assets/features/3.png";
+import FeatureImg1 from "../../../assets/features/6.png";
+import FeatureImg2 from "../../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
-import EmployeeImg from "../../assets/employee.jpg";
+import EmployeeImg from "../../../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import Education from "../../assets/features/education.svg";
-import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
-import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
-import DashboardDevelopment from "../../assets/features/dashboard-development.png";
+import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
+import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
 
-const { nomargin } = Astro.props;
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
+
+const { nomargin } = Astro.props;
+
+const templates = [
   {
-    "title": "Plan",
-    "description": "Task planning and organization",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/plan"
+    "title": "Data Dashboard",
+    "description": "Visualize and analyze data effectively.",
+    "icon": "fluent:export-24-regular",
+    "link": "/templates/data-dashboard"
   },
   {
-    "title": "Track",
-    "description": "Project analysis and reporting",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/track"
+    "title": "Report Generator",
+    "description": "Create custom reports for insights.",
+    "icon": "fluent:export-24-regular",
+    "link": "/templates/report-generator"
   },
   {
-    "title": "Collaborate",
-    "description": "Connect, communicate, and update",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/collaborate"
+    "title": "Data Import",
+    "description": "Import, transform, and analyze data.",
+    "icon": "fluent:export-24-regular",
+    "link": "/templates/data-import"
   },
   {
-    "title": "Approve",
-    "description": "Permissions and approvals",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/approve"
+    "title": "Chart Library",
+    "description": "Access a variety of chart options.",
+    "icon": "fluent:export-24-regular",
+    "link": "/templates/chart-library"
   },
   {
-    "title": "Strategize",
-    "description": "Manage and support users",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/strategize"
+    "title": "Predictive Models",
+    "description": "Utilize predictive insights for decision-making.",
+    "icon": "fluent:lightbulb-24-regular",
+    "link": "/templates/predictive-models"
   },
   {
-    "title": "Optimize",
-    "description": "Scale operations efficiently",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/optimize"
-  },
+    "title": "Data Export",
+    "description": "Export data for external analysis and reporting.",
+    "icon": "fluent:export-24-regular",
+    "link": "/templates/data-export"
+  }
 ];
 
 
 const data = [
   {
-    "mainHeading": "Optimize Project Management with Empress",
-    "subtext": "Harness AI-enhanced tools to streamline project workflows, improve team coordination, and ensure project success.",
+    "mainHeading": "Track",
+    "subtext": "Streamline your project management with our organizational tools designed to bring efficiency and order to your tasks.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -89,37 +91,37 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for Project Management",
+    "sectionHeading": "Master Task Organization",
     "offering": {
-      "title": "Innovative Project Management Solutions",
-      "subtext": "Transform your project management practices with AI-driven insights, enabling precise planning, execution, and delivery."
+      "title": "Effortless Organization, Exceptional Results",
+      "subtext": "Perfect the art of task organization to ensure that every project component is executed with precision."
     },
     "valueBlocks": [
       {
-        "heading": "Empress OS",
-        "title": "Streamline Project Workflows",
-        "description": "Unify project data, enhance team collaboration, and automate routine tasks for increased project efficiency and reduced time to delivery."
+        "heading": "Task-Centric OS",
+        "title": "Systemize Your Workflow",
+        "description": "Utilize our Operating System to bring a structured approach to your project tasks, boosting productivity and ensuring no detail is overlooked."
       },
       {
-        "heading": "Empress Chat",
-        "title": "Enhance Team Communication",
-        "description": "Facilitate real-time communication within project teams and with stakeholders to keep projects on track and teams aligned."
+        "heading": "Collaborative Task Management",
+        "title": "Collaborate and Deliver",
+        "description": "Encourage teamwork with a shared space for task management, where everyone knows their responsibilities and deadlines."
       },
       {
-        "heading": "Empress Insights",
-        "title": "Inform Project Strategy",
-        "description": "Leverage advanced analytics for project trend analysis, risk assessment, and performance metrics to drive informed decision-making."
+        "heading": "Insightful Task Analytics",
+        "title": "Track and Improve",
+        "description": "Leverage analytical insights from task progression to enhance future planning and drive continuous improvement in your processes."
       }
     ],
     "featureBlocks": [
       {
-        "heading": "OS for Project Management",
-        "title": "Centralize and Automate Project Tasks",
-        "description": "Empower project teams with Empress OS to centralize project information, automate workflows, and facilitate seamless collaboration across all project stages.",
+        "heading": "Organized Task Interface",
+        "title": "Navigate Tasks with Ease",
+        "description": "Manage your project tasks with an intuitive interface that organizes each component for easy access and tracking.",
         "bulletPoints": [
-          "Integrate project planning and resource management",
-          "Automate task allocation and progress tracking",
-          "Synchronize cross-departmental project efforts"
+          "Intuitive task categorization for streamlined operations",
+          "Visual progress tracking to keep everyone aligned",
+          "Automated alerts to keep tasks on track"
         ],
         "buttons": [
           {
@@ -133,13 +135,13 @@ const data = [
         ]
       },
       {
-        "heading": "Chat for Project Alignment",
-        "title": "Communicate Effectively for Project Success",
-        "description": "Utilize Empress Chat to maintain clear communication channels across project teams, enabling quick problem-solving and ensuring that all stakeholders are informed and engaged.",
+        "heading": "Task Communication Platform",
+        "title": "Optimize Team Interaction",
+        "description": "Facilitate clear and direct communication paths within your team, centered around task updates and completions.",
         "bulletPoints": [
-          "Provide real-time updates and gather team feedback",
-          "Facilitate stakeholder engagement and updates",
-          "Resolve project queries with AI-powered assistance"
+          "Instantly update teams on task changes",
+          "Easily share task-related files and instructions",
+          "Foster a collaborative environment with task-focused discussions"
         ],
         "buttons": [
           {
@@ -153,13 +155,13 @@ const data = [
         ]
       },
       {
-        "heading": "Insights for Project Precision",
-        "title": "Make Data-Driven Project Decisions",
-        "description": "Adopt a strategic edge with Empress Insights, utilizing comprehensive dashboards to track project health, anticipate risks, and capitalize on opportunities for improvement.",
+        "heading": "Analytical Task Oversight",
+        "title": "Informed Task Management",
+        "description": "Access comprehensive task analytics to gain insights on efficiency and team performance, informing your strategy and task distribution.",
         "bulletPoints": [
-          "Analyze real-time project performance data",
-          "Predict project outcomes and set benchmarks",
-          "Optimize resource allocation based on historical data"
+          "Evaluate task completion rates to assess team efficiency",
+          "Analyze task duration and outcomes for process optimization",
+          "Utilize predictive analytics for better task forecasting"
         ],
         "buttons": [
           {
@@ -173,77 +175,82 @@ const data = [
         ]
       }
     ],
-    "featureHeading": "Advanced Project Management Features",
-    "featureTitle": "Elevate Your Project Execution",
-    "featureAssurance": "Dedicated to empowering project teams with sophisticated, AI-enhanced project management tools for superior results."
+    "featureHeading": "Advanced Task Management",
+    "featureTitle": "Elevate Your Project Success",
+    "featureAssurance": "Trust in our advanced task management system to empower your projects with unparalleled organization and clarity."
   }
 ];
 
 
 const features = [
   {
-    "title": "Strategic Project Planning",
-    "description": "Utilize AI-driven analytics to optimize project timelines and resources, ensuring every plan is streamlined for maximum efficiency and effectiveness.",
-    "icon": "fluent:chart-multiple-24-regular"
+    "title": "Task Prioritization",
+    "description": "Easily prioritize tasks based on deadlines, team availability, and project urgency to ensure a smooth workflow.",
+    "icon": "fluent:arrow-sort-24-regular",
   },
   {
-    "title": "Real-Time Collaboration",
-    "description": "Facilitate instant project updates and team collaboration through an integrated communication platform, keeping everyone on the same page.",
-    "icon": "fluent:people-team-24-regular"
+    "title": "Integrated Time Tracking",
+    "description": "Track the time spent on individual tasks with integrated timers to help with productivity analysis and accurate billing.",
+    "icon": "fluent:timer-24-regular",
   },
   {
-    "title": "Predictive Task Management",
-    "description": "Implement AI forecasts to anticipate project bottlenecks, allocate resources effectively, and maintain steady progress with proactive task management.",
-    "icon": "fluent:task-list-square-ltr-24-regular"
+    "title": "Customizable Task Boards",
+    "description": "Create custom boards for different projects or teams, with the ability to tailor features and workflows to suit specific task requirements.",
+    "icon": "fluent:board-24-regular",
   },
   {
-    "title": "Automated Workflow Optimization",
-    "description": "Deploy intelligent automation to streamline project workflows, from initiation to delivery, ensuring a focus on value-added activities.",
-    "icon": "fluent:bot-24-regular"
+    "title": "Task Delegation System",
+    "description": "Easily delegate tasks to team members with clear instructions and defined outcomes, improving accountability and efficiency.",
+    "icon": "fluent:people-team-24-regular",
   },
   {
-    "title": "Cross-Platform Project Integration",
-    "description": "Achieve a cohesive project management environment with cross-platform integrations, simplifying the oversight of multiple project components.",
-    "icon": "fluent:plug-connected-24-regular"
+    "title": "Recurring Task Automation",
+    "description": "Set up recurring tasks that automatically reset upon completion, ensuring routine critical tasks are never overlooked.",
+    "icon": "fluent:bot-24-regular",
   },
   {
-    "title": "Comprehensive Project Dashboards",
-    "description": "Monitor project KPIs and progress with comprehensive dashboards, offering a centralized view for informed decision-making and control.",
-    "icon": "fluent:data-trending-24-regular"
+    "title": "Task Dependency Mapping",
+    "description": "Visualize and manage task dependencies to ensure projects proceed in logical progression and resources are allocated effectively.",
+    "icon": "fluent:branch-fork-link-24-regular",
   }
-]
-
+];
 
 const faq = [
   {
-    "question": "How does Empress enhance traditional project management?",
-    "answer": "Empress utilizes AI-driven analytics and machine learning to transform traditional project management. It streamlines workflows, enhances team collaboration, and provides real-time insights for more informed decision-making, ultimately leading to more successful project outcomes."
+    "question": "How can I get started with organizing my project tasks?",
+    "answer": "Getting started is simple. Click on the 'Get Started' button on our website to sign up. You’ll be guided through the setup process, where you can immediately begin organizing your tasks using our Task-Centric OS and Collaborative Task Management features."
   },
   {
-    "question": "What features does Empress OS offer for project management?",
-    "answer": "Empress OS offers centralized project data management, automated task workflows, and seamless collaboration across all project stages. It integrates planning and resource management to synchronize efforts and track progress effectively."
+    "question": "What makes your Task Management system different from others?",
+    "answer": "Our system is built with a focus on ease of use, collaborative features, and insightful analytics. The intuitive design of our Organized Task Interface and the depth of our Analytical Task Oversight set us apart, providing not just tools for management but also for continuous improvement and strategic planning."
   },
   {
-    "question": "Can Empress Chat improve communication within my project team?",
-    "answer": "Absolutely. Empress Chat is designed to maintain clear, real-time communication channels within project teams and with stakeholders. It facilitates instant updates, feedback collection, and quick resolution of queries, ensuring everyone stays aligned and informed."
+    "question": "Can I prioritize tasks within the system?",
+    "answer": "Yes, with our Task Prioritization feature, you can arrange your tasks based on various criteria such as deadlines, importance, or resources available. This helps keep your workflow efficient and your projects moving forward effectively."
   },
   {
-    "question": "How does Empress Insights contribute to project strategy?",
-    "answer": "Empress Insights delivers advanced analytics for risk assessment, trend analysis, and performance tracking. These data-driven insights allow teams to predict outcomes, set benchmarks, and optimize resource allocation, contributing to a more precise project strategy."
+    "question": "Is there a way to track the time spent on tasks?",
+    "answer": "Absolutely. Our Integrated Time Tracking feature allows you and your team to record the time spent on each task. This is ideal for productivity analysis, ensuring accountability, and if needed, accurate client billing."
   },
   {
-    "question": "In what ways can Empress' features save time and reduce project delivery cycles?",
-    "answer": "Empress features AI-driven planning tools, predictive task management, and automated workflows that eliminate bottlenecks and redundancies. This efficiency accelerates delivery cycles and frees up time for teams to focus on high-impact project areas."
+    "question": "How does the Task Delegation System work?",
+    "answer": "Our Task Delegation System lets you assign tasks to team members directly within the platform. You can add specific instructions, set deadlines, and track progress, making it easy to manage team workload and enhance accountability."
   },
   {
-    "question": "How does the cross-platform integration feature work to manage projects?",
-    "answer": "Empress’ cross-platform integration allows for seamless interaction between different software and tools used in project management. This creates a unified environment, reducing the complexity of managing multiple project components and ensuring data consistency."
+    "question": "Does your platform support recurring tasks?",
+    "answer": "Yes, it does. With Recurring Task Automation, you can create tasks that will automatically reset after completion, which is perfect for routine activities that need to occur on a regular schedule, ensuring they’re never missed."
   },
   {
-    "question": "Can I track the progress of my projects in real-time with Empress?",
-    "answer": "Yes, with Empress' comprehensive dashboards, you can monitor your project's key performance indicators (KPIs) and progress in real-time. These dashboards provide a centralized control point for tracking, reporting, and decision-making."
+    "question": "How does Task Dependency Mapping help in project management?",
+    "answer": "Task Dependency Mapping allows you to see and manage the relationships between different tasks. By understanding how tasks are interconnected, you can plan more effectively, avoid bottlenecks, and ensure resources are allocated where they’re needed most."
+  },
+  {
+    "question": "Can I customize the task boards to fit my project needs?",
+    "answer": "Yes, our Customizable Task Boards can be tailored to fit the unique requirements of your projects or teams. You can create and customize boards, add columns for different task stages, and set up individual workflows to match your project management style."
   }
-]
+];
+
+
 
 
 
@@ -251,10 +258,8 @@ const featureBlocks = data[0].featureBlocks;
 
 ---
 
-
 <Layout title="About" footerMargin={false}>
-  
-  <!-- <div class="overflow-x-clip">
+  <div class="overflow-x-clip">
     <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
@@ -293,7 +298,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={Education}
+            src={ECommerce}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -304,48 +309,86 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </main>
     </Container>
-  </div> -->
-
-  <Container>
-  <div>
-    <div
-    class:list={[
-      "max-w-4xl mx-auto flex flex-col items-center justify-center",
-      !nomargin && "mt-24",
-    ]}>
-    <Badge color="purple">Empress for Project Management</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      Optimize Your <span class="text-indigo-600">Projects with Empress</span>
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
-    </p>
   </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-    {
-      apps.map((item) => (
-        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          </div>
-        </a>
-      ))
-    }
-  </div>
-  </div>
-</Container>
-  
-  <div class="grid md:grid-cols-2 py-10"></div>
   
 
   <Container>
   
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+      <Badge color="purple">{data[0].sectionHeading}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].offering.title}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].offering.subtext}
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        templates.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
+      <Card color="indigo" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={NetworkServerManagement}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
+        <span slot="title">{data[0].valueBlocks[0].title}</span>
+        <span slot="desc">{data[0].valueBlocks[0].description}</span>
+      </Card>
+      
+      <Card color="purple" size="sm">
+        <Fragment slot="image">
+          <Picture
+            src={AutomatedMarketing}
+            alt="Feature image"
+            formats={["avif", "webp"]}
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
+        <span slot="title">{data[0].valueBlocks[1].title}</span>
+        <span slot="desc">{data[0].valueBlocks[1].description}</span>
+      </Card>
+      
+      <Card size="sm">
+        <Fragment slot="image">
+          <Image
+            src={DashboardDevelopment}
+            alt="Feature image"
+            width="909"
+            height="823"
+            class="object-contain"
+            loading="lazy"
+          />
+        </Fragment>
+        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
+        <span slot="title">{data[0].valueBlocks[2].title}</span>
+        <span slot="desc">{data[0].valueBlocks[2].description}</span>
+      </Card>
+    </div> -->
 
     <!-- Feature 1 -->
 
@@ -400,14 +443,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../../../chemical-laboratory.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../../../global-education.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../../../auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -513,67 +556,8 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../../../nuclear-research-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../../../../../pie-chart-bar.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
-  </div>
-
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">{data[0].sectionHeading}</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      {data[0].offering.title}
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      {data[0].offering.subtext}
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-    <Card color="indigo" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={NetworkServerManagement}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-      <span slot="title">{data[0].valueBlocks[0].title}</span>
-      <span slot="desc">{data[0].valueBlocks[0].description}</span>
-    </Card>
-    
-    <Card color="purple" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={AutomatedMarketing}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-      <span slot="title">{data[0].valueBlocks[1].title}</span>
-      <span slot="desc">{data[0].valueBlocks[1].description}</span>
-    </Card>
-    
-    <Card size="sm">
-      <Fragment slot="image">
-        <!-- // svg image. cannot use <picture/> as of now -->
-        <Image
-          src={DashboardDevelopment}
-          alt="Feature image"
-          width="909"
-          height="823"
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-      <span slot="title">{data[0].valueBlocks[2].title}</span>
-      <span slot="desc">{data[0].valueBlocks[2].description}</span>
-    </Card>
   </div>
 
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
