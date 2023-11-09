@@ -36,10 +36,115 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
+const data = [
+  {
+    "mainHeading": "Bring Your Business Online with Empress",
+    "subtext": "Craft a compelling digital footprint that captivates your audience at every touchpoint.",
+    "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "Effortless Online Creation",
+        "title": "Easily Launch Your Website",
+        "description": "Discover the new era of website design with Empress's intuitive platform, making the creation, management, and customization of your professional website straightforward and accessible to anyone.",
+        "bulletPoints": [
+          "Easily build and customize your site to perfection",
+          "Connect your site to your own domain name",
+          "Customize your theme to support your brand image"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Design With Precision",
+        "title": "Craft Your Site Like a Pro",
+        "description": "Tap into your creative side with Empress’s user-friendly design tools. Adjust layouts, add filters, and bring life to your pages with animations – all with simple, direct on-page actions.",
+        "bulletPoints": [
+          "Design intuitively with user-friendly tools",
+          "Customize visuals to align with your brand",
+          "Infuse your site with animation for a lively presence"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Seamless Business Expansion",
+        "title": "Scale Your Online Presence",
+        "description": "Empress Website grows with your ambitions, providing an array of features that make business operations smooth and customer experiences richer, all on a single, integrated platform.",
+        "bulletPoints": [
+          "Easily scale your site as your business evolves",
+          "Integrate seamlessly for peak business performance",
+          "Unlock a comprehensive feature set without additional cost"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
+    ],
+    "getStartedSection": {
+      "badge": "Get Started Today",
+      "title": "Start Building with Empress",
+      "description": "Bring your idea to life with the tools you need to start building."
+    },
+    "featureHeading": "Build with Empress",
+    "featureTitle": "Build Your Website in Minutes",
+    "featureAssurance": "Tools designed to make your website not just functional, but captivating"
+  }
+];
+
+const overview = [
+  {
+    "title": "Select a Website",
+    "description": "Pick from a variety of professionally designed websites that best reflect your brand's ethos and appeal.",
+    "icon": "fluent:design-ideas-24-regular"
+  },
+  {
+    "title": "Customize with Ease",
+    "description": "Easily drag and drop your unique content, adjust colors, and add features to make the website truly yours.",
+    "icon": "fluent:slide-add-24-regular"
+  },
+  {
+    "title": "Publish Instantly",
+    "description": "Launch your website to the world with just one click, and start connecting with your audience right away.",
+    "icon": "fluent:rocket-24-regular"
+  }
+];
+
 const apps = [
   {
     "title": "Website",
-    "description": "Create personal websites",
+    "description": "Create business websites",
     "icon": "fluent:phone-24-regular",
     "link": "/app/build/website"
   },
@@ -75,194 +180,37 @@ const apps = [
   },
 ];
 
-const data = [
-  {
-    "mainHeading": "Bring Your Business Online with Empress",
-    "subtext": "Craft a compelling digital footprint that captivates your audience at every touchpoint.",
-    "headingButtons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
-        "text": "View Pricing",
-        "link": "/pricing"
-      }
-    ],
-    "sectionHeading": "Empress: Your Digital Launchpad",
-    "offering": {
-      "title": "Cultivate Your Online Brand",
-      "subtext": "Adopt a proactive stance in digital marketing with tools designed to tailor your brand narrative and foster meaningful connections online."
-    },
-    "valueBlocks": [
-      {
-        "heading": "Empress OS",
-        "title": "Unify Your Digital Strategies",
-        "description": "Create a cohesive digital experience by unifying your online marketing initiatives, ensuring consistent messaging and brand presence."
-      },
-      {
-        "heading": "Empress Chat",
-        "title": "Personalize Audience Interactions",
-        "description": "Deploy AI-driven chat solutions to engage with your audience in real-time, providing an immersive and personalized brand experience."
-      },
-      {
-        "heading": "Empress Insights",
-        "title": "Refine Your Digital Tactics",
-        "description": "Leverage advanced analytics to fine-tune your digital tactics, turning insights into improved conversion rates and customer retention."
-      }
-    ],
-    "featureBlocks": [
-  {
-    "heading": "Effortless Online Creation",
-    "title": "Launch Your Website Instantly",
-    "description": "Discover the new era of website design with Empress's intuitive platform, making the creation, management, and customization of your professional website straightforward and accessible to anyone.",
-    "bulletPoints": [
-      "Easily build and customize your site to perfection",
-      "Showcase your brand's identity with a complimentary domain name",
-      "Select from a variety of themes that resonate with your business image"
-    ],
-    "buttons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
-        "text": "View Pricing",
-        "link": "/pricing"
-      }
-    ]
-  },
-  {
-    "heading": "Design With Precision",
-    "title": "Craft Your Site Like a Pro",
-    "description": "Tap into your creative side with Empress’s user-friendly design tools. Adjust layouts, add filters, and bring life to your pages with animations – all with simple, direct on-page actions.",
-    "bulletPoints": [
-      "Design intuitively with user-friendly tools",
-      "Customize visuals to align with your brand",
-      "Infuse your site with animation for a lively presence"
-    ],
-    "buttons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
-        "text": "View Pricing",
-        "link": "/pricing"
-      }
-    ]
-  },
-  {
-    "heading": "Seamless Business Expansion",
-    "title": "Scale Your Online Presence",
-    "description": "Empress Website grows with your ambitions, providing an array of features that make business operations smooth and customer experiences richer, all on a single, integrated platform.",
-    "bulletPoints": [
-      "Easily scale your site as your business evolves",
-      "Integrate seamlessly for peak business performance",
-      "Unlock a comprehensive feature set without additional cost"
-    ],
-    "buttons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
-        "text": "View Pricing",
-        "link": "/pricing"
-      }
-    ]
-  }
-],
-
-    "featureHeading": "Additional Features",
-    "featureTitle": "Build More With Empress",
-    "featureAssurance": "Tools designed to make your website not just functional, but captivating"
-  }
-];
-
-const features = [
-  {
-    "title": "Streamline",
-    "description": "Optimize workflow efficiency",
-    "icon": "fluent:data-trending-24-regular",
-    "link": "/app/build/website"
-  },
-  {
-    "title": "Analyze",
-    "description": "Unlock data insights",
-    "icon": "fluent:data-trending-24-regular",
-    "link": "/app/build/website"
-  },
-  {
-    "title": "Automate",
-    "description": "Automate routine tasks",
-    "icon": "fluent:data-trending-24-regular",
-    "link": "/app/build/website"
-  },
-  {
-    "title": "Access",
-    "description": "Control visibility",
-    "icon": "fluent:data-trending-24-regular",
-    "link": "/app/build/website"
-  },
-  {
-    "title": "Chat",
-    "description": "Engage users live",
-    "icon": "fluent:chat-24-regular",
-    "link": "/app/build/website"
-  },
-  {
-    "title": "Forecast",
-    "description": "Anticipate trends",
-    "icon": "fluent:predictions-24-regular",
-    "link": "/app/build/website"
-  },
-  {
-    "title": "Collaborate",
-    "description": "Connect with collaborators",
-    "icon": "fluent:chat-24-regular",
-    "link": "/app/build/website"
-  },
-  {
-    "title": "Integrate",
-    "description": "Seamless tool integration",
-    "icon": "fluent:predictions-24-regular",
-    "link": "/app/build/website"
-  }
-];
-
-
-
 const faq = [
   {
-    "question": "How can Empress help me establish a strong digital presence?",
-    "answer": "Empress provides an integrated suite of tools that help you unify your digital strategies, personalize audience interactions, and refine your digital tactics with advanced analytics. This ensures consistent messaging, a cohesive brand experience, and improved engagement across all digital platforms."
+    "question": "What makes Empress different from other website builders?",
+    "answer": "Empress sets itself apart with an intuitive design platform that simplifies website creation, management, and customization. Our tools are tailored to enhance your digital footprint, combining ease of use with professional, customizable templates and comprehensive features for business growth."
   },
   {
-    "question": "What platforms does Empress integrate with?",
-    "answer": "Empress streamlines your digital presence across 200+ platforms, offering sophisticated tools that adapt to your strategic growth and help maintain a unified brand voice online."
+    "question": "Can I customize my website to match my brand?",
+    "answer": "Absolutely! Empress provides a versatile drag-and-drop editor and a range of design tools that allow you to adjust layouts, colors, and features, so you can perfectly align your website with your brand's visual identity."
   },
   {
-    "question": "Can Empress assist in enhancing my brand's digital interactions?",
-    "answer": "Absolutely, Empress Chat utilizes AI-driven solutions to engage your audience in real-time, fostering a more immersive and personalized experience with your brand across digital channels."
+    "question": "Is technical knowledge required to use Empress?",
+    "answer": "No technical expertise is needed. Empress is designed for users of all skill levels, with user-friendly tools that guide you through every step of the website building process."
   },
   {
-    "question": "How does Empress turn insights into better customer engagement?",
-    "answer": "Empress Insights leverages granular analytics and trend analysis to fine-tune your digital approach, leading to better conversion rates and customer retention by informing your digital strategy with data-driven decisions."
+ "question": "Does Empress support e-commerce and online store creation?",
+    "answer": "Yes, Empress offers specialized tools for setting up an online store, providing you with everything you need to sell products or services directly from your website."
   },
   {
-    "question": "Is there support for campaign management within Empress?",
-    "answer": "Yes, Empress OS centralizes all aspects of your digital presence, allowing you to manage assets, coordinate campaigns, and automate workflows from one platform, streamlining campaign management and amplifying reach."
+    "question": "How quickly can I launch my website with Empress?",
+    "answer": "With Empress, you can launch your website instantly. After selecting your template and customizing your site, you can go live with just one click, enabling you to connect with your audience without delay."
   },
   {
-    "question": "What kind of analytics can I expect with Empress?",
-    "answer": "Empress offers advanced analytics that provide real-time insights and trend predictions, enabling you to make informed decisions that sharpen your digital strategy and keep you ahead of the market curve."
+    "question": "What kind of support does Empress offer for my website?",
+    "answer": "Empress offers comprehensive support, from technical assistance for website setup to ongoing support for any questions you may have while using our platform."
   },
   {
-    "question": "How does Empress ensure the consistency of my brand's voice?",
-    "answer": "Empress tools are designed to help maintain a consistent and recognizable brand voice across all your digital platforms, thereby enhancing brand recall and fostering loyalty."
+    "question": "Can I scale my website as my business grows?",
+    "answer": "Definitely. Empress provides scalable solutions that grow with your business, from seamless integration for enhanced performance to a full set of features that adapt to your expanding needs without additional costs."
   }
 ];
+
 
 
 const featureBlocks = data[0].featureBlocks;
@@ -324,44 +272,39 @@ const featureBlocks = data[0].featureBlocks;
     </Container>
   </div>
 
+  <Container>
+
+  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+    <Badge color="purple">{data[0].featureHeading}</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      {data[0].featureTitle}
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      {data[0].featureAssurance}
+    </p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+    {
+      overview.map((item) => (
+        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+          <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+            <Icon class="text-indigo-500" name={item.icon} size="24" />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+</Container>
+
 
   <Container>
-    <div>
-      <div
-      class:list={[
-        "max-w-4xl mx-auto flex flex-col items-center justify-center",
-        !nomargin && "mt-24",
-      ]}>
-      <Badge color="purple">Build with Empress</Badge>
-      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        Choose Your <span class="text-indigo-600">Website</span>
-      </h2>
-      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Bring your idea to life with the tools you need to start building.
-      </p>
-    </div>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-      {
-        apps.map((item) => (
-          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="24" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-lg">{item.title}</h3>
-                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-    </div>
-  </Container>
-  
 
-  <Container>
   
 
     <!-- Feature 1 -->
@@ -535,168 +478,45 @@ const featureBlocks = data[0].featureBlocks;
   </div>
 
   </Container>
+
+  <Container>
+    <div>
+      <div
+      class:list={[
+        "max-w-4xl mx-auto flex flex-col items-center justify-center",
+        !nomargin && "mt-24",
+      ]}>
+      <Badge color="purple">{data[0].getStartedSection.badge}</Badge>
+      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+        {data[0].getStartedSection.title}
+      </h2>
+      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        {data[0].getStartedSection.description}
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        apps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    </div>
+  </Container>
   
   <Container>
 
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">{data[0].featureHeading}</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      {data[0].featureTitle}
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      {data[0].featureAssurance}
-    </p>
-  </div>
-
-  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
-    {
-      features.map((item) => (
-        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
-            </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          </div>
-        </a>
-      ))
-    }
-  </div>
-  
-
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
-
-
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">We're Here to Help</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      We're Here to Support You
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      Empress Advocates are committed to making the world a better place. Discover the values that drive our mission and vision:
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-    <Card color="indigo" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={NetworkServerManagement}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="h-full w-full object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">Interactive Learning</span>
-      <span slot="title">Empress Academy</span>
-      <span slot="desc">
-        Structured courses guided by industry experts.</span
-      >
-    </Card>
-  
-    <Card color="purple" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={NetworkServerManagement}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="h-full w-full object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">Self-paced Education</span>
-      <span slot="title">Empress Guides</span>
-      <span slot="desc">
-        Curated materials tailored to your learning pace.</span
-      >
-    </Card>
-  
-    <Card size="sm">
-      <Fragment slot="image">
-        <!-- // svg image. cannot use <picture/> as of now -->
-        <Image
-          src={NetworkServerManagement}
-          alt="Feature image"
-          width="909"
-          height="823"
-          class="h-full w-full object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">Latest Insights</span>
-      <span slot="title">Empress Blog</span>
-      <span slot="desc">
-        Stay updated with trends and actionable insights.</span
-      >
-    </Card>
-  </div>
-
 </Container>
-
-<!-- <Container>
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">{data[0].sectionHeading}</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      {data[0].offering.title}
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      {data[0].offering.subtext}
-    </p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-    <Card color="indigo" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={NetworkServerManagement}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-      <span slot="title">{data[0].valueBlocks[0].title}</span>
-      <span slot="desc">{data[0].valueBlocks[0].description}</span>
-    </Card>
-    
-    <Card color="purple" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={AutomatedMarketing}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-      <span slot="title">{data[0].valueBlocks[1].title}</span>
-      <span slot="desc">{data[0].valueBlocks[1].description}</span>
-    </Card>
-    
-    <Card size="sm">
-      <Fragment slot="image">
-        <Image
-          src={DashboardDevelopment}
-          alt="Feature image"
-          width="909"
-          height="823"
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-      <span slot="title">{data[0].valueBlocks[2].title}</span>
-      <span slot="desc">{data[0].valueBlocks[2].description}</span>
-    </Card>
-  </div>
-
-</Container> -->
   
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
