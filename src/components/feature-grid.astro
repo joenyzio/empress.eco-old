@@ -122,7 +122,7 @@ const data = [
 
     "featureHeading": "Additional Features",
     "featureTitle": "Do More With Empress",
-    "featureAssurance": "Lead your industry with an all inclusive set of modern tools"
+    "featureAssurance": "Outpace the competition with Empress, designed for the modern business landscape."
   }
 ];
 
@@ -131,7 +131,7 @@ const data = [
 const features = [
   {
     "title": "Streamline",
-    "description": "Optimize workflow efficiency",
+    "description": "Optimize Your Workflow",
     "icon": "fluent:flash-24-regular",
     "link": "/features/streamline"
   },
@@ -148,7 +148,7 @@ const features = [
     "link": "/features/automate"
   },
   {
-    "title": "Permission",
+    "title": "Permissions",
     "description": "Control visibility",
     "icon": "fluent:lock-24-regular",
     "link": "/features/permission"
@@ -202,18 +202,16 @@ const features = [
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-10">
   {
     features.map((item) => (
       <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-        <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-          <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-            <Icon class="text-indigo-500" name={item.icon} size="24" />
+        <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
+          <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
+            <Icon class="text-indigo-500" name={item.icon} size="32" />
           </div>
-          <div>
-            <h3 class="font-semibold text-lg">{item.title}</h3>
-            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-          </div>
+          <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
+          <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
         </div>
       </a>
     ))
@@ -222,20 +220,20 @@ const features = [
 
 <div class="grid md:grid-cols-2 py-10"></div>
 
-<div class="flex justify-center items-center"> <!-- Full screen height and center content -->
-  <Link href="/apps" size="sm" class="inline-flex items-center justify-center group gap-px">
-    <span>View All Features</span>
+<div class="flex justify-center items-center mt-8"> 
+  <a href="/apps" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150 w-full max-w-xs" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);"> <!-- Added classes and inline styles to match the look -->
+    <span>Explore All Features</span>
     <svg
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 20 20"
       fill="currentColor"
-      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+      class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
       <path
         fill-rule="evenodd"
         d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
         clip-rule="evenodd"></path>
     </svg>
-  </Link>
+  </a>
 </div>
 
 <!-- <div class="grid md:grid-cols-2 lg:grid-cols-5 mt-16 gap-10">

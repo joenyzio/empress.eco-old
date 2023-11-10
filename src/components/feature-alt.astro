@@ -77,19 +77,19 @@ const features = [
   },
   {
     "title": "Sell",
-    "description": "Drive Customer Growth",
+    "description": "Close More Deals",
     "icon": "fluent:contact-card-24-regular",
     "link": "/app/sell"
   },
   {
     "title": "Market",
-    "description": "Amplify Your Audience",
+    "description": "Amplify Your Reach",
     "icon": "fluent:heart-24-regular",
     "link": "/app/market"
   },
   {
     "title": "Support",
-    "description": "Streamline Customer Service",
+    "description": "Streamline Your Service",
     "icon": "fluent:service-bell-24-regular",
     "link": "/app/support"
   },
@@ -101,19 +101,19 @@ const features = [
   },
   {
     "title": "Finance",
-    "description": "Optimize Financial Management",
+    "description": "Simplify Your Finances",
     "icon": "fluent:payment-24-regular",
     "link": "/app/finance"
   },
   {
     "title": "Staff",
-    "description": "Simplify Human Resources",
+    "description": "Manage Your Team",
     "icon": "fluent:people-team-24-regular",
     "link": "/app/staff"
   },
   {
     "title": "Produce",
-    "description": "Streamline Inventory Control",
+    "description": "Track Your Inventory",
     "icon": "fluent:box-24-regular",
     "link": "/app/produce"
   }
@@ -129,34 +129,35 @@ const features = [
   ]}>
   <Badge color="purple">Welcome to Empress</Badge>
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-    Making Business <span class="text-indigo-600">Better for Everyone</span>
+    The Launchpad for <span class="text-indigo-600">Business Growth</span>
   </h2>
   <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-    Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
+    All the essentials bundled into one incredible deal.
   </p>
 </div>
-<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-10">
   {
     features.map((item) => (
-      <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-        <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-          <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-            <Icon class="text-indigo-500" name={item.icon} size="24" />
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg">{item.title}</h3>
-            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-          </div>
+      <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
+        <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
+          <Icon class="text-indigo-500" name={item.icon} size="32" />
         </div>
-      </a>
+        <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
+        <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
+        <a href={item.link} class="mt-6 inline-block w-full px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);">
+          Learn More
+        </a>
+      </div>
     ))
   }
 </div>
+
+
 </div>
 
 <div class="grid md:grid-cols-2 py-10"></div>
-
-<div class="flex justify-center items-center"> <!-- Full screen height and center content -->
+<!-- 
+<div class="flex justify-center items-center">
   <Link href="/apps" size="sm" class="inline-flex items-center justify-center group gap-px">
     <span>View All Applications</span>
     <svg
@@ -170,7 +171,7 @@ const features = [
         clip-rule="evenodd"></path>
     </svg>
   </Link>
-</div>
+</div> -->
 
   <div class="grid md:grid-cols-2 py-10">
     <div class="">
@@ -185,52 +186,50 @@ const features = [
   <div class="grid place-items-center">
     <div class="max-w-lg">
       <Badge color="purple" class="-ml-px">All-In-One Platform</Badge>
-      <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
-        Everything You Need to Run Your Business
+      <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
+        Affordable Monthly Rates. One Simple Subscription.
       </h3>
       <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Enhance your company's performance, from strategic planning and real-time analytics to operational excellence, ensuring a seamless progression from concept to execution.
+        Elevate your company's performance with our business apps and all-in-one tool suite, ensuring operational excellence for a smooth journey from concept to execution.
       </p>
 
       <ul class="grid mt-6 text-left gap-y-4">
         <li class="flex items-center gap-3 text-neutral-800">
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-          <span class="text-sm">End-to-End Tool Suite</span>
+          <span class="text-sm">Complete Toolkit for Every Business Need</span>
         </li>
 
         <li class="flex items-center gap-3 text-neutral-800">
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-          <span class="text-sm">Unified Business Management</span>
+          <span class="text-sm">Streamlined Management in One Unified Platform</span>
         </li>
 
         <li class="flex items-center gap-3 text-neutral-800">
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-          <span class="text-sm">Seamless Integration & Scalability</span>
+          <span class="text-sm">Effortless Integration & Limitless Growth Potential</span>
         </li>
       </ul>
-      <div class="flex items-center gap-4 mt-6">
-        <Link href="/contact" size="sm" class="inline-flex items-center group gap-px">
+      <div class="flex items-center gap-4 mt-10">
+        <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
           <span>Get Started</span>
           <svg
-            xmlns="https://app.empress.eco/admin/login"
+            xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+            class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
             <path
               fill-rule="evenodd"
               d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
               clip-rule="evenodd"></path>
           </svg>
-        </Link>
-        <a
-          href="/pricing"
-          class="text-sm px-2 transition py-1 text-slate-600 hover:text-brand focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-          View Pricing</a
-        >
-      </div>
+        </a>
+        <a href="/pricing" class="text-base px-6 py-3 transition bg-white text-slate-600 hover:text-slate-700 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-md shadow">
+          View Pricing
+        </a>
+      </div>      
     </div>
   </div>
 
@@ -245,59 +244,57 @@ const features = [
 <div class="grid place-items-center">
   <div class="max-w-lg">
     <Badge color="purple" class="-ml-px">Data-Driven Insights</Badge>
-    <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
-      Get the Bigger Picture 
+    <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
+      Focus on Growth – Leave the Details to Us
     </h3>
     <p class="mt-4 text-slate-600 [text-wrap:balance]">
-      Drive informed decision-making with advanced insights. Empress transforms complex data into actionable intelligence, enabling a strategic approach to business challenges.
+      We simplify your complex data into clear, actionable intelligence, empowering you to tackle business challenges with strategy and confidence.
     </p>
 
     <ul class="grid mt-6 text-left gap-y-4">
       <li class="flex items-center gap-3 text-neutral-800">
         <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-        <span class="text-sm">Advanced predictive analytics</span>
+        <span class="text-sm">Cutting-Edge Predictive Analytics</span>
       </li>
 
       <li class="flex items-center gap-3 text-neutral-800">
         <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-        <span class="text-sm">Real-time user engagement insights</span>
+        <span class="text-sm">Live Engagement Metrics</span>
       </li>
 
       <li class="flex items-center gap-3 text-neutral-800">
         <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-        <span class="text-sm">Streamlined performance dashboards</span>
+        <span class="text-sm">Sleek, User-Friendly Performance Dashboards</span>
       </li>
     </ul>
-    <div class="flex items-center gap-4 mt-6">
-      <Link href="/contact" size="sm" class="inline-flex items-center group gap-px">
+    <div class="flex items-center gap-4 mt-10">
+      <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
         <span>Get Started</span>
         <svg
-          xmlns="https://app.empress.eco/admin/login"
+          xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+          class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
           <path
             fill-rule="evenodd"
             d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
             clip-rule="evenodd"></path>
         </svg>
-      </Link>
-      <a
-        href="/pricing"
-        class="text-sm px-2 transition py-1 text-slate-600 hover:text-brand focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-        View Pricing</a
-      >
-    </div>
+      </a>
+      <a href="/pricing" class="text-base px-6 py-3 transition bg-white text-slate-600 hover:text-slate-700 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-md shadow">
+        View Pricing
+      </a>
+    </div>  
   </div>
 </div>
 
 <div class="">
   <LottieAnimation 
     id="lottie" 
-    src="../../candlestick-analysis.json" 
+    src="../../market-report.json" 
     autoplay="visible" 
     style={{ width: '100%', height: 'auto' }}
   />
@@ -313,46 +310,45 @@ const features = [
 <!-- Text Section (Moved to the left) -->
 <div class="grid place-items-center">
   <div class="max-w-lg">
-    <Badge color="purple" class="-ml-px">AI-Enhanced Performance</Badge>
-    <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
-      Streamline Your Business Operations
+    <Badge color="purple" class="-ml-px">Smart Solutions, Smarter Business</Badge>
+    <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
+      Simplify Your Workflow with AI and Automations
     </h3>
     <p class="mt-4 text-slate-600 [text-wrap:balance]">
-      Our AI-Driven products empower you to anticipate user needs, customize interactions, and enhance experiences with real-time precision.
+      Leverage Empress's AI-driven tools to intuitively understand and meet user expectations, personalizing interactions, and elevating experiences with instant accuracy.
     </p>
     <ul class="grid mt-6 text-left gap-y-4">
       <li class="flex items-center gap-3 text-neutral-800">
         <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-        <span class="text-sm">Intuitive AI Chat Experiences</span>
+        <span class="text-sm">Seamless AI Chat Integrations</span>
       </li>
       <li class="flex items-center gap-3 text-neutral-800">
         <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-        <span class="text-sm">Predictive Engagement Strategies</span>
+        <span class="text-sm">Proactive Engagement Tactics</span>
       </li>
       <li class="flex items-center gap-3 text-neutral-800">
         <Icon name="ph:check-circle-fill" class="w-5 h-5" />
-        <span class="text-sm">Custom Workflows and Automations</span>
+        <span class="text-sm">Tailored Workflows and Smart Automations</span>
       </li>
     </ul>
-    <div class="flex items-center gap-4 mt-6">
-      <Link href="/contact" size="sm" class="inline-flex items-center group gap-px">
+    <div class="flex items-center gap-4 mt-10">
+      <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
         <span>Get Started</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+          class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
           <path
             fill-rule="evenodd"
             d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
             clip-rule="evenodd"></path>
         </svg>
-      </Link>
-      <a
-        href="/pricing"
-        class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full"
-        >View Pricing</a>
-    </div>
+      </a>
+      <a href="/pricing" class="text-base px-6 py-3 transition bg-white text-slate-600 hover:text-slate-700 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-md shadow">
+        View Pricing
+      </a>
+    </div>  
   </div>
 </div>
 

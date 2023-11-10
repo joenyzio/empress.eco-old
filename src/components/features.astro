@@ -93,71 +93,54 @@ const faq = [
   </p>
 </div> -->
 <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-  <Badge color="purple">More Features</Badge>
+  <Badge color="purple">Trusted Partner in Business</Badge>
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-    We've Got You Covered
+    Your Growth, Our Commitment
   </h2>
   <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-    We're you're partner in business growth. If you don't find what you're looking
-    for, contact us and we'll either help you or steer you in the right
-    direction.
+    Think of us as your ally in business growth. Can't find what you need? Reach out, and we'll be right there to assist or point you towards the right path.
   </p>
 </div>
 
 <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-  <Card color="indigo" size="sm">
-    <Fragment slot="image">
-      <Picture
-        src={NetworkServerManagement}
-        alt="Feature image"
-        formats={["avif", "webp"]}
-        class="h-full w-full object-contain"
-        loading="lazy"
-      />
-    </Fragment>
-    <span slot="badge">Interactive Learning</span>
-    <span slot="title">Empress Academy</span>
-    <span slot="desc">
-      Structured courses guided by industry experts.</span
-    >
-  </Card>
+  <!-- First Card -->
+  <div class="Card bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl shadow-lg overflow-hidden p-8 group hover:shadow-2xl transition-all">
+    <h3 class="title text-white text-2xl font-bold mb-4">Empress Academy</h3>
+    <p class="desc text-white opacity-90 mb-6">
+      Dive into structured courses led by industry experts, designed to elevate your knowledge.
+    </p>
+    <a href="/empress-academy" class="inline-block w-full text-center bg-white text-indigo-500 hover:text-indigo-600 font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out shadow-md hover:shadow-lg">
+      Learn More
+    </a>
+  </div>
 
-  <Card color="purple" size="sm">
-    <Fragment slot="image">
-      <Picture
-        src={NetworkServerManagement}
-        alt="Feature image"
-        formats={["avif", "webp"]}
-        class="h-full w-full object-contain"
-        loading="lazy"
-      />
-    </Fragment>
-    <span slot="badge">Self-paced Education</span>
-    <span slot="title">Empress Guides</span>
-    <span slot="desc">
-      Curated materials tailored to your learning pace.</span
-    >
-  </Card>
+  <!-- Second Card -->
+  <div class="Card bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl shadow-lg overflow-hidden p-8 group hover:shadow-2xl transition-all">
+    <h3 class="title text-white text-2xl font-bold mb-4">Empress Guides</h3>
+    <p class="desc text-white opacity-90 mb-6">
+      Discover a world of learning at your own pace, with carefully curated materials tailored just for you.
+    </p>
+    <a href="/empress-guides" class="inline-block w-full text-center bg-white text-purple-500 hover:text-purple-600 font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out shadow-md hover:shadow-lg">
+      Explore Guides
+    </a>
+  </div>
 
-  <Card size="sm">
-    <Fragment slot="image">
-      <!-- // svg image. cannot use <picture/> as of now -->
-      <Image
-        src={NetworkServerManagement}
-        alt="Feature image"
-        width="909"
-        height="823"
-        class="h-full w-full object-contain"
-        loading="lazy"
-      />
-    </Fragment>
-    <span slot="badge">Latest Insights</span>
-    <span slot="title">Empress Blog</span>
-    <span slot="desc">
-      Stay updated with trends and actionable insights.</span
-    >
-  </Card>
+  <!-- Third Card -->
+  <div class="Card bg-gradient-to-r from-gray-900 to-black rounded-xl shadow-lg overflow-hidden p-8 group hover:shadow-2xl transition-all">
+    <h3 class="title text-white text-2xl font-bold mb-4">Empress Blog</h3>
+    <p class="desc text-white opacity-90 mb-6">
+      Keep your finger on the pulse. Stay informed and inspired with the latest trends and practical insights.
+    </p>
+    <a href="/empress-blog" class="inline-block w-full text-center bg-white text-gray-900 hover:text-black font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out shadow-md hover:shadow-lg">
+      Read Blog
+    </a>
+  </div>
 </div>
+
+
+
+
+
 
 <!-- <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
   {
