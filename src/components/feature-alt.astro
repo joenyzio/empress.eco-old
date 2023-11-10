@@ -73,49 +73,57 @@ const features = [
     "title": "Build",
     "description": "Establish Your Brand",
     "icon": "fluent:phone-24-regular",
-    "link": "/app/build"
+    "link": "/app/build",
+    "button": "Learn More"
   },
   {
     "title": "Sell",
     "description": "Close More Deals",
     "icon": "fluent:contact-card-24-regular",
-    "link": "/app/sell"
+    "link": "/app/sell",
+    "button": "Learn More"
   },
   {
     "title": "Market",
     "description": "Amplify Your Reach",
     "icon": "fluent:heart-24-regular",
-    "link": "/app/market"
+    "link": "/app/market",
+    "button": "Learn More"
   },
   {
     "title": "Support",
     "description": "Streamline Your Service",
     "icon": "fluent:service-bell-24-regular",
-    "link": "/app/support"
+    "link": "/app/support",
+    "button": "Learn More"
   },
   {
     "title": "Manage",
     "description": "Optimize Your Workflow",
     "icon": "fluent:clipboard-task-24-regular",
-    "link": "/app/manage"
+    "link": "/app/manage",
+    "button": "Learn More"
   },
   {
     "title": "Finance",
     "description": "Simplify Your Finances",
     "icon": "fluent:payment-24-regular",
-    "link": "/app/finance"
+    "link": "/app/finance",
+    "button": "Learn More"
   },
   {
     "title": "Staff",
     "description": "Manage Your Team",
     "icon": "fluent:people-team-24-regular",
-    "link": "/app/staff"
+    "link": "/app/staff",
+    "button": "Learn More"
   },
   {
     "title": "Produce",
     "description": "Track Your Inventory",
     "icon": "fluent:box-24-regular",
-    "link": "/app/produce"
+    "link": "/app/produce",
+    "button": "Learn More"
   }
 ];
 
@@ -144,8 +152,8 @@ const features = [
         </div>
         <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
         <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
-        <a href={item.link} class="mt-6 inline-block w-full px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);">
-          Learn More
+        <a href={item.link} class="mt-6 inline-block w-3/4 px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);">
+          {item.button}
         </a>
       </div>
     ))

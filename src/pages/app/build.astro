@@ -38,7 +38,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
   {
-    "mainHeading": "Bring Your Business Online with Empress",
+    "mainHeading": "Bring Your Business Online",
     "subtext": "Craft a compelling digital footprint that captivates your audience at every touchpoint.",
     "headingButtons": [
       {
@@ -126,49 +126,49 @@ const data = [
 const features = [
   {
     "title": "Streamline",
-    "description": "Simplify site creation processes",
+    "description": "Simplify site creation",
     "icon": "fluent:flash-24-regular",
     "link": "/features/streamline"
   },
   {
     "title": "Analyze",
-    "description": "Gain insights from visitor data",
+    "description": "Gain user insights",
     "icon": "fluent:cellular-data-1-24-regular",
     "link": "/features/analyze"
   },
   {
     "title": "Automate",
-    "description": "Reduce manual content updates",
+    "description": "Reduce manual updates",
     "icon": "fluent:bot-24-regular",
     "link": "/features/automate"
   },
   {
     "title": "Permission",
-    "description": "Manage user permissions easily",
+    "description": "Manage user permissions",
     "icon": "fluent:lock-24-regular",
     "link": "/features/permission"
   },
   {
     "title": "Chat",
-    "description": "Interact with visitors in real-time",
+    "description": "Interact with visitors",
     "icon": "fluent:chat-multiple-24-regular",
     "link": "/features/chat"
   },
   {
     "title": "Forecast",
-    "description": "Predict visitor behavior patterns",
+    "description": "Predict visitor behaviors",
     "icon": "fluent:weather-sunny-low-24-regular",
     "link": "/features/forecast"
   },
   {
     "title": "Collaborate",
-    "description": "Team up on website projects",
+    "description": "Team up on projects",
     "icon": "fluent:people-team-24-regular",
     "link": "/features/collaborate"
   },
   {
     "title": "Integrate",
-    "description": "Connect all your web tools",
+    "description": "Connect your tools",
     "icon": "fluent:plug-connected-24-regular",
     "link": "/features/integrate"
   }
@@ -180,37 +180,43 @@ const apps = [
     "title": "Website",
     "description": "Create business websites",
     "icon": "fluent:phone-24-regular",
-    "link": "/app/build/website"
+    "link": "/app/build/website",
+    "button": "Start Building"
   },
   {
     "title": "Store",
     "description": "Online store setup",
     "icon": "fluent:cart-24-regular",
-    "link": "/app/build/store"
+    "link": "/app/build/store",
+    "button": "Start Building"
   },
   {
     "title": "Blog",
     "description": "Share engaging content",
     "icon": "fluent:textbox-align-top-24-regular",
-    "link": "/app/build/blog"
+    "link": "/app/build/blog",
+    "button": "Start Building"
   },
   {
     "title": "Forum",
     "description": "Community discussion platform",
     "icon": "fluent:chat-multiple-24-regular",
-    "link": "/app/build/forum"
+    "link": "/app/build/forum",
+    "button": "Start Building"
   },
   {
     "title": "Documentation",
     "description": "Technical product support",
     "icon": "fluent:chat-24-regular",
-    "link": "/app/build/documentation"
+    "link": "/app/build/documentation",
+    "button": "Start Building"
   },
   {
     "title": "Course",
     "description": "Online learning platform",
     "icon": "fluent:food-apple-24-regular",
-    "link": "/app/build/course"
+    "link": "/app/build/course",
+    "button": "Start Building"
   },
 ];
 
@@ -250,110 +256,41 @@ const featureBlocks = data[0].featureBlocks;
 
 ---
 
-<Layout title="About" footerMargin={false}>
-
-  <div class="overflow-x-clip">
-    <Container>
-
-      <main class="grid lg:grid-cols-5 place-items-center relative">
-        <div
-          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
-        </div>
-        <div
-          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
-        </div>
-        <div class="max-w-sm md:max-w-max lg:col-span-2">
-          <h1
-            class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-            {data[0].mainHeading}
-          </h1>
-          <p
-            class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-            {data[0].subtext}
-          </p>
-          <div
-            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-          <Link
-              href={data[0].headingButtons[0].link}
-              class="flex gap-1 items-center justify-center bg-brand"
-              rel="noopener">
-              {data[0].headingButtons[0].text}
-          </Link>
-          
-          <Link
-            size="lg"
-            style="outline"
-            rel="noopener"
-            href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand">
-            {data[0].headingButtons[1].text}
-          </Link>
-          </div>
-        </div>
-        <div class="py-3 lg:col-span-3 lg:-mr-44">
-          <Picture
-            src={TargetMarketing}
-            alt="Astronaut in the air"
-            formats={["avif", "webp"]}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            widths={[240, 540, 720, heroImage.width]}
-            loading="eager"
-            fetchpriority="high"
-          />
-        </div>
-      </main>
-    </Container>
-  </div>
+<Layout title="Build" footerMargin={false}>
+  <div class="overflow-x-clip mt-20">
+  </Sectionhead>
 
   <Container>
     <div>
       <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center ">
         <Badge color="purple">{data[0].featureHeading}</Badge>
         <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-          {data[0].featureTitle}
+          {data[0].mainHeading}
         </h2>
         <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-          {data[0].featureAssurance}
+          {data[0].subtext}
         </p>
       </div>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-      {
-        apps.map((item) => (
-          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="24" />
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-10">
+        {
+          apps.map((item) => (
+            <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
+              <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="32" />
               </div>
-              <div>
-                <h3 class="font-semibold text-lg">{item.title}</h3>
-                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-              </div>
+              <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
+              <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
+              <a href={item.link} class="mt-6 inline-block w-3/4 px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);">
+                {item.button}
+              </a>
             </div>
-          </a>
-        ))
-      }
-    </div>
+          ))
+        }
+      </div>
+      
     </div>
 
-    <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
-      <Link href="/contact" size="sm" class="inline-flex items-center justify-center group gap-px">
-        <span>Start Building</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-          <path
-            fill-rule="evenodd"
-            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </Link>
-    </div>
   </Container>
-
-
-
 
   <Container>
 
@@ -365,7 +302,7 @@ const featureBlocks = data[0].featureBlocks;
       <div class="grid place-items-center">
         <div class="max-w-lg">
           <Badge color="purple" class="-ml-px">{data[0].featureBlocks[0].heading}</Badge>
-          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+          <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
             {data[0].featureBlocks[0].title}
           </h3>
           <p class="mt-4 text-slate-600 [text-wrap:balance]">
@@ -379,35 +316,26 @@ const featureBlocks = data[0].featureBlocks;
               </li>
             ))}
           </ul>
-          <div class="flex items-center gap-4 mt-6">
+          <div class="flex items-center gap-4 mt-10">
             {data[0].featureBlocks[0].buttons?.map((button, index) => {
               if (index === 0) {
                 return (
-                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                  <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
                     <span>{button.text}</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                      <path
-                        fill-rule="evenodd"
-                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                        clip-rule="evenodd"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+                      <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
                     </svg>
-                  </Link>
+                  </a>
                 );
               } else {
                 return (
-                  <a 
-                    href={button.link} 
-                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md bg-white text-slate-600 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md transition ease-in-out duration-150">
                     {button.text}
                   </a>
                 );
               }
             })}
-          </div>
+          </div>          
         </div>
       </div>
   
@@ -425,7 +353,7 @@ const featureBlocks = data[0].featureBlocks;
       <div class="grid place-items-center">
         <div class="max-w-lg">
           <Badge color="purple" class="-ml-px">{data[0].featureBlocks[1].heading}</Badge>
-          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+          <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
             {data[0].featureBlocks[1].title}
           </h3>
           <p class="mt-4 text-slate-600 [text-wrap:balance]">
@@ -439,35 +367,26 @@ const featureBlocks = data[0].featureBlocks;
               </li>
             ))}
           </ul>
-          <div class="flex items-center gap-4 mt-6">
-            {data[0].featureBlocks[1].buttons?.map((button, index) => {
+          <div class="flex items-center gap-4 mt-10">
+            {data[0].featureBlocks[0].buttons?.map((button, index) => {
               if (index === 0) {
                 return (
-                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                  <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
                     <span>{button.text}</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                      <path
-                        fill-rule="evenodd"
-                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                        clip-rule="evenodd"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+                      <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
                     </svg>
-                  </Link>
+                  </a>
                 );
               } else {
                 return (
-                  <a 
-                    href={button.link} 
-                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md bg-white text-slate-600 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md transition ease-in-out duration-150">
                     {button.text}
                   </a>
                 );
               }
             })}
-          </div>
+          </div> 
         </div>
       </div>
     </div>
@@ -479,7 +398,7 @@ const featureBlocks = data[0].featureBlocks;
     <div class="grid place-items-center">
       <div class="max-w-lg">
         <Badge color="purple" class="-ml-px">{data[0].featureBlocks[2].heading}</Badge>
-        <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+        <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
           {data[0].featureBlocks[2].title}
         </h3>
         <p class="mt-4 text-slate-600 [text-wrap:balance]">
@@ -493,35 +412,26 @@ const featureBlocks = data[0].featureBlocks;
             </li>
           ))}
         </ul>
-        <div class="flex items-center gap-4 mt-6">
-          {data[0].featureBlocks[2].buttons?.map((button, index) => {
+        <div class="flex items-center gap-4 mt-10">
+          {data[0].featureBlocks[0].buttons?.map((button, index) => {
             if (index === 0) {
               return (
-                <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
                   <span>{button.text}</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                      clip-rule="evenodd"></path>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
                   </svg>
-                </Link>
+                </a>
               );
             } else {
               return (
-                <a 
-                  href={button.link} 
-                  class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md bg-white text-slate-600 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md transition ease-in-out duration-150">
                   {button.text}
                 </a>
               );
             }
           })}
-        </div>
+        </div> 
       </div>
     </div>
     <div class="">
@@ -547,22 +457,37 @@ const featureBlocks = data[0].featureBlocks;
     </p>
   </div>
 
-  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-10">
     {
       features.map((item) => (
         <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
+          <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
+            <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="32" />
             </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
+            <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
+            <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
           </div>
         </a>
       ))
     }
+  </div>
+
+
+  <div class="flex justify-center items-center mt-20"> 
+    <a href="/features" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150 w-full max-w-xs" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);"> <!-- Added classes and inline styles to match the look -->
+      <span>Explore All Features</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+        <path
+          fill-rule="evenodd"
+          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
   </div>
 
 </Container>
