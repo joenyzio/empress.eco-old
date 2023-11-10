@@ -24,7 +24,8 @@ import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
-import Directus from "../../../assets/quotes.png";
+import Directus from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
+import Logo from "../../../assets/logo-full.png";
 import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
 import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
@@ -81,7 +82,7 @@ const templates = [
 const data = [
   {
     "mainHeading": "Simplify Your Sales Quotes",
-    "subtext": "Streamline your sales process with our intuitive quote management system designed to empower sales teams.",
+    "subtext": "Smooth out your sales with our smart, simple quote system—it's sales made easy.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -255,7 +256,7 @@ const featureBlocks = data[0].featureBlocks;
 
 ---
 
-<Layout title="About" footerMargin={false}>
+<Layout title="Quote" footerMargin={false}>
 
   <Container>
     <div>
@@ -279,61 +280,11 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="w-full overflow-hidden py-3 mt-20">
-      <Picture src={Directus} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
+      <Picture src={Logo} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
     </div>
   </Container>
   
-    
-
-    <!-- <Container>
-      <main class="grid lg:grid-cols-5 place-items-center relative">
-        <div
-          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
-        </div>
-        <div
-          class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
-        </div>
-        <div class="max-w-sm md:max-w-max lg:col-span-2">
-          <h1
-            class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-            {data[0].mainHeading}
-          </h1>
-          <p
-            class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-            {data[0].subtext}
-          </p>
-          <div
-            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-          <Link
-              href={data[0].headingButtons[0].link}
-              class="flex gap-1 items-center justify-center bg-brand"
-              rel="noopener">
-              {data[0].headingButtons[0].text}
-          </Link>
-          
-          <Link
-            size="lg"
-            style="outline"
-            rel="noopener"
-            href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand">
-            {data[0].headingButtons[1].text}
-          </Link>
-          </div>
-        </div>
-        <div class="py-3 lg:col-span-3 lg:-mr-44">
-          <Picture
-            src={ECommerce}
-            alt="Astronaut in the air"
-            formats={["avif", "webp"]}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            widths={[240, 540, 720, heroImage.width]}
-            loading="eager"
-            fetchpriority="high"
-          />
-        </div>
-      </main>
-    </Container> -->
+  
   </div>
   
 
@@ -367,61 +318,13 @@ const featureBlocks = data[0].featureBlocks;
       }
     </div>
 
-    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-      <Card color="indigo" size="sm">
-        <Fragment slot="image">
-          <Picture
-            src={NetworkServerManagement}
-            alt="Feature image"
-            formats={["avif", "webp"]}
-            class="object-contain"
-            loading="lazy"
-          />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-        <span slot="title">{data[0].valueBlocks[0].title}</span>
-        <span slot="desc">{data[0].valueBlocks[0].description}</span>
-      </Card>
-      
-      <Card color="purple" size="sm">
-        <Fragment slot="image">
-          <Picture
-            src={AutomatedMarketing}
-            alt="Feature image"
-            formats={["avif", "webp"]}
-            class="object-contain"
-            loading="lazy"
-          />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-        <span slot="title">{data[0].valueBlocks[1].title}</span>
-        <span slot="desc">{data[0].valueBlocks[1].description}</span>
-      </Card>
-      
-      <Card size="sm">
-        <Fragment slot="image">
-          <Image
-            src={DashboardDevelopment}
-            alt="Feature image"
-            width="909"
-            height="823"
-            class="object-contain"
-            loading="lazy"
-          />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-        <span slot="title">{data[0].valueBlocks[2].title}</span>
-        <span slot="desc">{data[0].valueBlocks[2].description}</span>
-      </Card>
-    </div> -->
-
     <!-- Feature 1 -->
 
-    <div class="grid md:grid-cols-2 py-10 mt-20">
+    <div class="grid md:grid-cols-2 py-10">
       <div class="grid place-items-center">
         <div class="max-w-lg">
           <Badge color="purple" class="-ml-px">{data[0].featureBlocks[0].heading}</Badge>
-          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+          <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
             {data[0].featureBlocks[0].title}
           </h3>
           <p class="mt-4 text-slate-600 [text-wrap:balance]">
@@ -435,97 +338,79 @@ const featureBlocks = data[0].featureBlocks;
               </li>
             ))}
           </ul>
-          <div class="flex items-center gap-4 mt-6">
+          <div class="flex items-center gap-4 mt-10">
             {data[0].featureBlocks[0].buttons?.map((button, index) => {
               if (index === 0) {
                 return (
-                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                  <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
                     <span>{button.text}</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                      <path
-                        fill-rule="evenodd"
-                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                        clip-rule="evenodd"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+                      <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
                     </svg>
-                  </Link>
+                  </a>
                 );
               } else {
                 return (
-                  <a 
-                    href={button.link} 
-                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md bg-white text-slate-600 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md transition ease-in-out duration-150">
                     {button.text}
                   </a>
                 );
               }
             })}
-          </div>
+          </div>  
         </div>
       </div>
   
-      <div class="w-full overflow-hidden py-3 mt-20">
-        <Picture src={Directus} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
+      <div class="container">
+        <LottieAnimation id="lottie" src="../../../../../../business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
-    <!-- Feature 2 -->
 
-    <div class="grid md:grid-cols-2 py-10 mt-20">
+    <!-- Feature 2 -->
+    <div class="grid md:grid-cols-2 py-10">
       <div class="grid place-items-center">
         <div class="max-w-lg">
           <Badge color="purple" class="-ml-px">{data[0].featureBlocks[1].heading}</Badge>
-          <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+          <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
             {data[0].featureBlocks[1].title}
           </h3>
           <p class="mt-4 text-slate-600 [text-wrap:balance]">
             {data[0].featureBlocks[1].description}
           </p>
           <ul class="grid mt-6 text-left gap-y-4">
-            {data[0].featureBlocks[0].bulletPoints.map((point) => (
+            {data[0].featureBlocks[1].bulletPoints.map((point) => (
               <li class="flex items-center gap-3 text-neutral-800">
                 <Icon name="ph:check-circle-fill" class="w-5 h-5" />
                 <span class="text-sm">{point}</span>
               </li>
             ))}
           </ul>
-          <div class="flex items-center gap-4 mt-6">
-            {data[0].featureBlocks[1].buttons?.map((button, index) => {
+          <div class="flex items-center gap-4 mt-10">
+            {data[0].featureBlocks[0].buttons?.map((button, index) => {
               if (index === 0) {
                 return (
-                  <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                  <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
                     <span>{button.text}</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                      <path
-                        fill-rule="evenodd"
-                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                        clip-rule="evenodd"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+                      <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
                     </svg>
-                  </Link>
+                  </a>
                 );
               } else {
                 return (
-                  <a 
-                    href={button.link} 
-                    class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                  <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md bg-white text-slate-600 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md transition ease-in-out duration-150">
                     {button.text}
                   </a>
                 );
               }
             })}
-          </div>
+          </div>  
         </div>
       </div>
   
-      <div class="w-full overflow-hidden py-3 mt-20">
-        <Picture src={Directus} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
+      <div class="container">
+        <LottieAnimation id="lottie" src="../../../../../../auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
@@ -536,7 +421,7 @@ const featureBlocks = data[0].featureBlocks;
     <div class="grid place-items-center">
       <div class="max-w-lg">
         <Badge color="purple" class="-ml-px">{data[0].featureBlocks[2].heading}</Badge>
-        <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+        <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
           {data[0].featureBlocks[2].title}
         </h3>
         <p class="mt-4 text-slate-600 [text-wrap:balance]">
@@ -550,39 +435,30 @@ const featureBlocks = data[0].featureBlocks;
             </li>
           ))}
         </ul>
-        <div class="flex items-center gap-4 mt-6">
-          {data[0].featureBlocks[2].buttons?.map((button, index) => {
+        <div class="flex items-center gap-4 mt-10">
+          {data[0].featureBlocks[0].buttons?.map((button, index) => {
             if (index === 0) {
               return (
-                <Link href={button.link} size="sm" class="inline-flex items-center group gap-px">
+                <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
                   <span>{button.text}</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                      clip-rule="evenodd"></path>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
                   </svg>
-                </Link>
+                </a>
               );
             } else {
               return (
-                <a 
-                  href={button.link} 
-                  class="text-sm px-2 transition py-1 text-slate-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+                <a href={button.link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md bg-white text-slate-600 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-md transition ease-in-out duration-150">
                   {button.text}
                 </a>
               );
             }
           })}
-        </div>
+        </div>  
       </div>
     </div>
-    <div class="w-full overflow-hidden py-3 mt-20">
-      <Picture src={Directus} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
+    <div class="">
+      <LottieAnimation id="lottie" src="../../../../../../pie-chart-bar.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
   </div>
 
