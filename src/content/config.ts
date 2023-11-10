@@ -35,6 +35,23 @@ const featuresCollection = defineCollection({
   }),
 });
 
+// 2. Define your collection(s)
+const pluginsCollection = defineCollection({
+  schema: z.object({
+    draft: z.boolean(),
+    title: z.string(),
+    snippet: z.string(),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    publishDate: z.string().transform(str => new Date(str)),
+    author: z.string().default('Empress'),
+    category: z.string(),
+    tags: z.array(z.string()),
+  }),
+});
+
 const guidesCollection = defineCollection({
   schema: z.object({
     draft: z.boolean(),
@@ -117,6 +134,7 @@ const templatesCollection = defineCollection({
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   'blog': blogCollection,
+  'plugins': pluginsCollection,
   'guides': guidesCollection,
   'integration': guidesCollection,
   'academy': academyCollection,

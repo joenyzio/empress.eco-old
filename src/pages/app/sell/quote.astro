@@ -24,6 +24,7 @@ import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../../assets/employee.jpg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
+import Directus from "../../../assets/quotes.png";
 import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
 import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
@@ -93,7 +94,7 @@ const data = [
     ],
     "sectionHeading": "Quotes for Sales Excellence",
     "offering": {
-      "title": "Accelerate Your Quote-to-Close Rate",
+      "title": "Accelerate Quote-to-Close Rate",
       "subtext": "Craft, send, and track outstanding sales quotes with ease, speeding up your path from initial interest to final approval."
     },
     "valueBlocks": [
@@ -175,8 +176,8 @@ const data = [
         ]
       }
     ],
-    "featureHeading": "Advanced Quoting Features",
-    "featureTitle": "Empower Sales with Intelligent Quoting",
+    "featureHeading": "Empress Quotes",
+    "featureTitle": "Empower Sales with Quotes",
     "featureAssurance": "Dedicated to providing sales teams with a powerful quoting tool that simplifies the sales cycle and enhances client relations."
   }
 ];
@@ -255,8 +256,36 @@ const featureBlocks = data[0].featureBlocks;
 ---
 
 <Layout title="About" footerMargin={false}>
-  <div class="overflow-x-clip">
-    <Container>
+
+  <Container>
+    <div>
+      <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <Badge color="purple">{data[0].featureHeading}</Badge>
+        <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+          {data[0].mainHeading}
+        </h2>
+        <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+          {data[0].subtext}
+        </p>
+      </div>
+      <div class="mt-6 flex justify-center gap-3">
+        <Link href={data[0].headingButtons[0].link} class="flex gap-1 items-center justify-center bg-brand" rel="noopener">
+          {data[0].headingButtons[0].text}
+        </Link>
+  
+        <Link size="lg" style="outline" rel="noopener" href={data[0].headingButtons[1].link} class="flex gap-1 items-center justify-center border-brand text-brand">
+          {data[0].headingButtons[1].text}
+        </Link>
+      </div>
+    </div>
+    <div class="w-full overflow-hidden py-3 mt-20">
+      <Picture src={Directus} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
+    </div>
+  </Container>
+  
+    
+
+    <!-- <Container>
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
           class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
@@ -304,7 +333,7 @@ const featureBlocks = data[0].featureBlocks;
           />
         </div>
       </main>
-    </Container>
+    </Container> -->
   </div>
   
 
@@ -388,7 +417,7 @@ const featureBlocks = data[0].featureBlocks;
 
     <!-- Feature 1 -->
 
-    <div class="grid md:grid-cols-2 py-10">
+    <div class="grid md:grid-cols-2 py-10 mt-20">
       <div class="grid place-items-center">
         <div class="max-w-lg">
           <Badge color="purple" class="-ml-px">{data[0].featureBlocks[0].heading}</Badge>
@@ -438,17 +467,14 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </div>
   
-      <div class="container">
-        <LottieAnimation id="lottie" src="../../../../../../business-technology.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <div class="w-full overflow-hidden py-3 mt-20">
+        <Picture src={Directus} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
       </div>
     </div>
 
     <!-- Feature 2 -->
-    <div class="grid md:grid-cols-2 py-10">
-      <div class="">
-        <LottieAnimation id="lottie" src="../../../../../../auto-chat.json" autoplay="true" style="width: 100%; height: auto;"/>
-      </div>
 
+    <div class="grid md:grid-cols-2 py-10 mt-20">
       <div class="grid place-items-center">
         <div class="max-w-lg">
           <Badge color="purple" class="-ml-px">{data[0].featureBlocks[1].heading}</Badge>
@@ -459,7 +485,7 @@ const featureBlocks = data[0].featureBlocks;
             {data[0].featureBlocks[1].description}
           </p>
           <ul class="grid mt-6 text-left gap-y-4">
-            {data[0].featureBlocks[1].bulletPoints.map((point) => (
+            {data[0].featureBlocks[0].bulletPoints.map((point) => (
               <li class="flex items-center gap-3 text-neutral-800">
                 <Icon name="ph:check-circle-fill" class="w-5 h-5" />
                 <span class="text-sm">{point}</span>
@@ -496,6 +522,10 @@ const featureBlocks = data[0].featureBlocks;
             })}
           </div>
         </div>
+      </div>
+  
+      <div class="w-full overflow-hidden py-3 mt-20">
+        <Picture src={Directus} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
       </div>
     </div>
 
@@ -551,8 +581,8 @@ const featureBlocks = data[0].featureBlocks;
         </div>
       </div>
     </div>
-    <div class="">
-      <LottieAnimation id="lottie" src="../../../../../../pie-chart-bar.json" autoplay="true" style="width: 100%; height: auto;"/>
+    <div class="w-full overflow-hidden py-3 mt-20">
+      <Picture src={Directus} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
     </div>
   </div>
 
