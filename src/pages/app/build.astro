@@ -113,7 +113,7 @@ const data = [
       }
     ],
     "getStartedSection": {
-      "badge": "Get Started Today",
+      "badge": "Additional Features",
       "title": "Start Building with Empress",
       "description": "Bring your idea to life with the tools you need to start building."
     },
@@ -123,23 +123,57 @@ const data = [
   }
 ];
 
-const overview = [
+const features = [
   {
-    "title": "Select a Website",
-    "description": "Pick from a variety of professionally designed websites that best reflect your brand's ethos and appeal.",
-    "icon": "fluent:design-ideas-24-regular"
+    "title": "Streamline",
+    "description": "Simplify site creation processes",
+    "icon": "fluent:flash-24-regular",
+    "link": "/features/streamline"
   },
   {
-    "title": "Customize with Ease",
-    "description": "Easily drag and drop your unique content, adjust colors, and add features to make the website truly yours.",
-    "icon": "fluent:slide-add-24-regular"
+    "title": "Analyze",
+    "description": "Gain insights from visitor data",
+    "icon": "fluent:cellular-data-1-24-regular",
+    "link": "/features/analyze"
   },
   {
-    "title": "Publish Instantly",
-    "description": "Launch your website to the world with just one click, and start connecting with your audience right away.",
-    "icon": "fluent:rocket-24-regular"
+    "title": "Automate",
+    "description": "Reduce manual content updates",
+    "icon": "fluent:bot-24-regular",
+    "link": "/features/automate"
+  },
+  {
+    "title": "Permission",
+    "description": "Manage user permissions easily",
+    "icon": "fluent:lock-24-regular",
+    "link": "/features/permission"
+  },
+  {
+    "title": "Chat",
+    "description": "Interact with visitors in real-time",
+    "icon": "fluent:chat-multiple-24-regular",
+    "link": "/features/chat"
+  },
+  {
+    "title": "Forecast",
+    "description": "Predict visitor behavior patterns",
+    "icon": "fluent:weather-sunny-low-24-regular",
+    "link": "/features/forecast"
+  },
+  {
+    "title": "Collaborate",
+    "description": "Team up on website projects",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/features/collaborate"
+  },
+  {
+    "title": "Integrate",
+    "description": "Connect all your web tools",
+    "icon": "fluent:plug-connected-24-regular",
+    "link": "/features/integrate"
   }
 ];
+
 
 const apps = [
   {
@@ -212,7 +246,6 @@ const faq = [
 ];
 
 
-
 const featureBlocks = data[0].featureBlocks;
 
 ---
@@ -273,34 +306,53 @@ const featureBlocks = data[0].featureBlocks;
   </div>
 
   <Container>
+    <div>
+      <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center ">
+        <Badge color="purple">{data[0].featureHeading}</Badge>
+        <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+          {data[0].featureTitle}
+        </h2>
+        <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+          {data[0].featureAssurance}
+        </p>
+      </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        apps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    </div>
 
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">{data[0].featureHeading}</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      {data[0].featureTitle}
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      {data[0].featureAssurance}
-    </p>
-  </div>
+    <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
+      <Link href="/contact" size="sm" class="inline-flex items-center justify-center group gap-px">
+        <span>Start Building</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+          <path
+            fill-rule="evenodd"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </Link>
+    </div>
+  </Container>
 
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-    {
-      overview.map((item) => (
-        <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-          <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-            <Icon class="text-indigo-500" name={item.icon} size="24" />
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg">{item.title}</h3>
-            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-          </div>
-        </div>
-      ))
-    }
-  </div>
 
-</Container>
 
 
   <Container>
@@ -480,43 +532,43 @@ const featureBlocks = data[0].featureBlocks;
   </Container>
 
   <Container>
-    <div>
-      <div
-      class:list={[
-        "max-w-4xl mx-auto flex flex-col items-center justify-center",
-        !nomargin && "mt-24",
-      ]}>
-      <Badge color="purple">{data[0].getStartedSection.badge}</Badge>
-      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        {data[0].getStartedSection.title}
-      </h2>
-      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        {data[0].getStartedSection.description}
-      </p>
-    </div>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-      {
-        apps.map((item) => (
-          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="24" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-lg">{item.title}</h3>
-                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-              </div>
+
+    <div
+    class:list={[
+      "max-w-4xl mx-auto flex flex-col items-center justify-center",
+      !nomargin && "mt-24",
+    ]}>
+    <Badge color="purple">{data[0].getStartedSection.badge}</Badge>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+      {data[0].getStartedSection.title}
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+      {data[0].getStartedSection.description}
+    </p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
+    {
+      features.map((item) => (
+        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+              <Icon class="text-indigo-500" name={item.icon} size="24" />
             </div>
-          </a>
-        ))
-      }
-    </div>
-    </div>
-  </Container>
-  
-  <Container>
+            <div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
 
 </Container>
+
+
+  
   
     <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 

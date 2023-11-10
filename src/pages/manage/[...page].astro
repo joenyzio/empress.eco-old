@@ -1,0 +1,102 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Pagination from "@components/pagination.astro";
+import Link from "@components/ui/link.astro";
+
+// Sort content entries by publication date
+
+export async function getStaticPaths({ paginate }) {
+  const PAGE_SIZE = 6;
+  const allPosts = await getCollection("manage", ({ data }) => {
+    return !data.draft && data.publishDate < new Date();
+  });
+
+  const allSortedPosts = allPosts.sort(function (a, b) {
+    return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+  });
+
+  return paginate(allSortedPosts, {
+    pageSize: PAGE_SIZE,
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title="Manage">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Manage with Empress</Fragment>
+      <Fragment slot="desc">
+        Begin your Empress management journey with our comprehensive guides for essential insights.
+        <div class="flex justify-center items-center mt-10"> <!-- Full screen height and center content -->
+          <Link href="/manage/overview" size="sm" class="inline-flex items-center justify-center group gap-px">
+            <span>Start Here</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+              <path
+                fill-rule="evenodd"
+                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </Link>
+        </div>
+      </Fragment>
+    </Sectionhead>
+    <main class="mt-16">
+      <ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 lg:gap-16">
+        {
+          page.data.map((post, index) => (
+            <li>
+              <a href={`/manage/${post.slug}`}>
+                <div>
+                  <Picture
+                    formats={["avif", "webp"]}
+                    src={post.data.image.src}
+                    alt={post.data.image.alt}
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    width={800}
+                    height={600}
+                    loading={index <= 2 ? "eager" : "lazy"}
+                    decoding={index <= 2 ? "sync" : "async"}
+                    class="w-full rounded-md object-cover"
+                    transition:name={`post-img-${post.slug}`}
+                  />
+                  <div class="mt-4">
+                    <span class="text-blue-400 uppercase tracking-wider text-xs font-medium">
+                      {post.data.category}
+                    </span>
+
+                    <h2
+                      class="text-xl font-semibold leading-snug tracking-tight mt-1"
+                      transition:persist>
+                      {post.data.title}
+                    </h2>
+
+                    <div class="flex gap-2 mt-3 text-sm">
+                      <span class="text-gray-400">{post.data.author}</span>
+                      <span class="text-gray-400">• </span>
+                      <time
+                        class="text-gray-400"
+                        datetime={post.data.publishDate.toISOString()}>
+                        {post.data.publishDate.toDateString()}
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <Pagination url={page.url} />
+    </main>
+  </Container>
+</Layout>

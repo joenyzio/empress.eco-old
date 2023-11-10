@@ -40,7 +40,7 @@ const apps = [
     "title": "Plan",
     "description": "Task planning and organization",
     "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/plan"
+    "link": "/manage/plan"
   },
   {
     "title": "Track",
@@ -307,6 +307,7 @@ const featureBlocks = data[0].featureBlocks;
   </div> -->
 
   <Container>
+
   <div>
     <div
     class:list={[
@@ -339,12 +340,21 @@ const featureBlocks = data[0].featureBlocks;
     }
   </div>
   </div>
+  <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
+    <Link href="/manage/" size="sm" class="inline-flex items-center justify-center group gap-px">
+      <span>Explore All Management Guides</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+        <path
+          fill-rule="evenodd"
+          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </Link>
 </Container>
-  
-  <div class="grid md:grid-cols-2 py-10"></div>
-  
-
-  <Container>
   
 
     <!-- Feature 1 -->

@@ -12,7 +12,24 @@ const blogCollection = defineCollection({
       alt: z.string(),
     }),
     publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('Astroship'),
+    author: z.string().default('Empress'),
+    category: z.string(),
+    tags: z.array(z.string()),
+  }),
+});
+
+// 2. Define your collection(s)
+const featuresCollection = defineCollection({
+  schema: z.object({
+    draft: z.boolean(),
+    title: z.string(),
+    snippet: z.string(),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    publishDate: z.string().transform(str => new Date(str)),
+    author: z.string().default('Empress'),
     category: z.string(),
     tags: z.array(z.string()),
   }),
@@ -28,7 +45,7 @@ const guidesCollection = defineCollection({
       alt: z.string(),
     }),
     publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('Astroship'),
+    author: z.string().default('Empress'),
     category: z.string(),
     tags: z.array(z.string()),
   }),
@@ -44,7 +61,23 @@ const academyCollection = defineCollection({
       alt: z.string(),
     }),
     publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('Astroship'),
+    author: z.string().default('Empress'),
+    category: z.string(),
+    tags: z.array(z.string()),
+  }),
+});
+
+const manageCollection = defineCollection({
+  schema: z.object({
+    draft: z.boolean(),
+    title: z.string(),
+    snippet: z.string(),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    publishDate: z.string().transform(str => new Date(str)),
+    author: z.string().default('Empress'),
     category: z.string(),
     tags: z.array(z.string()),
   }),
@@ -74,7 +107,7 @@ const templatesCollection = defineCollection({
       alt: z.string(),
     }),
     publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('Astroship'),
+    author: z.string().default('Empress'),
     category: z.string(),
     tags: z.array(z.string()),
   }),
@@ -88,5 +121,7 @@ export const collections = {
   'integration': guidesCollection,
   'academy': academyCollection,
   'team': teamCollection,
+  'features': featuresCollection,
+  'manage': manageCollection,
   'templates': templatesCollection,
 };

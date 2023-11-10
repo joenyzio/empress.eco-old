@@ -12,10 +12,9 @@ import Card from "@components/card.astro";
 import { Icon } from "astro-icon";
 import ArrowIcon from "@components/ui/icons/arrow.astro"
 
-import heroImage from "../../assets/hero-screenshot.png";
-
 import Logos from "@components/logos.astro";
-// import heroImage from "../../assets/hero-screenshot.png";
+import heroImage from "../../assets/hero-screenshot.png";
+import directus from "../../assets/directus.png";
 import IntegrationImg from "../../assets/integrations.svg?url";
 import FeatureImgOne from "../../assets/features/2.png";
 import FeatureImgTwo from "../../assets/features/2.png";
@@ -24,8 +23,8 @@ import FeatureImg1 from "../../assets/features/6.png";
 import FeatureImg2 from "../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../assets/employee.jpg";
+import TargetMarketing from "../../assets/features/targeting-audience-for-marketing.svg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import Education from "../../assets/features/education.svg";
 import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
 import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../assets/features/dashboard-development.png";
@@ -36,6 +35,148 @@ const { nomargin } = Astro.props;
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
+
+const data = [
+  {
+    "mainHeading": "Supercharge Your Sales Performance",
+    "subtext": "Experience the pinnacle of sales efficiency with our AI-driven suite, tailored to skyrocket your conversion rates.",
+    "headingButtons": [
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "CRM That Grows Revenue",
+        "title": "Customer Data, Optimized",
+        "description": "Our CRM doesn't just store data—it turns it into sales opportunities with actionable insights and predictive analytics.",
+        "bulletPoints": [
+          "Real-time lifecycle tracking increases retention rates",
+          "Proactive lead management boosts conversion",
+          "Forecasting tools that predict revenue trends"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Analytics That Inform Strategy",
+        "title": "Strategic Insights, Better Decisions",
+        "description": "Harness the power of your data with customizable analytics that deliver strategic insights and clear action items.",
+        "bulletPoints": [
+          "On-demand insights for instant decision-making",
+          "Tailored reporting that aligns with sales targets",
+          "In-depth market analysis for competitive advantage"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Automation That Scales",
+        "title": "Efficiency at Scale",
+        "description": "Empower your team with sales automation that scales with your business, ensuring a consistent and personalized customer journey.",
+        "bulletPoints": [
+          "Reduce manual entry with task automation",
+          "Workflow customization that adapts to your sales strategy",
+          "Smart scheduling that increases lead engagement"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
+    ],
+    "getStartedSection": {
+      "badge": "Get Started Today",
+      "title": "Start Selling with Empress",
+      "description": "Step into the future of sales with a suite designed to deliver results."
+    },
+    "featureHeading": "Sell with Empress",
+    "featureTitle": "Level Up Your Sales",
+    "featureAssurance": "Guaranteed satisfaction with 24/7 support — we're always here for your sales needs."
+  }
+];
+
+
+const features = [
+  {
+    "title": "Streamline",
+    "description": "Efficient sales funnel management",
+    "icon": "fluent:flash-24-regular",
+    "link": "/features/streamline"
+  },
+  {
+    "title": "Analyze",
+    "description": "Insights for sales optimization",
+    "icon": "fluent:cellular-data-1-24-regular",
+    "link": "/features/analyze"
+  },
+  {
+    "title": "Automate",
+    "description": "Simplify sales-related tasks",
+    "icon": "fluent:bot-24-regular",
+    "link": "/features/automate"
+  },
+  {
+    "title": "Permission",
+    "description": "Manage sales content visibility",
+    "icon": "fluent:lock-24-regular",
+    "link": "/features/permission"
+  },
+  {
+    "title": "Chat",
+    "description": "Real-time customer engagement",
+    "icon": "fluent:chat-multiple-24-regular",
+    "link": "/features/chat"
+  },
+  {
+    "title": "Forecast",
+    "description": "Predictive sales trend analysis",
+    "icon": "fluent:weather-sunny-low-24-regular",
+    "link": "/features/forecast"
+  },
+  {
+    "title": "Collaborate",
+    "description": "Coordinate sales strategies",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/features/collaborate"
+  },
+  {
+    "title": "Integrate",
+    "description": "Unify sales tools and data",
+    "icon": "fluent:plug-connected-24-regular",
+    "link": "/features/integrate"
+  }
+];
+
+
+
 
 const apps = [
   {
@@ -76,175 +217,37 @@ const apps = [
   }
 ];
 
-
-const data = [
-  {
-    "mainHeading": "Sales Empowerment",
-    "subtext": "Unleash the full potential of your sales force with Empress solutions tailored for maximal revenue generation and customer satisfaction.",
-    "headingButtons": [
-      {
-        "text": "Boost Your Sales",
-        "link": "/contact"
-      },
-      {
-        "text": "Sales Pricing Plans",
-        "link": "/pricing"
-      }
-    ],
-    "sectionHeading": "Ultimate Sales Tools",
-    "offering": {
-      "title": "Sales Optimization Redefined",
-      "subtext": "Drive unprecedented sales performance with our intelligent sales platform, leveraging cutting-edge technology to enhance every customer interaction."
-    },
-    "valueBlocks": [
-      {
-        "heading": "Empress OS for Sales",
-        "title": "Streamline Sales Processes",
-        "description": "Leverage a unified system to manage all sales operations, ensuring no opportunity slips through the cracks."
-      },
-      {
-        "heading": "Empress Chat for Sales",
-        "title": "Engage Effectively",
-        "description": "Connect instantly with prospects through real-time communication, providing timely assistance that closes deals."
-      },
-      {
-        "heading": "Empress Insights for Sales",
-        "title": "Data-Driven Decisions",
-        "description": "Harness powerful analytics to understand customer needs, predict sales trends, and make informed strategic choices."
-      }
-    ],
-    "featureBlocks": [
-      {
-        "heading": "OS for Sales",
-        "title": "Centralize Your Sales Hub",
-        "description": "Empress OS integrates all sales functions into a single, efficient platform, from customer management to deal closure.",
-        "bulletPoints": [
-          "Organize customer data for optimal access",
-          "Automate sales tasks to increase productivity",
-          "Sync all sales communication for seamless operation"
-        ],
-        "buttons": [
-          {
-            "text": "Optimize with Empress OS",
-            "link": "/app/sales/crm"
-          },
-          {
-            "text": "Discover Empress OS",
-            "link": "/os-info"
-          }
-        ]
-      },
-      {
-        "heading": "Chat for Sales",
-        "title": "Improve Sales Interactions",
-        "description": "Empress Chat connects your sales team with clients, offering real-time engagement and support to boost conversion rates.",
-        "bulletPoints": [
-          "Instant customer communication channel",
-          "Faster response times to sales inquiries",
-          "Personalized engagement for better customer relationships"
-        ],
-        "buttons": [
-          {
-            "text": "Enhance with Empress Chat",
-            "link": "/app/sales/chat"
-          },
-          {
-            "text": "Learn About Empress Chat",
-            "link": "/chat-info"
-          }
-        ]
-      },
-      {
-        "heading": "Insights for Sales",
-        "title": "Craft Winning Sales Strategies",
-        "description": "Empress Insights provides the data intelligence you need to outmaneuver the competition and drive sales growth.",
-        "bulletPoints": [
-          "Deep dive into sales metrics and KPIs",
-          "Understand customer behaviors and patterns",
-          "Adapt and evolve with market changes promptly"
-        ],
-        "buttons": [
-          {
-            "text": "Drive Growth with Empress Insights",
-            "link": "/app/sales/insights"
-          },
-          {
-            "text": "Explore Empress Insights",
-            "link": "/insights-info"
-          }
-        ]
-      }
-    ],
-    "featureHeading": "Sales Excellence with Empress",
-    "featureTitle": "Your Partner in Sales Success",
-    "featureAssurance": "Every Empress solution is crafted to not only meet but exceed the demanding needs of today’s sales teams."
-  }
-];
-
-
-const features = [
-  {
-    "title": "Accelerate Sales Cycles",
-    "description": "Speed up the sales pipeline with streamlined processes and automation. Empress OS ensures you capitalize on every opportunity swiftly.",
-    "icon": "fluent:top-speed-24-regular",
-  },
-  {
-    "title": "Universal Sales Access",
-    "description": "Provide your sales team with omnipresent communication tools to engage clients on any platform, at any time.",
-    "icon": "fluent:bot-24-regular",
-  },
-  {
-    "title": "Gain Deep Sales Insights",
-    "description": "With Empress Insights, dive into a deep analysis of sales trends and customer interactions to craft more effective sales strategies.",
-    "icon": "fluent:cellular-data-1-24-regular",
-  },
-  {
-    "title": "Integrate Data Seamlessly",
-    "description": "Consolidate customer data across platforms with Empress OS, removing information silos and enhancing sales team efficiency.",
-    "icon": "fluent:database-link-24-regular",
-  },
-  {
-    "title": "Predict Customer Trends",
-    "description": "Utilize predictive analytics to anticipate customer needs and market shifts, staying ahead of the curve with Empress Insights.",
-    "icon": "fluent:inprivate-account-24-regular",
-  },
-  {
-    "title": "Engage Clients Personally",
-    "description": "Forge stronger relationships and drive sales with personalized engagement tools provided by Empress Chat.",
-    "icon": "fluent:chat-bubbles-question-24-regular",
-  }
-];
-
 const faq = [
   {
-    "question": "How can Empress OS streamline our sales pipeline?",
-    "answer": "Empress OS centralizes all your sales activities, from lead tracking to deal closure. It automates routine tasks, organizes data for optimal access, and synchronizes communications to ensure you can focus on building relationships and closing sales more efficiently."
+    "question": "What sets Empress Sales Suite apart in sales performance?",
+    "answer": "Empress Sales Suite is AI-driven, offering tailored solutions that enhance sales efficiency, automate processes, and provide actionable insights to skyrocket conversion rates and shorten sales cycles."
   },
   {
-    "question": "Is Empress Chat suitable for international sales teams?",
-    "answer": "Absolutely. Empress Chat provides real-time communication capabilities across different platforms and time zones, ensuring your international sales teams can engage with clients effectively, regardless of their location."
+    "question": "Can Empress integrate with my existing sales and marketing tools?",
+    "answer": "Absolutely. Empress is designed for intuitive integration, connecting seamlessly with your current CRM, email, and campaign management tools to create a synergistic sales process."
   },
   {
-    "question": "Can Empress Insights help with forecasting sales trends?",
-    "answer": "Yes, Empress Insights employs advanced analytics to interpret sales data, customer behaviors, and market patterns, helping your team make data-driven decisions and forecast trends with greater accuracy."
+    "question": "How does the Empress CRM help in growing revenue?",
+    "answer": "Empress CRM goes beyond data storage, transforming customer information into sales opportunities with features like real-time lifecycle tracking and predictive analytics for improved lead management and forecasting."
   },
   {
-    "question": "What kind of support does Empress OS offer for managing customer relationships?",
-    "answer": "Empress OS offers a comprehensive CRM tool that helps you keep track of customer interactions, manage leads, and nurture client relationships, all in one platform to enhance customer satisfaction and loyalty."
+    "question": "What type of support does Empress provide?",
+    "answer": "We offer a satisfaction guarantee backed by 24/7 support to ensure that your sales operations are uninterrupted and consistently supported for optimal performance."
   },
   {
-    "question": "How does Empress ensure data privacy and security for sales transactions?",
-    "answer": "Security is a priority for Empress. We employ robust encryption, compliance with industry standards, and regular security audits to ensure that all sales transactions and customer data are handled with the highest level of security and confidentiality."
+    "question": "How does Empress automate the sales process?",
+    "answer": "Empress automates your sales process by reducing manual data entry, customizing workflows to your strategy, and smart scheduling to enhance lead engagement and follow-ups."
   },
   {
-    "question": "Can we integrate existing sales tools with Empress solutions?",
-    "answer": "Certainly. Empress solutions are designed to be flexible and compatible with a variety of sales tools and systems. We provide seamless integration capabilities to ensure you can continue to use your existing resources alongside our platform."
+    "question": "Can Empress manage transactions and subscriptions?",
+    "answer": "Yes, Empress includes robust features for retail point of sale transaction processing and subscription management, streamlining payments and recurring revenue models."
   },
   {
-    "question": "What makes Empress solutions stand out for sales professionals?",
-    "answer": "Empress solutions stand out due to their holistic approach to sales enablement. We provide a suite of tools that cover every aspect of the sales process, from generating quotes and managing email campaigns to processing transactions and managing subscriptions, all designed to maximize efficiency and revenue generation."
+    "question": "What resources are available to get started with Empress?",
+    "answer": "We provide comprehensive onboarding resources, including detailed documentation, training modules, and customer support to help you start selling with Empress effortlessly."
   }
 ];
+
 
 
 
@@ -252,11 +255,11 @@ const featureBlocks = data[0].featureBlocks;
 
 ---
 
-
 <Layout title="About" footerMargin={false}>
-  
+
   <div class="overflow-x-clip">
     <Container>
+
       <main class="grid lg:grid-cols-5 place-items-center relative">
         <div
           class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
@@ -294,7 +297,7 @@ const featureBlocks = data[0].featureBlocks;
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
-            src={Education}
+            src={TargetMarketing}
             alt="Astronaut in the air"
             formats={["avif", "webp"]}
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -308,44 +311,39 @@ const featureBlocks = data[0].featureBlocks;
   </div>
 
   <Container>
-  <div>
-    <div
-    class:list={[
-      "max-w-4xl mx-auto flex flex-col items-center justify-center",
-      !nomargin && "mt-24",
-    ]}>
-    <Badge color="purple">Welcome to Empress</Badge>
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      Streamline Your <span class="text-indigo-600">Sales with Empress</span>
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      Streamline your business management with an all-in-one suite to enhance productivity and drive growth.
-    </p>
-  </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-    {
-      apps.map((item) => (
-        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-            <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
+    <div>
+      <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <Badge color="purple">{data[0].featureHeading}</Badge>
+        <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+          {data[0].featureTitle}
+        </h2>
+        <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+          {data[0].featureAssurance}
+        </p>
+      </div>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+      {
+        apps.map((item) => (
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          </div>
-        </a>
-      ))
-    }
-  </div>
-  </div>
-</Container>
-  
-  <div class="grid md:grid-cols-2 py-10"></div>
-  
+          </a>
+        ))
+      }
+    </div>
+    </div>
+  </Container>
+
 
   <Container>
+
   
 
     <!-- Feature 1 -->
@@ -401,14 +399,14 @@ const featureBlocks = data[0].featureBlocks;
       </div>
   
       <div class="container">
-        <LottieAnimation id="lottie" src="../../../../chemical-laboratory.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../job-announcement.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
     </div>
 
     <!-- Feature 2 -->
     <div class="grid md:grid-cols-2 py-10">
       <div class="">
-        <LottieAnimation id="lottie" src="../../../../global-education.json" autoplay="true" style="width: 100%; height: auto;"/>
+        <LottieAnimation id="lottie" src="../../../../global-market-2.json" autoplay="true" style="width: 100%; height: auto;"/>
       </div>
 
       <div class="grid place-items-center">
@@ -514,99 +512,57 @@ const featureBlocks = data[0].featureBlocks;
       </div>
     </div>
     <div class="">
-      <LottieAnimation id="lottie" src="../../../../nuclear-research-2.json" autoplay="true" style="width: 100%; height: auto;"/>
+      <LottieAnimation id="lottie" src="../../../../data-analysis-2.json" autoplay="true" style="width: 100%; height: auto;"/>
     </div>
   </div>
 
-  <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-    <Badge color="purple">{data[0].sectionHeading}</Badge>
+  </Container>
+
+  <Container>
+
+
+
+    <div
+    class:list={[
+      "max-w-4xl mx-auto flex flex-col items-center justify-center",
+      !nomargin && "mt-24",
+    ]}>
+    <Badge color="purple">{data[0].getStartedSection.badge}</Badge>
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-      {data[0].offering.title}
+      {data[0].getStartedSection.title}
     </h2>
     <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-      {data[0].offering.subtext}
+      {data[0].getStartedSection.description}
     </p>
   </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-    <Card color="indigo" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={NetworkServerManagement}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-      <span slot="title">{data[0].valueBlocks[0].title}</span>
-      <span slot="desc">{data[0].valueBlocks[0].description}</span>
-    </Card>
-    
-    <Card color="purple" size="sm">
-      <Fragment slot="image">
-        <Picture
-          src={AutomatedMarketing}
-          alt="Feature image"
-          formats={["avif", "webp"]}
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-      <span slot="title">{data[0].valueBlocks[1].title}</span>
-      <span slot="desc">{data[0].valueBlocks[1].description}</span>
-    </Card>
-    
-    <Card size="sm">
-      <Fragment slot="image">
-        <!-- // svg image. cannot use <picture/> as of now -->
-        <Image
-          src={DashboardDevelopment}
-          alt="Feature image"
-          width="909"
-          height="823"
-          class="object-contain"
-          loading="lazy"
-        />
-      </Fragment>
-      <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-      <span slot="title">{data[0].valueBlocks[2].title}</span>
-      <span slot="desc">{data[0].valueBlocks[2].description}</span>
-    </Card>
-  </div>
-
-    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-      <Badge color="purple">{data[0].featureHeading}</Badge>
-      <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-        {data[0].featureTitle}
-      </h2>
-      <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        {data[0].featureAssurance}
-      </p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+  
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-16">
       {
         features.map((item) => (
-          <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-            <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="24" />
+          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
+              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+                <Icon class="text-indigo-500" name={item.icon} size="24" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{item.title}</h3>
+                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold text-lg">{item.title}</h3>
-              <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          </div>
+          </a>
         ))
       }
     </div>
+  
+  </Container>
+
 
   
-    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+  <Container>
 
-  </Container>
+</Container>
+  
+    <div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
   <Container>
     <Sectionhead>
