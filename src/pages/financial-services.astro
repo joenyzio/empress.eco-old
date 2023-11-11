@@ -37,7 +37,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
 {
-    "mainHeading": "Finance Redefined",
+    "mainHeading": "Financial Services Redefined",
     "subtext": "Centralize your financial information, ensure compliance, streamline operations, optimize communications, and harness real-time analytics for insightful decision-making.",
     "headingButtons": [
         {
@@ -274,53 +274,49 @@ const featureBlocks = data[0].featureBlocks;
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-      <Card color="indigo" size="sm">
-        <Fragment slot="image">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-10">
+      <a href="your-link-for-card-1" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <div class="flex flex-col items-left group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-left shadow-lg bg-white">
           <Picture
             src={NetworkServerManagement}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="object-contain"
+            class="object-contain mb-5 w-16 h-16"
             loading="lazy"
           />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-        <span slot="title">{data[0].valueBlocks[0].title}</span>
-        <span slot="desc">{data[0].valueBlocks[0].description}</span>
-      </Card>
-      
-      <Card color="purple" size="sm">
-        <Fragment slot="image">
+          <h3 class="font-semibold text-lg text-gray-900">{data[0].valueBlocks[0].title}</h3>
+          <p class="text-slate-500 mt-2 text-base leading-relaxed">{data[0].valueBlocks[0].description}</p>
+        </div>
+      </a>
+    
+      <a href="your-link-for-card-2" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <div class="flex flex-col items-left group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-left shadow-lg bg-white">
           <Picture
             src={AutomatedMarketing}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="object-contain"
+            class="object-contain mb-5 w-16 h-16"
             loading="lazy"
           />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-        <span slot="title">{data[0].valueBlocks[1].title}</span>
-        <span slot="desc">{data[0].valueBlocks[1].description}</span>
-      </Card>
-      
-      <Card size="sm">
-        <Fragment slot="image">
-          <!-- // svg image. cannot use <picture/> as of now -->
+          <h3 class="font-semibold text-lg text-gray-900">{data[0].valueBlocks[1].title}</h3>
+          <p class="text-slate-500 mt-2 text-base leading-relaxed">{data[0].valueBlocks[1].description}</p>
+        </div>
+      </a>
+    
+      <a href="your-link-for-card-3" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <div class="flex flex-col items-left group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-left shadow-lg bg-white">
           <Image
             src={DashboardDevelopment}
             alt="Feature image"
             width="909"
             height="823"
-            class="object-contain"
+            class="object-contain mb-5 w-16 h-16"
             loading="lazy"
           />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-        <span slot="title">{data[0].valueBlocks[2].title}</span>
-        <span slot="desc">{data[0].valueBlocks[2].description}</span>
-      </Card>
+          <h3 class="font-semibold text-lg text-gray-900">{data[0].valueBlocks[2].title}</h3>
+          <p class="text-slate-500 mt-2 text-base leading-relaxed">{data[0].valueBlocks[2].description}</p>
+        </div>
+      </a>
     </div>
 
     <!-- Feature 1 -->
