@@ -29,6 +29,20 @@ import AutomatedMarketing from "../../../assets/features/automated-marketing.svg
 import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
 
+import Review from "@components/review.astro";
+import IntelligentRobot from "../../../assets/features/intelligent-robot.svg";
+import BusinessCalculation from "../../../assets/features/business-calculation.svg";
+import FactoryBuilding from "../../../assets/features/factory-building.svg";
+import CommunucationSatellite from "../../../assets/features/communication-satellite.svg";
+import BotanyExperiment from "../assets/features/botany-experiment.svg";
+import AccountsMonitoringReport from "../assets/features/accounts-monitoring-report.svg";
+import Certificate from "../../../assets/features/certificate.svg";
+import Ambulance from "../../../assets/features/ambulance.svg";
+import PoliceStation from "../../../assets/features/police-station.svg";
+import FlyingAirplane from "../../../assets/features/flying-airplane.svg";
+import ShoppingBag from "../../../assets/features/shopping-bag.svg";
+import MegaPhone from "../../../assets/features/megaphone.svg";
+
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -74,6 +88,69 @@ const templates = [
     "icon": "fluent:chat-24-regular",
     "link": "/templates/ab-testing-tools"
   }
+];
+
+const testimonials = [
+  {
+    name: "Education",
+    title: "Empress for Education",
+    image: Certificate,
+    text: "Empress redefines e-learning with cutting-edge strategies to enhance student engagement and drive educational excellence.",
+  },
+  {
+    name: "Financial Services",
+    title: "Empress for Finance",
+    image: BusinessCalculation,
+    text: "Empress revolutionizes financial services, ensuring secure and insightful client relationships with forward-thinking solutions.",
+  },
+  {
+    name: "Government",
+    title: "Empress for Government",
+    image: PoliceStation,
+    text: "Empress transforms government operations, enhancing citizen engagement and streamlining processes for superior public services.",
+  },
+  {
+    name: "Healthcare",
+    title: "Empress for Healthcare",
+    image: Ambulance,
+    text: "Empress innovates healthcare, streamlining medical processes and providing secure, top-notch health consultations.",
+  },
+  {
+    name: "Manufacturing",
+    title: "Empress for Manufacturing",
+    image: FactoryBuilding,
+    text: "Empress propels manufacturing innovation, integrating processes for enhanced efficiency and industry-leading advancements.",
+  },
+  {
+    name: "Media",
+    title: "Empress for Media",
+    image: MegaPhone,
+    text: "Empress reshapes the media industry, creating engaging content and harnessing data for insightful storytelling and decisions.",
+  },
+  {
+    name: "Retail",
+    title: "Empress for Retail",
+    image: ShoppingBag,
+    text: "Empress revolutionizes retail experiences, understanding customer needs and employing AI for personalized shopping journeys.",
+  },
+  {
+    name: "Technology",
+    title: "Empress for Tech",
+    image: IntelligentRobot,
+    text: "Empress leads in tech innovation, streamlining processes with AI insights for an enhanced user experience.",
+  },
+  {
+    name: "Telecommunications",
+    title: "Empress for Telecommunications",
+    image: CommunucationSatellite,
+    text: "Empress redefines telecommunications with AI-enhanced solutions for cutting-edge, consistent communication experiences.",
+  },
+  {
+    name: "Transportation",
+    title: "Empress for Transportation",
+    image: FlyingAirplane,
+    text: "Empress is setting new standards in transportation, creating seamless travel experiences and engaging users effectively.",
+  },
 ];
 
 const data = [
@@ -273,12 +350,33 @@ const featureBlocks = data[0].featureBlocks;
         </Link>
       </div>
     </div>
-    <div class="w-full overflow-hidden py-3 mt-20">
+    <!-- <div class="w-full overflow-hidden py-3 mt-20">
       <Picture src={Logo} alt="Astronaut in the air" formats={["avif", "webp"]} sizes="100vw" width="100vw" loading="eager" fetchpriority="high" />
-    </div>
+    </div> -->
   </Container>
   
   
+  
+  </div>
+
+  <div class="mt-10 relative overflow-x-clip">
+    <div
+      class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-white-100 right-1/3 -top-10">
+    </div>
+    <div
+      class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-100 right-1/3 translate-x-2/3 top-10">
+    </div>
+    <div class="relative md:flex gap-10 overflow-hidden py-5 group">
+      <div
+        class="md:motion-safe:animate-marquee w-auto py-5 overflow-x-auto flex flex-nowrap min-w-full shrink-0 items-stretch gap-10 snap-x snap-mandatory px-5">
+        {testimonials.map((item) => <Review {...item} />)}
+      </div>
+      <!--  ↓↓ Shadow DOM to make the animation smooth (clone) ↓↓ -->
+      <div
+        class="md:motion-safe:animate-marquee hidden md:motion-reduce:hidden md:flex min-w-full shrink-0 items-center gap-10">
+        {testimonials.map((item) => <Review {...item} />)}
+      </div>
+    </div>
   </div>
   
 
