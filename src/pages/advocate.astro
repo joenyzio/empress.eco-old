@@ -31,6 +31,10 @@ import Education from "../assets/features/education.svg";
 import NewIdeas from "../assets/features/search-for-new-ideas-technologies-technological-innovations.svg";
 import Champion from "../assets/features/champion.svg";
 
+import AutomatedMarketing from "../assets/features/automated-marketing.svg";
+import NetworkServerManagement from "../assets/features/network-server-endpoint-management.svg";
+import DashboardDevelopment from "../assets/features/dashboard-development.png";
+
 
 
 // Filter team entries with 'draft: false' & date before current date
@@ -215,24 +219,20 @@ const featureBlocks = data[0].featureBlocks;
             class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
             {data[0].subtext}
           </p>
-          <div
-            class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-          <Link
-              href={data[0].headingButtons[0].link}
-              class="flex gap-1 items-center justify-center bg-brand"
-              rel="noopener">
-              {data[0].headingButtons[0].text}
-          </Link>
-          
-          <Link
-            size="lg"
-            style="outline"
-            rel="noopener"
-            href={data[0].headingButtons[1].link}
-            class="flex gap-1 items-center justify-center border-brand text-brand">
-            {data[0].headingButtons[1].text}
-          </Link>
-          </div>
+          <div class="flex items-center gap-4 mt-6">
+            <!-- First Button -->
+            <a href={data[0].headingButtons[0].link} class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150">
+                <span>{data[0].headingButtons[0].text}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        
+            <!-- Second Button -->
+            <a href={data[0].headingButtons[1].link} class="text-base px-6 py-3 transition bg-white text-slate-600 hover:text-slate-700 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-md shadow">
+                {data[0].headingButtons[1].text}
+            </a>
+        </div>  
         </div>
         <div class="py-3 lg:col-span-3 lg:-mr-44">
           <Picture
@@ -262,53 +262,49 @@ const featureBlocks = data[0].featureBlocks;
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-10">
-      <Card color="indigo" size="sm">
-        <Fragment slot="image">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-10">
+      <a href="your-link-for-card-1" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <div class="flex flex-col items-left group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-left shadow-lg bg-white">
           <Picture
-            src={CharitableDonation}
+            src={NetworkServerManagement}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="object-contain"
+            class="object-contain mb-5 w-16 h-16"
             loading="lazy"
           />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[0].heading}</span>
-        <span slot="title">{data[0].valueBlocks[0].title}</span>
-        <span slot="desc">{data[0].valueBlocks[0].description}</span>
-      </Card>
-      
-      <Card color="purple" size="sm">
-        <Fragment slot="image">
+          <h3 class="font-semibold text-lg text-gray-900">{data[0].valueBlocks[0].title}</h3>
+          <p class="text-slate-500 mt-2 text-base leading-relaxed">{data[0].valueBlocks[0].description}</p>
+        </div>
+      </a>
+    
+      <a href="your-link-for-card-2" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <div class="flex flex-col items-left group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-left shadow-lg bg-white">
           <Picture
-            src={Startup}
+            src={AutomatedMarketing}
             alt="Feature image"
             formats={["avif", "webp"]}
-            class="object-contain"
+            class="object-contain mb-5 w-16 h-16"
             loading="lazy"
           />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[1].heading}</span>
-        <span slot="title">{data[0].valueBlocks[1].title}</span>
-        <span slot="desc">{data[0].valueBlocks[1].description}</span>
-      </Card>
-      
-      <Card size="sm">
-        <Fragment slot="image">
-          <!-- // svg image. cannot use <picture/> as of now -->
+          <h3 class="font-semibold text-lg text-gray-900">{data[0].valueBlocks[1].title}</h3>
+          <p class="text-slate-500 mt-2 text-base leading-relaxed">{data[0].valueBlocks[1].description}</p>
+        </div>
+      </a>
+    
+      <a href="your-link-for-card-3" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <div class="flex flex-col items-left group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-left shadow-lg bg-white">
           <Image
-            src={ExclusiveResources}
+            src={DashboardDevelopment}
             alt="Feature image"
             width="909"
             height="823"
-            class="object-contain"
+            class="object-contain mb-5 w-16 h-16"
             loading="lazy"
           />
-        </Fragment>
-        <span slot="badge">{data[0].valueBlocks[2].heading}</span>
-        <span slot="title">{data[0].valueBlocks[2].title}</span>
-        <span slot="desc">{data[0].valueBlocks[2].description}</span>
-      </Card>
+          <h3 class="font-semibold text-lg text-gray-900">{data[0].valueBlocks[2].title}</h3>
+          <p class="text-slate-500 mt-2 text-base leading-relaxed">{data[0].valueBlocks[2].description}</p>
+        </div>
+      </a>
     </div>
 
     <!-- Feature 1 -->
