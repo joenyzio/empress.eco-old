@@ -22,232 +22,228 @@ import FeatureImg1 from "../../../assets/features/6.png";
 import FeatureImg2 from "../../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../../assets/employee.jpg";
-import Logo from "../../../assets/logo-full.png";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import Logo from "../../assets/logo-full.png";
 import ECommerce from "../../../assets/features/buyer-standing-in-front-of-giant-smartphone-and-buying-goods-on-internet-store.svg";
 import AutomatedMarketing from "../../../assets/features/automated-marketing.svg";
 import NetworkServerManagement from "../../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../../assets/features/dashboard-development.png";
 
+const { nomargin } = Astro.props;
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const { nomargin } = Astro.props;
 
 const templates = [
   {
-    "title": "Vehicle Inventory Management",
-    "description": "Track fleet vehicles",
-    "icon": "fluent:clipboard-checkmark-24-regular",
-    "link": "/templates/vehicle-inventory-management"
+    "title": "Business Site",
+    "description": "Establish Online Presence",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/business-site"
   },
   {
-    "title": "Maintenance Scheduling",
-    "description": "Schedule vehicle maintenance",
-    "icon": "fluent:clipboard-checkmark-24-regular",
-    "link": "/templates/maintenance-scheduling"
+    "title": "Portfolio Showcase",
+    "description": "Showcase Your Work",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/portfolio-showcase"
   },
   {
-    "title": "Fuel and Expense Tracking",
-    "description": "Monitor fuel and costs",
-    "icon": "fluent:clipboard-checkmark-24-regular",
-    "link": "/templates/fuel-and-expense-tracking"
+    "title": "Job Board",
+    "description": "Connect with Talent",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/job-board"
   },
   {
-    "title": "Driver Assignment System",
-    "description": "Assign vehicles to drivers",
-    "icon": "fluent:clipboard-checkmark-24-regular",
-    "link": "/templates/driver-assignment-system"
+    "title": "Landing Page",
+    "description": "Campaign Landing Page",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/landing-page"
   },
   {
-    "title": "Vehicle Usage Analytics",
-    "description": "Analyze vehicle data",
-    "icon": "fluent:clipboard-checkmark-24-regular",
-    "link": "/templates/vehicle-usage-analytics"
+    "title": "Company Blog",
+    "description": "Share Industry Insights",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/company-blog"
   },
   {
-    "title": "Compliance and Safety Checklists",
-    "description": "Ensure regulatory compliance",
-    "icon": "fluent:clipboard-checkmark-24-regular",
-    "link": "/templates/compliance-and-safety-checklists"
+    "title": "Event Site",
+    "description": "Streamline Event Management",
+    "icon": "fluent:phone-mobile-24-regular",
+    "link": "/templates/event-site"
   }
 ];
 
 
-
 const data = [
   {
-    "mainHeading": "Asset Management Made Easy",
-    "subtext": "Efficiently manage company resources.",
+    "mainHeading": "Connect with Collaborators",
+    "subtext": "Enhance collaboration across your network.",
     "headingButtons": [
       {
-        "text": "Manage Assets",
-        "link": "/contact"
+        "text": "Connect Today",
+        "link": "/contact-website-builder"
       },
       {
         "text": "View Pricing",
-        "link": "/pricing"
+        "link": "/pricing-website-builder"
       }
     ],
-    "sectionHeading": "Advanced Fleet Management",
+    "sectionHeading": "Empress for Business Websites",
     "offering": {
-      "title": "Drive Operational Efficiency and Fleet Performance",
-      "subtext": "Unlock the full potential of your fleet with integrated vehicle tracking, maintenance alerts, and fuel management."
+      "title": "Create Your Website",
+      "subtext": "Express your personal brand and connect with your audience through a bespoke website that’s all your own."
     },
     "valueBlocks": [
       {
-        "heading": "Fleet Tracking",
-        "title": "Streamline Fleet Operations",
-        "description": "Monitor vehicle locations, optimize routes, and enhance the safety of your fleet with real-time GPS tracking."
+        "heading": "Empress Site Creator",
+        "title": "Craft with Simplicity",
+        "description": "Our drag-and-drop builder simplifies website creation, making it accessible to build a professional online presence."
       },
       {
-        "heading": "Fleet Maintenance",
-        "title": "Minimize Downtime",
-        "description": "Automate maintenance scheduling, track service history, and receive alerts for upcoming vehicle maintenance needs."
+        "heading": "Empress Design Suite",
+        "title": "Design with Freedom",
+        "description": "Unleash your creativity with customizable templates and design elements that reflect your unique style."
       },
       {
-        "heading": "Fuel Management",
-        "title": "Reduce Fuel Costs",
-        "description": "Monitor fuel usage, identify inefficiencies, and optimize consumption with comprehensive fuel management tools."
+        "heading": "Empress Personal Insights",
+        "title": "Understand Your Audience",
+        "description": "Gain insights into visitor behavior with integrated analytics to continually refine your website and content."
       }
     ],
     "featureBlocks": [
       {
-        "heading": "Vehicle Management System",
-        "title": "Centralize Your Fleet Operations",
-        "description": "From acquisition to disposal, manage all aspects of your fleet lifecycle in one place for unmatched operational oversight.",
+        "heading": "Site Creator for Personal Use",
+        "title": "Bring Your Personal Brand to Life Online",
+        "description": "Create a stunning website that captures your personal brand and helps you stand out from the crowd.",
         "bulletPoints": [
-          "Track vehicle usage and lifecycle data",
-          "Manage vehicle acquisition and disposal",
-          "Keep detailed records for compliance and reporting"
+          "User-friendly design tools for personalization",
+          "Responsive templates for all devices",
+          "SEO features to help you get noticed"
         ],
         "buttons": [
           {
-            "text": "Get Started",
-            "link": "/contact"
+            "text": "Start Building",
+            "link": "/contact-site-creator"
           },
           {
-            "text": "View Pricing",
-            "link": "/pricing"
+            "text": "Site Creator Pricing",
+            "link": "/pricing-site-creator"
           }
         ]
       },
       {
-        "heading": "Driver Management",
-        "title": "Safeguard Your Operations with Driver Management",
-        "description": "Ensure driver safety and compliance with tools that help you manage licenses, training, and performance metrics.",
+        "heading": "Design Suite for Personal Websites",
+        "title": "Design Your Site with Artistic Control",
+        "description": "Tap into an extensive suite of design features to create a website that fully embodies your vision.",
         "bulletPoints": [
-          "Track driver licenses and certifications",
-          "Monitor driver behavior and performance",
-          "Schedule and record training sessions"
+          "Customize with ease using pre-designed elements",
+          "Express yourself with a wide range of fonts and colors",
+          "Implement engaging multimedia content"
         ],
         "buttons": [
           {
-            "text": "Get Started",
-            "link": "/contact"
+            "text": "Explore Design Suite",
+            "link": "/contact-design-suite"
           },
           {
-            "text": "View Pricing",
-            "link": "/pricing"
+            "text": "Design Suite Pricing",
+            "link": "/pricing-design-suite"
           }
         ]
       },
       {
-        "heading": "Fleet Analytics",
-        "title": "Inform Your Decisions with Fleet Analytics",
-        "description": "Make informed decisions with analytics that provide insights into fleet performance, utilization, and operational costs.",
+        "heading": "Personal Insights Dashboard",
+        "title": "Track Your Website's Performance",
+        "description": "Monitor how your personal website performs and how visitors engage with your content.",
         "bulletPoints": [
-          "Analyze fleet performance data",
-          "Improve vehicle utilization and efficiency",
-          "Optimize fleet-related costs and budgeting"
+          "Real-time analytics for immediate insights",
+          "User behavior tracking to understand engagement",
+          "Custom reports to follow your growth"
         ],
         "buttons": [
           {
-            "text": "Get Started",
-            "link": "/contact"
+            "text": "View Insights",
+            "link": "/contact-personal-insights"
           },
           {
-            "text": "View Pricing",
-            "link": "/pricing"
+            "text": "Insights Dashboard Pricing",
+            "link": "/pricing-personal-insights"
           }
         ]
       }
     ],
-    "featureHeading": "Empress for Asssets",
-    "featureTitle": "Elevate Your Fleet Operations",
-    "featureAssurance": "Our fleet vehicle management system is designed to grow with your business, ensuring that as your fleet expands, your ability to manage effectively does too."
+    "featureHeading": "Empress for Collaboration",
+    "featureTitle": "Make Your Mark on the Web",
+    "featureAssurance": "Our website builder is designed to empower your personal expression, with a commitment to adapt and grow as you do."
   }
 ];
 
 
 const features = [
   {
-    "title": "Compliance Management",
-    "description": "Keep your fleet in line with regulations using our compliance management tools, ensuring your vehicles and drivers adhere to legal requirements.",
-    "icon": "fluent:shield-24-regular",
+    "title": "Mobile Optimization",
+    "description": "Ensure your personal website looks stunning on every device with our mobile-optimized design features, providing a seamless experience for all visitors.",
+    "icon": "fluent:phone-mobile-24-regular",
   },
   {
-    "title": "Accident Management",
-    "description": "Efficiently handle vehicle incidents with an integrated accident management system that helps to minimize downtime and manage costs.",
-    "icon": "fluent:vehicle-car-collision-24-regular",
+    "title": "Blog Integration",
+    "description": "Engage your audience with a built-in blogging platform, allowing you to share your thoughts, updates, and news with ease and sophistication.",
+    "icon": "fluent:reading-list-add-24-regular",
   },
   {
-    "title": "Eco-Friendly Routing",
-    "description": "Reduce your carbon footprint with routes optimized for fuel efficiency, helping you make cost-effective and environmentally friendly decisions.",
-    "icon": "fluent:leaf-three-24-regular",
+    "title": "Social Media Tools",
+    "description": "Connect your website to your social media profiles to increase your online presence and allow visitors to share your content across their networks.",
+    "icon": "fluent:share-24-regular",
   },
   {
-    "title": "Real-Time Notifications",
-    "description": "Stay updated with real-time alerts for vehicle maintenance, route deviations, and unauthorized usage, keeping you in control at all times.",
-    "icon": "fluent:alert-24-regular",
+    "title": "SEO Optimization",
+    "description": "Improve your website’s visibility on search engines with integrated SEO tools that guide you through optimizing your content and metadata.",
+    "icon": "fluent:search-square-24-regular",
   },
   {
-    "title": "Custom Reporting",
-    "description": "Generate custom reports for insights into fleet operations, driver performance, and cost management to aid strategic decision-making.",
-    "icon": "fluent:chart-multiple-24-regular",
+    "title": "Custom Domain and Email",
+    "description": "Establish your brand with a custom domain name and professional email addresses that enhance recognition and trust.",
+    "icon": "fluent:mail-24-regular",
   },
   {
-    "title": "Asset Management",
-    "description": "Track all your fleet assets in one place, from vehicles to equipment, ensuring optimal allocation and reducing unnecessary expenses.",
-    "icon": "fluent:briefcase-24-regular",
+    "title": "Interactive Multimedia",
+    "description": "Incorporate various multimedia elements like photo galleries, videos, and interactive slideshows to enrich your website’s storytelling.",
+    "icon": "fluent:video-clip-24-regular",
   }
 ];
 
+
 const faq = [
   {
-    "question": "How does the Fleet Vehicle Management System improve operational efficiency?",
-    "answer": "Our system enhances operational efficiency by providing real-time GPS tracking, automated maintenance scheduling, and fuel management tools. These features work together to optimize routes, minimize vehicle downtime, and reduce fuel costs."
+    "question": "How easy is it to build a website with the Empress Site Creator?",
+    "answer": "Our Empress Site Creator is designed for ease of use with a drag-and-drop interface, making it simple for you to build a professional online presence without any prior web development experience."
   },
   {
-    "question": "Can the Fleet Management System help with driver safety and compliance?",
-    "answer": "Absolutely. The system includes driver management tools that track licenses, certifications, and performance metrics, promoting safety and ensuring compliance with transport regulations."
+    "question": "Can I customize my website to match my personal brand?",
+    "answer": "Absolutely! Our Empress Design Suite offers a wide range of customizable templates and design elements that allow you to express your unique style and brand identity."
   },
   {
-    "question": "Is it possible to manage the entire lifecycle of a vehicle within this system?",
-    "answer": "Yes, our Vehicle Management System is designed to manage all aspects of your fleet's lifecycle from acquisition to disposal, including usage tracking, maintenance records, and compliance reporting."
+    "question": "How can I track visitor engagement on my website?",
+    "answer": "With Empress Personal Insights, you can access real-time analytics and user behavior tracking to understand how visitors interact with your site, enabling you to make informed decisions to enhance engagement."
   },
   {
-    "question": "How does the Accident Management feature work?",
-    "answer": "The Accident Management feature helps you handle incidents by recording details, tracking claims, and managing repairs. This system streamlines the process to minimize downtime and costs associated with vehicle accidents."
+    "question": "Is my website optimized for mobile devices?",
+    "answer": "Yes, our mobile optimization feature ensures that your personal website will look and perform beautifully across all devices, providing a seamless experience for your visitors."
   },
   {
-    "question": "What kind of analytics can be accessed with the Fleet Analytics feature?",
-    "answer": "Fleet Analytics provides insights into vehicle performance, utilization, and operational costs. This data helps in making informed decisions that can improve efficiency and optimize expenses."
+    "question": "Can I integrate a blog into my website?",
+    "answer": "Definitely. Our blog integration tool allows you to easily create and manage a blog within your website to share updates, news, and articles, engaging your audience with fresh content."
   },
   {
-    "question": "How will I be alerted to vehicle maintenance needs?",
-    "answer": "Our system sends real-time notifications for maintenance alerts based on service history and scheduled maintenance plans, ensuring that you can proactively manage vehicle upkeep."
+    "question": "What social media integration options are available?",
+    "answer": "Our platform includes social media tools that link your website to your social profiles and enable content sharing, helping to expand your reach and enhance your online presence."
   },
   {
-    "question": "What type of reports can I generate with the Custom Reporting feature?",
-    "answer": "You can generate a variety of custom reports including, but not limited to, fleet utilization, cost management, driver performance, and maintenance records, all of which can be tailored to your specific business needs."
-  },
-  {
-    "question": "How does Eco-Friendly Routing contribute to cost savings?",
-    "answer": "Eco-Friendly Routing optimizes your fleet's routes for fuel efficiency, not only contributing to cost savings by reducing fuel consumption but also supporting your company's sustainability efforts."
+    "question": "How can I improve my website's search engine rankings?",
+    "answer": "Our SEO optimization tools guide you through the process of enhancing your content and metadata, improving your website's visibility on search engines and attracting more visitors."
   }
 ];
 
