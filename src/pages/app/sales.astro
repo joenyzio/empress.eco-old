@@ -14,6 +14,7 @@ import ArrowIcon from "@components/ui/icons/arrow.astro"
 
 import Logos from "@components/logos.astro";
 import heroImage from "../../assets/hero-screenshot.png";
+import directus from "../../assets/directus.png";
 import IntegrationImg from "../../assets/integrations.svg?url";
 import FeatureImgOne from "../../assets/features/2.png";
 import FeatureImgTwo from "../../assets/features/2.png";
@@ -22,9 +23,8 @@ import FeatureImg1 from "../../assets/features/6.png";
 import FeatureImg2 from "../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../assets/employee.jpg";
-import Logo from "../../../assets/logo-full.png";
+import TargetMarketing from "../../assets/features/targeting-audience-for-marketing.svg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import Education from "../../assets/features/education.svg";
 import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
 import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../assets/features/dashboard-development.png";
@@ -36,207 +36,140 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
-  {
-    "title": "Account",
-    "description": "Manage financial transactions",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/finance/account",
-    "button": "Get Started"
-  },
-  {
-    "title": "Expense",
-    "description": "Track business spending",
-    "icon": "fluent:receipt-24-regular",
-    "link": "/app/finance/expense",
-    "button": "Get Started"
-  },
-  {
-    "title": "Invoice",
-    "description": "Create and manage invoices",
-    "icon": "fluent:document-24-regular",
-    "link": "/app/finance/invoice",
-    "button": "Get Started"
-  },
-  {
-    "title": "Payroll",
-    "description": "Process employee salaries",
-    "icon": "fluent:wallet-24-regular",
-    "link": "/app/finance/payroll",
-    "button": "Get Started"
-  },
-  {
-    "title": "Budget",
-    "description": "Financial planning",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/finance/budget",
-    "button": "Get Started"
-  },
-  {
-    "title": "Tax",
-    "description": "Manage tax compliance",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/finance/tax",
-    "button": "Get Started"
-  }
-];
-
-
 const data = [
-{
-    "mainHeading": "Get Smart with Your Finances",
-    "subtext": "Simplify finance management, enhance compliance, and drive smarter decisions.",
+  {
+    "mainHeading": "Supercharge Your Sales",
+    "subtext": "Boost sales effortlessly with our AI-driven tools, designed to skyrocket conversions.",
     "headingButtons": [
-        {
+      {
+        "text": "Get Started",
+        "link": "/contact"
+      },
+      {
+        "text": "View Pricing",
+        "link": "/pricing"
+      }
+    ],
+    "featureBlocks": [
+      {
+        "heading": "CRM That Grows Revenue",
+        "title": "Customer Data, Optimized",
+        "description": "Our CRM doesn't just store data—it turns it into sales opportunities with actionable insights and predictive analytics.",
+        "bulletPoints": [
+          "Real-time lifecycle tracking increases retention rates",
+          "Proactive lead management boosts conversion",
+          "Forecasting tools that predict revenue trends"
+        ],
+        "buttons": [
+          {
             "text": "Get Started",
             "link": "/contact"
-        },
-        {
-            "text": "View pricing",
+          },
+          {
+            "text": "View Pricing",
             "link": "/pricing"
-        }
-    ],
-    "sectionHeading": "Financial Services Reimagined",
-    "offering": {
-        "title": "AI-Powered Financial Solutions",
-        "subtext": "Craft personalized financial journeys leveraging real-time data, analytics, and seamless integrations."
-    },
-    "valueBlocks": [
-    {
-        "heading": "Empress OS",
-        "title": "Simplify Coordination",
-        "description": "Centralize financial data, ensure regulatory compliance, and elevate operational workflows."
-    },
-    {
-        "heading": "Empress Chat",
-        "title": "Build Client Relationships",
-        "description": "Ensure rapid responses and optimize both internal and client-facing with compliance, tailored to drive financial outcomes."
-    },
-    {
-        "heading": "Empress Insights",
-        "title": "Boost Financial Outcomes",
-        "description": "Access real-time actionable analytics to understand client behaviors to optimize performance."
-    }
-],
-    "featureBlocks": [
-    {
-  "heading": "OS for Financial",
-  "title": "Transform Financial Operations & Collaboration",
-  "description": "Leverage Empress OS to redefine how financial services handle information, drive team synergy, and optimize intricate workflows for unmatched efficiency and compliance.",
-  "bulletPoints": [
-"Consolidate financial data for quick, secure retrieval",
-"Collaborate easily while complying with regulations",
-"Simplify financial tasks for better service"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Chat for Finance",
-  "title": "Revolutionize Financial Communication",
-  "description": "Empress Chat seamlessly integrates with Empress OS, enabling efficient communication that caters to the unique demands of the financial sector, from internal collaboration to client engagement.",
-  "bulletPoints": [
-  "Provide immediate, personalized financial responses",
-"Maintain secure, compliant data communication",
-"Enhance client relations with engagement and insights"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
-{
-  "heading": "Insights for Finance",
-  "title": "Data-Driven Financial Performance",
-  "description": "Equip your financial firm with the advanced analytics and intuitive dashboards crucial for agile decision-making in a dynamic financial landscape.",
-  "bulletPoints": [
-  "Simplify financial analysis for strategic action",
-"Gain immediate client insights for proactive service",
-"Refine strategies with advanced performance metrics"
-  ],
-  "buttons": [
-    {
-      "text": "Get Started",
-      "link": "/contact"
-    },
-    {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-  ]
-},
+          }
+        ]
+      },
+      {
+        "heading": "Analytics That Inform Strategy",
+        "title": "Strategic Insights, Better Decisions",
+        "description": "Harness the power of your data with customizable analytics that deliver strategic insights and clear action items.",
+        "bulletPoints": [
+          "On-demand insights for instant decision-making",
+          "Tailored reporting that aligns with sales targets",
+          "In-depth market analysis for competitive advantage"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      },
+      {
+        "heading": "Automation That Scales",
+        "title": "Efficiency at Scale",
+        "description": "Empower your team with sales automation that scales with your business, ensuring a consistent and personalized customer journey.",
+        "bulletPoints": [
+          "Reduce manual entry with task automation",
+          "Workflow customization that adapts to your sales strategy",
+          "Smart scheduling that increases lead engagement"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
     "getStartedSection": {
-      "badge": "Additional Features",
-      "title": "Optimize Finances with Empress",
-      "description": "Manage your finances effectively with the essential tools for financial control."
+      "badge": "Get Started Today",
+      "title": "Start Selling with Empress",
+      "description": "Step into the future of sales with a suite designed to deliver results."
     },
-    "featureHeading": "Empress for Finances",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "A suite crafted meticulously for the evolving financial landscape.",
+    "featureHeading": "Sell with Empress",
+    "featureTitle": "Level Up Your Sales",
+    "featureAssurance": "Guaranteed satisfaction with 24/7 support — we're always here for your sales needs."
   }
 ];
+
 
 const features = [
   {
     "title": "Streamline",
-    "description": "Efficient finance management",
+    "description": "Enhance sales efficiency",
     "icon": "fluent:flash-24-regular",
     "link": "/features/streamline"
   },
   {
     "title": "Analyze",
-    "description": "Financial data insights",
+    "description": "Understand customer trends",
     "icon": "fluent:cellular-data-1-24-regular",
     "link": "/features/analyze"
   },
   {
     "title": "Automate",
-    "description": "Simplify financial tasks",
+    "description": "Automate sales processes",
     "icon": "fluent:bot-24-regular",
     "link": "/features/automate"
   },
   {
     "title": "Permission",
-    "description": "Secure financial access",
+    "description": "Manage sales access",
     "icon": "fluent:lock-24-regular",
     "link": "/features/permission"
   },
   {
     "title": "Chat",
-    "description": "Client communication ease",
+    "description": "Engage with prospects",
     "icon": "fluent:chat-multiple-24-regular",
     "link": "/features/chat"
   },
   {
     "title": "Forecast",
-    "description": "Budget trend prediction",
+    "description": "Anticipate sales trends",
     "icon": "fluent:weather-sunny-low-24-regular",
     "link": "/features/forecast"
   },
   {
     "title": "Collaborate",
-    "description": "Team financial planning",
+    "description": "Coordinate sales teams",
     "icon": "fluent:people-team-24-regular",
     "link": "/features/collaborate"
   },
   {
     "title": "Integrate",
-    "description": "Merge financial systems",
+    "description": "Sync sales tools",
     "icon": "fluent:plug-connected-24-regular",
     "link": "/features/integrate"
   }
@@ -244,42 +177,96 @@ const features = [
 
 
 
-const faq = [
+
+
+const apps = [
   {
-    question: "How does Empress OS centralize financial information?",
-    answer: "Empress OS creates a centralized hub for all your financial data, ensuring easy and secure access while maintaining regulatory compliance and elevating operational workflows."
+    "title": "CRM",
+    "description": "Customer relationship management",
+    "icon": "fluent:people-add-24-regular",
+    "link": "/app/sell/crm",
+    "button": "Start Selling",
+    "color": "indigo"
   },
   {
-    question: "What client relationship tools does Empress offer for financial services?",
-    answer: "Empress Chat delivers rapid, compliant, and personalized communication options tailored to financial services, optimizing client engagement and satisfaction."
+    "title": "Quote",
+    "description": "Generate customer quotes",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/sell/quote",
+    "button": "Start Selling",
+    "color": "indigo"
   },
   {
-    question: "Can Empress Insights enhance my firm's financial performance?",
-    answer: "Yes, Empress Insights provides real-time analytics and dashboards to dissect client behaviors and engagement patterns, enabling data-driven strategies that boost financial outcomes."
+    "title": "Email",
+    "description": "Targeted email campaigns ",
+    "icon": "fluent:mail-copy-24-regular",
+    "link": "/app/sell/email",
+    "button": "Start Selling",
+    "color": "indigo"
   },
   {
-    question: "How does Empress ensure compliance in financial operations?",
-    answer: "Empress prioritizes compliance by streamlining operations through secure platforms and communication channels that adhere to regulatory standards."
+    "title": "Point of Sale",
+    "description": "Retail transaction processing",
+    "icon": "fluent:payment-24-regular",
+    "link": "/app/sell/pos",
+    "button": "Start Selling",
+    "color": "indigo"
   },
   {
-    question: "What makes Empress a suitable choice for collaboration?",
-    answer: "Empress fosters seamless collaboration within financial services by integrating a secure and compliant environment that promotes teamwork and enhances service delivery."
+    "title": "Subscription",
+    "description": "Manage recurring payments",
+    "icon": "fluent:add-circle-24-regular",
+    "link": "/app/sell/subscription",
+    "button": "Start Selling",
+    "color": "indigo"
   },
   {
-    question: "How does Empress integrate with existing financial software?",
-    answer: "Empress seamlessly integrates with existing financial platforms, simplifying tracking and decision-making while ensuring data integrity and security."
-  },
-  {
-    question: "What advantages does Empress offer for designing customer journeys?",
-    answer: "Empress provides design tools to create intuitive financial journeys for clients, ensuring meaningful interactions from portals to chat histories."
+    "title": "Rental",
+    "description": "Equipment leasing solutions",
+    "icon": "fluent:box-arrow-left-24-regular",
+    "link": "/app/sell/rental",
+    "button": "Start Selling",
+    "color": "indigo"
   }
 ];
+
+const faq = [
+  {
+    "question": "What sets Empress Sales Suite apart in sales performance?",
+    "answer": "Empress Sales Suite is AI-driven, offering tailored solutions that enhance sales efficiency, automate processes, and provide actionable insights to skyrocket conversion rates and shorten sales cycles."
+  },
+  {
+    "question": "Can Empress integrate with my existing sales and marketing tools?",
+    "answer": "Absolutely. Empress is designed for intuitive integration, connecting seamlessly with your current CRM, email, and campaign management tools to create a synergistic sales process."
+  },
+  {
+    "question": "How does the Empress CRM help in growing revenue?",
+    "answer": "Empress CRM goes beyond data storage, transforming customer information into sales opportunities with features like real-time lifecycle tracking and predictive analytics for improved lead management and forecasting."
+  },
+  {
+    "question": "What type of support does Empress provide?",
+    "answer": "We offer a satisfaction guarantee backed by 24/7 support to ensure that your sales operations are uninterrupted and consistently supported for optimal performance."
+  },
+  {
+    "question": "How does Empress automate the sales process?",
+    "answer": "Empress automates your sales process by reducing manual data entry, customizing workflows to your strategy, and smart scheduling to enhance lead engagement and follow-ups."
+  },
+  {
+    "question": "Can Empress manage transactions and subscriptions?",
+    "answer": "Yes, Empress includes robust features for retail point of sale transaction processing and subscription management, streamlining payments and recurring revenue models."
+  },
+  {
+    "question": "What resources are available to get started with Empress?",
+    "answer": "We provide comprehensive onboarding resources, including detailed documentation, training modules, and customer support to help you start selling with Empress effortlessly."
+  }
+];
+
+
 
 
 const featureBlocks = data[0].featureBlocks;
 
 ---
-
 
 <Layout title="Build" footerMargin={false}>
   <div class="overflow-x-clip mt-20">
@@ -296,22 +283,25 @@ const featureBlocks = data[0].featureBlocks;
           {data[0].subtext}
         </p>
       </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-10">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
           apps.map((item) => (
-            <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
-              <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="32" />
+            <a href={item.link} 
+               class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+              <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                  {/* Use the original icon coloring method */}
+                  <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+                </div>
+                <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                  <h3 class="font-semibold text-md">{item.title}</h3>
+                  <p class="text-slate-500">{item.description}</p>
+                </div>
               </div>
-              <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
-              <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
-              <a href={item.link} class="mt-6 inline-block w-3/4 px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);">
-                {item.button}
-              </a>
-            </div>
+            </a>
           ))
         }
-      </div>
+      </div> 
       
     </div>
 

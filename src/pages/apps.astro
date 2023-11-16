@@ -68,317 +68,386 @@ import VoIP from "../assets/apps/voip.svg";
 
 import Link from "@components/ui/link.astro";
 
-const BuildApps = [
-{
-    "title": "Website",
-    "description": "Create business websites",
-    "icon": "fluent:phone-24-regular",
-    "link": "/app/build/website"
-  },
-  {
-    "title": "Store",
-    "description": "Online store setup",
-    "icon": "fluent:cart-24-regular",
-    "link": "/app/build/store"
-  },
-  {
-    "title": "Blog",
-    "description": "Share engaging content",
-    "icon": "fluent:textbox-align-top-24-regular",
-    "link": "/app/build/blog"
-  },
-  {
-    "title": "Forum",
-    "description": "Community discussion platform",
-    "icon": "fluent:chat-multiple-24-regular",
-    "link": "/app/build/forum"
-  },
-  {
-    "title": "Documentation",
-    "description": "Technical product support",
-    "icon": "fluent:chat-24-regular",
-    "link": "/app/build/documentation"
-  },
-  {
-    "title": "Course",
-    "description": "Online learning platform",
-    "icon": "fluent:food-apple-24-regular",
-    "link": "/app/build/course"
-  },
-];
-
-const SalesApps = [
-{
-    "title": "CRM",
-    "description": "Customer relationship management",
-    "icon": "fluent:people-add-24-regular",
-    "link": "/app/sell/crm"
-  },
-  {
-    "title": "Quote",
-    "description": "Generate customer quotes",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/sell/quote"
-  },
-  {
-    "title": "Email",
-    "description": "Targeted email campaigns ",
-    "icon": "fluent:mail-copy-24-regular",
-    "link": "/app/sell/email"
-  },
-  {
-    "title": "Point of Sale",
-    "description": "Retail transaction processing",
-    "icon": "fluent:payment-24-regular",
-    "link": "/app/sell/pos"
-  },
-  {
-    "title": "Subscription",
-    "description": "Manage recurring payments",
-    "icon": "fluent:add-circle-24-regular",
-    "link": "/app/sell/subscription"
-  },
-  {
-    "title": "Rental",
-    "description": "Equipment leasing solutions",
-    "icon": "fluent:box-arrow-left-24-regular",
-    "link": "/app/sell/rental"
-  }
-];
-
-const FinanceApps = [
+const Finances = [
 {
     "title": "Account",
-    "description": "Manage financial transactions",
+    "description": "Manage Financial Flow",
     "icon": "fluent:money-24-regular",
-    "link": "/app/finance/account"
-  },
-  {
-    "title": "Expense",
-    "description": "Track business spending",
-    "icon": "fluent:receipt-24-regular",
-    "link": "/app/finance/expense"
+    "link": "/app/finances/account",
+    "color": "indigo"
   },
   {
     "title": "Invoice",
-    "description": "Create and manage invoices",
+    "description": "Simplify Invoice Management",
+    "icon": "fluent:receipt-24-regular",
+    "link": "/app/finances/expense",
+    "color": "indigo"
+  },
+  {
+    "title": "Expense",
+    "description": "Track Company Spending",
     "icon": "fluent:document-24-regular",
-    "link": "/app/finance/invoice"
-  },
-  {
-    "title": "Payroll",
-    "description": "Process employee salaries",
-    "icon": "fluent:wallet-24-regular",
-    "link": "/app/finance/payroll"
-  },
-  {
-    "title": "Budget",
-    "description": "Financial planning",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/finance/budget"
+    "link": "/app/finances/invoice",
+    "color": "indigo"
   },
   {
     "title": "Tax",
-    "description": "Manage tax compliance",
+    "description": "Ensure Tax Compliance",
+    "icon": "fluent:wallet-24-regular",
+    "link": "/app/finances/payroll",
+    "color": "indigo"
+  },
+  {
+    "title": "Budget",
+    "description": "Optimize Resource Allocation",
     "icon": "fluent:money-24-regular",
-    "link": "/app/finance/tax"
+    "link": "/app/finances/budget",
+    "color": "indigo"
+  },
+  {
+    "title": "Contracts",
+    "description": "Process Contracts Efficiently",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/finances/tax",
+    "color": "indigo"
   }
 ];
 
-const InventoryManufacturingApps = [
+const Sales = [
 {
-    "title": "Stock",
-    "description": "Inventory tracking system",
-    "icon": "fluent:tray-item-add-24-regular",
-    "link": "/app/produce/stock"
+    "title": "CRM",
+    "description": "Enhance Customer Relationships",
+    "icon": "fluent:people-add-24-regular",
+    "link": "/app/sales/crm",
+    "color": "indigo"
   },
   {
-    "title": "Manufacture",
-    "description": "Production planning control",
+    "title": "Fufillment",
+    "description": "Streamline Order Processing",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/sales/fulfillment",
+    "color": "indigo"
+  },
+  {
+    "title": "Invoicing",
+    "description": "Efficient Billing System",
+    "icon": "fluent:mail-copy-24-regular",
+    "link": "/app/sales/invoicing",
+    "color": "indigo"
+  },
+  {
+    "title": "Quotes",
+    "description": "Generate Quick Estimates",
+    "icon": "fluent:payment-24-regular",
+    "link": "/app/sales/quotes",
+    "color": "indigo"
+  },
+  {
+    "title": "Point of Sale",
+    "description": "Simplify Retail Transactions",
+    "icon": "fluent:add-circle-24-regular",
+    "link": "/app/sales/pos",
+    "color": "indigo"
+  },
+  {
+    "title": "Rentals",
+    "description": "Manage Rental Operations",
+    "icon": "fluent:box-arrow-left-24-regular",
+    "link": "/app/sales/rentals",
+    "color": "indigo"
+  }
+];
+
+const Product = [
+{
+    "title": "Inventory",
+    "description": "Track Stock Accurately",
+    "icon": "fluent:tray-item-add-24-regular",
+    "link": "/app/product/inventory",
+    "color": "indigo"
+  },
+  {
+    "title": "Procurement",
+    "description": "Streamline Purchasing Process",
     "icon": "fluent:manufacturer-24-regular",
-    "link": "/app/produce/manufacture"
+    "link": "/app/product/procurement",
+    "color": "indigo"
+  },
+  {
+    "title": "Manufacturing",
+    "description": "Efficient Production Management",
+    "icon": "fluent:production-24-regular",
+    "link": "/app/product/manufacturing",
+    "color": "indigo"
   },
   {
     "title": "Lifecycle",
-    "description": "Product lifecycle management",
-    "icon": "fluent:production-24-regular",
-    "link": "/app/produce/lifecycle"
-  },
-  {
-    "title": "Purchase",
-    "description": "Procurement management system",
+    "description": "Manage Product Lifecycle",
     "icon": "fluent:shopping-bag-24-regular",
-    "link": "/app/produce/purchase"
-  },
-  {
-    "title": "Maintenance",
-    "description": "Equipment upkeep scheduler",
-    "icon": "fluent:wrench-screwdriver-24-regular",
-    "link": "/app/produce/maintenance"
+    "link": "/app/product/lifecycle",
+    "color": "indigo"
   },
   {
     "title": "Quality",
-    "description": "Quality assurance protocols",
+    "description": "Ensure Quality Standards",
+    "icon": "fluent:wrench-screwdriver-24-regular",
+    "link": "/app/product/quality",
+    "color": "indigo"
+  },
+  {
+    "title": "Maintenance",
+    "description": "Streamline Asset Upkeep",
     "icon": "fluent:checkmark-starburst-24-regular",
-    "link": "/app/produce/quality"
+    "link": "/app/product/maintenance",
+    "color": "indigo"
   }
 ];
 
-const HumanResourcesApps = [
+const Operations = [
 {
-    "title": "Team",
-    "description": "Staff management hub",
-    "icon": "fluent:people-team-24-regular",
-    "link": "/app/staff/team"
+    "title": "Purchase Orders",
+    "description": "Manage Orders Effectively",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/operations/purchase-orders",
+    "color": "indigo"
   },
   {
-    "title": "Recruit",
-    "description": "Streamline hiring process",
-    "icon": "fluent:people-team-add-24-regular",
-    "link": "/app/staff/recruit"
+    "title": "Production",
+    "description": "Enhance Manufacturing Process",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/operations/production",
+    "color": "indigo"
   },
   {
-    "title": "Timesheet",
-    "description": "Work hours tracking",
-    "icon": "fluent:beach-24-regular",
-    "link": "/app/staff/timesheet"
+    "title": "Logistics",
+    "description": "Streamline Distribution Flow",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/operations/logistics",
+    "color": "indigo"
   },
   {
-    "title": "Review",
-    "description": "Performance review tool",
-    "icon": "fluent:star-emphasis-24-regular",
-    "link": "/app/staff/review"
+    "title": "Distribution",
+    "description": "Efficiently Distribute Products",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/operations/distribution",
+    "color": "indigo"
   },
   {
-    "title": "Referral",
-    "description": "Employee referral program",
-    "icon": "fluent:comment-arrow-left-24-regular",
-    "link": "/app/staff/referral"
+    "title": "Facilities",
+    "description": "Manage Facility Operations",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/operations/facilities",
+    "color": "indigo"
   },
   {
-    "title": "Assets",
-    "description": "Manage company resources",
-    "icon": "fluent:vehicle-bus-24-regular",
-    "link": "/app/staff/assets"
-  }
-];
+    "title": "Approvals",
+    "description": "Streamline Approval Process",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/operations/approvals",
+    "color": "indigo"
+  },
+]
 
-const MarketingApps = [
+const Marketing = [
 {
-    "title": "Content",
-    "description": "Targeted content creation",
+    "title": "Campaign",
+    "description": "Optimize Campaign Execution",
     "icon": "fluent:bot-24-regular",
-    "link": "/app/market/content"
+    "link": "/app/marketing/campaign",
+    "color": "indigo"
+  },
+  {
+    "title": "Content",
+    "description": "Manage Content Effectively",
+    "icon": "fluent:share-android-24-regular",
+    "link": "/app/marketing/content",
+    "color": "indigo"
   },
   {
     "title": "Social",
-    "description": "Social media engagement",
-    "icon": "fluent:share-android-24-regular",
-    "link": "/app/market/social"
+    "description": "Enhance Social Presence",
+    "icon": "fluent:calendar-24-regular",
+    "link": "/app/marketing/social",
+    "color": "indigo"
   },
   {
-    "title": "Event",
-    "description": "Organize promotional events",
-    "icon": "fluent:calendar-24-regular",
-    "link": "/app/market/event"
+    "title": "Events",
+    "description": "Organize Events Efficiently",
+    "icon": "fluent:mail-add-24-regular",
+    "link": "/app/marketing/events",
+    "color": "indigo"
   },
   {
     "title": "Email",
-    "description": "Targeted email campaigns",
-    "icon": "fluent:mail-add-24-regular",
-    "link": "/app/market/email"
-  },
-  {
-    "title": "SMS",
-    "description": "Direct text outreach",
+    "description": "Streamline Email Campaigns",
     "icon": "fluent:phone-add-24-regular",
-    "link": "/app/market/sms"
+    "link": "/app/marketing/email",
+    "color": "indigo"
   },
   {
-    "title": "Survey",
-    "description": "Gather customer feedback",
+    "title": "Surveys",
+    "description": "Collect Customer Feedback",
     "icon": "fluent:form-new-24-regular",
-    "link": "/app/market/survey"
+    "link": "/app/marketing/surveys",
+    "color": "indigo"
   }
 ];
 
-const SupportApps = [
+const Talent = [
+{
+    "title": "Recruit",
+    "description": "Optimize Talent Acquisition",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/app/talent/recruit",
+    "color": "indigo"
+  },
+  {
+    "title": "Payroll",
+    "description": "Efficient Payroll Management",
+    "icon": "fluent:people-team-add-24-regular",
+    "link": "/app/talent/payroll",
+    "color": "indigo"
+  },
+  {
+    "title": "Performance",
+    "description": "Enhance Employee Performance",
+    "icon": "fluent:beach-24-regular",
+    "link": "/app/talent/performance",
+    "color": "indigo"
+  },
+  {
+    "title": "Training",
+    "description": "Streamline Staff Training",
+    "icon": "fluent:star-emphasis-24-regular",
+    "link": "/app/talent/training",
+    "color": "indigo"
+  },
+  {
+    "title": "Directory",
+    "description": "Manage Employee Directory",
+    "icon": "fluent:comment-arrow-left-24-regular",
+    "link": "/app/talent/directory",
+    "color": "indigo"
+  },
+  {
+    "title": "Assets",
+    "description": "Optimize Asset Management",
+    "icon": "fluent:vehicle-bus-24-regular",
+    "link": "/app/talent/assets",
+    "color": "indigo"
+  }
+];
+
+const Experience = [
 {
     "title": "Helpdesk",
-    "description": "Support ticket system",
+    "description": "Streamline Support Queries",
     "icon": "fluent:question-circle-24-regular",
-    "link": "/app/support/help-desk"
+    "link": "/app/experience/help-desk",
+    "color": "indigo"
+  },
+  {
+    "title": "Live Chat",
+    "description": "Engage Customers Instantly",
+    "icon": "fluent:clock-24-regular",
+    "link": "/app/experience/live-chat",
+    "color": "indigo"
   },
   {
     "title": "Feedback",
-    "description": "Collect and analyze feedback",
-    "icon": "fluent:clock-24-regular",
-    "link": "/app/support/feedback"
-  },
-  {
-    "title": "Knowledge Base",
-    "description": "Provide self-service support",
+    "description": "Gather Valuable Feedback",
     "icon": "fluent:gantt-chart-24-regular",
-    "link": "/app/support/knowledge-base"
+    "link": "/app/experience/feedback",
+    "color": "indigo"
   },
   {
-    "title": "Chatbot",
-    "description": "Real-time support",
+    "title": "Forum",
+    "description": "Foster Community Engagement",
     "icon": "fluent:tasks-app-24-regular",
-    "link": "/app/support/chatbot"
+    "link": "/app/experience/forum",
+    "color": "indigo"
+  },
+  {
+    "title": "Loyalty",
+    "description": "Build Customer Loyalty",
+    "icon": "fluent:calendar-24-regular",
+    "link": "/app/experience/loyalty",
+    "color": "indigo"
   },
   {
     "title": "Appointments",
-    "description": "Schedule client meetings",
-    "icon": "fluent:calendar-24-regular",
-    "link": "/app/support/appointments"
-  },
-  {
-    "title": "Field Service",
-    "description": "On-site support management",
+    "description": "Manage Customer Appointments",
     "icon": "fluent:service-bell-24-regular",
-    "link": "/app/support/field-service"
+    "link": "/app/experience/appointments",
+    "color": "indigo"
   },
 ];
 
-const ProductivityApps = [
+const Technology = [
 {
-    "title": "Plan",
-    "description": "Task planning and organization",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/plan"
+    "title": "Insights",
+    "description": "Unlock Data Insights",
+    "icon": "fluent:phone-24-regular",
+    "link": "/app/build/website",
+    "color": "indigo"
   },
   {
-    "title": "Track",
-    "description": "Project analysis and reporting",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/track"
+    "title": "Flows",
+    "description": "Optimize Your Workflow",
+    "icon": "fluent:cart-24-regular",
+    "link": "/app/build/store",
+    "color": "indigo"
   },
   {
-    "title": "Collaborate",
-    "description": "Connect, communicate, and update",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/collaborate"
+    "title": "Zaps",
+    "description": "Automate Routine Tasks",
+    "icon": "fluent:textbox-align-top-24-regular",
+    "link": "/app/build/blog",
+    "color": "indigo"
   },
   {
-    "title": "Approve",
-    "description": "Permissions and approvals",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/approve"
+    "title": "Assistants",
+    "description": "Expert AI Chat Support",
+    "icon": "fluent:chat-multiple-24-regular",
+    "link": "/app/build/forum",
+    "color": "indigo"
   },
   {
-    "title": "Strategize",
-    "description": "Manage and support users",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/strategize"
+    "title": "Forecast",
+    "description": "Anticipate Future Trends",
+    "icon": "fluent:chat-24-regular",
+    "link": "/app/build/documentation",
+    "color": "indigo"
   },
   {
-    "title": "Optimize",
-    "description": "Scale operations efficiently",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/optimize"
+    "title": "Bridge",
+    "description": "Connect Teams and Organizations",
+    "icon": "fluent:food-apple-24-regular",
+    "link": "/app/build/course",
+    "color": "indigo"
   },
-]
+  {
+    "title": "Integrations",
+    "description": "Seamless Tool Integration",
+    "icon": "fluent:food-apple-24-regular",
+    "link": "/app/build/course",
+    "color": "indigo"
+  },
+  {
+    "title": "Administration",
+    "description": "Control Access & Visibility",
+    "icon": "fluent:food-apple-24-regular",
+    "link": "/app/build/course",
+    "color": "indigo"
+  },
+  {
+    "title": "Other",
+    "description": "Customize Your Experience",
+    "icon": "fluent:food-apple-24-regular",
+    "link": "/app/build/course",
+    "color": "indigo"
+  }
+];
 
 ---
 
@@ -391,425 +460,125 @@ const ProductivityApps = [
       </Fragment>
     </Sectionhead>
 
-    <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+    
 
-    <!-- Websites -->
+      <!-- Finances Apps -->
 
-    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-4 text-center">
-      Build Your <span class="text-indigo-600">Online Presence</span>
+      <h2 class="text-3xl lg:text-3xl font-bold lg:tracking-tight mt-20 text-center">
+        Simplify Your <span class="text-indigo-600">Finances</span>
+      </h2>
+  
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
+        {
+          Finances.map((item) => (
+            <a href={item.link} 
+               class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+              <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                  {/* Use the original icon coloring method */}
+                  <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+                </div>
+                <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                  <h3 class="font-semibold text-md">{item.title}</h3>
+                  <p class="text-slate-500">{item.description}</p>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>   
+  
+      <!-- <div class="flex justify-center items-center mt-20"> 
+        <Link href="/app/finance" size="sm" class="inline-flex items-center justify-center group gap-px">
+          <span>Finance with Empress</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+            <path
+              fill-rule="evenodd"
+              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </Link>
+      </div> -->
+      
+      <!-- <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div> -->
+
+       <!-- Sales Apps -->
+
+       <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+       <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-20 text-center">
+        Boost Your <span class="text-indigo-600">Sales</span>
+      </h2>
+  
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
+        {
+          Sales.map((item) => (
+            <a href={item.link} 
+               class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+              <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                  {/* Use the original icon coloring method */}
+                  <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+                </div>
+                <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                  <h3 class="font-semibold text-md">{item.title}</h3>
+                  <p class="text-slate-500">{item.description}</p>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>   
+  
+      <!-- <div class="flex justify-center items-center mt-20"> 
+        <Link href="/app/sell" size="sm" class="inline-flex items-center justify-center group gap-px">
+          <span>Sell with Empress</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+            <path
+              fill-rule="evenodd"
+              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </Link>
+      </div> -->
+
+      <!-- Inventory & Manufacturing Apps -->
+
+      <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+    <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-20 text-center">
+      Streamline Your <span class="text-indigo-600">Production</span>
     </h2>
 
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
       {
-        BuildApps.map((item) => (
-          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="24" />
+        Product.map((item) => (
+          <a href={item.link} 
+             class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+            <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+              <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                {/* Use the original icon coloring method */}
+                <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
               </div>
-              <div>
-                <h3 class="font-semibold text-lg">{item.title}</h3>
-                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+              <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                <h3 class="font-semibold text-md">{item.title}</h3>
+                <p class="text-slate-500">{item.description}</p>
               </div>
             </div>
           </a>
         ))
       }
-    </div>
+    </div>    
 
-    <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
-      <Link href="/app/build" size="sm" class="inline-flex items-center justify-center group gap-px">
-        <span>Build with Empress</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-          <path
-            fill-rule="evenodd"
-            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </Link>
-    </div>
-
-    
-    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
-      {
-      WebsiteApps.map((item) => (
-        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
-              <Picture
-                src={item.icon}
-                alt={`${item.name} icon`}
-                formats={["avif", "webp", "svg"]}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                widths={[240, 540, 720]}
-                loading="lazy"
-                fetchpriority="high"
-                class="w-8 h-8"
-              />
-            </div>
-    
-            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
-            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-                {item.description}
-            </p>
-    
-            <div class="mt-3 text-center">
-                <a
-                href={item.link}
-                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                    View App
-                    <span class="absolute inset-0" />
-                </a>
-            </div>
-        </div>
-      ))
-      }
-    </div>     -->
-
-        <!-- Sales Apps -->
-
-        <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
-          Boost Your <span class="text-indigo-600">Sales Performance</span>
-        </h2>
-    
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-          {
-            SalesApps.map((item) => (
-              <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-                  <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                    <Icon class="text-indigo-500" name={item.icon} size="24" />
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-lg">{item.title}</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div>
-    
-        <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
-          <Link href="/app/sell" size="sm" class="inline-flex items-center justify-center group gap-px">
-            <span>Sell with Empress</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
-        </div>
-
-        <!-- Marketing Apps -->
-
-        <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
-          Amplify Your <span class="text-indigo-600">Marketing Impact</span>
-        </h2>
-    
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-          {
-            MarketingApps.map((item) => (
-              <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-                  <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                    <Icon class="text-indigo-500" name={item.icon} size="24" />
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-lg">{item.title}</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div>
-    
-    
-        <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
-          <Link href="/app/market" size="sm" class="inline-flex items-center justify-center group gap-px">
-            <span>Market with Empress</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
-        </div>
-
-
-    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
-      {
-      SalesApps.map((item) => (
-        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
-              <Picture
-                src={item.icon}
-                alt={`${item.name} icon`}
-                formats={["avif", "webp", "svg"]}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                widths={[240, 540, 720]}
-                loading="lazy"
-                fetchpriority="high"
-                class="w-8 h-8"
-              />
-            </div>
-    
-            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
-            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-                {item.description}
-            </p>
-    
-            <div class="mt-3 text-center">
-                <a
-                href={item.link}
-                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                    View App
-                    <span class="absolute inset-0" />
-                </a>
-            </div>
-        </div>
-      ))
-      }
-    </div>   -->
-
-        <!-- Services -->
-
-        <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
-          Elevate Your <span class="text-indigo-600">Service Delivery</span>
-        </h2>
-    
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-          {
-            SupportApps.map((item) => (
-              <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-                  <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                    <Icon class="text-indigo-500" name={item.icon} size="24" />
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-lg">{item.title}</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div>
-    
-    
-        <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
-          <Link href="/app/support" size="sm" class="inline-flex items-center justify-center group gap-px">
-            <span>Support with Empress</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
-        </div>
-
-               <!-- Productivity Apps -->
-
-               <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
-                Enhance Your <span class="text-indigo-600">Productivity</span>
-              </h2>
-    
-              <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 mb-30 gap-8 md:gap-16">
-                {
-                  ProductivityApps.map((item) => (
-                    <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                      <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-                        <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                          <Icon class="text-indigo-500" name={item.icon} size="24" />
-                        </div>
-                        <div>
-                          <h3 class="font-semibold text-lg">{item.title}</h3>
-                          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-                        </div>
-                      </div>
-                    </a>
-                  ))
-                }
-              </div>
-    
-    
-          <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
-            <Link href="/app/manage" size="sm" class="inline-flex items-center justify-center group gap-px">
-              <span>Manage with Empress</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg" 
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-                <path
-                  fill-rule="evenodd"
-                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </Link>
-          </div>
-    
-        
-
-    <!-- Finance Apps -->
-
-    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
-      Streamline Your <span class="text-indigo-600">Financial Operations</span>
-    </h2>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-      {
-        FinanceApps.map((item) => (
-          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="24" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-lg">{item.title}</h3>
-                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-
-    <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
-      <Link href="/app/finance" size="sm" class="inline-flex items-center justify-center group gap-px">
-        <span>Finance with Empress</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-          <path
-            fill-rule="evenodd"
-            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </Link>
-    </div>
-
-    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
-      {
-      FinanceApps.map((item) => (
-        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
-              <Picture
-                src={item.icon}
-                alt={`${item.name} icon`}
-                formats={["avif", "webp", "svg"]}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                widths={[240, 540, 720]}
-                loading="lazy"
-                fetchpriority="high"
-                class="w-8 h-8"
-              />
-            </div>
-    
-            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
-            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-                {item.description}
-            </p>
-    
-            <div class="mt-3 text-center">
-                <a
-                href={item.link}
-                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                    View App
-                    <span class="absolute inset-0" />
-                </a>
-            </div>
-        </div>
-      ))
-      }
-    </div>   -->
-
-        <!-- Human Resources Apps -->
-
-        <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
-          Empower Your <span class="text-indigo-600">Workforce</span>
-        </h2>
-    
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-          {
-            HumanResourcesApps.map((item) => (
-              <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-                  <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                    <Icon class="text-indigo-500" name={item.icon} size="24" />
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-lg">{item.title}</h3>
-                    <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))
-          }
-        </div>
-    
-        <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
-          <Link href="/app/staff" size="sm" class="inline-flex items-center justify-center group gap-px">
-            <span>Staff with Empress</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
-              <path
-                fill-rule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </Link>
-        </div>
-
-    <!-- Inventory & Manufacturing Apps -->
-
-    <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight mt-20 text-center">
-      Optimize Your <span class="text-indigo-600">Inventory & Production</span>
-    </h2>
-
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-      {
-        InventoryManufacturingApps.map((item) => (
-          <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            <div class="flex flex-col gap-4 items-center group hover:bg-slate-50 hover:shadow-md rounded-lg transition-all md:-m-5 p-5 text-center shadow">
-              <div class="bg-indigo-50 border shadow border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="24" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-lg">{item.title}</h3>
-                <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-
-    <div class="flex justify-center items-center mt-20"> <!-- Full screen height and center content -->
+    <!-- <div class="flex justify-center items-center mt-20"> 
       <Link href="/app/produce" size="sm" class="inline-flex items-center justify-center group gap-px">
         <span>Produce with Empress</span>
         <svg
@@ -823,187 +592,236 @@ const ProductivityApps = [
             clip-rule="evenodd"></path>
         </svg>
       </Link>
-    </div>
-    
-    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
-      {
-      InventoryManufacturingApps.map((item) => (
-        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
-              <Picture
-                src={item.icon}
-                alt={`${item.name} icon`}
-                formats={["avif", "webp", "svg"]}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                widths={[240, 540, 720]}
-                loading="lazy"
-                fetchpriority="high"
-                class="w-8 h-8"
-              />
-            </div>
-    
-            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
-            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-                {item.description}
-            </p>
-    
-            <div class="mt-3 text-center">
-                <a
-                href={item.link}
-                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                    View App
-                    <span class="absolute inset-0" />
-                </a>
-            </div>
-        </div>
-      ))
-      }
-    </div>   -->
+    </div> -->
 
+    <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
-    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
-      {
-      HumanResourcesApps.map((item) => (
-        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
-              <Picture
-                src={item.icon}
-                alt={`${item.name} icon`}
-                formats={["avif", "webp", "svg"]}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                widths={[240, 540, 720]}
-                loading="lazy"
-                fetchpriority="high"
-                class="w-8 h-8"
-              />
-            </div>
-    
-            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
-            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-                {item.description}
-            </p>
-    
-            <div class="mt-3 text-center">
-                <a
-                href={item.link}
-                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                    View App
-                    <span class="absolute inset-0" />
-                </a>
-            </div>
-        </div>
-      ))
-      }
-    </div>   -->
+       <!-- Operations Apps -->
 
-
-    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
-      {
-      MarketingApps.map((item) => (
-        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
-              <Picture
-                src={item.icon}
-                alt={`${item.name} icon`}
-                formats={["avif", "webp", "svg"]}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                widths={[240, 540, 720]}
-                loading="lazy"
-                fetchpriority="high"
-                class="w-8 h-8"
-              />
-            </div>
-    
-            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
-            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-                {item.description}
-            </p>
-    
-            <div class="mt-3 text-center">
-                <a
-                href={item.link}
-                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                    View App
-                    <span class="absolute inset-0" />
-                </a>
-            </div>
-        </div>
-      ))
-      }
-    </div>   -->
-
-
-
-    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
-      {
-      ServicesApps.map((item) => (
-        <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-            <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
-              <Picture
-                src={item.icon}
-                alt={`${item.name} icon`}
-                formats={["avif", "webp", "svg"]}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                widths={[240, 540, 720]}
-                loading="lazy"
-                fetchpriority="high"
-                class="w-8 h-8"
-              />
-            </div>
-    
-            <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
-            <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-                {item.description}
-            </p>
-    
-            <div class="mt-3 text-center">
-                <a
-                href={item.link}
-                class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                    View App
-                    <span class="absolute inset-0" />
-                </a>
-            </div>
-        </div>
-      ))
-      }
-    </div>   -->
-
-
-        <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 my-24 gap-x-10 gap-y-24">
-          {
-          ProductivityApps.map((item) => (
-            <div key={item.name} class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
-                <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white"> 
-                  <Picture
-                    src={item.icon}
-                    alt={`${item.name} icon`}
-                    formats={["avif", "webp", "svg"]}
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    widths={[240, 540, 720]}
-                    loading="lazy"
-                    fetchpriority="high"
-                    class="w-8 h-8"
-                  />
+       <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-20 text-center">
+        Enhance Your <span class="text-indigo-600">Operations</span>
+      </h2>
+   
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
+        {
+          Operations.map((item) => (
+            <a href={item.link} 
+               class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+              <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                  {/* Use the original icon coloring method */}
+                  <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
                 </div>
-        
-                <h3 class="text-lg text-center font-medium mt-4">{item.name}</h3>
-                <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
-                    {item.description}
-                </p>
-        
-                <div class="mt-3 text-center">
-                    <a
-                    href={item.link}
-                    class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
-                        View App
-                        <span class="absolute inset-0" />
-                    </a>
+                <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                  <h3 class="font-semibold text-md">{item.title}</h3>
+                  <p class="text-slate-500">{item.description}</p>
                 </div>
-            </div>
+              </div>
+            </a>
           ))
-          }
-        </div>   -->
+        }
+      </div>    
+   
+   <!-- 
+   <div class="flex justify-center items-center mt-20">
+    <Link href="/app/manage" size="sm" class="inline-flex items-center justify-center group gap-px">
+      <span>Manage with Empress</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+        <path
+          fill-rule="evenodd"
+          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </Link>
+   </div> -->
+
+   <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+     <!-- Marketing Apps -->
+
+     <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-20 text-center">
+      Amplify Your <span class="text-indigo-600">Marketing</span>
+    </h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
+      {
+        Marketing.map((item) => (
+          <a href={item.link} 
+             class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+            <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+              <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                {/* Use the original icon coloring method */}
+                <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+              </div>
+              <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                <h3 class="font-semibold text-md">{item.title}</h3>
+                <p class="text-slate-500">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>   
+
+
+    <!-- <div class="flex justify-center items-center mt-20"> 
+      <Link href="/app/market" size="sm" class="inline-flex items-center justify-center group gap-px">
+        <span>Market with Empress</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+          <path
+            fill-rule="evenodd"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </Link>
+    </div> -->
+
+    <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+
+    <!-- Talent -->
+
+    <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-20 text-center">
+      Empower Your <span class="text-indigo-600">Team</span>
+    </h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
+      {
+        Talent.map((item) => (
+          <a href={item.link} 
+              class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+            <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+              <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                {/* Use the original icon coloring method */}
+                <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+              </div>
+              <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                <h3 class="font-semibold text-md">{item.title}</h3>
+                <p class="text-slate-500">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>    
+
+    <!-- <div class="flex justify-center items-center mt-20"> 
+      <Link href="/app/staff" size="sm" class="inline-flex items-center justify-center group gap-px">
+        <span>Staff with Empress</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+          <path
+            fill-rule="evenodd"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </Link>
+    </div> -->
+
+    <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+
+      <!-- Experience -->
+
+      <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-20 text-center">
+        Elevate Your <span class="text-indigo-600">Services</span>
+      </h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
+        {
+          Experience.map((item) => (
+            <a href={item.link} 
+                class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+              <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                  {/* Use the original icon coloring method */}
+                  <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+                </div>
+                <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                  <h3 class="font-semibold text-md">{item.title}</h3>
+                  <p class="text-slate-500">{item.description}</p>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>    
+
+
+      <!-- <div class="flex justify-center items-center mt-20"> 
+        <Link href="/app/support" size="sm" class="inline-flex items-center justify-center group gap-px">
+          <span>Support with Empress</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+            <path
+              fill-rule="evenodd"
+              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </Link>
+      </div> -->
+
+      <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+      <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
+
+    <!-- Websites -->
+
+    <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-4 text-center">
+      Enhance Your <span class="text-indigo-600">Technology</span>
+    </h2>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
+      {
+        Technology.map((item) => (
+          <a href={item.link} 
+             class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+            <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+              <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                {/* Use the original icon coloring method */}
+                <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+              </div>
+              <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                <h3 class="font-semibold text-md">{item.title}</h3>
+                <p class="text-slate-500">{item.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>    
+      
+<!-- 
+    <div class="flex justify-center items-center mt-20"> 
+      <Link href="/app/build" size="sm" class="inline-flex items-center justify-center group gap-px">
+        <span>Build with Empress</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+          <path
+            fill-rule="evenodd"
+            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </Link>
+    </div> -->
+    <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
         <div class="mt-14 max-w-3xl mx-auto flex flex-col items-center justify-center"></div>
 
   </Container>

@@ -22,8 +22,8 @@ import FeatureImg1 from "../../assets/features/6.png";
 import FeatureImg2 from "../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../assets/employee.jpg";
-import TargetMarketing from "../../assets/features/targeting-audience-for-marketing.svg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import Education from "../../assets/features/education.svg";
 import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
 import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../assets/features/dashboard-development.png";
@@ -37,53 +37,60 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const apps = [
   {
-    "title": "Content",
-    "description": "Targeted content creation",
-    "icon": "fluent:bot-24-regular",
-    "link": "/app/market/content",
-    "button": "Start Marketing"
+    "title": "Team",
+    "description": "Staff management hub",
+    "icon": "fluent:people-team-24-regular",
+    "link": "/app/staff/team",
+    "button": "Grow Your Team",
+    "color": "indigo"
   },
   {
-    "title": "Social",
-    "description": "Social media engagement",
-    "icon": "fluent:share-android-24-regular",
-    "link": "/app/market/social",
-    "button": "Start Marketing"
+    "title": "Recruit",
+    "description": "Streamline hiring process",
+    "icon": "fluent:people-team-add-24-regular",
+    "link": "/app/staff/recruit",
+    "button": "Grow Your Team",
+    "color": "indigo"
   },
   {
-    "title": "Event",
-    "description": "Organize promotional events",
-    "icon": "fluent:calendar-24-regular",
-    "link": "/app/market/event",
-    "button": "Start Marketing"
+    "title": "Timesheet",
+    "description": "Work hours tracking",
+    "icon": "fluent:beach-24-regular",
+    "link": "/app/staff/timesheet",
+    "button": "Grow Your Team",
+    "color": "indigo"
   },
   {
-    "title": "Email",
-    "description": "Targeted email campaigns",
-    "icon": "fluent:mail-add-24-regular",
-    "link": "/app/market/email",
-    "button": "Start Marketing"
+    "title": "Review",
+    "description": "Performance review tool",
+    "icon": "fluent:star-emphasis-24-regular",
+    "link": "/app/staff/review",
+    "button": "Grow Your Team",
+    "color": "indigo"
   },
   {
-    "title": "SMS",
-    "description": "Direct text outreach",
-    "icon": "fluent:phone-add-24-regular",
-    "link": "/app/market/sms",
-    "button": "Start Marketing"
+    "title": "Referral",
+    "description": "Employee referral program",
+    "icon": "fluent:comment-arrow-left-24-regular",
+    "link": "/app/staff/referral",
+    "button": "Grow Your Team",
+    "color": "indigo"
   },
   {
-    "title": "Survey",
-    "description": "Gather customer feedback",
-    "icon": "fluent:form-new-24-regular",
-    "link": "/app/market/survey",
-    "button": "Start Marketing"
+    "title": "Assets",
+    "description": "Manage company resources",
+    "icon": "fluent:vehicle-bus-24-regular",
+    "link": "/app/staff/assets",
+    "button": "Grow Your Team",
+    "color": "indigo"
   }
 ];
 
+
 const data = [
-  {
-    "mainHeading": "Revolutionize Your Marketing",
-    "subtext": "Boost your marketing game with data-driven strategies and seamless communication.",
+{
+    "mainHeading": "Elevate Your Team",
+    "subtext": "Streamline hiring, personalize employee experiences, and optimize processes.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -94,225 +101,192 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empower Your Marketing",
+    "sectionHeading": "Empress for HR",
     "offering": {
-      "title": "Craft Unforgettable Campaigns",
-      "subtext": "Harness the combined power of analytics and communication to deliver marketing that captivates and converts."
+      "title": "Next Generation HR Transformation",
+      "subtext": "Leverage a comprehensive platform to enhance every facet of your HR operations."
     },
     "valueBlocks": [
-      {
-        "heading": "Unified Marketing Platform",
-        "title": "Unify Your Marketing Landscape",
-        "description": "Bring all your marketing initiatives under one roof for streamlined execution and unparalleled synergy."
-      },
-      {
-        "heading": "Engage and Convert",
-        "title": "Personalize Audience Interactions",
-        "description": "Engage your audience with tailored communication that turns prospects into loyal customers."
-      },
-      {
-        "heading": "Actionable Insights",
-        "title": "Drive Informed Marketing",
-        "description": "Leverage analytics to fine-tune your strategies and capture your market effectively."
-      }
-    ],
+    {
+      "heading": "Empress OS",
+      "title": "Unify HR Efforts",
+      "description": "Centralize HR data, boost collaboration across teams, and automate workflows for optimal efficiency."
+    },
+    {
+      "heading": "Empress Chat",
+      "title": "Scale Employee Support",
+      "description": "Boost internal alignment and engage external stakeholders with precision, ensuring scalable operations."
+    },
+    {
+      "heading": "Empress Insights",
+      "title": "Empower HR Decisions",
+      "description": "Align HR strategies with organization goals and optimize workforce productivity with insightful dashboards."
+    }
+  ],
     "featureBlocks": [
-      {
-        "heading": "Seamless Campaign Management",
-        "title": "Streamline Marketing Operations",
-        "description": "Facilitate a seamless flow from planning to execution, ensuring every campaign hits its mark.",
-        "bulletPoints": [
-          "Centralized asset management",
-          "Collaborative real-time editing",
-          "Efficient automated workflows"
-        ],
-        "buttons": [
-          {
-            "text": "Get Started",
-            "link": "/contact"
-          },
-          {
-            "text": "View Pricing",
-            "link": "/pricing"
-          }
+    {
+  "heading": "OS for HR",
+  "title": "Unify, Collaborate, and Simplify HR Processes",
+  "description": "Harness the power of Empress OS to centralize HR information, boost interdepartmental synergy, and craft seamless and automated HR workflows.",
+  "bulletPoints": [
+  "Centralize HR documents on one platform",
+"Enable collaboration across HR and departments",
+"Streamline HR tasks from hiring to exit."
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+{
+  "heading": "Chat for HR",
+  "title": "Streamline Internal and External Communication",
+  "description": "Seamlessly connect Empress OS's robust tools with its users. Experience unmatched efficiency in both internal team interactions and external stakeholder communication.",
+  "bulletPoints": [
+  "Provide immediate, precise answers to frequent questions",
+"Improve communication for faster resolutions",
+"Connect with stakeholders through tailored, clear messaging"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+
+{
+  "heading": "Insights for HR",
+  "title": "Empower HR with Data-Driven Decisions",
+  "description": "Harness the power of insightful dashboards and data-driven recommendations to align HR strategies with organizational goals and enhance workforce productivity.",
+  "bulletPoints": [
+  "Track talent trends, retention, and training success",
+"Refine hiring tactics with data-driven recruitment insights",
+"Enhance engagement and satisfaction through trend analysis"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
         ]
-      },
-      {
-        "heading": "Dynamic Audience Engagement",
-        "title": "Transform Communication",
-        "description": "Adopt a dynamic approach to customer conversations that adapts to their needs and preferences.",
-        "bulletPoints": [
-          "Real-time feedback loops",
-          "AI-enhanced messaging",
-          "Agile team coordination"
-        ],
-        "buttons": [
-          {
-            "text": "Get Started",
-            "link": "/contact"
-          },
-          {
-            "text": "View Pricing",
-            "link": "/pricing"
-          }
-        ]
-      },
-      {
-        "heading": "In-Depth Marketing Analytics",
-        "title": "Cultivate Marketing Excellence",
-        "description": "Access a wealth of data insights that empower you to anticipate market trends and outmaneuver competitors.",
-        "bulletPoints": [
-          "Behavioral campaign analysis",
-          "Real-time performance updates",
-          "Market trend anticipation"
-        ],
-        "buttons": [
-          {
-            "text": "Gain Insights",
-            "link": "/contact"
-          },
-          {
-            "text": "Pricing Details",
-            "link": "/pricing"
-          }
-        ]
-      },
+      }
     ],
     "getStartedSection": {
       "badge": "Additional Features",
-      "title": "Start Marketing with Empress",
-      "description": "Launch your marketing campaigns with the perfect set of tools at your fingertips."
+      "title": "Grow Your Team with Empress",
+      "description": "Manage your team effectively with the essential tools to turn your vision into reality."
     },
-    "featureHeading": "Empress for Marketing",
-    "featureTitle": "Elevate Your Marketing Game",
-    "featureAssurance": "Achieve marketing mastery with Empress—your partner in digital marketing excellence."
+    "featureHeading": "Empress for Staff",
+    "featureTitle": "We're Here to Support You",
+    "featureAssurance": "Guaranteeing transformative and consistent support for all HR initiatives."
   }
 ];
-
 
 const features = [
   {
     "title": "Streamline",
-    "description": "Optimize marketing workflows",
+    "description": "Optimize team operations",
     "icon": "fluent:flash-24-regular",
     "link": "/features/streamline"
   },
   {
     "title": "Analyze",
-    "description": "Deep-dive into marketing analytics",
+    "description": "Understand team dynamics",
     "icon": "fluent:cellular-data-1-24-regular",
     "link": "/features/analyze"
   },
   {
     "title": "Automate",
-    "description": "Automate marketing tasks",
+    "description": "Automate administrative tasks",
     "icon": "fluent:bot-24-regular",
     "link": "/features/automate"
   },
   {
     "title": "Permission",
-    "description": "Manage team permissions",
+    "description": "Manage team access controls",
     "icon": "fluent:lock-24-regular",
     "link": "/features/permission"
   },
   {
     "title": "Chat",
-    "description": "Engage with audiences",
+    "description": "Facilitate team communication",
     "icon": "fluent:chat-multiple-24-regular",
     "link": "/features/chat"
   },
   {
     "title": "Forecast",
-    "description": "Predict market trends",
+    "description": "Anticipate staffing needs",
     "icon": "fluent:weather-sunny-low-24-regular",
     "link": "/features/forecast"
   },
   {
     "title": "Collaborate",
-    "description": "Coordinate marketing efforts",
+    "description": "Enhance team collaboration",
     "icon": "fluent:people-team-24-regular",
     "link": "/features/collaborate"
   },
   {
     "title": "Integrate",
-    "description": "Sync your platforms",
+    "description": "Sync HR tools",
     "icon": "fluent:plug-connected-24-regular",
     "link": "/features/integrate"
   }
 ];
 
 
-const features_2 = [
-  {
-    "title": "Automate with Precision",
-    "description": "Effortlessly integrate with 200+ platforms, offering versatile marketing solutions that adapt to ever-evolving strategies.",
-    "icon": "fluent:flash-settings-24-regular"
-  },
-  {
-    "title": "Optimize Your Strategy",
-    "description": "Redefine your strategy with our tailored solutions, delivering unparalleled marketing insights and guidance.",
-    "icon": "fluent:arrow-routing-24-regular"
-  },
-  {
-    "title": "Brand Consistency Across Channels",
-    "description": "Ensure a cohesive brand voice throughout your campaigns, enhancing recall and fortifying brand identity.",
-    "icon": "fluent:mobile-optimized-24-regular"
-  },
-  {
-    "title": "Tools for Marketing Excellence",
-    "description": "Unlock tools and insights that drive campaigns to unmatched success, making every marketing effort count.",
-    "icon": "fluent:window-dev-tools-24-regular"
-  },
-  {
-    "title": "Decisions Powered by Insights",
-    "description": "Empower your marketing strategies with data-driven decisions, ensuring unparalleled efficiency and impactful ROI.",
-    "icon": "fluent:cellular-data-1-24-regular"
-  },
-  {
-    "title": "Get AI Driven Support",
-    "description": "Combine AI, real-time analytics, and Empress insights to consistently raise your marketing standards and outcomes.",
-    "icon": "fluent:bot-24-regular"
-  }
-];
-
 const faq = [
   {
-    question: "How can Empress OS enhance my marketing campaign management?",
-    answer: "Empress OS enhances marketing campaigns by centralizing marketing assets on a unified platform, facilitating real-time collaboration among teams, and automating workflows for consistent brand messaging."
+    question: "How does Empress OS enhance HR operations?",
+    answer: "Empress OS centralizes HR content, enhances team collaboration, and automates workflows, resulting in increased efficiency and streamlined HR processes across the entire employee lifecycle."
   },
   {
-    question: "What role does AI play in Empress Chat for audience engagement?",
-    answer: "Empress Chat uses AI to provide on-demand, personalized communication, ensuring that audience engagement is tailored and responsive, leading to a more modernized and efficient engagement strategy."
+    question: "What support does Empress Chat provide for HR teams?",
+    answer: "Empress Chat scales employee support by providing instant and accurate responses to inquiries, bolstering internal communication, and engaging external stakeholders with personalized interactions."
   },
   {
-    question: "Can Empress Insights help increase my conversion rates?",
-    answer: "Yes, Empress Insights dives into granular analytics and provides dashboards that help understand audience behavior and preferences, enabling real-time optimization of campaigns to boost conversion rates."
+    question: "Can Empress Insights improve our HR decision-making?",
+    answer: "Yes, Empress Insights offers data-driven dashboards that provide actionable insights, helping to align HR strategies with organizational goals, and optimize workforce productivity through analytics."
   },
   {
-    question: "What integrations are available with Empress for marketing?",
-    answer: "Empress offers seamless integrations with over 200 platforms, providing versatile marketing solutions that can adapt to evolving strategies and ensuring brand consistency across channels."
+    question: "What integrations are available with Empress for HR tasks?",
+    answer: "Empress offers seamless integrations with essential HR tools to facilitate rapid communication, efficient workflows, and streamline tasks such as recruitment, onboarding, and employee management."
   },
   {
-    question: "How does Empress ensure brand consistency across all marketing channels?",
-    answer: "Empress centralizes business management and automates marketing workflows, which helps in maintaining a cohesive brand voice and ensuring consistency across all marketing channels."
+    question: "How can AI within Empress transform HR practices?",
+    answer: "Empress leverages AI to predict employee and talent trends, refine decision-making, and provide AI-driven resources for continuous learning, effectively ushering in the next generation of HR."
   },
   {
-    question: "How do Empress tools contribute to marketing excellence?",
-    answer: "Empress provides tools that unlock insights and analytics, driving campaigns to success by making every marketing effort data-driven, strategic, and efficient."
+    question: "What functionalities do interactive HR bots provide?",
+    answer: "Interactive HR bots within Empress facilitate employee queries, deliver instant support, help with routine HR tasks, and improve overall HR process efficiency."
   },
   {
-    question: "What support does Empress provide for data-driven marketing decisions?",
-    answer: "Empress supports data-driven marketing strategies with advanced analytics and real-time insights, allowing marketers to make informed decisions that lead to impactful ROI."
+    question: "Does Empress support a multilingual workforce?",
+    answer: "Yes, Empress caters to a global workforce with multilingual support capabilities, ensuring clear and effective communication across different languages."
   }
 ];
-
 
 
 const featureBlocks = data[0].featureBlocks;
 
 ---
 
-<Layout title="Build" footerMargin={false}>
+
+<Layout title="Staff" footerMargin={false}>
   <div class="overflow-x-clip mt-20">
   </Sectionhead>
 
@@ -327,22 +301,25 @@ const featureBlocks = data[0].featureBlocks;
           {data[0].subtext}
         </p>
       </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-10">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
           apps.map((item) => (
-            <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
-              <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="32" />
+            <a href={item.link} 
+               class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+              <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                  {/* Use the original icon coloring method */}
+                  <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+                </div>
+                <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                  <h3 class="font-semibold text-md">{item.title}</h3>
+                  <p class="text-slate-500">{item.description}</p>
+                </div>
               </div>
-              <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
-              <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
-              <a href={item.link} class="mt-6 inline-block w-3/4 px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);">
-                {item.button}
-              </a>
-            </div>
+            </a>
           ))
         }
-      </div>
+      </div> 
       
     </div>
 

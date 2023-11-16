@@ -14,6 +14,7 @@ import ArrowIcon from "@components/ui/icons/arrow.astro"
 
 import Logos from "@components/logos.astro";
 import heroImage from "../../assets/hero-screenshot.png";
+import directus from "../../assets/directus.png";
 import IntegrationImg from "../../assets/integrations.svg?url";
 import FeatureImgOne from "../../assets/features/2.png";
 import FeatureImgTwo from "../../assets/features/2.png";
@@ -22,8 +23,8 @@ import FeatureImg1 from "../../assets/features/6.png";
 import FeatureImg2 from "../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../assets/employee.jpg";
+import TargetMarketing from "../../assets/features/targeting-audience-for-marketing.svg";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
-import Education from "../../assets/features/education.svg";
 import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
 import NetworkServerManagement from "../../assets/features/network-server-endpoint-management.svg";
 import DashboardDevelopment from "../../assets/features/dashboard-development.png";
@@ -35,56 +36,10 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
-  {
-    "title": "Plan",
-    "description": "Task planning and organization",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/plan",
-    "button": "Start Managing"
-  },
-  {
-    "title": "Track",
-    "description": "Project analysis and reporting",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/track",
-    "button": "Start Managing"
-  },
-  {
-    "title": "Collaborate",
-    "description": "Connect, communicate, and update",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/collaborate",
-    "button": "Start Managing"
-  },
-  {
-    "title": "Approve",
-    "description": "Permissions and approvals",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/approve",
-    "button": "Start Managing"
-  },
-  {
-    "title": "Strategize",
-    "description": "Manage and support users",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/strategize",
-    "button": "Start Managing"
-  },
-  {
-    "title": "Optimize",
-    "description": "Scale operations efficiently",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/optimize",
-    "button": "Start Managing"
-  },
-];
-
-
 const data = [
   {
-    "mainHeading": "Streamline Project Management",
-    "subtext": "Effortlessly coordinate teams and nail every goal. Project management, smarter.",
+    "mainHeading": "Bring Your Business Online",
+    "subtext": "Craft a compelling digital footprint that captivates your audience at every touchpoint.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -95,37 +50,15 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for Project Management",
-    "offering": {
-      "title": "Innovative Project Management Solutions",
-      "subtext": "Transform your project management practices with AI-driven insights, enabling precise planning, execution, and delivery."
-    },
-    "valueBlocks": [
-      {
-        "heading": "Empress OS",
-        "title": "Streamline Project Workflows",
-        "description": "Unify project data, enhance team collaboration, and automate routine tasks for increased project efficiency and reduced time to delivery."
-      },
-      {
-        "heading": "Empress Chat",
-        "title": "Enhance Team Communication",
-        "description": "Facilitate real-time communication within project teams and with stakeholders to keep projects on track and teams aligned."
-      },
-      {
-        "heading": "Empress Insights",
-        "title": "Inform Project Strategy",
-        "description": "Leverage advanced analytics for project trend analysis, risk assessment, and performance metrics to drive informed decision-making."
-      }
-    ],
     "featureBlocks": [
       {
-        "heading": "OS for Project Management",
-        "title": "Centralize and Automate Project Tasks",
-        "description": "Empower project teams with Empress OS to centralize project information, automate workflows, and facilitate seamless collaboration across all project stages.",
+        "heading": "Effortless Online Creation",
+        "title": "Easily Launch Your Website",
+        "description": "Discover the new era of website design with Empress's intuitive platform, making the creation, management, and customization of your professional website straightforward and accessible to anyone.",
         "bulletPoints": [
-          "Integrate project planning and resource management",
-          "Automate task allocation and progress tracking",
-          "Synchronize cross-departmental project efforts"
+          "Easily build and customize your site to perfection",
+          "Connect your site to your own domain name",
+          "Customize your theme to support your brand image"
         ],
         "buttons": [
           {
@@ -139,13 +72,13 @@ const data = [
         ]
       },
       {
-        "heading": "Chat for Project Alignment",
-        "title": "Communicate Effectively for Project Success",
-        "description": "Utilize Empress Chat to maintain clear communication channels across project teams, enabling quick problem-solving and ensuring that all stakeholders are informed and engaged.",
+        "heading": "Design With Precision",
+        "title": "Craft Your Site Like a Pro",
+        "description": "Tap into your creative side with Empress’s user-friendly design tools. Adjust layouts, add filters, and bring life to your pages with animations – all with simple, direct on-page actions.",
         "bulletPoints": [
-          "Provide real-time updates and gather team feedback",
-          "Facilitate stakeholder engagement and updates",
-          "Resolve project queries with AI-powered assistance"
+          "Design intuitively with user-friendly tools",
+          "Customize visuals to align with your brand",
+          "Infuse your site with animation for a lively presence"
         ],
         "buttons": [
           {
@@ -159,13 +92,13 @@ const data = [
         ]
       },
       {
-        "heading": "Insights for Project Precision",
-        "title": "Make Data-Driven Project Decisions",
-        "description": "Adopt a strategic edge with Empress Insights, utilizing comprehensive dashboards to track project health, anticipate risks, and capitalize on opportunities for improvement.",
+        "heading": "Seamless Business Expansion",
+        "title": "Scale Your Online Presence",
+        "description": "Empress Website grows with your ambitions, providing an array of features that make business operations smooth and customer experiences richer, all on a single, integrated platform.",
         "bulletPoints": [
-          "Analyze real-time project performance data",
-          "Predict project outcomes and set benchmarks",
-          "Optimize resource allocation based on historical data"
+          "Easily scale your site as your business evolves",
+          "Integrate seamlessly for peak business performance",
+          "Unlock a comprehensive feature set without additional cost"
         ],
         "buttons": [
           {
@@ -184,104 +117,160 @@ const data = [
       "title": "Start Building with Empress",
       "description": "Bring your idea to life with the tools you need to start building."
     },
-    "featureHeading": "Empress for Management",
-    "featureTitle": "Elevate Your Project Execution",
-    "featureAssurance": "Dedicated to empowering project teams with sophisticated, AI-enhanced project management tools for superior results."
+    "featureHeading": "Build with Empress",
+    "featureTitle": "Build Your Website in Minutes",
+    "featureAssurance": "Tools designed to make your website not just functional, but captivating"
   }
 ];
-
 
 const features = [
   {
     "title": "Streamline",
-    "description": "Optimize project workflows",
+    "description": "Simplify site creation",
     "icon": "fluent:flash-24-regular",
-    "link": "/features/streamline"
+    "link": "/features/streamline",
+    "color": "indigo"
   },
   {
     "title": "Analyze",
-    "description": "Assess project metrics",
+    "description": "Gain user insights",
     "icon": "fluent:cellular-data-1-24-regular",
-    "link": "/features/analyze"
+    "link": "/features/analyze",
+    "color": "indigo"
   },
   {
     "title": "Automate",
-    "description": "Automate task processes",
+    "description": "Reduce manual updates",
     "icon": "fluent:bot-24-regular",
-    "link": "/features/automate"
+    "link": "/features/automate",
+    "color": "indigo"
   },
   {
     "title": "Permission",
-    "description": "Control project access",
+    "description": "Manage user permissions",
     "icon": "fluent:lock-24-regular",
-    "link": "/features/permission"
+    "link": "/features/permission",
+    "color": "indigo"
   },
   {
     "title": "Chat",
-    "description": "Facilitate team communication",
+    "description": "Interact with visitors",
     "icon": "fluent:chat-multiple-24-regular",
-    "link": "/features/chat"
+    "link": "/features/chat",
+    "color": "indigo"
   },
   {
     "title": "Forecast",
-    "description": "Predict project outcomes",
+    "description": "Predict visitor behaviors",
     "icon": "fluent:weather-sunny-low-24-regular",
-    "link": "/features/forecast"
+    "link": "/features/forecast",
+    "color": "indigo"
   },
   {
     "title": "Collaborate",
-    "description": "Enhance team collaboration",
+    "description": "Team up on projects",
     "icon": "fluent:people-team-24-regular",
-    "link": "/features/collaborate"
+    "link": "/features/collaborate",
+    "color": "indigo"
   },
   {
     "title": "Integrate",
-    "description": "Link management tools",
+    "description": "Connect your tools",
     "icon": "fluent:plug-connected-24-regular",
-    "link": "/features/integrate"
+    "link": "/features/integrate",
+    "color": "indigo"
   }
 ];
 
 
+const apps = [
+  {
+    "title": "Website",
+    "description": "Create business websites",
+    "icon": "fluent:phone-24-regular",
+    "link": "/app/build/website",
+    "button": "Start Building",
+    "color": "indigo"
+  },
+  {
+    "title": "Store",
+    "description": "Online store setup",
+    "icon": "fluent:cart-24-regular",
+    "link": "/app/build/store",
+    "button": "Start Building",
+    "color": "indigo"
+  },
+  {
+    "title": "Blog",
+    "description": "Share engaging content",
+    "icon": "fluent:textbox-align-top-24-regular",
+    "link": "/app/build/blog",
+    "button": "Start Building",
+    "color": "indigo"
+  },
+  {
+    "title": "Forum",
+    "description": "Community discussion platform",
+    "icon": "fluent:chat-multiple-24-regular",
+    "link": "/app/build/forum",
+    "button": "Start Building",
+    "color": "indigo"
+  },
+  {
+    "title": "Documentation",
+    "description": "Technical product support",
+    "icon": "fluent:chat-24-regular",
+    "link": "/app/build/documentation",
+    "button": "Start Building",
+    "color": "indigo"
+  },
+  {
+    "title": "Course",
+    "description": "Online learning platform",
+    "icon": "fluent:food-apple-24-regular",
+    "link": "/app/build/course",
+    "button": "Start Building",
+    "color": "indigo"
+  },
+];
+
 const faq = [
   {
-    "question": "How does Empress enhance traditional project management?",
-    "answer": "Empress utilizes AI-driven analytics and machine learning to transform traditional project management. It streamlines workflows, enhances team collaboration, and provides real-time insights for more informed decision-making, ultimately leading to more successful project outcomes."
+    "question": "What makes Empress different from other website builders?",
+    "answer": "Empress sets itself apart with an intuitive design platform that simplifies website creation, management, and customization. Our tools are tailored to enhance your digital footprint, combining ease of use with professional, customizable templates and comprehensive features for business growth."
   },
   {
-    "question": "What features does Empress OS offer for project management?",
-    "answer": "Empress OS offers centralized project data management, automated task workflows, and seamless collaboration across all project stages. It integrates planning and resource management to synchronize efforts and track progress effectively."
+    "question": "Can I customize my website to match my brand?",
+    "answer": "Absolutely! Empress provides a versatile drag-and-drop editor and a range of design tools that allow you to adjust layouts, colors, and features, so you can perfectly align your website with your brand's visual identity."
   },
   {
-    "question": "Can Empress Chat improve communication within my project team?",
-    "answer": "Absolutely. Empress Chat is designed to maintain clear, real-time communication channels within project teams and with stakeholders. It facilitates instant updates, feedback collection, and quick resolution of queries, ensuring everyone stays aligned and informed."
+    "question": "Is technical knowledge required to use Empress?",
+    "answer": "No technical expertise is needed. Empress is designed for users of all skill levels, with user-friendly tools that guide you through every step of the website building process."
   },
   {
-    "question": "How does Empress Insights contribute to project strategy?",
-    "answer": "Empress Insights delivers advanced analytics for risk assessment, trend analysis, and performance tracking. These data-driven insights allow teams to predict outcomes, set benchmarks, and optimize resource allocation, contributing to a more precise project strategy."
+ "question": "Does Empress support e-commerce and online store creation?",
+    "answer": "Yes, Empress offers specialized tools for setting up an online store, providing you with everything you need to sell products or services directly from your website."
   },
   {
-    "question": "In what ways can Empress' features save time and reduce project delivery cycles?",
-    "answer": "Empress features AI-driven planning tools, predictive task management, and automated workflows that eliminate bottlenecks and redundancies. This efficiency accelerates delivery cycles and frees up time for teams to focus on high-impact project areas."
+    "question": "How quickly can I launch my website with Empress?",
+    "answer": "With Empress, you can launch your website instantly. After selecting your template and customizing your site, you can go live with just one click, enabling you to connect with your audience without delay."
   },
   {
-    "question": "How does the cross-platform integration feature work to manage projects?",
-    "answer": "Empress’ cross-platform integration allows for seamless interaction between different software and tools used in project management. This creates a unified environment, reducing the complexity of managing multiple project components and ensuring data consistency."
+    "question": "What kind of support does Empress offer for my website?",
+    "answer": "Empress offers comprehensive support, from technical assistance for website setup to ongoing support for any questions you may have while using our platform."
   },
   {
-    "question": "Can I track the progress of my projects in real-time with Empress?",
-    "answer": "Yes, with Empress' comprehensive dashboards, you can monitor your project's key performance indicators (KPIs) and progress in real-time. These dashboards provide a centralized control point for tracking, reporting, and decision-making."
+    "question": "Can I scale my website as my business grows?",
+    "answer": "Definitely. Empress provides scalable solutions that grow with your business, from seamless integration for enhanced performance to a full set of features that adapt to your expanding needs without additional costs."
   }
-]
-
+];
 
 
 const featureBlocks = data[0].featureBlocks;
 
 ---
 
-
-<Layout title="Finance" footerMargin={false}>
+<Layout title="Build" footerMargin={false}>
   <div class="overflow-x-clip mt-20">
   </Sectionhead>
 
@@ -296,22 +285,25 @@ const featureBlocks = data[0].featureBlocks;
           {data[0].subtext}
         </p>
       </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-10">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
           apps.map((item) => (
-            <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
-              <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="32" />
+            <a href={item.link} 
+               class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+              <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                  {/* Use the original icon coloring method */}
+                  <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+                </div>
+                <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                  <h3 class="font-semibold text-md">{item.title}</h3>
+                  <p class="text-slate-500">{item.description}</p>
+                </div>
               </div>
-              <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
-              <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
-              <a href={item.link} class="mt-6 inline-block w-3/4 px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);">
-                {item.button}
-              </a>
-            </div>
+            </a>
           ))
         }
-      </div>
+      </div> 
       
     </div>
 

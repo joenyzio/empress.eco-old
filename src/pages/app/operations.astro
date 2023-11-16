@@ -37,53 +37,60 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const apps = [
   {
-    "title": "Helpdesk",
-    "description": "Support ticket system",
-    "icon": "fluent:question-circle-24-regular",
-    "link": "/app/support/help-desk",
-    "button": "Provide Support"
+    "title": "Plan",
+    "description": "Task planning and organization",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/manage/plan",
+    "button": "Start Managing",
+    "color": "indigo"
   },
   {
-    "title": "Feedback",
-    "description": "Collect and analyze feedback",
-    "icon": "fluent:clock-24-regular",
-    "link": "/app/support/feedback",
-    "button": "Provide Support"
+    "title": "Track",
+    "description": "Project analysis and reporting",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/manage/track",
+    "button": "Start Managing",
+    "color": "indigo"
   },
   {
-    "title": "Knowledge Base",
-    "description": "Provide self-service support",
-    "icon": "fluent:gantt-chart-24-regular",
-    "link": "/app/support/knowledge-base",
-    "button": "Provide Support"
+    "title": "Collaborate",
+    "description": "Connect, communicate, and update",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/manage/collaborate",
+    "button": "Start Managing",
+    "color": "indigo"
   },
   {
-    "title": "Chatbot",
-    "description": "Real-time support",
-    "icon": "fluent:tasks-app-24-regular",
-    "link": "/app/support/chatbot",
-    "button": "Provide Support"
+    "title": "Approve",
+    "description": "Permissions and approvals",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/manage/approve",
+    "button": "Start Managing",
+    "color": "indigo"
   },
   {
-    "title": "Appointments",
-    "description": "Schedule client meetings",
-    "icon": "fluent:calendar-24-regular",
-    "link": "/app/support/appointments",
-    "button": "Provide Support"
+    "title": "Strategize",
+    "description": "Manage and support users",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/manage/strategize",
+    "button": "Start Managing",
+    "color": "indigo"
   },
   {
-    "title": "Field Service",
-    "description": "On-site support management",
-    "icon": "fluent:service-bell-24-regular",
-    "link": "/app/support/field-service",
-    "button": "Provide Support"
+    "title": "Optimize",
+    "description": "Scale operations efficiently",
+    "icon": "fluent:heart-24-regular",
+    "link": "/app/manage/optimize",
+    "button": "Start Managing",
+    "color": "indigo"
   },
 ];
 
+
 const data = [
   {
-    "mainHeading": "Empower Your Customer Support",
-    "subtext": "Transform customer support with efficient operations and instant insights.",
+    "mainHeading": "Streamline Project Management",
+    "subtext": "Effortlessly coordinate teams and nail every goal. Project management, smarter.",
     "headingButtons": [
       {
         "text": "Get Started",
@@ -94,185 +101,185 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for Customer Support",
+    "sectionHeading": "Empress for Project Management",
     "offering": {
-      "title": "Streamline Support and Optimize Customer Assistance",
-      "subtext": "Centralize, update, and swiftly retrieve vital information, ensuring your users always have answers at their fingertips."
+      "title": "Innovative Project Management Solutions",
+      "subtext": "Transform your project management practices with AI-driven insights, enabling precise planning, execution, and delivery."
     },
     "valueBlocks": [
-    {
+      {
         "heading": "Empress OS",
-        "title": "Streamline Your Messaging",
-        "description": "Revolutionize customer support through centralized information management, team collaboration, and streamlined workflows. "
-    },
-    {
+        "title": "Streamline Project Workflows",
+        "description": "Unify project data, enhance team collaboration, and automate routine tasks for increased project efficiency and reduced time to delivery."
+      },
+      {
         "heading": "Empress Chat",
-        "title": "Enhance Your Support",
-        "description": "Connect your team with tools, provide swift responses, and enhance both internal and external communication."
-    },
-    {
+        "title": "Enhance Team Communication",
+        "description": "Facilitate real-time communication within project teams and with stakeholders to keep projects on track and teams aligned."
+      },
+      {
         "heading": "Empress Insights",
-        "title": "Boost Service Metrics",
-        "description": "Gain insights into customer feedback, identify areas of improvement, and make data-informed decisions."
-    }
-  ],
+        "title": "Inform Project Strategy",
+        "description": "Leverage advanced analytics for project trend analysis, risk assessment, and performance metrics to drive informed decision-making."
+      }
+    ],
     "featureBlocks": [
-    {
-    "heading": "OS for Customer Support",
-    "title": "Modernize Your Customer Support Strategy",
-    "description": "A cutting-edge unified platform crafted to revolutionize customer support by centralizing information, promoting synergy among teams, and offering seamless workflows.",
-    "bulletPoints": [
-    "Centralize support information for easy access",
-"Collaborate in real time for quicker issue resolution",
-"Automate support to free up focus for growth"
-    ],
-    "buttons": [
       {
-        "text": "Get Started",
-        "link": "/contact"
+        "heading": "OS for Project Management",
+        "title": "Centralize and Automate Project Tasks",
+        "description": "Empower project teams with Empress OS to centralize project information, automate workflows, and facilitate seamless collaboration across all project stages.",
+        "bulletPoints": [
+          "Integrate project planning and resource management",
+          "Automate task allocation and progress tracking",
+          "Synchronize cross-departmental project efforts"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
       },
       {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-    ]
-},
-{
-    "heading": "Chat for Customer Support",
-    "title": "Elevate, Automate, and Optimize Support Interactions",
-    "description": "An intelligent chatbot engineered to seamlessly connect your support team with the powerful tools of Empress OS, ensuring swift and effective communication both internally and with customers.",
-    "bulletPoints": [
-    "Quickly resolve common inquiries to cut wait times",
-"Unify team communication for better coordination",
-"Improve customer interactions with personalized, efficient replies"
-    ],
-    "buttons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
+        "heading": "Chat for Project Alignment",
+        "title": "Communicate Effectively for Project Success",
+        "description": "Utilize Empress Chat to maintain clear communication channels across project teams, enabling quick problem-solving and ensuring that all stakeholders are informed and engaged.",
+        "bulletPoints": [
+          "Provide real-time updates and gather team feedback",
+          "Facilitate stakeholder engagement and updates",
+          "Resolve project queries with AI-powered assistance"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
       },
       {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-    ]
-},
-{
-    "heading": "Insights for Customer Support",
-    "title": "Drive Support Excellence Through Analytics",
-    "description": "Harness the power of sophisticated analytics and intuitive dashboards tailored for customer support. Transform raw data into actionable strategies, enabling your team to anticipate needs, spot trends, and make confident decisions.",
-    "bulletPoints": [
-    "Track customer feedback and trends instantly",
-"Pinpoint and improve support bottlenecks",
-"Allocate resources effectively using data insights"
-    ],
-    "buttons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
-      "text": "View Pricing",
-      "link": "/pricing"
-    }
-    ]
-}
-
+        "heading": "Insights for Project Precision",
+        "title": "Make Data-Driven Project Decisions",
+        "description": "Adopt a strategic edge with Empress Insights, utilizing comprehensive dashboards to track project health, anticipate risks, and capitalize on opportunities for improvement.",
+        "bulletPoints": [
+          "Analyze real-time project performance data",
+          "Predict project outcomes and set benchmarks",
+          "Optimize resource allocation based on historical data"
+        ],
+        "buttons": [
+          {
+            "text": "Get Started",
+            "link": "/contact"
+          },
+          {
+            "text": "View Pricing",
+            "link": "/pricing"
+          }
+        ]
+      }
     ],
     "getStartedSection": {
       "badge": "Additional Features",
-      "title": "Start Supporting with Empress",
-      "description": "Launch top-notch customer support easily with all the right tools you need."
+      "title": "Start Building with Empress",
+      "description": "Bring your idea to life with the tools you need to start building."
     },
-    "featureHeading": "Empress for Customer Support",
-    "featureTitle": "We're Here to Support You",
-    "featureAssurance": "Empress delivers a data-driven approach, ensuring efficient, responsive support and enhancing customer loyalty."
+    "featureHeading": "Empress for Management",
+    "featureTitle": "Elevate Your Project Execution",
+    "featureAssurance": "Dedicated to empowering project teams with sophisticated, AI-enhanced project management tools for superior results."
   }
 ];
+
 
 const features = [
   {
     "title": "Streamline",
-    "description": "Enhance customer support",
+    "description": "Optimize project workflows",
     "icon": "fluent:flash-24-regular",
     "link": "/features/streamline"
   },
   {
     "title": "Analyze",
-    "description": "Understand customer needs",
+    "description": "Assess project metrics",
     "icon": "fluent:cellular-data-1-24-regular",
     "link": "/features/analyze"
   },
   {
     "title": "Automate",
-    "description": "Streamline support tasks",
+    "description": "Automate task processes",
     "icon": "fluent:bot-24-regular",
     "link": "/features/automate"
   },
   {
     "title": "Permission",
-    "description": "Control support access",
+    "description": "Control project access",
     "icon": "fluent:lock-24-regular",
     "link": "/features/permission"
   },
   {
     "title": "Chat",
-    "description": "Quick customer interaction",
+    "description": "Facilitate team communication",
     "icon": "fluent:chat-multiple-24-regular",
     "link": "/features/chat"
   },
   {
     "title": "Forecast",
-    "description": "Anticipate support needs",
+    "description": "Predict project outcomes",
     "icon": "fluent:weather-sunny-low-24-regular",
     "link": "/features/forecast"
   },
   {
     "title": "Collaborate",
-    "description": "Coordinate support teams",
+    "description": "Enhance team collaboration",
     "icon": "fluent:people-team-24-regular",
     "link": "/features/collaborate"
   },
   {
     "title": "Integrate",
-    "description": "Unify support tools",
+    "description": "Link management tools",
     "icon": "fluent:plug-connected-24-regular",
     "link": "/features/integrate"
   }
 ];
 
 
-
 const faq = [
   {
-    question: "How does Empress OS streamline customer support operations?",
-    answer: "Empress OS centralizes information management and enables team collaboration, creating streamlined workflows. It helps teams access vital information quickly and efficiently, ensuring customers always have answers at their fingertips."
+    "question": "How does Empress enhance traditional project management?",
+    "answer": "Empress utilizes AI-driven analytics and machine learning to transform traditional project management. It streamlines workflows, enhances team collaboration, and provides real-time insights for more informed decision-making, ultimately leading to more successful project outcomes."
   },
   {
-    question: "What capabilities does Empress Chat offer for customer support?",
-    answer: "Empress Chat provides instant responses to common customer inquiries, reduces wait times, and supports team coordination with unified communication tools, resulting in tailored and efficient customer experiences."
+    "question": "What features does Empress OS offer for project management?",
+    "answer": "Empress OS offers centralized project data management, automated task workflows, and seamless collaboration across all project stages. It integrates planning and resource management to synchronize efforts and track progress effectively."
   },
   {
-    question: "In what ways can Empress Insights boost my customer service metrics?",
-    answer: "Empress Insights gives you real-time visibility into customer feedback and service trends, helping you identify areas for improvement, optimize resource allocation, and make data-informed decisions to enhance support services."
+    "question": "Can Empress Chat improve communication within my project team?",
+    "answer": "Absolutely. Empress Chat is designed to maintain clear, real-time communication channels within project teams and with stakeholders. It facilitates instant updates, feedback collection, and quick resolution of queries, ensuring everyone stays aligned and informed."
   },
   {
-    question: "What does Empress offer to modernize customer support strategies?",
-    answer: "Empress provides a unified platform that centralizes customer support infomation, fosters real-time team collaboration, and automates workflows, allowing teams to focus more on growth and customer satisfaction."
+    "question": "How does Empress Insights contribute to project strategy?",
+    "answer": "Empress Insights delivers advanced analytics for risk assessment, trend analysis, and performance tracking. These data-driven insights allow teams to predict outcomes, set benchmarks, and optimize resource allocation, contributing to a more precise project strategy."
   },
   {
-    question: "How can Messenger-assisted support improve customer interactions?",
-    answer: "By leveraging platforms like Messenger for real-time support, Empress ensures swift and effective assistance, thereby improving response times and overall customer satisfaction."
+    "question": "In what ways can Empress' features save time and reduce project delivery cycles?",
+    "answer": "Empress features AI-driven planning tools, predictive task management, and automated workflows that eliminate bottlenecks and redundancies. This efficiency accelerates delivery cycles and frees up time for teams to focus on high-impact project areas."
   },
   {
-    question: "What solutions does Empress provide for supporting global customers?",
-    answer: "Empress overcomes language barriers with AI-assisted translations, making sure all users receive support in their preferred language, which enriches the customer experience and fosters global user engagement."
+    "question": "How does the cross-platform integration feature work to manage projects?",
+    "answer": "Empress’ cross-platform integration allows for seamless interaction between different software and tools used in project management. This creates a unified environment, reducing the complexity of managing multiple project components and ensuring data consistency."
   },
   {
-    question: "How does the integrated tools suite enhance customer support?",
-    answer: "The integrated tools suite optimizes communication and user engagement through a comprehensive set of tools, ensuring a smooth and efficient support experience for both the support team and the customers."
+    "question": "Can I track the progress of my projects in real-time with Empress?",
+    "answer": "Yes, with Empress' comprehensive dashboards, you can monitor your project's key performance indicators (KPIs) and progress in real-time. These dashboards provide a centralized control point for tracking, reporting, and decision-making."
   }
-];
+]
+
 
 
 const featureBlocks = data[0].featureBlocks;
@@ -280,7 +287,7 @@ const featureBlocks = data[0].featureBlocks;
 ---
 
 
-<Layout title="Build" footerMargin={false}>
+<Layout title="Finance" footerMargin={false}>
   <div class="overflow-x-clip mt-20">
   </Sectionhead>
 
@@ -295,22 +302,25 @@ const featureBlocks = data[0].featureBlocks;
           {data[0].subtext}
         </p>
       </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-10">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
           apps.map((item) => (
-            <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
-              <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="32" />
+            <a href={item.link} 
+               class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+              <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                  {/* Use the original icon coloring method */}
+                  <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+                </div>
+                <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                  <h3 class="font-semibold text-md">{item.title}</h3>
+                  <p class="text-slate-500">{item.description}</p>
+                </div>
               </div>
-              <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
-              <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
-              <a href={item.link} class="mt-6 inline-block w-3/4 px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);">
-                {item.button}
-              </a>
-            </div>
+            </a>
           ))
         }
-      </div>
+      </div> 
       
     </div>
 

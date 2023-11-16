@@ -4,12 +4,15 @@ import { Picture } from "astro:assets";
 import FeatureImg1 from "../assets/features/6.png";
 import FeatureImg2 from "../assets/features/2.png";
 import FeatureImg8 from "../assets/features/8.png";
+import Dashboard from "../assets/dashboard.png";
 import ServerAnalysis from "../assets/features/server-analysis.png";
 import Outsourcing from "../assets/features/outsourcing-software-development-service-web-page.png";
 import ContentCreation from "../assets/features/content-blog.png";
 import AnalyticalAI from "../assets/features/analytical-ai.png";
 import Card from "@components/card.astro";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+
+import heroImage from "../assets/hero-screenshot.png";
 import { Icon } from "astro-icon";
 import Link from "@components/ui/link.astro";
 
@@ -70,60 +73,76 @@ const Apps = [
 
 const features = [
 {
-    "title": "Build",
-    "description": "Establish Your Brand",
-    "icon": "fluent:phone-24-regular",
-    "link": "/app/build",
-    "button": "Learn More"
-  },
-  {
-    "title": "Sell",
-    "description": "Close More Deals",
-    "icon": "fluent:contact-card-24-regular",
-    "link": "/app/sell",
-    "button": "Learn More"
-  },
-  {
-    "title": "Market",
-    "description": "Amplify Your Reach",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/market",
-    "button": "Learn More"
-  },
-  {
-    "title": "Support",
-    "description": "Streamline Your Service",
-    "icon": "fluent:service-bell-24-regular",
-    "link": "/app/support",
-    "button": "Learn More"
-  },
-  {
-    "title": "Manage",
-    "description": "Optimize Your Workflow",
-    "icon": "fluent:clipboard-task-24-regular",
-    "link": "/app/manage",
-    "button": "Learn More"
-  },
-  {
-    "title": "Finance",
+    "title": "Finances",
     "description": "Simplify Your Finances",
-    "icon": "fluent:payment-24-regular",
+    "icon": "ph:money-duotone",
+    "link": "/app/build",
+    "button": "Learn More",
+     "color": "indigo"
+  },
+  {
+    "title": "Sales",
+    "description": "Close More Deals",
+    "icon": "ph:tag-duotone",
+    "link": "/app/sell",
+    "button": "Learn More",
+    "color": "indigo"
+  },
+  {
+    "title": "Product",
+    "description": "Streamline Your Production",
+    "icon": "ph:archive-box-duotone",
+    "link": "/app/market",
+    "button": "Learn More",
+    "color": "indigo"
+  },
+  {
+    "title": "Operations",
+    "description": "Optimize Your Workflow",
+    "icon": "ph:clock-counter-clockwise-duotone",
+    "link": "/app/support",
+    "button": "Learn More",
+    "color": "indigo"
+  },
+  {
+    "title": "Marketing",
+    "description": "Amplify Your Reach",
+    "icon": "ph:share-network-duotone",
+    "link": "/app/manage",
+    "button": "Learn More",
+    "color": "indigo"
+  },
+  {
+    "title": "Talent",
+    "description": "Empower Your Workforce",
+    "icon": "ph:users-duotone",
     "link": "/app/finance",
-    "button": "Learn More"
+    "button": "Learn More",
+    "color": "indigo"
   },
   {
-    "title": "Staff",
-    "description": "Manage Your Team",
-    "icon": "fluent:people-team-24-regular",
+    "title": "Experience",
+    "description": "Elevate Your Service",
+    "icon": "ph:heart-straight-duotone",
     "link": "/app/staff",
-    "button": "Learn More"
+    "button": "Learn More",
+    "color": "indigo"
   },
   {
-    "title": "Produce",
-    "description": "Track Your Inventory",
-    "icon": "fluent:box-24-regular",
+    "title": "Technology",
+    "description": "Accelerate Your Innovation",
+    "icon": "ph:device-mobile-camera-duotone",
     "link": "/app/produce",
-    "button": "Learn More"
+    "button": "Learn More",
+    "color": "indigo"
+  },
+  {
+    "title": "Other",
+    "description": "Customize Your Experience",
+    "icon": "ph:circles-three-plus-duotone",
+    "link": "/app/produce",
+    "button": "Learn More",
+    "color": "indigo"
   }
 ];
 
@@ -137,13 +156,13 @@ const features = [
   ]}>
   <Badge color="purple">Welcome to Empress</Badge>
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-    It's Business As Usual...<span class="text-indigo-600">Made Simpler</span>
+    Making Business <span class="text-indigo-600">Better for Everyone</span>
   </h2>
   <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-    All the essentials bundled into one incredible deal.
+    Find essential tools to boost operations and drive growth for your business.
   </p>
 </div>
-<div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-10">
+<!-- <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-10">
   {
     features.map((item) => (
       <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
@@ -158,7 +177,31 @@ const features = [
       </div>
     ))
   }
+</div> -->
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
+  {
+    features.map((item) => (
+      <a href={item.link} 
+         class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+        <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+          <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+            {/* Use the original icon coloring method */}
+            <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+          </div>
+          <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+            <h3 class="font-semibold text-md">{item.title}</h3>
+            <p class="text-slate-500">{item.description}</p>
+          </div>
+        </div>
+      </a>
+    ))
+  }
 </div>
+
+
+
+
 
 
 </div>
@@ -194,8 +237,8 @@ const features = [
   <div class="grid place-items-center">
     <div class="max-w-lg">
       <Badge color="purple" class="-ml-px">All-In-One Platform</Badge>
-      <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
-        Affordable Monthly Rates. One Simple Subscription.
+      <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
+        One Dashboard to Manage Your Entire Business
       </h3>
       <p class="mt-4 text-slate-600 [text-wrap:balance]">
         Elevate your company's performance with our business apps and all-in-one tool suite, ensuring operational excellence for a smooth journey from concept to execution.
@@ -252,7 +295,7 @@ const features = [
 <div class="grid place-items-center">
   <div class="max-w-lg">
     <Badge color="purple" class="-ml-px">Data-Driven Insights</Badge>
-    <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
+    <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
       Focus on Growth – Leave the Details to Us
     </h3>
     <p class="mt-4 text-slate-600 [text-wrap:balance]">
@@ -305,7 +348,17 @@ const features = [
     src="../../market-report.json" 
     autoplay="visible" 
     style={{ width: '100%', height: 'auto' }}
-  />
+  /> 
+
+  <!-- <Picture
+      src={Dashboard}
+      alt="Astronaut in the air"
+      formats={["avif", "webp"]}
+      sizes="(max-width: 1024px) 100vw, 50vw"
+      widths={[240, 540, 720, heroImage.width]}
+      loading="eager"
+      fetchpriority="high"
+    /> -->
 </div>
 
 </div>
@@ -319,7 +372,7 @@ const features = [
 <div class="grid place-items-center">
   <div class="max-w-lg">
     <Badge color="purple" class="-ml-px">Smart Solutions, Smarter Business</Badge>
-    <h3 class="text-4xl font-bold mt-4 [text-wrap:balance]">
+    <h3 class="text-3xl font-bold mt-4 [text-wrap:balance]">
       Simplify Your Workflow with AI and Automation
     </h3>
     <p class="mt-4 text-slate-600 [text-wrap:balance]">

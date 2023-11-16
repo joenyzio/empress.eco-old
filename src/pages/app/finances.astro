@@ -22,6 +22,7 @@ import FeatureImg1 from "../../assets/features/6.png";
 import FeatureImg2 from "../../assets/features/2.png";
 import { Picture, Image } from "astro:assets";
 import EmployeeImg from "../../assets/employee.jpg";
+import Logo from "../../../assets/logo-full.png";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 import Education from "../../assets/features/education.svg";
 import AutomatedMarketing from "../../assets/features/automated-marketing.svg";
@@ -37,243 +38,249 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const apps = [
   {
-    "title": "Stock",
-    "description": "Inventory tracking system",
-    "icon": "fluent:tray-item-add-24-regular",
-    "link": "/app/produce/stock",
-    "button": "Start Production"
+    "title": "Account",
+    "description": "Manage financial transactions",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/finance/account",
+    "button": "Get Started",
+    "color": "indigo"
+
   },
   {
-    "title": "Manufacture",
-    "description": "Production planning control",
-    "icon": "fluent:manufacturer-24-regular",
-    "link": "/app/produce/manufacture",
-    "button": "Start Production"
+    "title": "Expense",
+    "description": "Track business spending",
+    "icon": "fluent:receipt-24-regular",
+    "link": "/app/finance/expense",
+    "button": "Get Started",
+    "color": "indigo"
   },
   {
-    "title": "Lifecycle",
-    "description": "Product lifecycle management",
-    "icon": "fluent:production-24-regular",
-    "link": "/app/produce/lifecycle",
-    "button": "Start Production"
+    "title": "Invoice",
+    "description": "Create and manage invoices",
+    "icon": "fluent:document-24-regular",
+    "link": "/app/finance/invoice",
+    "button": "Get Started",
+    "color": "indigo"
   },
   {
-    "title": "Purchase",
-    "description": "Procurement management system",
-    "icon": "fluent:shopping-bag-24-regular",
-    "link": "/app/produce/purchase",
-    "button": "Start Production"
+    "title": "Payroll",
+    "description": "Process employee salaries",
+    "icon": "fluent:wallet-24-regular",
+    "link": "/app/finance/payroll",
+    "button": "Get Started",
+    "color": "indigo"
   },
   {
-    "title": "Maintenance",
-    "description": "Equipment upkeep scheduler",
-    "icon": "fluent:wrench-screwdriver-24-regular",
-    "link": "/app/produce/maintenance",
-    "button": "Start Production"
+    "title": "Budget",
+    "description": "Financial planning",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/finance/budget",
+    "button": "Get Started",
+    "color": "indigo"
   },
   {
-    "title": "Quality",
-    "description": "Quality assurance protocols",
-    "icon": "fluent:checkmark-starburst-24-regular",
-    "link": "/app/produce/quality",
-    "button": "Start Production"
+    "title": "Tax",
+    "description": "Manage tax compliance",
+    "icon": "fluent:money-24-regular",
+    "link": "/app/finance/tax",
+    "button": "Get Started",
+    "color": "indigo"
   }
 ];
 
 
 const data = [
-  {
-    "mainHeading": "Elevate Your Product",
-    "subtext": "Streamline your processes with our smart, AI-driven tools for better efficiency and results.",
+{
+    "mainHeading": "Get Smart with Your Finances",
+    "subtext": "Simplify finance management, enhance compliance, and drive smarter decisions.",
     "headingButtons": [
-      {
-        "text": "Get Started",
-        "link": "/contact"
-      },
-      {
-        "text": "View Pricing",
-        "link": "/pricing"
-      }
+        {
+            "text": "Get Started",
+            "link": "/contact"
+        },
+        {
+            "text": "View pricing",
+            "link": "/pricing"
+        }
     ],
-    "sectionHeading": "Empress for Inventory & Manufacturing",
+    "sectionHeading": "Financial Services Reimagined",
     "offering": {
-      "title": "Next-Level Operational Excellence",
-      "subtext": "Adopt an innovative approach to inventory management and manufacturing with a suite designed for precision and scalability."
+        "title": "AI-Powered Financial Solutions",
+        "subtext": "Craft personalized financial journeys leveraging real-time data, analytics, and seamless integrations."
     },
     "valueBlocks": [
-      {
+    {
         "heading": "Empress OS",
-        "title": "Streamline Production Workflows",
-        "description": "Centralize your production data, synchronize operations, and automate manufacturing workflows to enhance productivity."
-      },
-      {
+        "title": "Simplify Coordination",
+        "description": "Centralize financial data, ensure regulatory compliance, and elevate operational workflows."
+    },
+    {
         "heading": "Empress Chat",
-        "title": "Optimize Supply Chain Communication",
-        "description": "Enhance communication with suppliers and customers for smoother operations, utilizing AI to manage inquiries and streamline service."
-      },
-      {
+        "title": "Build Client Relationships",
+        "description": "Ensure rapid responses and optimize both internal and client-facing with compliance, tailored to drive financial outcomes."
+    },
+    {
         "heading": "Empress Insights",
-        "title": "Strategize with Smart Data",
-        "description": "Inform your inventory decisions with smart analytics, optimizing stock levels and reducing waste through predictive insights."
-      }
-    ],
+        "title": "Boost Financial Outcomes",
+        "description": "Access real-time actionable analytics to understand client behaviors to optimize performance."
+    }
+],
     "featureBlocks": [
-      {
-        "heading": "OS for Inventory & Manufacturing",
-        "title": "Control and Visibility Over Your Operations",
-        "description": "Empress OS offers unparalleled control and insights into your manufacturing and inventory, ensuring every decision is data-backed and every process optimized.",
-        "bulletPoints": [
-          "Track inventory levels in real-time",
-          "Predictive analytics for demand forecasting",
-          "Automate supply chain management"
-        ],
-        "buttons": [
-          {
-            "text": "Get Started",
-            "link": "/contact"
-          },
-          {
-            "text": "View Pricing",
-            "link": "/pricing"
-          }
-        ]
-      },
-      {
-        "heading": "Chat for Supply Chain Excellence",
-        "title": "Instant Communication, Seamless Integration",
-        "description": "Use Empress Chat to facilitate instant, AI-assisted communication within the supply chain, reducing delays and enhancing partner relations.",
-        "bulletPoints": [
-          "Automate vendor and customer interactions",
-          "Quickly address supply chain queries",
-          "Maintain clear, consistent communication"
-        ],
-        "buttons": [
-          {
-            "text": "Get Started",
-            "link": "/contact"
-          },
-          {
-            "text": "View Pricing",
-            "link": "/pricing"
-          }
-        ]
-      },
-      {
-        "heading": "Insights for Manufacturing Prowess",
-        "title": "Make Informed Production Decisions",
-        "description": "With Empress Insights, leverage deep analytics to optimize your manufacturing processes, predict maintenance, and reduce downtime.",
-        "bulletPoints": [
-          "Monitor production efficiency",
-          "Analyze machine performance data",
-          "Plan and predict maintenance for uninterrupted production"
-        ],
-        "buttons": [
-          {
-            "text": "Get Started",
-            "link": "/contact"
-          },
-          {
-            "text": "View Pricing",
-            "link": "/pricing"
-          }
-        ]
-      }
+    {
+  "heading": "OS for Financial",
+  "title": "Transform Financial Operations & Collaboration",
+  "description": "Leverage Empress OS to redefine how financial services handle information, drive team synergy, and optimize intricate workflows for unmatched efficiency and compliance.",
+  "bulletPoints": [
+"Consolidate financial data for quick, secure retrieval",
+"Collaborate easily while complying with regulations",
+"Simplify financial tasks for better service"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+{
+  "heading": "Chat for Finance",
+  "title": "Revolutionize Financial Communication",
+  "description": "Empress Chat seamlessly integrates with Empress OS, enabling efficient communication that caters to the unique demands of the financial sector, from internal collaboration to client engagement.",
+  "bulletPoints": [
+  "Provide immediate, personalized financial responses",
+"Maintain secure, compliant data communication",
+"Enhance client relations with engagement and insights"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
+{
+  "heading": "Insights for Finance",
+  "title": "Data-Driven Financial Performance",
+  "description": "Equip your financial firm with the advanced analytics and intuitive dashboards crucial for agile decision-making in a dynamic financial landscape.",
+  "bulletPoints": [
+  "Simplify financial analysis for strategic action",
+"Gain immediate client insights for proactive service",
+"Refine strategies with advanced performance metrics"
+  ],
+  "buttons": [
+    {
+      "text": "Get Started",
+      "link": "/contact"
+    },
+    {
+      "text": "View Pricing",
+      "link": "/pricing"
+    }
+  ]
+},
     ],
     "getStartedSection": {
       "badge": "Additional Features",
-      "title": "Improve Support with Empress",
-      "description": "Start shaping exceptional customer support with the essential tools you need."
+      "title": "Optimize Finances with Empress",
+      "description": "Manage your finances effectively with the essential tools for financial control."
     },
-    "featureHeading": "Empress for Product",
-    "featureTitle": "Master Your Production and Inventory",
-    "featureAssurance": "At Empress, we're committed to equipping your business with the most sophisticated tools for a lean and proactive inventory and manufacturing operation."
+    "featureHeading": "Empress for Finances",
+    "featureTitle": "We're Here to Support You",
+    "featureAssurance": "A suite crafted meticulously for the evolving financial landscape.",
   }
 ];
-
 
 const features = [
   {
     "title": "Streamline",
-    "description": "Optimize production flow",
+    "description": "Efficient finance management",
     "icon": "fluent:flash-24-regular",
     "link": "/features/streamline"
   },
   {
     "title": "Analyze",
-    "description": "Monitor production metrics",
+    "description": "Financial data insights",
     "icon": "fluent:cellular-data-1-24-regular",
     "link": "/features/analyze"
   },
   {
     "title": "Automate",
-    "description": "Streamline manufacturing tasks",
+    "description": "Simplify financial tasks",
     "icon": "fluent:bot-24-regular",
     "link": "/features/automate"
   },
   {
     "title": "Permission",
-    "description": "Control inventory access",
+    "description": "Secure financial access",
     "icon": "fluent:lock-24-regular",
     "link": "/features/permission"
   },
   {
     "title": "Chat",
-    "description": "Communicate in production",
+    "description": "Client communication ease",
     "icon": "fluent:chat-multiple-24-regular",
     "link": "/features/chat"
   },
   {
     "title": "Forecast",
-    "description": "Predict inventory needs",
+    "description": "Budget trend prediction",
     "icon": "fluent:weather-sunny-low-24-regular",
     "link": "/features/forecast"
   },
   {
     "title": "Collaborate",
-    "description": "Manage production teams",
+    "description": "Team financial planning",
     "icon": "fluent:people-team-24-regular",
     "link": "/features/collaborate"
   },
   {
     "title": "Integrate",
-    "description": "Unify manufacturing systems",
+    "description": "Merge financial systems",
     "icon": "fluent:plug-connected-24-regular",
     "link": "/features/integrate"
   }
 ];
 
 
+
 const faq = [
   {
-    "question": "How does Empress revolutionize inventory management?",
-    "answer": "Empress revolutionizes inventory management by leveraging AI-driven analytics to predict inventory needs, automate stock level optimization, and minimize waste, resulting in maximized efficiency and cost savings."
+    question: "How does Empress OS centralize financial information?",
+    answer: "Empress OS creates a centralized hub for all your financial data, ensuring easy and secure access while maintaining regulatory compliance and elevating operational workflows."
   },
   {
-    "question": "Can Empress OS integrate with my existing manufacturing systems?",
-    "answer": "Yes, Empress OS is designed to seamlessly integrate with your existing manufacturing systems, providing a centralized platform for streamlined operations and real-time insights into your production processes."
+    question: "What client relationship tools does Empress offer for financial services?",
+    answer: "Empress Chat delivers rapid, compliant, and personalized communication options tailored to financial services, optimizing client engagement and satisfaction."
   },
   {
-    "question": "What advantages does Empress Chat offer for supply chain communication?",
-    "answer": "Empress Chat offers the advantage of instant, AI-assisted communication, which helps reduce delays, automate interactions with vendors and customers, and maintain clear and consistent communication throughout the supply chain."
+    question: "Can Empress Insights enhance my firm's financial performance?",
+    answer: "Yes, Empress Insights provides real-time analytics and dashboards to dissect client behaviors and engagement patterns, enabling data-driven strategies that boost financial outcomes."
   },
   {
-    "question": "How does Empress Insights enhance production decision-making?",
-    "answer": "Empress Insights enhances production decision-making by providing deep analytics that allow you to monitor efficiency, analyze performance data, and predict maintenance needs, ensuring reduced downtime and more informed manufacturing strategies."
+    question: "How does Empress ensure compliance in financial operations?",
+    answer: "Empress prioritizes compliance by streamlining operations through secure platforms and communication channels that adhere to regulatory standards."
   },
   {
-    "question": "In what ways does smart inventory management through Empress reduce waste?",
-    "answer": "Smart inventory management through Empress uses AI to accurately forecast demand, preventing overstocking or stockouts, and ensuring that inventory levels are kept optimal, thus significantly reducing waste and associated costs."
+    question: "What makes Empress a suitable choice for collaboration?",
+    answer: "Empress fosters seamless collaboration within financial services by integrating a secure and compliant environment that promotes teamwork and enhances service delivery."
   },
   {
-    "question": "How does Empress ensure its platform supports global manufacturing operations?",
-    "answer": "Empress ensures global support by providing a multilingual platform that caters to diverse manufacturing environments, allowing for clear communication and efficient operation across different regions and languages."
+    question: "How does Empress integrate with existing financial software?",
+    answer: "Empress seamlessly integrates with existing financial platforms, simplifying tracking and decision-making while ensuring data integrity and security."
   },
   {
-    "question": "Is the user interface of Empress conducive to on-the-go management for manufacturing?",
-    "answer": "Yes, the Empress user interface is designed for on-the-go management, providing a consistent and intuitive experience across all devices, ensuring that you can efficiently interact with your manufacturing systems, whether you're on the factory floor or away from the site."
+    question: "What advantages does Empress offer for designing customer journeys?",
+    answer: "Empress provides design tools to create intuitive financial journeys for clients, ensuring meaningful interactions from portals to chat histories."
   }
-]
-
+];
 
 
 const featureBlocks = data[0].featureBlocks;
@@ -296,22 +303,25 @@ const featureBlocks = data[0].featureBlocks;
           {data[0].subtext}
         </p>
       </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-10">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
           apps.map((item) => (
-            <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
-              <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
-                <Icon class="text-indigo-500" name={item.icon} size="32" />
+            <a href={item.link} 
+               class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+              <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+                <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+                  {/* Use the original icon coloring method */}
+                  <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
+                </div>
+                <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+                  <h3 class="font-semibold text-md">{item.title}</h3>
+                  <p class="text-slate-500">{item.description}</p>
+                </div>
               </div>
-              <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
-              <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
-              <a href={item.link} class="mt-6 inline-block w-3/4 px-6 py-3 border border-transparent text-base font-normal rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 shadow-md transition ease-in-out duration-150" style="box-shadow: 0 4px 6px rgba(90, 49, 196, 0.25);">
-                {item.button}
-              </a>
-            </div>
+            </a>
           ))
         }
-      </div>
+      </div> 
       
     </div>
 
