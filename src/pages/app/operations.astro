@@ -35,61 +35,55 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
-  {
-    "title": "Plan",
-    "description": "Task planning and organization",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/plan",
-    "button": "Start Managing",
+const Operations = [
+{
+    "title": "Purchase Orders",
+    "description": "Manage Orders Effectively",
+    "icon": "ph:shopping-bag-duotone",
+    "link": "/app/operations/purchase-orders",
     "color": "indigo"
   },
   {
-    "title": "Track",
-    "description": "Project analysis and reporting",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/track",
-    "button": "Start Managing",
+    "title": "Production",
+    "description": "Enhance Manufacturing Process",
+    "icon": "ph:dots-three-outline-duotone",
+    "link": "/app/operations/production",
     "color": "indigo"
   },
   {
-    "title": "Collaborate",
-    "description": "Connect, communicate, and update",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/collaborate",
-    "button": "Start Managing",
+    "title": "Logistics",
+    "description": "Streamline Distribution Flow",
+    "icon": "ph:arrow-fat-line-right-duotone",
+    "link": "/app/operations/logistics",
     "color": "indigo"
   },
   {
-    "title": "Approve",
-    "description": "Permissions and approvals",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/approve",
-    "button": "Start Managing",
+    "title": "Distribution",
+    "description": "Efficiently Distribute Products",
+    "icon": "ph:truck-duotone",
+    "link": "/app/operations/distribution",
     "color": "indigo"
   },
   {
-    "title": "Strategize",
-    "description": "Manage and support users",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/strategize",
-    "button": "Start Managing",
+    "title": "Facilities",
+    "description": "Manage Facility Operations",
+    "icon": "ph:house-line-duotone",
+    "link": "/app/operations/facilities",
     "color": "indigo"
   },
   {
-    "title": "Optimize",
-    "description": "Scale operations efficiently",
-    "icon": "fluent:heart-24-regular",
-    "link": "/app/manage/optimize",
-    "button": "Start Managing",
+    "title": "Approvals",
+    "description": "Streamline Approval Process",
+    "icon": "ph:check-circle-duotone",
+    "link": "/app/operations/approvals",
     "color": "indigo"
   },
-];
+]
 
 
 const data = [
   {
-    "mainHeading": "Streamline Project Management",
+    "mainHeading": "Optimize Your Workflow",
     "subtext": "Effortlessly coordinate teams and nail every goal. Project management, smarter.",
     "headingButtons": [
       {
@@ -190,7 +184,7 @@ const data = [
       "title": "Start Building with Empress",
       "description": "Bring your idea to life with the tools you need to start building."
     },
-    "featureHeading": "Empress for Management",
+    "featureHeading": "Empress for Operations",
     "featureTitle": "Elevate Your Project Execution",
     "featureAssurance": "Dedicated to empowering project teams with sophisticated, AI-enhanced project management tools for superior results."
   }
@@ -304,7 +298,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
-          apps.map((item) => (
+          Operations.map((item) => (
             <a href={item.link} 
                class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
               <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">

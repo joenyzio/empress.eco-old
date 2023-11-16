@@ -35,60 +35,54 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
+const Marketing = [
+{
+    "title": "Campaign",
+    "description": "Optimize Campaign Execution",
+    "icon": "ph:rocket-duotone",
+    "link": "/app/marketing/campaign",
+    "color": "indigo"
+  },
   {
     "title": "Content",
-    "description": "Targeted content creation",
-    "icon": "fluent:bot-24-regular",
-    "link": "/app/market/content",
-    "button": "Start Marketing",
+    "description": "Manage Content Effectively",
+    "icon": "ph:file-video-duotone",
+    "link": "/app/marketing/content",
     "color": "indigo"
   },
   {
     "title": "Social",
-    "description": "Social media engagement",
-    "icon": "fluent:share-android-24-regular",
-    "link": "/app/market/social",
-    "button": "Start Marketing",
+    "description": "Enhance Social Presence",
+    "icon": "ph:share-network-duotone",
+    "link": "/app/marketing/social",
     "color": "indigo"
   },
   {
-    "title": "Event",
-    "description": "Organize promotional events",
-    "icon": "fluent:calendar-24-regular",
-    "link": "/app/market/event",
-    "button": "Start Marketing",
+    "title": "Events",
+    "description": "Organize Events Efficiently",
+    "icon": "ph:calendar-plus-duotone",
+    "link": "/app/marketing/events",
     "color": "indigo"
   },
   {
     "title": "Email",
-    "description": "Targeted email campaigns",
-    "icon": "fluent:mail-add-24-regular",
-    "link": "/app/market/email",
-    "button": "Start Marketing",
+    "description": "Streamline Email Campaigns",
+    "icon": "ph:telegram-logo-duotone",
+    "link": "/app/marketing/email",
     "color": "indigo"
   },
   {
-    "title": "SMS",
-    "description": "Direct text outreach",
-    "icon": "fluent:phone-add-24-regular",
-    "link": "/app/market/sms",
-    "button": "Start Marketing",
-    "color": "indigo"
-  },
-  {
-    "title": "Survey",
-    "description": "Gather customer feedback",
-    "icon": "fluent:form-new-24-regular",
-    "link": "/app/market/survey",
-    "button": "Start Marketing",
+    "title": "Surveys",
+    "description": "Collect Customer Feedback",
+    "icon": "ph:user-list-duotone",
+    "link": "/app/marketing/surveys",
     "color": "indigo"
   }
 ];
 
 const data = [
   {
-    "mainHeading": "Revolutionize Your Marketing",
+    "mainHeading": "Amplify Your Reach",
     "subtext": "Boost your marketing game with data-driven strategies and seamless communication.",
     "headingButtons": [
       {
@@ -335,7 +329,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
-          apps.map((item) => (
+          Marketing.map((item) => (
             <a href={item.link} 
                class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
               <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">

@@ -36,54 +36,47 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
-  {
+const Finances = [
+{
     "title": "Account",
-    "description": "Manage financial transactions",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/finance/account",
-    "button": "Get Started",
-    "color": "indigo"
-
-  },
-  {
-    "title": "Expense",
-    "description": "Track business spending",
-    "icon": "fluent:receipt-24-regular",
-    "link": "/app/finance/expense",
-    "button": "Get Started",
+    "description": "Manage Financial Flow",
+    "icon": "ph:money-duotone",
+    "link": "/app/finances/account",
     "color": "indigo"
   },
   {
     "title": "Invoice",
-    "description": "Create and manage invoices",
-    "icon": "fluent:document-24-regular",
-    "link": "/app/finance/invoice",
-    "button": "Get Started",
+    "description": "Simplify Invoice Management",
+    "icon": "ph:calendar-check-duotone",
+    "link": "/app/finances/expense",
     "color": "indigo"
   },
   {
-    "title": "Payroll",
-    "description": "Process employee salaries",
-    "icon": "fluent:wallet-24-regular",
-    "link": "/app/finance/payroll",
-    "button": "Get Started",
-    "color": "indigo"
-  },
-  {
-    "title": "Budget",
-    "description": "Financial planning",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/finance/budget",
-    "button": "Get Started",
+    "title": "Expense",
+    "description": "Track Company Spending",
+    "icon": "ph:calculator-duotone",
+    "link": "/app/finances/invoice",
     "color": "indigo"
   },
   {
     "title": "Tax",
-    "description": "Manage tax compliance",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/finance/tax",
-    "button": "Get Started",
+    "description": "Ensure Tax Compliance",
+    "icon": "ph:coins-duotone",
+    "link": "/app/finances/payroll",
+    "color": "indigo"
+  },
+  {
+    "title": "Budget",
+    "description": "Optimize Resource Allocation",
+    "icon": "ph:battery-charging-duotone",
+    "link": "/app/finances/budget",
+    "color": "indigo"
+  },
+  {
+    "title": "Contracts",
+    "description": "Process Contracts Efficiently",
+    "icon": "ph:newspaper-duotone",
+    "link": "/app/finances/tax",
     "color": "indigo"
   }
 ];
@@ -91,8 +84,8 @@ const apps = [
 
 const data = [
 {
-    "mainHeading": "Get Smart with Your Finances",
-    "subtext": "Simplify finance management, enhance compliance, and drive smarter decisions.",
+    "mainHeading": "Simplify Your Finances",
+    "subtext": "Streamline finance management, enhance compliance, and drive smarter decisions.",
     "headingButtons": [
         {
             "text": "Get Started",
@@ -199,54 +192,69 @@ const data = [
 ];
 
 const features = [
-  {
-    "title": "Streamline",
-    "description": "Efficient finance management",
-    "icon": "fluent:flash-24-regular",
-    "link": "/features/streamline"
+{
+    "title": "Inights",
+    "description": "Financial Data Insights",
+    "icon": "ph:chart-bar-duotone",
+    "link": "/feature/insights",
+    "color": "indigo"
   },
   {
-    "title": "Analyze",
-    "description": "Financial data insights",
-    "icon": "fluent:cellular-data-1-24-regular",
-    "link": "/features/analyze"
+    "title": "Flows",
+    "description": "Efficient Finance Management",
+    "icon": "ph:flow-arrow-duotone",
+    "link": "/feature/flows",
+    "color": "indigo"
   },
   {
-    "title": "Automate",
-    "description": "Simplify financial tasks",
-    "icon": "fluent:bot-24-regular",
-    "link": "/features/automate"
+    "title": "Zaps",
+    "description": "Simplify Financial Tasks",
+    "icon": "ph:lightning-duotone",
+    "link": "/feature/zaps",
+    "color": "indigo"
   },
   {
-    "title": "Permission",
-    "description": "Secure financial access",
-    "icon": "fluent:lock-24-regular",
-    "link": "/features/permission"
-  },
-  {
-    "title": "Chat",
-    "description": "Client communication ease",
-    "icon": "fluent:chat-multiple-24-regular",
-    "link": "/features/chat"
+    "title": "Assistants",
+    "description": "On-Demand Financial Support",
+    "icon": "ph:robot-duotone",
+    "link": "/feature/assistants",
+    "color": "indigo"
   },
   {
     "title": "Forecast",
-    "description": "Budget trend prediction",
-    "icon": "fluent:weather-sunny-low-24-regular",
-    "link": "/features/forecast"
+    "description": "Financial Trend Prediction",
+    "icon": "ph:cloud-sun-duotone",
+    "link": "/feature/forecast",
+    "color": "indigo"
   },
   {
-    "title": "Collaborate",
-    "description": "Team financial planning",
-    "icon": "fluent:people-team-24-regular",
-    "link": "/features/collaborate"
+    "title": "Bridge",
+    "description": "Team Financial Planning",
+    "icon": "ph:arrows-out-duotone",
+    "link": "/feature/bridge",
+    "color": "indigo"
   },
   {
-    "title": "Integrate",
-    "description": "Merge financial systems",
-    "icon": "fluent:plug-connected-24-regular",
-    "link": "/features/integrate"
-  }
+    "title": "Administration",
+    "description": "Secure Financial Access",
+    "icon": "ph:address-book-duotone",
+    "link": "/feature/administration",
+    "color": "indigo"
+  },
+  {
+    "title": "Innovation",
+    "description": "Customize Financial Experiences",
+    "icon": "ph:circles-three-plus-duotone",
+    "link": "/feature/innovation",
+    "color": "indigo"
+  },
+  {
+    "title": "Integrations",
+    "description": "Merge Financial Systems",
+    "icon": "ph:plugs-connected-duotone",
+    "link": "/feature/integrations",
+    "color": "indigo"
+  },
 ];
 
 
@@ -305,7 +313,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
-          apps.map((item) => (
+          Finances.map((item) => (
             <a href={item.link} 
                class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
               <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
@@ -492,21 +500,25 @@ const featureBlocks = data[0].featureBlocks;
     </p>
   </div>
 
-  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-10">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
     {
       features.map((item) => (
-        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
-            <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="32" />
+        <a href={item.link} 
+           class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+          <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+            <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+              {/* Use the original icon coloring method */}
+              <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
             </div>
-            <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
-            <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
+            <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+              <h3 class="font-semibold text-md">{item.title}</h3>
+              <p class="text-slate-500">{item.description}</p>
+            </div>
           </div>
         </a>
       ))
     }
-  </div>
+  </div> 
 
 
   <div class="flex justify-center items-center mt-20"> 

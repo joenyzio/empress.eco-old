@@ -38,7 +38,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
   {
-    "mainHeading": "Supercharge Your Sales",
+    "mainHeading": "Close More Sales",
     "subtext": "Boost sales effortlessly with our AI-driven tools, designed to skyrocket conversions.",
     "headingButtons": [
       {
@@ -117,7 +117,7 @@ const data = [
       "title": "Start Selling with Empress",
       "description": "Step into the future of sales with a suite designed to deliver results."
     },
-    "featureHeading": "Sell with Empress",
+    "featureHeading": "Empress for Sales",
     "featureTitle": "Level Up Your Sales",
     "featureAssurance": "Guaranteed satisfaction with 24/7 support — we're always here for your sales needs."
   }
@@ -125,107 +125,113 @@ const data = [
 
 
 const features = [
-  {
-    "title": "Streamline",
-    "description": "Enhance sales efficiency",
-    "icon": "fluent:flash-24-regular",
-    "link": "/features/streamline"
+{
+    "title": "Inights",
+    "description": "Understand Customer Trends",
+    "icon": "ph:chart-bar-duotone",
+    "link": "/feature/insights",
+    "color": "indigo"
   },
   {
-    "title": "Analyze",
-    "description": "Understand customer trends",
-    "icon": "fluent:cellular-data-1-24-regular",
-    "link": "/features/analyze"
+    "title": "Flows",
+    "description": "Enhance Sales Efficiency",
+    "icon": "ph:flow-arrow-duotone",
+    "link": "/feature/flows",
+    "color": "indigo"
   },
   {
-    "title": "Automate",
-    "description": "Automate sales processes",
-    "icon": "fluent:bot-24-regular",
-    "link": "/features/automate"
+    "title": "Zaps",
+    "description": "Automate Sales Processes",
+    "icon": "ph:lightning-duotone",
+    "link": "/feature/zaps",
+    "color": "indigo"
   },
   {
-    "title": "Permission",
-    "description": "Manage sales access",
-    "icon": "fluent:lock-24-regular",
-    "link": "/features/permission"
-  },
-  {
-    "title": "Chat",
-    "description": "Engage with prospects",
-    "icon": "fluent:chat-multiple-24-regular",
-    "link": "/features/chat"
+    "title": "Assistants",
+    "description": "Engage With Prospects",
+    "icon": "ph:robot-duotone",
+    "link": "/feature/assistants",
+    "color": "indigo"
   },
   {
     "title": "Forecast",
-    "description": "Anticipate sales trends",
-    "icon": "fluent:weather-sunny-low-24-regular",
-    "link": "/features/forecast"
+    "description": "Anticipate Sales Trends",
+    "icon": "ph:cloud-sun-duotone",
+    "link": "/feature/forecast",
+    "color": "indigo"
   },
   {
-    "title": "Collaborate",
-    "description": "Coordinate sales teams",
-    "icon": "fluent:people-team-24-regular",
-    "link": "/features/collaborate"
+    "title": "Bridge",
+    "description": "Coordinate Sales Teams",
+    "icon": "ph:arrows-out-duotone",
+    "link": "/feature/bridge",
+    "color": "indigo"
   },
   {
-    "title": "Integrate",
-    "description": "Sync sales tools",
-    "icon": "fluent:plug-connected-24-regular",
-    "link": "/features/integrate"
-  }
+    "title": "Administration",
+    "description": "Secure Financial Access",
+    "icon": "ph:address-book-duotone",
+    "link": "/feature/administration",
+    "color": "indigo"
+  },
+  {
+    "title": "Innovation",
+    "description": "Customize Sales Experiences",
+    "icon": "ph:circles-three-plus-duotone",
+    "link": "/feature/innovation",
+    "color": "indigo"
+  },
+  {
+    "title": "Integrations",
+    "description": "Sync Sales Tools",
+    "icon": "ph:plugs-connected-duotone",
+    "link": "/feature/integrations",
+    "color": "indigo"
+  },
 ];
 
 
-
-
-
-const apps = [
-  {
+const Sales = [
+{
     "title": "CRM",
-    "description": "Customer relationship management",
-    "icon": "fluent:people-add-24-regular",
-    "link": "/app/sell/crm",
-    "button": "Start Selling",
+    "description": "Enhance Customer Relationships",
+    "icon": "ph:address-book-duotone",
+    "link": "/app/sales/crm",
     "color": "indigo"
   },
   {
-    "title": "Quote",
-    "description": "Generate customer quotes",
-    "icon": "fluent:money-24-regular",
-    "link": "/app/sell/quote",
-    "button": "Start Selling",
+    "title": "Fufillment",
+    "description": "Streamline Order Processing",
+    "icon": "ph:archive-box-fill",
+    "link": "/app/sales/fulfillment",
     "color": "indigo"
   },
   {
-    "title": "Email",
-    "description": "Targeted email campaigns ",
-    "icon": "fluent:mail-copy-24-regular",
-    "link": "/app/sell/email",
-    "button": "Start Selling",
+    "title": "Invoicing",
+    "description": "Efficient Billing System",
+    "icon": "ph:calendar-check-duotone",
+    "link": "/app/sales/invoicing",
+    "color": "indigo"
+  },
+  {
+    "title": "Quotes",
+    "description": "Generate Quick Estimates",
+    "icon": "ph:quotes-duotone",
+    "link": "/app/sales/quotes",
     "color": "indigo"
   },
   {
     "title": "Point of Sale",
-    "description": "Retail transaction processing",
-    "icon": "fluent:payment-24-regular",
-    "link": "/app/sell/pos",
-    "button": "Start Selling",
+    "description": "Simplify Retail Transactions",
+    "icon": "ph:shopping-cart-simple-duotone",
+    "link": "/app/sales/pos",
     "color": "indigo"
   },
   {
-    "title": "Subscription",
-    "description": "Manage recurring payments",
-    "icon": "fluent:add-circle-24-regular",
-    "link": "/app/sell/subscription",
-    "button": "Start Selling",
-    "color": "indigo"
-  },
-  {
-    "title": "Rental",
-    "description": "Equipment leasing solutions",
-    "icon": "fluent:box-arrow-left-24-regular",
-    "link": "/app/sell/rental",
-    "button": "Start Selling",
+    "title": "Rentals",
+    "description": "Manage Rental Operations",
+    "icon": "ph:car-duotone",
+    "link": "/app/sales/rentals",
     "color": "indigo"
   }
 ];
@@ -285,7 +291,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
-          apps.map((item) => (
+          Sales.map((item) => (
             <a href={item.link} 
                class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
               <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
@@ -472,21 +478,25 @@ const featureBlocks = data[0].featureBlocks;
     </p>
   </div>
 
-  <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-16 gap-8 md:gap-10">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
     {
       features.map((item) => (
-        <a href={item.link} class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <div class="flex flex-col items-center group hover:bg-slate-50 hover:shadow-lg rounded-lg transition-all p-6 text-center shadow-lg bg-white">
-            <div class="bg-indigo-50 border shadow-sm border-indigo-100 transition-colors rounded-lg grid place-items-center p-4 mb-5 w-16 h-16 shrink-0">
-              <Icon class="text-indigo-500" name={item.icon} size="32" />
+        <a href={item.link} 
+           class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
+          <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
+            <div class={`bg-${item.color}-100 rounded-lg grid place-items-center p-2 w-12 h-12 shrink-0 mr-6`}>
+              {/* Use the original icon coloring method */}
+              <Icon class={`text-${item.color}-500`} name={item.icon} size="28" />
             </div>
-            <h3 class="font-semibold text-lg text-gray-900">{item.title}</h3>
-            <p class="text-slate-500 mt-2 text-base leading-relaxed">{item.description}</p>
+            <div class="flex flex-col justify-center text-left" style="color: #1e293b;">
+              <h3 class="font-semibold text-md">{item.title}</h3>
+              <p class="text-slate-500">{item.description}</p>
+            </div>
           </div>
         </a>
       ))
     }
-  </div>
+  </div> 
 
 
   <div class="flex justify-center items-center mt-20"> 

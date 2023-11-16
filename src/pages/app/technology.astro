@@ -38,7 +38,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 const data = [
   {
-    "mainHeading": "Bring Your Business Online",
+    "mainHeading": "Accelerate Your Innovation",
     "subtext": "Craft a compelling digital footprint that captivates your audience at every touchpoint.",
     "headingButtons": [
       {
@@ -117,7 +117,7 @@ const data = [
       "title": "Start Building with Empress",
       "description": "Bring your idea to life with the tools you need to start building."
     },
-    "featureHeading": "Build with Empress",
+    "featureHeading": "Empress for Technology",
     "featureTitle": "Build Your Website in Minutes",
     "featureAssurance": "Tools designed to make your website not just functional, but captivating"
   }
@@ -183,55 +183,70 @@ const features = [
 ];
 
 
-const apps = [
-  {
-    "title": "Website",
-    "description": "Create business websites",
-    "icon": "fluent:phone-24-regular",
-    "link": "/app/build/website",
-    "button": "Start Building",
+const Technology = [
+{
+    "title": "Insights",
+    "description": "Unlock Data Insights",
+    "icon": "ph:chart-bar-duotone",
+    "link": "/feature/insights",
     "color": "indigo"
   },
   {
-    "title": "Store",
-    "description": "Online store setup",
-    "icon": "fluent:cart-24-regular",
-    "link": "/app/build/store",
-    "button": "Start Building",
+    "title": "Flows",
+    "description": "Optimize Your Workflow",
+    "icon": "ph:flow-arrow-duotone",
+    "link": "/feature/flows",
     "color": "indigo"
   },
   {
-    "title": "Blog",
-    "description": "Share engaging content",
-    "icon": "fluent:textbox-align-top-24-regular",
-    "link": "/app/build/blog",
-    "button": "Start Building",
+    "title": "Zaps",
+    "description": "Automate Routine Tasks",
+    "icon": "ph:lightning-duotone",
+    "link": "/feature/zaps",
     "color": "indigo"
   },
   {
-    "title": "Forum",
-    "description": "Community discussion platform",
-    "icon": "fluent:chat-multiple-24-regular",
-    "link": "/app/build/forum",
-    "button": "Start Building",
+    "title": "Assistants",
+    "description": "Expert AI Chat Support",
+    "icon": "ph:robot-duotone",
+    "link": "/feature/assistants",
     "color": "indigo"
   },
   {
-    "title": "Documentation",
-    "description": "Technical product support",
-    "icon": "fluent:chat-24-regular",
-    "link": "/app/build/documentation",
-    "button": "Start Building",
+    "title": "Forecast",
+    "description": "Anticipate Future Trends",
+    "icon": "ph:cloud-sun-duotone",
+    "link": "/feature/forecast",
     "color": "indigo"
   },
   {
-    "title": "Course",
-    "description": "Online learning platform",
-    "icon": "fluent:food-apple-24-regular",
-    "link": "/app/build/course",
-    "button": "Start Building",
+    "title": "Bridge",
+    "description": "Connect With Collaborators",
+    "icon": "ph:arrows-left-right-duotone",
+    "link": "/feature/bridge",
     "color": "indigo"
   },
+  {
+    "title": "Integrations",
+    "description": "Seamless Tool Integration",
+    "icon": "ph:plugs-connected-duotone",
+    "link": "/featurs/integrations",
+    "color": "indigo"
+  },
+  {
+    "title": "Administration",
+    "description": "Control Access & Visibility",
+    "icon": "ph:gear-duotone",
+    "link": "/feature/administration",
+    "color": "indigo"
+  },
+  {
+    "title": "Innovation",
+    "description": "Customize Your Experience",
+    "icon": "ph:circles-three-plus-duotone",
+    "link": "/features/innovation",
+    "color": "indigo"
+  }
 ];
 
 const faq = [
@@ -287,7 +302,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
-          apps.map((item) => (
+          Technology.map((item) => (
             <a href={item.link} 
                class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
               <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">

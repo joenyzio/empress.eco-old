@@ -35,54 +35,47 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
-  {
-    "title": "Stock",
-    "description": "Inventory tracking system",
-    "icon": "fluent:tray-item-add-24-regular",
-    "link": "/app/produce/stock",
-    "button": "Start Production",
+const Product = [
+{
+    "title": "Inventory",
+    "description": "Track Stock Accurately",
+    "icon": "ph:gift-duotone",
+    "link": "/app/product/inventory",
     "color": "indigo"
-    
   },
   {
-    "title": "Manufacture",
-    "description": "Production planning control",
-    "icon": "fluent:manufacturer-24-regular",
-    "link": "/app/produce/manufacture",
-    "button": "Start Production",
+    "title": "Procurement",
+    "description": "Streamline Purchasing Process",
+    "icon": "ph:git-branch-duotone",
+    "link": "/app/product/procurement",
+    "color": "indigo"
+  },
+  {
+    "title": "Manufacturing",
+    "description": "Efficient Production Management",
+    "icon": "ph:buildings-duotone",
+    "link": "/app/product/manufacturing",
     "color": "indigo"
   },
   {
     "title": "Lifecycle",
-    "description": "Product lifecycle management",
-    "icon": "fluent:production-24-regular",
-    "link": "/app/produce/lifecycle",
-    "button": "Start Production",
-    "color": "indigo"
-  },
-  {
-    "title": "Purchase",
-    "description": "Procurement management system",
-    "icon": "fluent:shopping-bag-24-regular",
-    "link": "/app/produce/purchase",
-    "button": "Start Production",
-    "color": "indigo"
-  },
-  {
-    "title": "Maintenance",
-    "description": "Equipment upkeep scheduler",
-    "icon": "fluent:wrench-screwdriver-24-regular",
-    "link": "/app/produce/maintenance",
-    "button": "Start Production",
+    "description": "Manage Product Lifecycle",
+    "icon": "ph:arrows-clockwise-duotone",
+    "link": "/app/product/lifecycle",
     "color": "indigo"
   },
   {
     "title": "Quality",
-    "description": "Quality assurance protocols",
-    "icon": "fluent:checkmark-starburst-24-regular",
-    "link": "/app/produce/quality",
-    "button": "Start Production",
+    "description": "Ensure Quality Standards",
+    "icon": "ph:star-duotone",
+    "link": "/app/product/quality",
+    "color": "indigo"
+  },
+  {
+    "title": "Maintenance",
+    "description": "Streamline Asset Upkeep",
+    "icon": "ph:link-duotone",
+    "link": "/app/product/maintenance",
     "color": "indigo"
   }
 ];
@@ -90,7 +83,7 @@ const apps = [
 
 const data = [
   {
-    "mainHeading": "Elevate Your Product",
+    "mainHeading": "Streamline Your Production",
     "subtext": "Streamline your processes with our smart, AI-driven tools for better efficiency and results.",
     "headingButtons": [
       {
@@ -305,7 +298,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
-          apps.map((item) => (
+          Product.map((item) => (
             <a href={item.link} 
                class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
               <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">

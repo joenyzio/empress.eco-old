@@ -35,60 +35,54 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
-  {
+const Experience = [
+{
     "title": "Helpdesk",
-    "description": "Support ticket system",
+    "description": "Streamline Support Queries",
     "icon": "fluent:question-circle-24-regular",
-    "link": "/app/support/help-desk",
-    "button": "Provide Support",
+    "link": "/app/experience/help-desk",
+    "color": "indigo"
+  },
+  {
+    "title": "Live Chat",
+    "description": "Engage Customers Instantly",
+    "icon": "ph:chats-duotone",
+    "link": "/app/experience/live-chat",
     "color": "indigo"
   },
   {
     "title": "Feedback",
-    "description": "Collect and analyze feedback",
-    "icon": "fluent:clock-24-regular",
-    "link": "/app/support/feedback",
-    "button": "Provide Support",
+    "description": "Gather Valuable Feedback",
+    "icon": "ph:arrows-in-cardinal-duotone",
+    "link": "/app/experience/feedback",
     "color": "indigo"
   },
   {
-    "title": "Knowledge Base",
-    "description": "Provide self-service support",
-    "icon": "fluent:gantt-chart-24-regular",
-    "link": "/app/support/knowledge-base",
-    "button": "Provide Support",
+    "title": "Forum",
+    "description": "Foster Community Engagement",
+    "icon": "ph:chat-dots-duotone",
+    "link": "/app/experience/forum",
     "color": "indigo"
   },
   {
-    "title": "Chatbot",
-    "description": "Real-time support",
-    "icon": "fluent:tasks-app-24-regular",
-    "link": "/app/support/chatbot",
-    "button": "Provide Support",
+    "title": "Loyalty",
+    "description": "Build Customer Loyalty",
+    "icon": "ph:heart-duotone",
+    "link": "/app/experience/loyalty",
     "color": "indigo"
   },
   {
     "title": "Appointments",
-    "description": "Schedule client meetings",
-    "icon": "fluent:calendar-24-regular",
-    "link": "/app/support/appointments",
-    "button": "Provide Support",
-    "color": "indigo"
-  },
-  {
-    "title": "Field Service",
-    "description": "On-site support management",
-    "icon": "fluent:service-bell-24-regular",
-    "link": "/app/support/field-service",
-    "button": "Provide Support",
+    "description": "Manage Customer Appointments",
+    "icon": "ph:clock-clockwise-duotone",
+    "link": "/app/experience/appointments",
     "color": "indigo"
   },
 ];
 
 const data = [
   {
-    "mainHeading": "Empower Your Customer Support",
+    "mainHeading": "Elevate Your Service",
     "subtext": "Transform customer support with efficient operations and instant insights.",
     "headingButtons": [
       {
@@ -100,7 +94,7 @@ const data = [
         "link": "/pricing"
       }
     ],
-    "sectionHeading": "Empress for Customer Support",
+    "sectionHeading": "Empress for Experience",
     "offering": {
       "title": "Streamline Support and Optimize Customer Assistance",
       "subtext": "Centralize, update, and swiftly retrieve vital information, ensuring your users always have answers at their fingertips."
@@ -303,7 +297,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
-          apps.map((item) => (
+          Experience.map((item) => (
             <a href={item.link} 
                class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
               <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">

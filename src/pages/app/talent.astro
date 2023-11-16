@@ -35,53 +35,47 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-const apps = [
-  {
-    "title": "Team",
-    "description": "Staff management hub",
-    "icon": "fluent:people-team-24-regular",
-    "link": "/app/staff/team",
-    "button": "Grow Your Team",
-    "color": "indigo"
-  },
-  {
+const Talent = [
+{
     "title": "Recruit",
-    "description": "Streamline hiring process",
-    "icon": "fluent:people-team-add-24-regular",
-    "link": "/app/staff/recruit",
-    "button": "Grow Your Team",
+    "description": "Optimize Talent Acquisition",
+    "icon": "ph:user-circle-plus-duotone",
+    "link": "/app/talent/recruit",
     "color": "indigo"
   },
   {
-    "title": "Timesheet",
-    "description": "Work hours tracking",
-    "icon": "fluent:beach-24-regular",
-    "link": "/app/staff/timesheet",
-    "button": "Grow Your Team",
+    "title": "Payroll",
+    "description": "Efficient Payroll Management",
+    "icon": "ph:clock-duotone",
+    "link": "/app/talent/payroll",
     "color": "indigo"
   },
   {
-    "title": "Review",
-    "description": "Performance review tool",
-    "icon": "fluent:star-emphasis-24-regular",
-    "link": "/app/staff/review",
-    "button": "Grow Your Team",
+    "title": "Performance",
+    "description": "Enhance Employee Performance",
+    "icon": "ph:sliders-duotone",
+    "link": "/app/talent/performance",
     "color": "indigo"
   },
   {
-    "title": "Referral",
-    "description": "Employee referral program",
-    "icon": "fluent:comment-arrow-left-24-regular",
-    "link": "/app/staff/referral",
-    "button": "Grow Your Team",
+    "title": "Training",
+    "description": "Streamline Staff Training",
+    "icon": "ph:student-duotone",
+    "link": "/app/talent/training",
+    "color": "indigo"
+  },
+  {
+    "title": "Directory",
+    "description": "Manage Employee Directory",
+    "icon": "ph:dots-nine-bold",
+    "link": "/app/talent/directory",
     "color": "indigo"
   },
   {
     "title": "Assets",
-    "description": "Manage company resources",
-    "icon": "fluent:vehicle-bus-24-regular",
-    "link": "/app/staff/assets",
-    "button": "Grow Your Team",
+    "description": "Optimize Asset Management",
+    "icon": "ph:sketch-logo-duotone",
+    "link": "/app/talent/assets",
     "color": "indigo"
   }
 ];
@@ -89,7 +83,7 @@ const apps = [
 
 const data = [
 {
-    "mainHeading": "Elevate Your Team",
+    "mainHeading": "Empower Your Workforce",
     "subtext": "Streamline hiring, personalize employee experiences, and optimize processes.",
     "headingButtons": [
       {
@@ -191,7 +185,7 @@ const data = [
       "title": "Grow Your Team with Empress",
       "description": "Manage your team effectively with the essential tools to turn your vision into reality."
     },
-    "featureHeading": "Empress for Staff",
+    "featureHeading": "Empress for Talent",
     "featureTitle": "We're Here to Support You",
     "featureAssurance": "Guaranteeing transformative and consistent support for all HR initiatives."
   }
@@ -303,7 +297,7 @@ const featureBlocks = data[0].featureBlocks;
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-6 md:gap-16">
         {
-          apps.map((item) => (
+          Talent.map((item) => (
             <a href={item.link} 
                class={`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${item.color}-500 transition-transform hover:scale-105`}>
               <div class="flex items-center group hover:bg-slate-50 rounded-xl transition-all md:-m-5 p-5 border border-gray-200 shadow-sm">
